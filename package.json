@@ -1,0 +1,16 @@
+{
+  "name": "x3dschema",
+  "description": "X3D JSON schema validate",
+  "engines": [
+    "node >= 5.2.0"
+  ],
+  "main": "validatex3djson.js",
+  "dependencies": {
+    "ajv": ">=1.2.1",
+    "is-my-json-valid": "^2.12.4",
+    "jjv": "^1.0.2"
+  },
+  "scripts": {
+    "validate": "node validatex3djson.js"
+  }
+}

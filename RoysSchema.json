@@ -1,0 +1,185 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "JSON Schema X3D V3.3",
+	"description": "Roy's development Schema for JSON X3D",
+	"type": "object",
+	"properties": {
+		"X3D": {
+			"type": "object",
+			"properties": {
+				"@profile": {
+					"type": "string"
+				},
+				"@version": {
+					"type": "number",
+					"minimum": 0,
+					"exclusiveMinimum": true
+				},
+				"@xsd:noNamespaceSchemaLocation": {
+					"type": "string",
+					"format": "uri"
+				},
+				"-children": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"#comment": {
+								"type": "string"
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"head": {
+					"type": "object",
+					"properties": {
+						"component": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "object",
+								"properties": {
+									"@name": {
+										"type": "string"
+									},
+									"@level": {
+										"type": "integer",
+										"minimum": 1
+									}
+								},
+								"required": [
+									"@name",
+									"@level"
+								],
+								"additionalProperties": false
+							}
+						},
+						"unit": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "object",
+								"properties": {
+									"@name": {
+										"type": "string"
+									},
+									"@category": {
+										"type": "string",
+										"enum": [
+											"angle",
+											"force",
+											"length",
+											"mass"
+										]
+									},
+									"@conversionFactor": {
+										"type": "number"
+									}
+								},
+								"required": [
+									"@name",
+									"@category",
+									"@conversionFactor"
+								],
+								"additionalProperties": false
+							}
+						},
+						"meta": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "object",
+								"properties": {
+									"@name": {
+										"type": "string"
+									},
+									"@content": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"@name",
+									"@content"
+								],
+								"additionalProperties": false
+							}
+						},
+						"-children": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"#comment": {
+										"type": "string"
+									}
+								},
+								"additionalProperties": false
+							}
+						}
+					},
+					"additionalProperties": false
+				},
+				"Scene": {
+					"type": "object",
+					"properties": {
+						"-children": {
+							"type": "array"
+						},
+						"EXPORT": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "object",
+								"properties": {
+									"@AS": {
+										"type": "string"
+									},
+									"@localDEF": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"@localDEF"
+								],
+								"additionalProperties": false
+							}
+						},
+						"IMPORT": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "object",
+								"properties": {
+									"@AS": {
+										"type": "string"
+									},
+									"@importedDEF": {
+										"type": "string"
+									},
+									"@inlineDEF": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"@importedDEF",
+									"@inlineDEF"
+								],
+								"additionalProperties": false
+							}
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"required": [
+				"Scene"
+			],
+			"additionalProperties": false
+		}
+	},
+	"required": [
+		"X3D"
+	],
+	"additionalProperties": false
+}
