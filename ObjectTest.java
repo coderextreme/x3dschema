@@ -15,11 +15,14 @@
  */
 
 import org.everit.json.schema.loader.SchemaLoader;
+import org.everit.json.schema.ValidationException;
 import org.everit.json.schema.Schema;
 import org.json.JSONObject;
 import org.json.JSONTokener;
+import org.json.JSONException;
 
 import java.io.*;
+import java.util.*;
 
 public class ObjectTest {
     public static void validateObject(String file) throws FileNotFoundException {
@@ -36,12 +39,22 @@ public class ObjectTest {
     }
     public static void main(String args[]) {
     	for (int a = 0; a < args.length; a++) {
+		System.out.println("BEGIN "+args[a]);
 		try {
 			validateObject(args[a]);
-			System.out.println(args[a]+" Valid");
-		} catch (Exception e) {
-			System.out.println(args[a]+" "+e.getMessage());
+			System.out.println("json-parse Valid");
+		} catch (FileNotFoundException e) {
+			System.out.println("json-parse file "+e.getMessage());
+		} catch (JSONException je) {
+			System.out.println("json-parse json "+je.getMessage());
+		} catch (ValidationException ve) {
+			Iterator<ValidationException> i = ve.getCausingExceptions().iterator();
+			while (i.hasNext()) {
+				ValidationException veel = i.next();
+				System.out.println("json-parse Validation "+veel);
+			}
 		}
+		System.out.println("END "+args[a]);
 	}
     }
 }
