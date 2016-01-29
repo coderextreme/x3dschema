@@ -29,7 +29,7 @@ public class ObjectTest {
 
         JSONObject jsonSchema = new JSONObject(new JSONTokener(
                 ObjectTest.class
-                        .getResourceAsStream("RoysSchema.json")));
+                        .getResourceAsStream("x3d-3.3-JSONSchema.json")));
 
 	JSONTokener tokener = new JSONTokener(new FileInputStream(file));
 	JSONObject jsonSubject = new JSONObject(tokener);
@@ -42,16 +42,16 @@ public class ObjectTest {
 		System.out.println("BEGIN "+args[a]);
 		try {
 			validateObject(args[a]);
-			System.out.println("json-parse Valid");
+			System.out.println("json-schema Valid");
 		} catch (FileNotFoundException e) {
-			System.out.println("json-parse file "+e.getMessage());
+			System.out.println("json-file file "+e.getMessage());
 		} catch (JSONException je) {
 			System.out.println("json-parse json "+je.getMessage());
 		} catch (ValidationException ve) {
 			Iterator<ValidationException> i = ve.getCausingExceptions().iterator();
 			while (i.hasNext()) {
 				ValidationException veel = i.next();
-				System.out.println("json-parse Validation "+veel);
+				System.out.println("json-schema Validation "+veel);
 			}
 		}
 		System.out.println("END "+args[a]);

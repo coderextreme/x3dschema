@@ -28,7 +28,7 @@ public class MetaSchemaTest {
 
     JSONObject jsonSubject = new JSONObject(new JSONTokener(
         MetaSchemaTest.class
-            .getResourceAsStream("RoysSchema.json")));
+            .getResourceAsStream("x3d-3.3-JSONSchema.json")));
 
     Schema schema = SchemaLoader.load(jsonSchema);
     schema.validate(jsonSubject);

@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "JSON Schema X3D V3.3",
-	"description": "Roy's development Schema for JSON X3D",
+	"description": "Development JSON Schema for X3D V3.3 ",
 	"type": "object",
 	"properties": {
 		"X3D": {
@@ -210,6 +210,7 @@
 					"maxItems": 3,
 					"items": {
 						"type": "number",
+						"minimum": -1,
 						"default": -1
 					}
 				},
@@ -402,20 +403,7 @@
 					}
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -457,20 +445,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -525,20 +500,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -595,20 +557,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -719,26 +668,68 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
 		},
 		"Billboard": {
 			"type": "object",
+			"properties": {
+				"@DEF": {
+					"type": "string"
+				},
+				"@USE": {
+					"type": "string"
+				},
+				"IS": {
+					"$ref": "#/definitions/IS"
+				},
+				"@axisOfRotation": {
+					"type": "array",
+					"minItems": 3,
+					"maxItems": 3,
+					"items": [
+						{
+							"type": "number",
+							"default": 0
+						},
+						{
+							"type": "number",
+							"default": 1
+						}
+					],
+					"additionalItems": {
+						"type": "number",
+						"default": 0
+					}
+				},
+				"@bboxCenter": {
+					"type": "array",
+					"minItems": 3,
+					"maxItems": 3,
+					"items": {
+						"type": "number",
+						"default": 0
+					}
+				},
+				"@bboxSize": {
+					"type": "array",
+					"minItems": 3,
+					"maxItems": 3,
+					"items": {
+						"type": "number",
+						"minimum": -1,
+						"default": -1
+					}
+				},
+				"-children": {
+					"$ref": "#/definitions/-children"
+				},
+				"-metadata": {
+					"$ref": "#/definitions/-metadata"
+				}
+			},
 			"additionalProperties": false
 		},
 		"BooleanFilter": {
@@ -782,20 +773,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -827,10 +805,7 @@
 					"maxItems": 3,
 					"items": {
 						"type": "number",
-						"minimum": 0,
-						"enum": [
-							-1
-						],
+						"minimum": -1,
 						"default": -1
 					}
 				},
@@ -888,6 +863,9 @@
 							},
 							"HAnimSite": {
 								"$ref": "#/definitions/HAnimSite"
+							},
+							"Inline": {
+								"$ref": "#/definitions/Inline"
 							},
 							"LayoutGroup": {
 								"$ref": "#/definitions/LayoutGroup"
@@ -953,10 +931,7 @@
 					"maxItems": 3,
 					"items": {
 						"type": "number",
-						"minimum": 0,
-						"enum": [
-							-1
-						],
+						"minimum": -1,
 						"default": -1
 					}
 				},
@@ -990,26 +965,60 @@
 					}
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
 		},
 		"CADLayer": {
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"@DEF": {
+					"type": "string"
+				},
+				"@USE": {
+					"type": "string"
+				},
+				"IS": {
+					"$ref": "#/definitions/IS"
+				},
+				"@bboxCenter": {
+					"type": "array",
+					"minItems": 3,
+					"maxItems": 3,
+					"items": {
+						"type": "number",
+						"default": 0
+					}
+				},
+				"@bboxSize": {
+					"type": "array",
+					"minItems": 3,
+					"maxItems": 3,
+					"items": {
+						"type": "number",
+						"minimum": -1,
+						"default": -1
+					}
+				},
+				"@name": {
+					"type": "string"
+				},
+				"@visible": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "boolean"
+					}
+				},
+				"-children": {
+					"$ref": "#/definitions/-children"
+				},
+				"-metadata": {
+					"$ref": "#/definitions/-metadata"
+				}
+			},
+			"additionalProperties": false
 		},
 		"CADPart": {
 			"type": "object",
@@ -1038,10 +1047,7 @@
 					"maxItems": 3,
 					"items": {
 						"type": "number",
-						"minimum": 0,
-						"enum": [
-							-1
-						],
+						"minimum": -1,
 						"default": -1
 					}
 				},
@@ -1153,7 +1159,60 @@
 			"type": "object"
 		},
 		"ClipPlane": {
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"@DEF": {
+					"type": "string"
+				},
+				"@USE": {
+					"type": "string"
+				},
+				"IS": {
+					"$ref": "#/definitions/IS"
+				},
+				"@enabled": {
+					"type": "boolean",
+					"default": true
+				},
+				"@plane": {
+					"type": "array",
+					"minItems": 4,
+					"maxItems": 4,
+					"items": [
+						{
+							"type": "number",
+							"minimum": -1,
+							"maximum": 1,
+							"default": 0
+						},
+						{
+							"type": "number",
+							"minimum": -1,
+							"maximum": 1,
+							"default": 1
+						},
+						{
+							"type": "number",
+							"minimum": -1,
+							"maximum": 1,
+							"default": 0
+						}
+					],
+					"additionalItems": {
+						"type": "number",
+						"minimum": -1,
+						"maximum": 1,
+						"default": 0
+					}
+				},
+				"-metadata": {
+					"$ref": "#/definitions/-metadata"
+				},
+				"-children": {
+					"$ref": "#/definitions/-commentRoute"
+				}
+			},
+			"additionalProperties": false
 		},
 		"CollidableOffset": {
 			"type": "object"
@@ -1192,7 +1251,49 @@
 			"type": "object"
 		},
 		"Cone": {
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"@DEF": {
+					"type": "string"
+				},
+				"@USE": {
+					"type": "string"
+				},
+				"IS": {
+					"$ref": "#/definitions/IS"
+				},
+				"@bottom": {
+					"type": "boolean",
+					"default": true
+				},
+				"@bottomRadius": {
+					"type": "number",
+					"minimum": 0,
+					"exclusiveMinimum": true,
+					"default": 1
+				},
+				"@height": {
+					"type": "number",
+					"minimum": 0,
+					"exclusiveMinimum": true,
+					"default": 2
+				},
+				"@side": {
+					"type": "boolean",
+					"default": true
+				},
+				"@solid": {
+					"type": "boolean",
+					"default": true
+				},
+				"-metadata": {
+					"$ref": "#/definitions/-metadata"
+				},
+				"-children": {
+					"$ref": "#/definitions/-commentRoute"
+				}
+			},
+			"additionalProperties": false
 		},
 		"Coordinate": {
 			"type": "object",
@@ -1217,20 +1318,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -1294,20 +1382,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -1355,20 +1430,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -1559,20 +1621,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -1618,20 +1667,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -1737,20 +1773,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -1815,6 +1838,7 @@
 					"maxItems": 3,
 					"items": {
 						"type": "number",
+						"minimum": -1,
 						"default": -1
 					}
 				},
@@ -1843,7 +1867,44 @@
 			"type": "object"
 		},
 		"ImageTexture": {
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"@DEF": {
+					"type": "string"
+				},
+				"@USE": {
+					"type": "string"
+				},
+				"IS": {
+					"$ref": "#/definitions/IS"
+				},
+				"@repeatS": {
+					"type": "boolean",
+					"default": true
+				},
+				"@repeatT": {
+					"type": "boolean",
+					"default": true
+				},
+				"@url": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "string",
+						"format": "uri"
+					}
+				},
+				"-metadata": {
+					"$ref": "#/definitions/-metadata"
+				},
+				"-textureProperties": {
+					"$ref": "#/definitions/-textureProperties"
+				},
+				"-children": {
+					"$ref": "#/definitions/-commentRoute"
+				}
+			},
+			"additionalProperties": false
 		},
 		"ImageTexture3D": {
 			"type": "object"
@@ -1939,29 +2000,126 @@
 					"$ref": "#/definitions/-texCoord"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
 		},
 		"IndexedLineSet": {
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"@DEF": {
+					"type": "string"
+				},
+				"@USE": {
+					"type": "string"
+				},
+				"IS": {
+					"$ref": "#/definitions/IS"
+				},
+				"@colorIndex": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "integer",
+						"minimum": -1
+					}
+				},
+				"@colorPerVertex": {
+					"type": "boolean",
+					"default": true
+				},
+				"@coordIndex": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "integer",
+						"minimum": -1
+					}
+				},
+				"-attrib": {
+					"$ref": "#/definitions/-attrib"
+				},
+				"-color": {
+					"$ref": "#/definitions/-color"
+				},
+				"-coord": {
+					"$ref": "#/definitions/-coord"
+				},
+				"-fogCoord": {
+					"$ref": "#/definitions/-fogCoord"
+				},
+				"-metadata": {
+					"$ref": "#/definitions/-metadata"
+				},
+				"-children": {
+					"$ref": "#/definitions/-commentRoute"
+				}
+			},
+			"additionalProperties": false
 		},
 		"IndexedQuadSet": {
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"@DEF": {
+					"type": "string"
+				},
+				"@USE": {
+					"type": "string"
+				},
+				"IS": {
+					"$ref": "#/definitions/IS"
+				},
+				"@ccw": {
+					"type": "boolean",
+					"default": true
+				},
+				"@colorPerVertex": {
+					"type": "boolean",
+					"default": true
+				},
+				"@index": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "integer",
+						"minimum": 0
+					}
+				},
+				"@normalPerVertex": {
+					"type": "boolean",
+					"default": true
+				},
+				"@solid": {
+					"type": "boolean",
+					"default": true
+				},
+				"-attrib": {
+					"$ref": "#/definitions/-attrib"
+				},
+				"-color": {
+					"$ref": "#/definitions/-color"
+				},
+				"-coord": {
+					"$ref": "#/definitions/-coord"
+				},
+				"-fogCoord": {
+					"$ref": "#/definitions/-fogCoord"
+				},
+				"-metadata": {
+					"$ref": "#/definitions/-metadata"
+				},
+				"-normal": {
+					"$ref": "#/definitions/-normal"
+				},
+				"-texCoord": {
+					"$ref": "#/definitions/-texCoord"
+				},
+				"-children": {
+					"$ref": "#/definitions/-commentRoute"
+				}
+			},
+			"additionalProperties": false
 		},
 		"IndexedTriangleFanSet": {
 			"type": "object"
@@ -2023,20 +2181,7 @@
 					"$ref": "#/definitions/-texCoord"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -2071,10 +2216,7 @@
 					"maxItems": 3,
 					"items": {
 						"type": "number",
-						"minimum": 0,
-						"enum": [
-							-1
-						],
+						"minimum": -1,
 						"default": -1
 					}
 				},
@@ -2094,20 +2236,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -2192,20 +2321,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -2289,20 +2405,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -2356,20 +2459,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"required": [
@@ -2390,7 +2480,96 @@
 			"type": "object"
 		},
 		"NavigationInfo": {
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"@DEF": {
+					"type": "string"
+				},
+				"@USE": {
+					"type": "string"
+				},
+				"IS": {
+					"$ref": "#/definitions/IS"
+				},
+				"@avatarSize": {
+					"type": "array",
+					"minItems": 3,
+					"maxItems": 3,
+					"items": [
+						{
+							"type": "number",
+							"minimum": 0,
+							"default": 0.25
+						},
+						{
+							"type": "number",
+							"minimum": 0,
+							"default": 1.6
+						}
+					],
+					"additionalItems": {
+						"type": "number",
+						"minimum": 0,
+						"default": 0.75
+					}
+				},
+				"@headlight": {
+					"type": "boolean",
+					"default": true
+				},
+				"@speed": {
+					"type": "number",
+					"minimum": 0,
+					"default": 1
+				},
+				"@transitionTime": {
+					"type": "number",
+					"minimum": 0,
+					"default": 1
+				},
+				"@transitionType": {
+					"type": "array",
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"default": "LINEAR"
+						}
+					],
+					"additionalItems": {
+						"type": "string"
+					}
+				},
+				"@type": {
+					"type": "array",
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"default": "EXAMINE"
+						},
+						{
+							"type": "string",
+							"default": "ANY"
+						}
+					],
+					"additionalItems": {
+						"type": "string"
+					}
+				},
+				"@visibilityLimit": {
+					"type": "number",
+					"minimum": 0,
+					"default": 0
+				},
+				"-metadata": {
+					"$ref": "#/definitions/-metadata"
+				},
+				"-children": {
+					"$ref": "#/definitions/-commentRoute"
+				}
+			},
+			"additionalProperties": false
 		},
 		"Normal": {
 			"type": "object",
@@ -2414,6 +2593,9 @@
 				},
 				"-metadata": {
 					"$ref": "#/definitions/-metadata"
+				},
+				"-children": {
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -2479,7 +2661,92 @@
 			"type": "object"
 		},
 		"PointLight": {
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"@DEF": {
+					"type": "string"
+				},
+				"@USE": {
+					"type": "string"
+				},
+				"IS": {
+					"$ref": "#/definitions/IS"
+				},
+				"@ambientIntensity": {
+					"type": "number",
+					"minimum": 0,
+					"maximum": 1,
+					"default": 0
+				},
+				"@attenuation": {
+					"type": "array",
+					"minItems": 3,
+					"maxItems": 3,
+					"items": [
+						{
+							"type": "number",
+							"minimum": 0,
+							"default": 1
+						},
+						{
+							"type": "number",
+							"minimum": 0,
+							"default": 0
+						}
+					],
+					"additionalItems": {
+						"type": "number",
+						"minimum": 0,
+						"default": 0
+					}
+				},
+				"@color": {
+					"type": "array",
+					"minItems": 3,
+					"maxItems": 3,
+					"items": {
+						"type": "number",
+						"minimum": 0,
+						"maximum": 1,
+						"default": 1
+					}
+				},
+				"@global": {
+					"type": "boolean",
+					"default": true
+				},
+				"@intensity": {
+					"type": "number",
+					"minimum": 0,
+					"maximum": 1,
+					"default": 1
+				},
+				"@location": {
+					"type": "array",
+					"minItems": 3,
+					"maxItems": 3,
+					"items": {
+						"type": "number",
+						"default": 0
+					}
+				},
+				"@on": {
+					"type": "boolean",
+					"default": true
+				},
+				"@radius": {
+					"type": "number",
+					"minimum": 0,
+					"default": 100
+				},
+				"-metadata": {
+					"$ref": "#/definitions/-metadata"
+				},
+				"-children": {
+					"$ref": "#/definitions/-commentRoute"
+				}
+			},
+			"additionalProperties": false
 		},
 		"PointPickSensor": {
 			"type": "object"
@@ -2535,20 +2802,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -2630,7 +2884,59 @@
 			"type": "object"
 		},
 		"QuadSet": {
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"@DEF": {
+					"type": "string"
+				},
+				"@USE": {
+					"type": "string"
+				},
+				"IS": {
+					"$ref": "#/definitions/IS"
+				},
+				"@ccw": {
+					"type": "boolean",
+					"default": true
+				},
+				"@colorPerVertex": {
+					"type": "boolean",
+					"default": true
+				},
+				"@normalPerVertex": {
+					"type": "boolean",
+					"default": true
+				},
+				"@solid": {
+					"type": "boolean",
+					"default": true
+				},
+				"-attrib": {
+					"$ref": "#/definitions/-attrib"
+				},
+				"-color": {
+					"$ref": "#/definitions/-color"
+				},
+				"-coord": {
+					"$ref": "#/definitions/-coord"
+				},
+				"-fogCoord": {
+					"$ref": "#/definitions/-fogCoord"
+				},
+				"-metadata": {
+					"$ref": "#/definitions/-metadata"
+				},
+				"-normal": {
+					"$ref": "#/definitions/-normal"
+				},
+				"-texCoord": {
+					"$ref": "#/definitions/-texCoord"
+				},
+				"-children": {
+					"$ref": "#/definitions/-commentRoute"
+				}
+			},
+			"additionalProperties": false
 		},
 		"ReceiverPdu": {
 			"type": "object"
@@ -2721,20 +3027,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -2769,6 +3062,7 @@
 					"maxItems": 3,
 					"items": {
 						"type": "number",
+						"minimum": -1,
 						"default": -1
 					}
 				},
@@ -2796,20 +3090,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -2821,7 +3102,35 @@
 			"type": "object"
 		},
 		"Sphere": {
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"@DEF": {
+					"type": "string"
+				},
+				"@USE": {
+					"type": "string"
+				},
+				"IS": {
+					"$ref": "#/definitions/IS"
+				},
+				"@radius": {
+					"type": "number",
+					"minimum": 0,
+					"exclusiveMinimum": true,
+					"default": 1
+				},
+				"@solid": {
+					"type": "boolean",
+					"default": true
+				},
+				"-metadata": {
+					"$ref": "#/definitions/-metadata"
+				},
+				"-children": {
+					"$ref": "#/definitions/-commentRoute"
+				}
+			},
+			"additionalProperties": false
 		},
 		"SphereSensor": {
 			"type": "object"
@@ -2874,10 +3183,7 @@
 					"maxItems": 3,
 					"items": {
 						"type": "number",
-						"minimum": 0,
-						"enum": [
-							-1
-						],
+						"minimum": -1,
 						"default": -1
 					}
 				},
@@ -2958,20 +3264,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -2980,7 +3273,32 @@
 			"type": "object"
 		},
 		"TextureCoordinate": {
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"@DEF": {
+					"type": "string"
+				},
+				"@USE": {
+					"type": "string"
+				},
+				"IS": {
+					"$ref": "#/definitions/IS"
+				},
+				"@point": {
+					"type": "array",
+					"minItems": 2,
+					"items": {
+						"type": "number"
+					}
+				},
+				"-metadata": {
+					"$ref": "#/definitions/-metadata"
+				},
+				"-children": {
+					"$ref": "#/definitions/-commentRoute"
+				}
+			},
+			"additionalProperties": false
 		},
 		"TextureCoordinate3D": {
 			"type": "object"
@@ -2989,6 +3307,9 @@
 			"type": "object"
 		},
 		"TextureCoordinateGenerator": {
+			"type": "object"
+		},
+		"TextureProperties": {
 			"type": "object"
 		},
 		"TextureTransform": {
@@ -3046,20 +3367,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -3090,20 +3398,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -3135,6 +3430,7 @@
 					"maxItems": 3,
 					"items": {
 						"type": "number",
+						"minimum": -1,
 						"default": -1
 					}
 				},
@@ -3323,20 +3619,7 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-children": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"#comment": {
-								"type": "string"
-							},
-							"ROUTE": {
-								"$ref": "#/definitions/ROUTE"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -3357,7 +3640,35 @@
 			"type": "object"
 		},
 		"WorldInfo": {
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"@DEF": {
+					"type": "string"
+				},
+				"@USE": {
+					"type": "string"
+				},
+				"IS": {
+					"$ref": "#/definitions/IS"
+				},
+				"@info": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "string"
+					}
+				},
+				"@title": {
+					"type": "string"
+				},
+				"-metadata": {
+					"$ref": "#/definitions/-metadata"
+				},
+				"-children": {
+					"$ref": "#/definitions/-commentRoute"
+				}
+			},
+			"additionalProperties": false
 		},
 		"field": {
 			"type": "array",
@@ -3960,6 +4271,9 @@
 					"TextureCoordinateGenerator": {
 						"$ref": "#/definitions/TextureCoordinateGenerator"
 					},
+					"TextureProperties": {
+						"$ref": "#/definitions/TextureProperties"
+					},
 					"TextureTransform": {
 						"$ref": "#/definitions/TextureTransform"
 					},
@@ -4445,6 +4759,23 @@
 				"additionalProperties": false
 			}
 		},
+		"-commentRoute": {
+			"description": "Comments and ROUTEs",
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "object",
+				"properties": {
+					"#comment": {
+						"type": "string"
+					},
+					"ROUTE": {
+						"$ref": "#/definitions/ROUTE"
+					}
+				},
+				"additionalProperties": false
+			}
+		},
 		"-coord": {
 			"description": "X3DCoordinateNode content",
 			"type": "array",
@@ -4745,6 +5076,24 @@
 					},
 					"TextureCoordinateGenerator": {
 						"$ref": "#/definitions/TextureCoordinateGenerator"
+					},
+					"ProtoInstance": {
+						"$ref": "#/definitions/ProtoInstance"
+					}
+				},
+				"additionalProperties": false
+			}
+		},
+		"-textureProperties": {
+			"description": "TextureProperties content",
+			"type": "array",
+			"minItems": 1,
+			"maxItems": 1,
+			"items": {
+				"type": "object",
+				"properties": {
+					"TextureProperties": {
+						"$ref": "#/definitions/TextureProperties"
 					},
 					"ProtoInstance": {
 						"$ref": "#/definitions/ProtoInstance"
