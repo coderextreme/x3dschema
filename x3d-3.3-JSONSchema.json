@@ -2010,7 +2010,7 @@
 				"IS": {
 					"$ref": "#/definitions/IS"
 				},
-				"color": {
+				"@color": {
 					"type": "array",
 					"minItems": 4,
 					"items": {
@@ -4533,7 +4533,7 @@
 					"minimum": 0,
 					"default": 2
 				},
-				"zSpacing": {
+				"@zSpacing": {
 					"type": "number",
 					"minimum": 0,
 					"exclusiveMinimum": true,
@@ -4689,6 +4689,9 @@
 						"format": "uri"
 					}
 				},
+				"-children": {
+					"$ref": "#/definitions/-children"
+				},
 				"-geoOrigin": {
 					"$ref": "#/definitions/-geoOrigin"
 				},
@@ -4697,9 +4700,6 @@
 				},
 				"-rootNode": {
 					"$ref": "#/definitions/-children"
-				},
-				"-children": {
-					"$ref": "#/definitions/-commentRoute"
 				}
 			},
 			"additionalProperties": false
@@ -6314,6 +6314,9 @@
 				"@DEF": {
 					"type": "string"
 				},
+				"@USE": {
+					"type": "string"
+				},
 				"@name": {
 					"type": "string"
 				},
@@ -6322,6 +6325,9 @@
 				},
 				"IS": {
 					"$ref": "#/definitions/IS"
+				},
+				"-children": {
+					"$ref": "#/definitions/-allNodes"
 				},
 				"-metadata": {
 					"$ref": "#/definitions/-metadata"
