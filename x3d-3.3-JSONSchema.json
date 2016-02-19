@@ -11,9 +11,14 @@
 					"type": "string"
 				},
 				"@version": {
-					"type": "number",
-					"minimum": 0,
-					"exclusiveMinimum": true
+					"type": "string",
+					"enum": [
+						"3.0",
+						"3.1",
+						"3.2",
+						"3.3"
+					],
+					"default": "3.3"
 				},
 				"@xsd:noNamespaceSchemaLocation": {
 					"type": "string",
@@ -247,38 +252,28 @@
 					"$ref": "#/definitions/IS"
 				},
 				"-fillProperties": {
-					"type": "array",
-					"minItems": 1,
-					"maxItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"FillProperties": {
-								"$ref": "#/definitions/FillProperties"
-							},
-							"ProtoInstance": {
-								"$ref": "#/definitions/ProtoInstance"
-							}
+					"type": "object",
+					"properties": {
+						"FillProperties": {
+							"$ref": "#/definitions/FillProperties"
 						},
-						"additionalProperties": false
-					}
+						"ProtoInstance": {
+							"$ref": "#/definitions/ProtoInstance"
+						}
+					},
+					"additionalProperties": false
 				},
 				"-lineProperties": {
-					"type": "array",
-					"minItems": 1,
-					"maxItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"LineProperties": {
-								"$ref": "#/definitions/LineProperties"
-							},
-							"ProtoInstance": {
-								"$ref": "#/definitions/ProtoInstance"
-							}
+					"type": "object",
+					"properties": {
+						"LineProperties": {
+							"$ref": "#/definitions/LineProperties"
 						},
-						"additionalProperties": false
-					}
+						"ProtoInstance": {
+							"$ref": "#/definitions/ProtoInstance"
+						}
+					},
+					"additionalProperties": false
 				},
 				"-material": {
 					"$ref": "#/definitions/-material"
@@ -309,74 +304,64 @@
 					}
 				},
 				"-texture": {
-					"type": "array",
-					"minItems": 1,
-					"maxItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"ComposedCubeMapTexture": {
-								"$ref": "#/definitions/ComposedCubeMapTexture"
-							},
-							"ComposedTexture3D": {
-								"$ref": "#/definitions/ComposedTexture3D"
-							},
-							"GeneratedCubeMapTexture": {
-								"$ref": "#/definitions/GeneratedCubeMapTexture"
-							},
-							"ImageCubeMapTexture": {
-								"$ref": "#/definitions/ImageCubeMapTexture"
-							},
-							"ImageTexture": {
-								"$ref": "#/definitions/ImageTexture"
-							},
-							"ImageTexture3D": {
-								"$ref": "#/definitions/ImageTexture3D"
-							},
-							"MovieTexture": {
-								"$ref": "#/definitions/MovieTexture"
-							},
-							"MultiTexture": {
-								"$ref": "#/definitions/MultiTexture"
-							},
-							"PixelTexture": {
-								"$ref": "#/definitions/PixelTexture"
-							},
-							"PixelTexture3D": {
-								"$ref": "#/definitions/PixelTexture3D"
-							},
-							"ProtoInstance": {
-								"$ref": "#/definitions/ProtoInstance"
-							}
+					"type": "object",
+					"properties": {
+						"ComposedCubeMapTexture": {
+							"$ref": "#/definitions/ComposedCubeMapTexture"
 						},
-						"additionalProperties": false
-					}
+						"ComposedTexture3D": {
+							"$ref": "#/definitions/ComposedTexture3D"
+						},
+						"GeneratedCubeMapTexture": {
+							"$ref": "#/definitions/GeneratedCubeMapTexture"
+						},
+						"ImageCubeMapTexture": {
+							"$ref": "#/definitions/ImageCubeMapTexture"
+						},
+						"ImageTexture": {
+							"$ref": "#/definitions/ImageTexture"
+						},
+						"ImageTexture3D": {
+							"$ref": "#/definitions/ImageTexture3D"
+						},
+						"MovieTexture": {
+							"$ref": "#/definitions/MovieTexture"
+						},
+						"MultiTexture": {
+							"$ref": "#/definitions/MultiTexture"
+						},
+						"PixelTexture": {
+							"$ref": "#/definitions/PixelTexture"
+						},
+						"PixelTexture3D": {
+							"$ref": "#/definitions/PixelTexture3D"
+						},
+						"ProtoInstance": {
+							"$ref": "#/definitions/ProtoInstance"
+						}
+					},
+					"additionalProperties": false
 				},
 				"-textureTransform": {
-					"type": "array",
-					"minItems": 1,
-					"maxItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"MultiTextureTransform": {
-								"$ref": "#/definitions/MultiTextureTransform"
-							},
-							"TextureTransform": {
-								"$ref": "#/definitions/TextureTransform"
-							},
-							"TextureTransform3D": {
-								"$ref": "#/definitions/TextureTransform3D"
-							},
-							"TextureTransformMatrix3D": {
-								"$ref": "#/definitions/TextureTransformMatrix3D"
-							},
-							"ProtoInstance": {
-								"$ref": "#/definitions/ProtoInstance"
-							}
+					"type": "object",
+					"properties": {
+						"MultiTextureTransform": {
+							"$ref": "#/definitions/MultiTextureTransform"
 						},
-						"additionalProperties": false
-					}
+						"TextureTransform": {
+							"$ref": "#/definitions/TextureTransform"
+						},
+						"TextureTransform3D": {
+							"$ref": "#/definitions/TextureTransform3D"
+						},
+						"TextureTransformMatrix3D": {
+							"$ref": "#/definitions/TextureTransformMatrix3D"
+						},
+						"ProtoInstance": {
+							"$ref": "#/definitions/ProtoInstance"
+						}
+					},
+					"additionalProperties": false
 				},
 				"-children": {
 					"$ref": "#/definitions/-commentRoute"
@@ -1179,27 +1164,22 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-shape": {
-					"type": "array",
-					"minItems": 1,
-					"maxItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"LOD": {
-								"$ref": "#/definitions/LOD"
-							},
-							"Shape": {
-								"$ref": "#/definitions/Shape"
-							},
-							"Transform": {
-								"$ref": "#/definitions/Transform"
-							},
-							"ProtoInstance": {
-								"$ref": "#/definitions/ProtoInstance"
-							}
+					"type": "object",
+					"properties": {
+						"LOD": {
+							"$ref": "#/definitions/LOD"
 						},
-						"additionalProperties": false
-					}
+						"Shape": {
+							"$ref": "#/definitions/Shape"
+						},
+						"Transform": {
+							"$ref": "#/definitions/Transform"
+						},
+						"ProtoInstance": {
+							"$ref": "#/definitions/ProtoInstance"
+						}
+					},
+					"additionalProperties": false
 				},
 				"-children": {
 					"$ref": "#/definitions/-commentRoute"
@@ -2059,7 +2039,7 @@
 				"@USE": {
 					"type": "string"
 				},
-				"-field": {
+				"field": {
 					"$ref": "#/definitions/field"
 				},
 				"IS": {
@@ -5849,7 +5829,7 @@
 					"minItems": 1,
 					"items": {
 						"type": "integer",
-						"minimum": 0
+						"minimum": -1
 					}
 				},
 				"@normalPerVertex": {
@@ -5974,7 +5954,7 @@
 					"minItems": 1,
 					"items": {
 						"type": "integer",
-						"minimum": 0
+						"minimum": -1
 					}
 				},
 				"@normalPerVertex": {
@@ -6790,8 +6770,18 @@
 					"minItems": 1,
 					"items": {
 						"type": "number",
-						"minimum": 0,
-						"exclusiveMinimum": true
+						"oneOf": [
+							{
+								"type": "number",
+								"enum": [
+									-1
+								]
+							},
+							{
+								"type": "number",
+								"minimum": 0
+							}
+						]
 					}
 				},
 				"-children": {
@@ -7095,7 +7085,32 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-value": {
-					"$ref": "#/definitions/-metadata"
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "object",
+						"properties": {
+							"MetadataBoolean": {
+								"$ref": "#/definitions/MetadataBoolean"
+							},
+							"MetadataDouble": {
+								"$ref": "#/definitions/MetadataDouble"
+							},
+							"MetadataFloat": {
+								"$ref": "#/definitions/MetadataFloat"
+							},
+							"MetadataInteger": {
+								"$ref": "#/definitions/MetadataInteger"
+							},
+							"MetadataSet": {
+								"$ref": "#/definitions/MetadataSet"
+							},
+							"MetadataString": {
+								"$ref": "#/definitions/MetadataString"
+							}
+						},
+						"additionalProperties": false
+					}
 				},
 				"-children": {
 					"$ref": "#/definitions/-commentRoute"
@@ -7123,6 +7138,7 @@
 				},
 				"@value": {
 					"type": "array",
+					"minItems": 1,
 					"items": {
 						"type": "string"
 					}
@@ -7134,9 +7150,6 @@
 					"$ref": "#/definitions/-commentRoute"
 				}
 			},
-			"required": [
-				"@name"
-			],
 			"additionalProperties": false
 		},
 		"MotorJoint": {
@@ -7705,7 +7718,7 @@
 					"minimum": 2,
 					"default": 3
 				},
-				"@tesselation": {
+				"@tessellation": {
 					"type": "integer",
 					"default": 0
 				},
@@ -7867,7 +7880,7 @@
 					"minimum": 2,
 					"default": 3
 				},
-				"@uTesselation": {
+				"@uTessellation": {
 					"type": "integer",
 					"default": 0
 				},
@@ -7892,7 +7905,7 @@
 					"minimum": 2,
 					"default": 3
 				},
-				"@vTesselation": {
+				"@vTessellation": {
 					"type": "integer",
 					"default": 0
 				},
@@ -8246,7 +8259,7 @@
 					"minimum": 2,
 					"default": 3
 				},
-				"@uTesselation": {
+				"@uTessellation": {
 					"type": "integer",
 					"default": 0
 				},
@@ -8271,7 +8284,7 @@
 					"minimum": 2,
 					"default": 3
 				},
-				"@vTesselation": {
+				"@vTessellation": {
 					"type": "integer",
 					"default": 0
 				},
@@ -8547,7 +8560,14 @@
 						"format": "uri"
 					}
 				},
-				"-field": {
+				"#sourceText": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "string"
+					}
+				},
+				"field": {
 					"$ref": "#/definitions/field"
 				},
 				"-metadata": {
@@ -10807,6 +10827,13 @@
 						"format": "uri"
 					}
 				},
+				"#sourceText": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "string"
+					}
+				},
 				"-metadata": {
 					"$ref": "#/definitions/-metadata"
 				},
@@ -10839,7 +10866,14 @@
 						"format": "uri"
 					}
 				},
-				"-field": {
+				"#sourceText": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "string"
+					}
+				},
+				"field": {
 					"$ref": "#/definitions/field"
 				},
 				"-metadata": {
@@ -12072,23 +12106,19 @@
 					}
 				},
 				"-fontStyle": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"FontStyle": {
-								"$ref": "#/definitions/FontStyle"
-							},
-							"ScreenFontStyle": {
-								"$ref": "#/definitions/ScreenFontStyle"
-							},
-							"ProtoInstance": {
-								"$ref": "#/definitions/ProtoInstance"
-							}
+					"type": "object",
+					"properties": {
+						"FontStyle": {
+							"$ref": "#/definitions/FontStyle"
 						},
-						"additionalProperties": false
-					}
+						"ScreenFontStyle": {
+							"$ref": "#/definitions/ScreenFontStyle"
+						},
+						"ProtoInstance": {
+							"$ref": "#/definitions/ProtoInstance"
+						}
+					},
+					"additionalProperties": false
 				},
 				"-metadata": {
 					"$ref": "#/definitions/-metadata"
@@ -12158,142 +12188,22 @@
 					"$ref": "#/definitions/-texture2DMulti"
 				},
 				"-bottomTexture": {
-					"description": "SF X3DTexture2DNode | MultiTexture content",
-					"type": "array",
-					"minItems": 1,
-					"maxItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"ImageTexture": {
-								"$ref": "#/definitions/ImageTexture"
-							},
-							"MovieTexture": {
-								"$ref": "#/definitions/MovieTexture"
-							},
-							"MultiTexture": {
-								"$ref": "#/definitions/MultiTexture"
-							},
-							"PixelTexture": {
-								"$ref": "#/definitions/PixelTexture"
-							},
-							"ProtoInstance": {
-								"$ref": "#/definitions/ProtoInstance"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-texture2DMulti"
 				},
 				"-frontTexture": {
-					"description": "SF X3DTexture2DNode | MultiTexture content",
-					"type": "array",
-					"minItems": 1,
-					"maxItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"ImageTexture": {
-								"$ref": "#/definitions/ImageTexture"
-							},
-							"MovieTexture": {
-								"$ref": "#/definitions/MovieTexture"
-							},
-							"MultiTexture": {
-								"$ref": "#/definitions/MultiTexture"
-							},
-							"PixelTexture": {
-								"$ref": "#/definitions/PixelTexture"
-							},
-							"ProtoInstance": {
-								"$ref": "#/definitions/ProtoInstance"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-texture2DMulti"
 				},
 				"-leftTexture": {
-					"description": "SF X3DTexture2DNode | MultiTexture content",
-					"type": "array",
-					"minItems": 1,
-					"maxItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"ImageTexture": {
-								"$ref": "#/definitions/ImageTexture"
-							},
-							"MovieTexture": {
-								"$ref": "#/definitions/MovieTexture"
-							},
-							"MultiTexture": {
-								"$ref": "#/definitions/MultiTexture"
-							},
-							"PixelTexture": {
-								"$ref": "#/definitions/PixelTexture"
-							},
-							"ProtoInstance": {
-								"$ref": "#/definitions/ProtoInstance"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-texture2DMulti"
 				},
 				"-metadata": {
 					"$ref": "#/definitions/-metadata"
 				},
 				"-rightTexture": {
-					"description": "SF X3DTexture2DNode | MultiTexture content",
-					"type": "array",
-					"minItems": 1,
-					"maxItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"ImageTexture": {
-								"$ref": "#/definitions/ImageTexture"
-							},
-							"MovieTexture": {
-								"$ref": "#/definitions/MovieTexture"
-							},
-							"MultiTexture": {
-								"$ref": "#/definitions/MultiTexture"
-							},
-							"PixelTexture": {
-								"$ref": "#/definitions/PixelTexture"
-							},
-							"ProtoInstance": {
-								"$ref": "#/definitions/ProtoInstance"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-texture2DMulti"
 				},
 				"-topTexture": {
-					"description": "SF X3DTexture2DNode | MultiTexture content",
-					"type": "array",
-					"minItems": 1,
-					"maxItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"ImageTexture": {
-								"$ref": "#/definitions/ImageTexture"
-							},
-							"MovieTexture": {
-								"$ref": "#/definitions/MovieTexture"
-							},
-							"MultiTexture": {
-								"$ref": "#/definitions/MultiTexture"
-							},
-							"PixelTexture": {
-								"$ref": "#/definitions/PixelTexture"
-							},
-							"ProtoInstance": {
-								"$ref": "#/definitions/ProtoInstance"
-							}
-						},
-						"additionalProperties": false
-					}
+					"$ref": "#/definitions/-texture2DMulti"
 				},
 				"-children": {
 					"$ref": "#/definitions/-commentRoute"
@@ -15587,22 +15497,17 @@
 			}
 		},
 		"-appearance": {
-			"description": "SF X3DAppearanceNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"Appearance": {
-						"$ref": "#/definitions/Appearance"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"description": "SF X3DAppearance content",
+			"type": "object",
+			"properties": {
+				"Appearance": {
+					"$ref": "#/definitions/Appearance"
 				},
-				"additionalProperties": false
-			}
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-attrib": {
 			"description": "MF X3DVertexAttributeNode content",
@@ -15646,381 +15551,371 @@
 		},
 		"-body": {
 			"description": "SF RigidBody content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"RigidBody": {
-						"$ref": "#/definitions/RigidBody"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"RigidBody": {
+					"$ref": "#/definitions/RigidBody"
 				},
-				"additionalProperties": false
-			}
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-child": {
 			"description": "SF X3DChildNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					},
-					"Anchor": {
-						"$ref": "#/definitions/Anchor"
-					},
-					"AudioClip": {
-						"$ref": "#/definitions/AudioClip"
-					},
-					"Background": {
-						"$ref": "#/definitions/Background"
-					},
-					"Billboard": {
-						"$ref": "#/definitions/Billboard"
-					},
-					"BooleanFilter": {
-						"$ref": "#/definitions/BooleanFilter"
-					},
-					"BooleanSequencer": {
-						"$ref": "#/definitions/BooleanSequencer"
-					},
-					"BooleanToggle": {
-						"$ref": "#/definitions/BooleanToggle"
-					},
-					"BooleanTrigger": {
-						"$ref": "#/definitions/BooleanTrigger"
-					},
-					"CADAssembly": {
-						"$ref": "#/definitions/CADAssembly"
-					},
-					"CADFace": {
-						"$ref": "#/definitions/CADFace"
-					},
-					"CADLayer": {
-						"$ref": "#/definitions/CADLayer"
-					},
-					"CADPart": {
-						"$ref": "#/definitions/CADPart"
-					},
-					"ClipPlane": {
-						"$ref": "#/definitions/ClipPlane"
-					},
-					"CollidableOffset": {
-						"$ref": "#/definitions/CollidableOffset"
-					},
-					"CollidableShape": {
-						"$ref": "#/definitions/CollidableShape"
-					},
-					"Collision": {
-						"$ref": "#/definitions/Collision"
-					},
-					"CollisionSensor": {
-						"$ref": "#/definitions/CollisionSensor"
-					},
-					"ColorChaser": {
-						"$ref": "#/definitions/ColorChaser"
-					},
-					"ColorDamper": {
-						"$ref": "#/definitions/ColorDamper"
-					},
-					"ColorInterpolator": {
-						"$ref": "#/definitions/ColorInterpolator"
-					},
-					"CoordinateChaser": {
-						"$ref": "#/definitions/CoordinateChaser"
-					},
-					"CoordinateDamper": {
-						"$ref": "#/definitions/CoordinateDamper"
-					},
-					"CoordinateInterpolator": {
-						"$ref": "#/definitions/CoordinateInterpolator"
-					},
-					"CoordinateInterpolator2D": {
-						"$ref": "#/definitions/CoordinateInterpolator2D"
-					},
-					"CylinderSensor": {
-						"$ref": "#/definitions/CylinderSensor"
-					},
-					"DirectionalLight": {
-						"$ref": "#/definitions/DirectionalLight"
-					},
-					"DISEntityManager": {
-						"$ref": "#/definitions/DISEntityManager"
-					},
-					"DISEntityTypeMapping": {
-						"$ref": "#/definitions/DISEntityTypeMapping"
-					},
-					"EaseInEaseOut": {
-						"$ref": "#/definitions/EaseInEaseOut"
-					},
-					"EspduTransform": {
-						"$ref": "#/definitions/EspduTransform"
-					},
-					"Fog": {
-						"$ref": "#/definitions/Fog"
-					},
-					"GeoLocation": {
-						"$ref": "#/definitions/GeoLocation"
-					},
-					"GeoLOD": {
-						"$ref": "#/definitions/GeoLOD"
-					},
-					"GeoMetadata": {
-						"$ref": "#/definitions/GeoMetadata"
-					},
-					"GeoPositionInterpolator": {
-						"$ref": "#/definitions/GeoPositionInterpolator"
-					},
-					"GeoProximitySensor": {
-						"$ref": "#/definitions/GeoProximitySensor"
-					},
-					"GeoTouchSensor": {
-						"$ref": "#/definitions/GeoTouchSensor"
-					},
-					"GeoTransform": {
-						"$ref": "#/definitions/GeoTransform"
-					},
-					"GeoViewpoint": {
-						"$ref": "#/definitions/GeoViewpoint"
-					},
-					"Group": {
-						"$ref": "#/definitions/Group"
-					},
-					"HAnimHumanoid": {
-						"$ref": "#/definitions/HAnimHumanoid"
-					},
-					"HAnimJoint": {
-						"$ref": "#/definitions/HAnimJoint"
-					},
-					"HAnimSegment": {
-						"$ref": "#/definitions/HAnimSegment"
-					},
-					"HAnimSite": {
-						"$ref": "#/definitions/HAnimSite"
-					},
-					"Inline": {
-						"$ref": "#/definitions/Inline"
-					},
-					"IntegerSequencer": {
-						"$ref": "#/definitions/IntegerSequencer"
-					},
-					"IntegerTrigger": {
-						"$ref": "#/definitions/IntergerTrigger"
-					},
-					"IsoSurfaceVolumeData": {
-						"$ref": "#/definitions/IsoSurfaceVolumeData"
-					},
-					"KeySensor": {
-						"$ref": "#/definitions/KeySensor"
-					},
-					"Layout": {
-						"$ref": "#/definitions/Layout"
-					},
-					"LinePickSensor": {
-						"$ref": "#/definitions/LinePickSensor"
-					},
-					"LoadSensor": {
-						"$ref": "#/definitions/LoadSensor"
-					},
-					"LocalFog": {
-						"$ref": "#/definitions/LocalFog"
-					},
-					"LOD": {
-						"$ref": "#/definitions/LOD"
-					},
-					"NavigationInfo": {
-						"$ref": "#/definitions/NavigationInfo"
-					},
-					"NormalInterpolator": {
-						"$ref": "#/definitions/NormalInterpolator"
-					},
-					"NurbsOrientationInterpolator": {
-						"$ref": "#/definitions/NurbsOrientationInterpolator"
-					},
-					"NurbsPositionInterpolator": {
-						"$ref": "#/definitions/NurbsPositionInterpolator"
-					},
-					"NurbsSet": {
-						"$ref": "#/definitions/NurbsSet"
-					},
-					"NurbsSurfaceInterpolator": {
-						"$ref": "#/definitions/NurbsSurfaceInterpolator"
-					},
-					"OrientationChaser": {
-						"$ref": "#/definitions/OrientationChaser"
-					},
-					"OrientationDamper": {
-						"$ref": "#/definitions/OrientationDamper"
-					},
-					"OrientationInterpolator": {
-						"$ref": "#/definitions/OrientationInterpolator"
-					},
-					"OrthoViewpoint": {
-						"$ref": "#/definitions/OrthoViewpoint"
-					},
-					"ParticleSystem": {
-						"$ref": "#/definitions/ParticleSystem"
-					},
-					"PickableGroup": {
-						"$ref": "#/definitions/PickableGroup"
-					},
-					"PlaneSensor": {
-						"$ref": "#/definitions/PlaneSensor"
-					},
-					"PointLight": {
-						"$ref": "#/definitions/PointLight"
-					},
-					"PointPickSensor": {
-						"$ref": "#/definitions/PointPickSensor"
-					},
-					"PositionChaser": {
-						"$ref": "#/definitions/PositionChaser"
-					},
-					"PositionChaser2D": {
-						"$ref": "#/definitions/PositionChaser2D"
-					},
-					"PositionDamper": {
-						"$ref": "#/definitions/PositionDamper"
-					},
-					"PositionDamper2D": {
-						"$ref": "#/definitions/PositionDamper2D"
-					},
-					"PositionInterpolator": {
-						"$ref": "#/definitions/PositionInterpolator"
-					},
-					"PositionInterpolator2D": {
-						"$ref": "#/definitions/PositionInterpolator2D"
-					},
-					"PrimitivePickSensor": {
-						"$ref": "#/definitions/PrimitivePickSensor"
-					},
-					"ProximitySensor": {
-						"$ref": "#/definitions/ProximitySensor"
-					},
-					"ReceiverPdu": {
-						"$ref": "#/definitions/ReceiverPdu"
-					},
-					"RigidBodyCollection": {
-						"$ref": "#/definitions/RigidBodyCollection"
-					},
-					"ScalarChaser": {
-						"$ref": "#/definitions/ScalarChaser"
-					},
-					"ScalarDamper": {
-						"$ref": "#/definitions/ScalarDamper"
-					},
-					"ScalarInterpolator": {
-						"$ref": "#/definitions/ScalarInterpolator"
-					},
-					"ScreenGroup": {
-						"$ref": "#/definitions/ScreenGroup"
-					},
-					"Script": {
-						"$ref": "#/definitions/Script"
-					},
-					"SegmentedVolumeData": {
-						"$ref": "#/definitions/SegmentedVolumeData"
-					},
-					"Shape": {
-						"$ref": "#/definitions/Shape"
-					},
-					"SignalPdu": {
-						"$ref": "#/definitions/SignalPdu"
-					},
-					"Sound": {
-						"$ref": "#/definitions/Sound"
-					},
-					"SphereSensor": {
-						"$ref": "#/definitions/SphereSensor"
-					},
-					"SplinePositionInterpolator": {
-						"$ref": "#/definitions/SplinePositionInterpolator"
-					},
-					"SplinePositionInterpolator2D": {
-						"$ref": "#/definitions/SplinePositionInterpolator2D"
-					},
-					"SplineScalarInterpolator": {
-						"$ref": "#/definitions/SplineScalarInterpolator"
-					},
-					"SpotLight": {
-						"$ref": "#/definitions/Spotlight"
-					},
-					"SquadOrientationInterpolator": {
-						"$ref": "#/definitions/SquadOrientationInterpolator"
-					},
-					"StaticGroup": {
-						"$ref": "#/definitions/StaticGroup"
-					},
-					"StringSensor": {
-						"$ref": "#/definitions/StringSensor"
-					},
-					"Switch": {
-						"$ref": "#/definitions/Switch"
-					},
-					"TexCoordChaser2D": {
-						"$ref": "#/definitions/TexCoordChaser2D"
-					},
-					"TexCoordDamper2D": {
-						"$ref": "#/definitions/TexCoordDamper2D"
-					},
-					"TextureBackground": {
-						"$ref": "#/definitions/TextureBackground"
-					},
-					"TimeSensor": {
-						"$ref": "#/definitions/TimeSensor"
-					},
-					"TimeTrigger": {
-						"$ref": "#/definitions/TimeTrigger"
-					},
-					"TouchSensor": {
-						"$ref": "#/definitions/TouchSensor"
-					},
-					"Transform": {
-						"$ref": "#/definitions/Transform"
-					},
-					"TransformSensor": {
-						"$ref": "#/definitions/TransformSensor"
-					},
-					"TransmitterPdu": {
-						"$ref": "#/definitions/TransmitterPdu"
-					},
-					"Viewpoint": {
-						"$ref": "#/definitions/Viewpoint"
-					},
-					"ViewpointGroup": {
-						"$ref": "#/definitions/ViewpointGroup"
-					},
-					"Viewport": {
-						"$ref": "#/definitions/Viewport"
-					},
-					"VisibilitySensor": {
-						"$ref": "#/definitions/VisibilitySensor"
-					},
-					"VolumeData": {
-						"$ref": "#/definitions/VolumeData"
-					},
-					"VolumePickSensor": {
-						"$ref": "#/definitions/VolumePickSensor"
-					},
-					"WorldInfo": {
-						"$ref": "#/definitions/WorldInfo"
-					},
-					"ProtoDeclare": {
-						"$ref": "#/definitions/ProtoDeclare"
-					},
-					"ExternProtoDeclare": {
-						"$ref": "#/definitions/ExternProtoDeclare"
-					}
+			"type": "object",
+			"properties": {
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
 				},
-				"additionalProperties": false
-			}
+				"Anchor": {
+					"$ref": "#/definitions/Anchor"
+				},
+				"AudioClip": {
+					"$ref": "#/definitions/AudioClip"
+				},
+				"Background": {
+					"$ref": "#/definitions/Background"
+				},
+				"Billboard": {
+					"$ref": "#/definitions/Billboard"
+				},
+				"BooleanFilter": {
+					"$ref": "#/definitions/BooleanFilter"
+				},
+				"BooleanSequencer": {
+					"$ref": "#/definitions/BooleanSequencer"
+				},
+				"BooleanToggle": {
+					"$ref": "#/definitions/BooleanToggle"
+				},
+				"BooleanTrigger": {
+					"$ref": "#/definitions/BooleanTrigger"
+				},
+				"CADAssembly": {
+					"$ref": "#/definitions/CADAssembly"
+				},
+				"CADFace": {
+					"$ref": "#/definitions/CADFace"
+				},
+				"CADLayer": {
+					"$ref": "#/definitions/CADLayer"
+				},
+				"CADPart": {
+					"$ref": "#/definitions/CADPart"
+				},
+				"ClipPlane": {
+					"$ref": "#/definitions/ClipPlane"
+				},
+				"CollidableOffset": {
+					"$ref": "#/definitions/CollidableOffset"
+				},
+				"CollidableShape": {
+					"$ref": "#/definitions/CollidableShape"
+				},
+				"Collision": {
+					"$ref": "#/definitions/Collision"
+				},
+				"CollisionSensor": {
+					"$ref": "#/definitions/CollisionSensor"
+				},
+				"ColorChaser": {
+					"$ref": "#/definitions/ColorChaser"
+				},
+				"ColorDamper": {
+					"$ref": "#/definitions/ColorDamper"
+				},
+				"ColorInterpolator": {
+					"$ref": "#/definitions/ColorInterpolator"
+				},
+				"CoordinateChaser": {
+					"$ref": "#/definitions/CoordinateChaser"
+				},
+				"CoordinateDamper": {
+					"$ref": "#/definitions/CoordinateDamper"
+				},
+				"CoordinateInterpolator": {
+					"$ref": "#/definitions/CoordinateInterpolator"
+				},
+				"CoordinateInterpolator2D": {
+					"$ref": "#/definitions/CoordinateInterpolator2D"
+				},
+				"CylinderSensor": {
+					"$ref": "#/definitions/CylinderSensor"
+				},
+				"DirectionalLight": {
+					"$ref": "#/definitions/DirectionalLight"
+				},
+				"DISEntityManager": {
+					"$ref": "#/definitions/DISEntityManager"
+				},
+				"DISEntityTypeMapping": {
+					"$ref": "#/definitions/DISEntityTypeMapping"
+				},
+				"EaseInEaseOut": {
+					"$ref": "#/definitions/EaseInEaseOut"
+				},
+				"EspduTransform": {
+					"$ref": "#/definitions/EspduTransform"
+				},
+				"Fog": {
+					"$ref": "#/definitions/Fog"
+				},
+				"GeoLocation": {
+					"$ref": "#/definitions/GeoLocation"
+				},
+				"GeoLOD": {
+					"$ref": "#/definitions/GeoLOD"
+				},
+				"GeoMetadata": {
+					"$ref": "#/definitions/GeoMetadata"
+				},
+				"GeoPositionInterpolator": {
+					"$ref": "#/definitions/GeoPositionInterpolator"
+				},
+				"GeoProximitySensor": {
+					"$ref": "#/definitions/GeoProximitySensor"
+				},
+				"GeoTouchSensor": {
+					"$ref": "#/definitions/GeoTouchSensor"
+				},
+				"GeoTransform": {
+					"$ref": "#/definitions/GeoTransform"
+				},
+				"GeoViewpoint": {
+					"$ref": "#/definitions/GeoViewpoint"
+				},
+				"Group": {
+					"$ref": "#/definitions/Group"
+				},
+				"HAnimHumanoid": {
+					"$ref": "#/definitions/HAnimHumanoid"
+				},
+				"HAnimJoint": {
+					"$ref": "#/definitions/HAnimJoint"
+				},
+				"HAnimSegment": {
+					"$ref": "#/definitions/HAnimSegment"
+				},
+				"HAnimSite": {
+					"$ref": "#/definitions/HAnimSite"
+				},
+				"Inline": {
+					"$ref": "#/definitions/Inline"
+				},
+				"IntegerSequencer": {
+					"$ref": "#/definitions/IntegerSequencer"
+				},
+				"IntegerTrigger": {
+					"$ref": "#/definitions/IntergerTrigger"
+				},
+				"IsoSurfaceVolumeData": {
+					"$ref": "#/definitions/IsoSurfaceVolumeData"
+				},
+				"KeySensor": {
+					"$ref": "#/definitions/KeySensor"
+				},
+				"Layout": {
+					"$ref": "#/definitions/Layout"
+				},
+				"LinePickSensor": {
+					"$ref": "#/definitions/LinePickSensor"
+				},
+				"LoadSensor": {
+					"$ref": "#/definitions/LoadSensor"
+				},
+				"LocalFog": {
+					"$ref": "#/definitions/LocalFog"
+				},
+				"LOD": {
+					"$ref": "#/definitions/LOD"
+				},
+				"NavigationInfo": {
+					"$ref": "#/definitions/NavigationInfo"
+				},
+				"NormalInterpolator": {
+					"$ref": "#/definitions/NormalInterpolator"
+				},
+				"NurbsOrientationInterpolator": {
+					"$ref": "#/definitions/NurbsOrientationInterpolator"
+				},
+				"NurbsPositionInterpolator": {
+					"$ref": "#/definitions/NurbsPositionInterpolator"
+				},
+				"NurbsSet": {
+					"$ref": "#/definitions/NurbsSet"
+				},
+				"NurbsSurfaceInterpolator": {
+					"$ref": "#/definitions/NurbsSurfaceInterpolator"
+				},
+				"OrientationChaser": {
+					"$ref": "#/definitions/OrientationChaser"
+				},
+				"OrientationDamper": {
+					"$ref": "#/definitions/OrientationDamper"
+				},
+				"OrientationInterpolator": {
+					"$ref": "#/definitions/OrientationInterpolator"
+				},
+				"OrthoViewpoint": {
+					"$ref": "#/definitions/OrthoViewpoint"
+				},
+				"ParticleSystem": {
+					"$ref": "#/definitions/ParticleSystem"
+				},
+				"PickableGroup": {
+					"$ref": "#/definitions/PickableGroup"
+				},
+				"PlaneSensor": {
+					"$ref": "#/definitions/PlaneSensor"
+				},
+				"PointLight": {
+					"$ref": "#/definitions/PointLight"
+				},
+				"PointPickSensor": {
+					"$ref": "#/definitions/PointPickSensor"
+				},
+				"PositionChaser": {
+					"$ref": "#/definitions/PositionChaser"
+				},
+				"PositionChaser2D": {
+					"$ref": "#/definitions/PositionChaser2D"
+				},
+				"PositionDamper": {
+					"$ref": "#/definitions/PositionDamper"
+				},
+				"PositionDamper2D": {
+					"$ref": "#/definitions/PositionDamper2D"
+				},
+				"PositionInterpolator": {
+					"$ref": "#/definitions/PositionInterpolator"
+				},
+				"PositionInterpolator2D": {
+					"$ref": "#/definitions/PositionInterpolator2D"
+				},
+				"PrimitivePickSensor": {
+					"$ref": "#/definitions/PrimitivePickSensor"
+				},
+				"ProximitySensor": {
+					"$ref": "#/definitions/ProximitySensor"
+				},
+				"ReceiverPdu": {
+					"$ref": "#/definitions/ReceiverPdu"
+				},
+				"RigidBodyCollection": {
+					"$ref": "#/definitions/RigidBodyCollection"
+				},
+				"ScalarChaser": {
+					"$ref": "#/definitions/ScalarChaser"
+				},
+				"ScalarDamper": {
+					"$ref": "#/definitions/ScalarDamper"
+				},
+				"ScalarInterpolator": {
+					"$ref": "#/definitions/ScalarInterpolator"
+				},
+				"ScreenGroup": {
+					"$ref": "#/definitions/ScreenGroup"
+				},
+				"Script": {
+					"$ref": "#/definitions/Script"
+				},
+				"SegmentedVolumeData": {
+					"$ref": "#/definitions/SegmentedVolumeData"
+				},
+				"Shape": {
+					"$ref": "#/definitions/Shape"
+				},
+				"SignalPdu": {
+					"$ref": "#/definitions/SignalPdu"
+				},
+				"Sound": {
+					"$ref": "#/definitions/Sound"
+				},
+				"SphereSensor": {
+					"$ref": "#/definitions/SphereSensor"
+				},
+				"SplinePositionInterpolator": {
+					"$ref": "#/definitions/SplinePositionInterpolator"
+				},
+				"SplinePositionInterpolator2D": {
+					"$ref": "#/definitions/SplinePositionInterpolator2D"
+				},
+				"SplineScalarInterpolator": {
+					"$ref": "#/definitions/SplineScalarInterpolator"
+				},
+				"SpotLight": {
+					"$ref": "#/definitions/Spotlight"
+				},
+				"SquadOrientationInterpolator": {
+					"$ref": "#/definitions/SquadOrientationInterpolator"
+				},
+				"StaticGroup": {
+					"$ref": "#/definitions/StaticGroup"
+				},
+				"StringSensor": {
+					"$ref": "#/definitions/StringSensor"
+				},
+				"Switch": {
+					"$ref": "#/definitions/Switch"
+				},
+				"TexCoordChaser2D": {
+					"$ref": "#/definitions/TexCoordChaser2D"
+				},
+				"TexCoordDamper2D": {
+					"$ref": "#/definitions/TexCoordDamper2D"
+				},
+				"TextureBackground": {
+					"$ref": "#/definitions/TextureBackground"
+				},
+				"TimeSensor": {
+					"$ref": "#/definitions/TimeSensor"
+				},
+				"TimeTrigger": {
+					"$ref": "#/definitions/TimeTrigger"
+				},
+				"TouchSensor": {
+					"$ref": "#/definitions/TouchSensor"
+				},
+				"Transform": {
+					"$ref": "#/definitions/Transform"
+				},
+				"TransformSensor": {
+					"$ref": "#/definitions/TransformSensor"
+				},
+				"TransmitterPdu": {
+					"$ref": "#/definitions/TransmitterPdu"
+				},
+				"Viewpoint": {
+					"$ref": "#/definitions/Viewpoint"
+				},
+				"ViewpointGroup": {
+					"$ref": "#/definitions/ViewpointGroup"
+				},
+				"Viewport": {
+					"$ref": "#/definitions/Viewport"
+				},
+				"VisibilitySensor": {
+					"$ref": "#/definitions/VisibilitySensor"
+				},
+				"VolumeData": {
+					"$ref": "#/definitions/VolumeData"
+				},
+				"VolumePickSensor": {
+					"$ref": "#/definitions/VolumePickSensor"
+				},
+				"WorldInfo": {
+					"$ref": "#/definitions/WorldInfo"
+				},
+				"ProtoDeclare": {
+					"$ref": "#/definitions/ProtoDeclare"
+				},
+				"ExternProtoDeclare": {
+					"$ref": "#/definitions/ExternProtoDeclare"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-children": {
 			"description": "MF X3DChildNode content",
@@ -16389,24 +16284,19 @@
 		},
 		"-collidable": {
 			"description": "SF X3DNBodyCollidableNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"CollidableOffset": {
-						"$ref": "#/definitions/CollidableOffset"
-					},
-					"CollidableShape": {
-						"$ref": "#/definitions/CollidableShape"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"CollidableOffset": {
+					"$ref": "#/definitions/CollidableOffset"
 				},
-				"additionalProperties": false
-			}
+				"CollidableShape": {
+					"$ref": "#/definitions/CollidableShape"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-collidables": {
 			"description": "MF X3DNBodyCollisionSpaceNode | X3DNBodyColllidableNode content",
@@ -16433,42 +16323,32 @@
 		},
 		"-collider": {
 			"description": "SF CollisionCollection content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"CollisionCollection": {
-						"$ref": "#/definitions/CollisionCollection"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"CollisionCollection": {
+					"$ref": "#/definitions/CollisionCollection"
 				},
-				"additionalProperties": false
-			}
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-color": {
 			"description": "SF X3DColorNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"Color": {
-						"$ref": "#/definitions/Color"
-					},
-					"ColorRGBA": {
-						"$ref": "#/definitions/ColorRGBA"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"Color": {
+					"$ref": "#/definitions/Color"
 				},
-				"additionalProperties": false
-			}
+				"ColorRGBA": {
+					"$ref": "#/definitions/ColorRGBA"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-commentRoute": {
 			"description": "Comments and ROUTEs",
@@ -16489,45 +16369,40 @@
 		},
 		"-composableRenderStyle": {
 			"description": "SF X3DComposableVolumeRenderStyleNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"BlendedVolumeStyle": {
-						"$ref": "#/definitions/BlendedVolumeStyle"
-					},
-					"BoundaryEnhancementVolumeStyle": {
-						"$ref": "#/definitions/BoundaryEnhancementVolumeStyle"
-					},
-					"CartoonVolumeStyle": {
-						"$ref": "#/definitions/CartoonVolumeStyle"
-					},
-					"ComposedVolumeStyle": {
-						"$ref": "#/definitions/ComposedVolumeStyle"
-					},
-					"EdgeEnhancementVolumeStyle": {
-						"$ref": "#/definitions/EdgeEnhancementVolumeStyle"
-					},
-					"OpacityMapVolumeStyle": {
-						"$ref": "#/definitions/OpacityMapVolumeStyle"
-					},
-					"ShadedVolumeStyle": {
-						"$ref": "#/definitions/ShadedVolumeStyle"
-					},
-					"SilhouetteEnhancementVolumeStyle": {
-						"$ref": "#/definitions/SilhouetteEnhancementVolumeStyle"
-					},
-					"ToneMappedVolumeStyle": {
-						"$ref": "#/definitions/ToneMappedVolumeStyle"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"BlendedVolumeStyle": {
+					"$ref": "#/definitions/BlendedVolumeStyle"
 				},
-				"additionalProperties": false
-			}
+				"BoundaryEnhancementVolumeStyle": {
+					"$ref": "#/definitions/BoundaryEnhancementVolumeStyle"
+				},
+				"CartoonVolumeStyle": {
+					"$ref": "#/definitions/CartoonVolumeStyle"
+				},
+				"ComposedVolumeStyle": {
+					"$ref": "#/definitions/ComposedVolumeStyle"
+				},
+				"EdgeEnhancementVolumeStyle": {
+					"$ref": "#/definitions/EdgeEnhancementVolumeStyle"
+				},
+				"OpacityMapVolumeStyle": {
+					"$ref": "#/definitions/OpacityMapVolumeStyle"
+				},
+				"ShadedVolumeStyle": {
+					"$ref": "#/definitions/ShadedVolumeStyle"
+				},
+				"SilhouetteEnhancementVolumeStyle": {
+					"$ref": "#/definitions/SilhouetteEnhancementVolumeStyle"
+				},
+				"ToneMappedVolumeStyle": {
+					"$ref": "#/definitions/ToneMappedVolumeStyle"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-composableRenderStyles": {
 			"description": "MF X3DComposableVolumeRenderStyleNode content",
@@ -16572,27 +16447,22 @@
 		},
 		"-coord": {
 			"description": "SF X3DCoordinateNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"Coordinate": {
-						"$ref": "#/definitions/Coordinate"
-					},
-					"CoordinateDouble": {
-						"$ref": "#/definitions/CoordinateDouble"
-					},
-					"GeoCoordinate": {
-						"$ref": "#/definitions/GeoCoordinate"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"Coordinate": {
+					"$ref": "#/definitions/Coordinate"
 				},
-				"additionalProperties": false
-			}
+				"CoordinateDouble": {
+					"$ref": "#/definitions/CoordinateDouble"
+				},
+				"GeoCoordinate": {
+					"$ref": "#/definitions/GeoCoordinate"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-displacers": {
 			"description": "MF HAnimDisplacers content",
@@ -16613,168 +16483,153 @@
 		},
 		"-emitter": {
 			"description": "SF X3DParticleEmitterNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"ConeEmitter": {
-						"$ref": "#/definitions/ConeEmitter"
-					},
-					"ExplosionEmitter": {
-						"$ref": "#/definitions/ExplosionEmitter"
-					},
-					"PointEmitter": {
-						"$ref": "#/definitions/PointEmitter"
-					},
-					"PolylineEmitter": {
-						"$ref": "#/definitions/PolylineEmitter"
-					},
-					"SurfaceEmitter": {
-						"$ref": "#/definitions/SurfaceEmitter"
-					},
-					"VolumeEmitter": {
-						"$ref": "#/definitions/VolumeEmitter"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"ConeEmitter": {
+					"$ref": "#/definitions/ConeEmitter"
 				},
-				"additionalProperties": false
-			}
+				"ExplosionEmitter": {
+					"$ref": "#/definitions/ExplosionEmitter"
+				},
+				"PointEmitter": {
+					"$ref": "#/definitions/PointEmitter"
+				},
+				"PolylineEmitter": {
+					"$ref": "#/definitions/PolylineEmitter"
+				},
+				"SurfaceEmitter": {
+					"$ref": "#/definitions/SurfaceEmitter"
+				},
+				"VolumeEmitter": {
+					"$ref": "#/definitions/VolumeEmitter"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-fogCoord": {
 			"description": "SF FogCoordinate content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"FogCoordinate": {
-						"$ref": "#/definitions/FogCoordinate"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"FogCoordinate": {
+					"$ref": "#/definitions/FogCoordinate"
 				},
-				"additionalProperties": false
-			}
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-geometry": {
 			"description": "SF X3DGeometryNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"Arc2D": {
-						"$ref": "#/definitions/Arc2D"
-					},
-					"ArcClose2D": {
-						"$ref": "#/definitions/ArcClose2D"
-					},
-					"Box": {
-						"$ref": "#/definitions/Box"
-					},
-					"Circle2D": {
-						"$ref": "#/definitions/Circle2D"
-					},
-					"Cone": {
-						"$ref": "#/definitions/Cone"
-					},
-					"Cylinder": {
-						"$ref": "#/definitions/Cylinder"
-					},
-					"Disk2D": {
-						"$ref": "#/definitions/Disk2D"
-					},
-					"ElevationGrid": {
-						"$ref": "#/definitions/ElevationGrid"
-					},
-					"Extrusion": {
-						"$ref": "#/definitions/Extrusion"
-					},
-					"GeoElevationGrid": {
-						"$ref": "#/definitions/GeoElevationGrid"
-					},
-					"IndexedFaceSet": {
-						"$ref": "#/definitions/IndexedFaceSet"
-					},
-					"IndexedLineSet": {
-						"$ref": "#/definitions/IndexedLineSet"
-					},
-					"IndexedQuadSet": {
-						"$ref": "#/definitions/IndexedQuadSet"
-					},
-					"IndexedTriangleFanSet": {
-						"$ref": "#/definitions/IndexedTriangleFanSet"
-					},
-					"IndexedTriangleSet": {
-						"$ref": "#/definitions/IndexedTrangleSet"
-					},
-					"IndexedTriangleStripSet": {
-						"$ref": "#/definitions/IndexedTriangleStripSet"
-					},
-					"LineSet": {
-						"$ref": "#/definitions/LineSet"
-					},
-					"NurbsCurve": {
-						"$ref": "#/definitions/NurbsCurve"
-					},
-					"NurbsPatchSurface": {
-						"$ref": "#/definitions/NurbsPatchSurface"
-					},
-					"NurbsSweptSurface": {
-						"$ref": "#/definitions/NurbsSweptSurface"
-					},
-					"NurbsSwungSurface": {
-						"$ref": "#/definitions/NurbsSwungSurface"
-					},
-					"NurbsTrimmedSurface": {
-						"$ref": "#/definitions/NurbsTrimmedSurface"
-					},
-					"PointSet": {
-						"$ref": "#/definitions/PointSet"
-					},
-					"Polyline2D": {
-						"$ref": "#/definitions/Polyline2D"
-					},
-					"Polypoint2D": {
-						"$ref": "#/definitions/Polypoint2D"
-					},
-					"QuadSet": {
-						"$ref": "#/definitions/QuadSet"
-					},
-					"Rectangle2D": {
-						"$ref": "#/definitions/Rectangle2D"
-					},
-					"Sphere": {
-						"$ref": "#/definitions/Sphere"
-					},
-					"Text": {
-						"$ref": "#/definitions/Text"
-					},
-					"TriangleFanSet": {
-						"$ref": "#/definitions/TriangleFanSet"
-					},
-					"TriangleSet": {
-						"$ref": "#/definitions/TriangleSet"
-					},
-					"TriangleSet2D": {
-						"$ref": "#/definitions/TriangleSet2D"
-					},
-					"TriangleStripSet": {
-						"$ref": "#/definitions/TriangleStripSet"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"Arc2D": {
+					"$ref": "#/definitions/Arc2D"
 				},
-				"additionalProperties": false
-			}
+				"ArcClose2D": {
+					"$ref": "#/definitions/ArcClose2D"
+				},
+				"Box": {
+					"$ref": "#/definitions/Box"
+				},
+				"Circle2D": {
+					"$ref": "#/definitions/Circle2D"
+				},
+				"Cone": {
+					"$ref": "#/definitions/Cone"
+				},
+				"Cylinder": {
+					"$ref": "#/definitions/Cylinder"
+				},
+				"Disk2D": {
+					"$ref": "#/definitions/Disk2D"
+				},
+				"ElevationGrid": {
+					"$ref": "#/definitions/ElevationGrid"
+				},
+				"Extrusion": {
+					"$ref": "#/definitions/Extrusion"
+				},
+				"GeoElevationGrid": {
+					"$ref": "#/definitions/GeoElevationGrid"
+				},
+				"IndexedFaceSet": {
+					"$ref": "#/definitions/IndexedFaceSet"
+				},
+				"IndexedLineSet": {
+					"$ref": "#/definitions/IndexedLineSet"
+				},
+				"IndexedQuadSet": {
+					"$ref": "#/definitions/IndexedQuadSet"
+				},
+				"IndexedTriangleFanSet": {
+					"$ref": "#/definitions/IndexedTriangleFanSet"
+				},
+				"IndexedTriangleSet": {
+					"$ref": "#/definitions/IndexedTrangleSet"
+				},
+				"IndexedTriangleStripSet": {
+					"$ref": "#/definitions/IndexedTriangleStripSet"
+				},
+				"LineSet": {
+					"$ref": "#/definitions/LineSet"
+				},
+				"NurbsCurve": {
+					"$ref": "#/definitions/NurbsCurve"
+				},
+				"NurbsPatchSurface": {
+					"$ref": "#/definitions/NurbsPatchSurface"
+				},
+				"NurbsSweptSurface": {
+					"$ref": "#/definitions/NurbsSweptSurface"
+				},
+				"NurbsSwungSurface": {
+					"$ref": "#/definitions/NurbsSwungSurface"
+				},
+				"NurbsTrimmedSurface": {
+					"$ref": "#/definitions/NurbsTrimmedSurface"
+				},
+				"PointSet": {
+					"$ref": "#/definitions/PointSet"
+				},
+				"Polyline2D": {
+					"$ref": "#/definitions/Polyline2D"
+				},
+				"Polypoint2D": {
+					"$ref": "#/definitions/Polypoint2D"
+				},
+				"QuadSet": {
+					"$ref": "#/definitions/QuadSet"
+				},
+				"Rectangle2D": {
+					"$ref": "#/definitions/Rectangle2D"
+				},
+				"Sphere": {
+					"$ref": "#/definitions/Sphere"
+				},
+				"Text": {
+					"$ref": "#/definitions/Text"
+				},
+				"TriangleFanSet": {
+					"$ref": "#/definitions/TriangleFanSet"
+				},
+				"TriangleSet": {
+					"$ref": "#/definitions/TriangleSet"
+				},
+				"TriangleSet2D": {
+					"$ref": "#/definitions/TriangleSet2D"
+				},
+				"TriangleStripSet": {
+					"$ref": "#/definitions/TriangleStripSet"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-geometryNurbsSurface": {
 			"description": "MF X3DNurbsSurfaceGeometryNode content",
@@ -16798,21 +16653,16 @@
 		},
 		"-geoOrigin": {
 			"description": "SF GeoOrigin content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"GeoOrigin": {
-						"$ref": "#/definitions/GeoOrigin"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"GeoOrigin": {
+					"$ref": "#/definitions/GeoOrigin"
 				},
-				"additionalProperties": false
-			}
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-grouping": {
 			"description": "MF X3DGroupingNode content",
@@ -16953,21 +16803,16 @@
 		},
 		"-layout": {
 			"description": "SF X3DLayoutNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"Layout": {
-						"$ref": "#/definitions/Layout"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"Layout": {
+					"$ref": "#/definitions/Layout"
 				},
-				"additionalProperties": false
-			}
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-mapping": {
 			"description": "MF DisEntityTypeMapping content",
@@ -16988,135 +16833,105 @@
 		},
 		"-massDensityModel": {
 			"description": "SF Box | Cone | Sphere content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"Box": {
-						"$ref": "#/definitions/Box"
-					},
-					"@Cone": {
-						"$ref": "#/definitions/Cone"
-					},
-					"Sphere": {
-						"$ref": "#/definitions/Sphere"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"Box": {
+					"$ref": "#/definitions/Box"
 				},
-				"additionalProperties": false
-			}
+				"@Cone": {
+					"$ref": "#/definitions/Cone"
+				},
+				"Sphere": {
+					"$ref": "#/definitions/Sphere"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-material": {
 			"description": "SF X3DMaterialNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"Material": {
-						"$ref": "#/definitions/Material"
-					},
-					"TwoSidedMaterial": {
-						"$ref": "#/definitions/TwoSidedMaterial"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"Material": {
+					"$ref": "#/definitions/Material"
 				},
-				"additionalProperties": false
-			}
+				"TwoSidedMaterial": {
+					"$ref": "#/definitions/TwoSidedMaterial"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-metadata": {
 			"description": "SF X3DMetadataObject content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"MetadataBoolean": {
-						"$ref": "#/definitions/MetadataBoolean"
-					},
-					"MetadataDouble": {
-						"$ref": "#/definitions/MetadataDouble"
-					},
-					"MetadataFloat": {
-						"$ref": "#/definitions/MetadataFloat"
-					},
-					"MetadataInteger": {
-						"$ref": "#/definitions/MetadataInteger"
-					},
-					"MetadataSet": {
-						"$ref": "#/definitions/MetadataSet"
-					},
-					"MetadataString": {
-						"$ref": "#/definitions/MetadataString"
-					}
+			"type": "object",
+			"properties": {
+				"MetadataBoolean": {
+					"$ref": "#/definitions/MetadataBoolean"
 				},
-				"additionalProperties": false
-			}
+				"MetadataDouble": {
+					"$ref": "#/definitions/MetadataDouble"
+				},
+				"MetadataFloat": {
+					"$ref": "#/definitions/MetadataFloat"
+				},
+				"MetadataInteger": {
+					"$ref": "#/definitions/MetadataInteger"
+				},
+				"MetadataSet": {
+					"$ref": "#/definitions/MetadataSet"
+				},
+				"MetadataString": {
+					"$ref": "#/definitions/MetadataString"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-normal": {
 			"description": "SF X3DNormalNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"Normal": {
-						"$ref": "#/definitions/Normal"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"Normal": {
+					"$ref": "#/definitions/Normal"
 				},
-				"additionalProperties": false
-			}
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-nurbsCurve": {
 			"description": "SF NurbsCurve content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"NurbsCurve": {
-						"$ref": "#/definitions/NurbsCurve"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"NurbsCurve": {
+					"$ref": "#/definitions/NurbsCurve"
 				},
-				"additionalProperties": false
-			}
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-nurbsCurve2D": {
 			"description": "SF X3DNurbsControlCurveNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"ContourPolyline2D": {
-						"$ref": "#/definitions/ContourPolyline2D"
-					},
-					"NurbsCurve2D": {
-						"$ref": "#/definitions/NurbsCurve2D"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"ContourPolyline2D": {
+					"$ref": "#/definitions/ContourPolyline2D"
 				},
-				"additionalProperties": false
-			}
+				"NurbsCurve2D": {
+					"$ref": "#/definitions/NurbsCurve2D"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-parts": {
 			"description": "MF ShaderPart content",
@@ -17260,48 +17075,43 @@
 		},
 		"-renderStyle": {
 			"description": "SF X3DVolumeRenderStyleNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"BlendedVolumeStyle": {
-						"$ref": "#/definitions/BlendedVolumeStyle"
-					},
-					"BoundaryEnhancementVolumeStyle": {
-						"$ref": "#/definitions/BoundaryEnhancementVolumeStyle"
-					},
-					"CartoonVolumeStyle": {
-						"$ref": "#/definitions/CartoonVolumeStyle"
-					},
-					"ComposedVolumeStyle": {
-						"$ref": "#/definitions/ComposedVolumeStyle"
-					},
-					"EdgeEnhancementVolumeStyle": {
-						"$ref": "#/definitions/EdgeEnhancementVolumeStyle"
-					},
-					"OpacityMapVolumeStyle": {
-						"$ref": "#/definitions/OpacityMapVolumeStyle"
-					},
-					"ProjectionVolumeStyle": {
-						"$ref": "#/definitions/ProjectionVolumeStyle"
-					},
-					"ShadedVolumeStyle": {
-						"$ref": "#/definitions/ShadedVolumeStyle"
-					},
-					"SilhouetteEnhancementVolumeStyle": {
-						"$ref": "#/definitions/SilhouetteEnhancementVolumeStyle"
-					},
-					"ToneMappedVolumeStyle": {
-						"$ref": "#/definitions/ToneMappedVolumeStyle"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"BlendedVolumeStyle": {
+					"$ref": "#/definitions/BlendedVolumeStyle"
 				},
-				"additionalProperties": false
-			}
+				"BoundaryEnhancementVolumeStyle": {
+					"$ref": "#/definitions/BoundaryEnhancementVolumeStyle"
+				},
+				"CartoonVolumeStyle": {
+					"$ref": "#/definitions/CartoonVolumeStyle"
+				},
+				"ComposedVolumeStyle": {
+					"$ref": "#/definitions/ComposedVolumeStyle"
+				},
+				"EdgeEnhancementVolumeStyle": {
+					"$ref": "#/definitions/EdgeEnhancementVolumeStyle"
+				},
+				"OpacityMapVolumeStyle": {
+					"$ref": "#/definitions/OpacityMapVolumeStyle"
+				},
+				"ProjectionVolumeStyle": {
+					"$ref": "#/definitions/ProjectionVolumeStyle"
+				},
+				"ShadedVolumeStyle": {
+					"$ref": "#/definitions/ShadedVolumeStyle"
+				},
+				"SilhouetteEnhancementVolumeStyle": {
+					"$ref": "#/definitions/SilhouetteEnhancementVolumeStyle"
+				},
+				"ToneMappedVolumeStyle": {
+					"$ref": "#/definitions/ToneMappedVolumeStyle"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-renderStyles": {
 			"description": "MF X3DVolumeRenderStyleNode content",
@@ -17435,87 +17245,72 @@
 		},
 		"-source": {
 			"description": "SF X3DSoundSourceNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"AudioClip": {
-						"$ref": "#/definitions/AudioClip"
-					},
-					"MovieTexture": {
-						"$ref": "#/definitions/MovieTexture"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"AudioClip": {
+					"$ref": "#/definitions/AudioClip"
 				},
-				"additionalProperties": false
-			}
+				"MovieTexture": {
+					"$ref": "#/definitions/MovieTexture"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-texCoord": {
 			"description": "SF X3DTextureCoordinateNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"MultiTextureCoordinate": {
-						"$ref": "#/definitions/MultiTextureCoordinate"
-					},
-					"TextureCoordinate": {
-						"$ref": "#/definitions/TextureCoordinate"
-					},
-					"TextureCoordinate3D": {
-						"$ref": "#/definitions/TextureCoordinate3D"
-					},
-					"TextureCoordinate4D": {
-						"$ref": "#/definitions/TextureCoordinate4D"
-					},
-					"TextureCoordinateGenerator": {
-						"$ref": "#/definitions/TextureCoordinateGenerator"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"MultiTextureCoordinate": {
+					"$ref": "#/definitions/MultiTextureCoordinate"
 				},
-				"additionalProperties": false
-			}
+				"TextureCoordinate": {
+					"$ref": "#/definitions/TextureCoordinate"
+				},
+				"TextureCoordinate3D": {
+					"$ref": "#/definitions/TextureCoordinate3D"
+				},
+				"TextureCoordinate4D": {
+					"$ref": "#/definitions/TextureCoordinate4D"
+				},
+				"TextureCoordinateGenerator": {
+					"$ref": "#/definitions/TextureCoordinateGenerator"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-texCoordNurbs": {
 			"description": "SF X3DTextureCoordinateNode | NurbsTextureCoordinate content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"MultiTextureCoordinate": {
-						"$ref": "#/definitions/MultiTextureCoordinate"
-					},
-					"NurbsTextureCoordinate": {
-						"$ref": "#/definitions/NurbsTextureCoordinate"
-					},
-					"TextureCoordinate": {
-						"$ref": "#/definitions/TextureCoordinate"
-					},
-					"TextureCoordinate3D": {
-						"$ref": "#/definitions/TextureCoordinate3D"
-					},
-					"TextureCoordinate4D": {
-						"$ref": "#/definitions/TextureCoordinate4D"
-					},
-					"TextureCoordinateGenerator": {
-						"$ref": "#/definitions/TextureCoordinateGenerator"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"MultiTextureCoordinate": {
+					"$ref": "#/definitions/MultiTextureCoordinate"
 				},
-				"additionalProperties": false
-			}
+				"NurbsTextureCoordinate": {
+					"$ref": "#/definitions/NurbsTextureCoordinate"
+				},
+				"TextureCoordinate": {
+					"$ref": "#/definitions/TextureCoordinate"
+				},
+				"TextureCoordinate3D": {
+					"$ref": "#/definitions/TextureCoordinate3D"
+				},
+				"TextureCoordinate4D": {
+					"$ref": "#/definitions/TextureCoordinate4D"
+				},
+				"TextureCoordinateGenerator": {
+					"$ref": "#/definitions/TextureCoordinateGenerator"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-texCoords2D": {
 			"description": "MF TextureCoordinate | TextureCoordinateGenerator content",
@@ -17539,96 +17334,76 @@
 		},
 		"-texture2D": {
 			"description": "SF X3DTexture2DNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"ImageTexture": {
-						"$ref": "#/definitions/ImageTexture"
-					},
-					"MovieTexture": {
-						"$ref": "#/definitions/MovieTexture"
-					},
-					"PixelTexture": {
-						"$ref": "#/definitions/PixelTexture"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"ImageTexture": {
+					"$ref": "#/definitions/ImageTexture"
 				},
-				"additionalProperties": false
-			}
+				"MovieTexture": {
+					"$ref": "#/definitions/MovieTexture"
+				},
+				"PixelTexture": {
+					"$ref": "#/definitions/PixelTexture"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-texture2DMulti": {
 			"description": "SF X3DTexture2DNode | MultiTexture content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"ImageTexture": {
-						"$ref": "#/definitions/ImageTexture"
-					},
-					"MovieTexture": {
-						"$ref": "#/definitions/MovieTexture"
-					},
-					"MultiTexture": {
-						"$ref": "#/definitions/MultiTexture"
-					},
-					"PixelTexture": {
-						"$ref": "#/definitions/PixelTexture"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"ImageTexture": {
+					"$ref": "#/definitions/ImageTexture"
 				},
-				"additionalProperties": false
-			}
+				"MovieTexture": {
+					"$ref": "#/definitions/MovieTexture"
+				},
+				"MultiTexture": {
+					"$ref": "#/definitions/MultiTexture"
+				},
+				"PixelTexture": {
+					"$ref": "#/definitions/PixelTexture"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-texture3D": {
 			"description": "SF X3DTexture3DNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"ComposedTexture3D": {
-						"$ref": "#/definitions/ComposedTexture3D"
-					},
-					"ImageTexture3D": {
-						"$ref": "#/definitions/ImageTexture3D"
-					},
-					"PixelTexture3D": {
-						"$ref": "#/definitions/PixelTexture3D"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"ComposedTexture3D": {
+					"$ref": "#/definitions/ComposedTexture3D"
 				},
-				"additionalProperties": false
-			}
+				"ImageTexture3D": {
+					"$ref": "#/definitions/ImageTexture3D"
+				},
+				"PixelTexture3D": {
+					"$ref": "#/definitions/PixelTexture3D"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-textureProperties": {
 			"description": "SF TextureProperties content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"TextureProperties": {
-						"$ref": "#/definitions/TextureProperties"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"TextureProperties": {
+					"$ref": "#/definitions/TextureProperties"
 				},
-				"additionalProperties": false
-			}
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-textures2D": {
 			"description": "MF X3DTexture2DNode content",
@@ -17672,36 +17447,31 @@
 		},
 		"-transferFunction": {
 			"description": "SF X3DTexture2DNode | X3DTexture3DNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"ComposedTexture3D": {
-						"$ref": "#/definitions/ComposedTexture3D"
-					},
-					"ImageTexture": {
-						"$ref": "#/definitions/ImageTexture"
-					},
-					"ImageTexture3D": {
-						"$ref": "#/definitions/ImageTexture3D"
-					},
-					"MovieTexture": {
-						"$ref": "#/definitions/MovieTexture"
-					},
-					"PixelTexture": {
-						"$ref": "#/definitions/PixelTexture"
-					},
-					"PixelTexture3D": {
-						"$ref": "#/definitions/PixelTexture3D"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"ComposedTexture3D": {
+					"$ref": "#/definitions/ComposedTexture3D"
 				},
-				"additionalProperties": false
-			}
+				"ImageTexture": {
+					"$ref": "#/definitions/ImageTexture"
+				},
+				"ImageTexture3D": {
+					"$ref": "#/definitions/ImageTexture3D"
+				},
+				"MovieTexture": {
+					"$ref": "#/definitions/MovieTexture"
+				},
+				"PixelTexture": {
+					"$ref": "#/definitions/PixelTexture"
+				},
+				"PixelTexture3D": {
+					"$ref": "#/definitions/PixelTexture3D"
+				},
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-trimmingContour": {
 			"description": "MF Contour2D content",
@@ -17722,21 +17492,16 @@
 		},
 		"-viewport": {
 			"description": "SF X3DViewportNode content",
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 1,
-			"items": {
-				"type": "object",
-				"properties": {
-					"Viewport": {
-						"$ref": "#/definitions/Viewport"
-					},
-					"ProtoInstance": {
-						"$ref": "#/definitions/ProtoInstance"
-					}
+			"type": "object",
+			"properties": {
+				"Viewport": {
+					"$ref": "#/definitions/Viewport"
 				},
-				"additionalProperties": false
-			}
+				"ProtoInstance": {
+					"$ref": "#/definitions/ProtoInstance"
+				}
+			},
+			"additionalProperties": false
 		},
 		"-watchList": {
 			"description": "MF X3DUrlObject content",
