@@ -39,22 +39,20 @@ public class ObjectTest {
     }
     public static void main(String args[]) {
     	for (int a = 0; a < args.length; a++) {
-		System.out.println("BEGIN "+args[a]);
 		try {
 			validateObject(args[a]);
-			System.out.println("json-schema Valid");
+			System.out.println("json-schema Valid "+args[a]);
 		} catch (FileNotFoundException e) {
-			System.out.println("json-file file "+e.getMessage());
+			System.out.println("json-file file missing "+e.getMessage()+" "+args[a]);
 		} catch (JSONException je) {
-			System.out.println("json-parse json "+je.getMessage());
+			System.out.println("json-parse json "+je.getMessage()+" "+args[a]);
 		} catch (ValidationException ve) {
 			Iterator<ValidationException> i = ve.getCausingExceptions().iterator();
 			while (i.hasNext()) {
 				ValidationException veel = i.next();
-				System.out.println("json-schema Validation "+veel);
+				System.out.println("json-schema Validation error "+veel+" "+args[a]);
 			}
 		}
-		System.out.println("END "+args[a]);
 	}
     }
 }

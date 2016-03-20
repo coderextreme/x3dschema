@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "JSON Schema X3D V3.3",
-	"description": "Development JSON Schema for X3D V3.3 ",
+	"description": "Experimental JSON Schema for X3D V3.3 ",
 	"type": "object",
 	"properties": {
 		"X3D": {
@@ -35,6 +35,17 @@
 						},
 						"additionalProperties": false
 					}
+				},
+				"JSON schema": {
+					"type": "string"
+				},
+				"encoding": {
+					"type": "string",
+					"enum": [
+						"UTF-8",
+						"UTF-16",
+						"UTF-32"
+					]
 				},
 				"head": {
 					"type": "object",
@@ -178,6 +189,7 @@
 				}
 			},
 			"required": [
+				"encoding",
 				"Scene"
 			],
 			"additionalProperties": false
@@ -1573,21 +1585,16 @@
 					"$ref": "#/definitions/-metadata"
 				},
 				"-shape": {
-					"type": "array",
-					"minItems": 1,
-					"maxItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"Shape": {
-								"$ref": "#/definitions/Shape"
-							},
-							"ProtoInstance": {
-								"$ref": "#/definitions/ProtoInstance"
-							}
+					"type": "object",
+					"properties": {
+						"Shape": {
+							"$ref": "#/definitions/Shape"
 						},
-						"additionalProperties": false
-					}
+						"ProtoInstance": {
+							"$ref": "#/definitions/ProtoInstance"
+						}
+					},
+					"additionalProperties": false
 				},
 				"-children": {
 					"$ref": "#/definitions/-commentRoute"
@@ -7107,6 +7114,9 @@
 							},
 							"MetadataString": {
 								"$ref": "#/definitions/MetadataString"
+							},
+							"ProtoInstance": {
+								"$ref": "#/definitions/ProtoInstance"
 							}
 						},
 						"additionalProperties": false
@@ -9837,6 +9847,9 @@
 					"$ref": "#/definitions/-metadata"
 				}
 			},
+			"required": [
+				"@name"
+			],
 			"additionalProperties": false
 		},
 		"ProtoInterface": {
@@ -14395,7 +14408,8 @@
 						{
 							"type": "string",
 							"enum": [
-								"GD"
+								"GD",
+								"GDC"
 							],
 							"default": "GD"
 						},
@@ -14571,7 +14585,8 @@
 						{
 							"type": "string",
 							"enum": [
-								"GC"
+								"GC",
+								"GCC"
 							]
 						}
 					],

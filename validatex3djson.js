@@ -69,7 +69,8 @@ function validateFile(file) {
 		console.error('END', file);
 		console.log('END', file);
 	} catch (e) {
-		console.error('Failed JSON parse', file);
+		console.error('Failed JSON parse', file, e);
+		console.log('Failed JSON parse', file, e);
 	}
 }
 
