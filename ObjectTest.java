@@ -41,7 +41,7 @@ public class ObjectTest {
     	for (int a = 0; a < args.length; a++) {
 		try {
 			validateObject(args[a]);
-			System.out.println("json-schema Valid "+args[a]);
+			// System.out.println("json-schema Valid "+args[a]);
 		} catch (FileNotFoundException e) {
 			System.out.println("json-file file missing "+e.getMessage()+" "+args[a]);
 		} catch (JSONException je) {
