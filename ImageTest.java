@@ -24,35 +24,33 @@ import org.json.JSONException;
 import java.io.*;
 import java.util.*;
 
-public class ObjectTest {
+public class ImageTest {
     public static void main(String args[]) {
+	args = new String [] { "image.json" };
     	for (int a = 0; a < args.length; a++) {
 		String version = "Unknown";
 		try {
 			JSONTokener tokener = new JSONTokener(new FileInputStream(args[a]));
 			JSONObject jsonSubject = new JSONObject(tokener);
-			version = jsonSubject.getJSONObject("X3D").getString("@version");
 			JSONObject jsonSchema = new JSONObject(new JSONTokener(
-				ObjectTest.class
-					.getResourceAsStream("x3d-"+version+"-JSONSchema.json")));
+				ImageTest.class
+					.getResourceAsStream("schema.json")));
 
 			Schema schema = SchemaLoader.load(jsonSchema);
 			schema.validate(jsonSubject);
 			
-			// System.out.println("json-schema "+version+" Valid "+args[a]);
-		} catch (NullPointerException npe) {
-			System.out.println("json-config "+version+" null point error "+args[a]);
+			System.out.println("json-schema Valid "+args[a]);
+		} catch (NullPointerException e) {
+			System.out.println("json-config null point error "+args[a]);
 		} catch (FileNotFoundException e) {
 			System.out.println("json-file file missing "+e.getMessage()+" "+args[a]);
-		} catch (NumberFormatException nfe) {
-			System.out.println("json-parse json "+nfe.getMessage()+" "+args[a]);
 		} catch (JSONException je) {
 			System.out.println("json-parse json "+je.getMessage()+" "+args[a]);
 		} catch (ValidationException ve) {
 			Iterator<ValidationException> i = ve.getCausingExceptions().iterator();
 			while (i.hasNext()) {
 				ValidationException veel = i.next();
-				System.out.println("json-schema "+version+" Validation error "+veel+" "+args[a]);
+				System.out.println("json-schema Validation error "+veel+" "+args[a]);
 			}
 		}
 	}

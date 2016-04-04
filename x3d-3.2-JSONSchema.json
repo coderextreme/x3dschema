@@ -115,12 +115,6 @@
                 "-textureTransform": {
                     "$ref": "#/definitions/-textureTransform"
                 },
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "-children": {
                     "$ref": "#/definitions/-commentRoute"
                 }
@@ -4762,12 +4756,6 @@
                 "@bboxSize": {
                     "$ref": "#/definitions/@bboxSize"
                 },
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "-children": {
                     "$ref": "#/definitions/-children"
                 },
@@ -7299,11 +7287,27 @@
                     "items": [
                         {
                             "type": "string",
-                            "default": "EXAMINE"
+                            "default": "EXAMINE",
+                    	    "enum": [
+				"ANY",
+				"WALK",
+				"EXAMINE",
+                                "FLY",
+				"LOOKAT",
+				"NONE"
+			     ]
                         },
                         {
                             "type": "string",
-                            "default": "ANY"
+                            "default": "ANY",
+                    	    "enum": [
+				"ANY",
+				"WALK",
+				"EXAMINE",
+                                "FLY",
+				"LOOKAT",
+				"NONE"
+			     ]
                         }
                     ],
                     "additionalItems": {
@@ -9466,12 +9470,6 @@
         "ProtoBody": {
             "type": "object",
             "properties": {
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "-children": {
                     "$ref": "#/definitions/-allNodes"
                 }
@@ -9495,12 +9493,6 @@
                 },
                 "ProtoBody": {
                     "$ref": "#/definitions/ProtoBody"
-                },
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
                 },
                 "-children": {
                     "type": "array",
@@ -10264,12 +10256,6 @@
         "Scene": {
             "type": "object",
             "properties": {
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "-children": {
                     "$ref": "#/definitions/-children"
                 },
@@ -10457,12 +10443,6 @@
                     }
                 },
                 "#sourceText": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "#comment": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -10684,12 +10664,6 @@
                 },
                 "@bboxSize": {
                     "$ref": "#/definitions/@bboxSize"
-                },
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
                 },
                 "-appearance": {
                     "$ref": "#/definitions/-appearance"
@@ -12613,12 +12587,6 @@
                         "default": 0
                     }
                 },
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "-children": {
                     "$ref": "#/definitions/-children"
                 },
@@ -14212,12 +14180,6 @@
                             "@conversionFactor"
                         ],
                         "additionalProperties": false
-                    }
-                },
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
                     }
                 },
                 "meta": {
@@ -17175,9 +17137,6 @@
                 "properties": {
                     "HAnimSite": {
                         "$ref": "#/definitions/HAnimSite"
-                    },
-                    "Viewpoint": {
-                        "$ref": "#/definitions/Viewpoint"
                     },
                     "ProtoInstance": {
                         "$ref": "#/definitions/ProtoInstance"
