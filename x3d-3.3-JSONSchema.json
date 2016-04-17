@@ -115,12 +115,6 @@
                 "-textureTransform": {
                     "$ref": "#/definitions/-textureTransform"
                 },
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "-children": {
                     "$ref": "#/definitions/-commentRoute"
                 }
@@ -3726,12 +3720,16 @@
                         {
                             "type": "number",
                             "default": 1
+                        },
+                        {
+                            "type": "number",
+                            "default": 0
+                        },
+                        {
+                            "type": "number"
                         }
                     ],
-                    "additionalItems": {
-                        "type": "number",
-                        "default": 0
-                    }
+                    "additionalItems": true
                 },
                 "-metadata": {
                     "$ref": "#/definitions/-metadata"
@@ -3765,9 +3763,7 @@
                     "items": {
                         "type": "number",
                         "minimum": 0,
-                        "exclusiveMinimum": true,
                         "maximum": 1,
-                        "exclusiveMaximum": true,
                         "default": 1
                     }
                 },
@@ -3806,7 +3802,8 @@
                 "@numComponents": {
                     "type": "integer",
                     "minimum": 1,
-                    "maximum": 4
+                    "maximum": 4,
+                    "default": 4
                 },
                 "@value": {
                     "type": "array",
@@ -3842,7 +3839,8 @@
                     "items": {
                         "type": "number",
                         "minimum": 0,
-                        "maximum": 1
+                        "maximum": 1,
+                        "default": 1
                     }
                 },
                 "@fogType": {
@@ -3855,7 +3853,8 @@
                 },
                 "@visibilityRange": {
                     "type": "number",
-                    "minimum": 0
+                    "minimum": 0,
+                    "default": 0
                 },
                 "-metadata": {
                     "$ref": "#/definitions/-metadata"
@@ -3996,12 +3995,13 @@
                         {
                             "type": "number",
                             "default": -9.8
+                        },
+                        {
+                            "type": "number",
+                            "default": 0
                         }
                     ],
-                    "additionalItems": {
-                        "type": "number",
-                        "default": 0
-                    }
+                    "additionalItems": false
                 },
                 "-metadata": {
                     "$ref": "#/definitions/-metadata"
@@ -4065,7 +4065,7 @@
                 },
                 "@point": {
                     "type": "array",
-                    "minItems": 1,
+                    "minItems": 3,
                     "items": {
                         "type": "number"
                     }
@@ -4710,12 +4710,13 @@
                         {
                             "type": "number",
                             "default": 0
+                        },
+                        {
+                            "type": "number",
+                            "default": 100000
                         }
                     ],
-                    "additionalItems": {
-                        "type": "number",
-                        "default": 100000
-                    }
+                    "additionalItems": false
                 },
                 "@retainUserOffsets": {
                     "type": "boolean",
@@ -4762,12 +4763,6 @@
                 "@bboxSize": {
                     "$ref": "#/definitions/@bboxSize"
                 },
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "-children": {
                     "$ref": "#/definitions/-children"
                 },
@@ -4808,7 +4803,8 @@
                     "type": "string"
                 },
                 "@weight": {
-                    "type": "number"
+                    "type": "number",
+                    "default": 0
                 },
                 "-metadata": {
                     "$ref": "#/definitions/-metadata"
@@ -5866,6 +5862,7 @@
                     "items": {
                         "type": "number",
                         "minimum": 0,
+                        "exclusiveMinimum": true,
                         "default": 1
                     }
                 },
@@ -6991,22 +6988,7 @@
                     "$ref": "#/definitions/-body"
                 },
                 "-body2": {
-                    "description": "SF RigidBody content",
-                    "type": "array",
-                    "minItems": 1,
-                    "maxItems": 1,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "RigidBody": {
-                                "$ref": "#/definitions/RigidBody"
-                            },
-                            "ProtoInstance": {
-                                "$ref": "#/definitions/ProtoInstance"
-                            }
-                        },
-                        "additionalProperties": false
-                    }
+                    "$ref": "#/definitions/-body"
                 },
                 "-metadata": {
                     "$ref": "#/definitions/-metadata"
@@ -7247,7 +7229,6 @@
                 "@avatarSize": {
                     "type": "array",
                     "minItems": 3,
-                    "maxItems": 3,
                     "items": [
                         {
                             "type": "number",
@@ -7258,12 +7239,16 @@
                             "type": "number",
                             "minimum": 0,
                             "default": 1.6
+                        },
+                        {
+                            "type": "number",
+                            "minimum": 0,
+                            "default": 0.75
                         }
                     ],
                     "additionalItems": {
                         "type": "number",
-                        "minimum": 0,
-                        "default": 0.75
+                        "minimum": 0
                     }
                 },
                 "@headlight": {
@@ -8176,7 +8161,6 @@
                 "@fieldOfView": {
                     "type": "array",
                     "minItems": 4,
-                    "maxItems": 4,
                     "items": [
                         {
                             "type": "number",
@@ -8189,11 +8173,14 @@
                         {
                             "type": "number",
                             "default": 1
+                        },
+                        {
+                            "type": "number",
+                            "default": 1
                         }
                     ],
                     "additionalItems": {
-                        "type": "number",
-                        "default": 1
+                        "type": "number"
                     }
                 },
                 "@jump": {
@@ -8215,12 +8202,13 @@
                         {
                             "type": "number",
                             "default": 0
+                        },
+                        {
+                            "type": "number",
+                            "default": 10
                         }
                     ],
-                    "additionalItems": {
-                        "type": "number",
-                        "default": 10
-                    }
+                    "additionalItems": false
                 },
                 "@retainUserOffsets": {
                     "type": "boolean",
@@ -8344,7 +8332,7 @@
                     "items": {
                         "type": "number",
                         "minimum": 0,
-                        "default": 0.2
+                        "default": 0.02
                     }
                 },
                 "@texCoordKey": {
@@ -8374,21 +8362,16 @@
                     "$ref": "#/definitions/-physics"
                 },
                 "-texCoordRamp": {
-                    "type": "array",
-                    "minItems": 1,
-                    "maxItems": 1,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "TextureCoordinate": {
-                                "$ref": "#/definitions/TextureCoordinate"
-                            },
-                            "ProtoInstance": {
-                                "$ref": "#/definitions/ProtoInstance"
-                            }
+                    "type": "object",
+                    "properties": {
+                        "TextureCoordinate": {
+                            "$ref": "#/definitions/TextureCoordinate"
                         },
-                        "additionalProperties": false
-                    }
+                        "ProtoInstance": {
+                            "$ref": "#/definitions/ProtoInstance"
+                        }
+                    },
+                    "additionalProperties": false
                 },
                 "-children": {
                     "$ref": "#/definitions/-commentRoute"
@@ -8652,14 +8635,15 @@
                             "minimum": -1,
                             "maximum": 1,
                             "default": 1
+                        },
+                        {
+                            "type": "number",
+                            "minimum": -1,
+                            "maximum": 1,
+                            "default": 0
                         }
                     ],
-                    "additionalItems": {
-                        "type": "number",
-                        "minimum": -1,
-                        "maximum": 1,
-                        "default": 0
-                    }
+                    "additionalItems": false
                 },
                 "@mass": {
                     "type": "number",
@@ -8731,13 +8715,14 @@
                             "type": "number",
                             "minimum": 0,
                             "default": 0
+                        },
+                        {
+                            "type": "number",
+                            "minimum": 0,
+                            "default": 0
                         }
                     ],
-                    "additionalItems": {
-                        "type": "number",
-                        "minimum": 0,
-                        "default": 0
-                    }
+                    "additionalItems": false
                 },
                 "@color": {
                     "type": "array",
@@ -8843,21 +8828,16 @@
                     "$ref": "#/definitions/-metadata"
                 },
                 "-pickingGeometry": {
-                    "type": "array",
-                    "minItems": 1,
-                    "maxItems": 1,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "PointSet": {
-                                "$ref": "#/definitions/PointSet"
-                            },
-                            "ProtoInstance": {
-                                "$ref": "#/definitions/ProtoInstance"
-                            }
+                    "type": "object",
+                    "properties": {
+                        "PointSet": {
+                            "$ref": "#/definitions/PointSet"
                         },
-                        "additionalProperties": false
-                    }
+                        "ProtoInstance": {
+                            "$ref": "#/definitions/ProtoInstance"
+                        }
+                    },
+                    "additionalProperties": false
                 },
                 "-pickTarget": {
                     "$ref": "#/definitions/-pickTarget"
@@ -9466,12 +9446,6 @@
         "ProtoBody": {
             "type": "object",
             "properties": {
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "-children": {
                     "$ref": "#/definitions/-allNodes"
                 }
@@ -9495,12 +9469,6 @@
                 },
                 "ProtoBody": {
                     "$ref": "#/definitions/ProtoBody"
-                },
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
                 },
                 "-children": {
                     "type": "array",
@@ -10264,12 +10232,6 @@
         "Scene": {
             "type": "object",
             "properties": {
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "-children": {
                     "$ref": "#/definitions/-children"
                 },
@@ -10457,12 +10419,6 @@
                     }
                 },
                 "#sourceText": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "#comment": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -10684,12 +10640,6 @@
                 },
                 "@bboxSize": {
                     "$ref": "#/definitions/@bboxSize"
-                },
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
                 },
                 "-appearance": {
                     "$ref": "#/definitions/-appearance"
@@ -12613,12 +12563,6 @@
                         "default": 0
                     }
                 },
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "-children": {
                     "$ref": "#/definitions/-children"
                 },
@@ -14150,6 +14094,9 @@
                         "type": "string"
                     },
                     "@value": {},
+                    "-value": {
+                        "$ref": "#/definitions/-oneNode"
+		    },
                     "-children": {
                         "$ref": "#/definitions/-allNodes"
                     }
@@ -14212,12 +14159,6 @@
                             "@conversionFactor"
                         ],
                         "additionalProperties": false
-                    }
-                },
-                "#comment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
                     }
                 },
                 "meta": {
@@ -14709,10 +14650,15 @@
             ]
         },
         "-allNodes": {
-            "description": "Any X3D node",
+            "description": "List of X3D nodes",
             "type": "array",
             "minItems": 1,
             "items": {
+                "$ref": "#/definitions/-oneNode"
+            }
+        },
+        "-oneNode": {
+                "description": "Any X3D node",
                 "type": "object",
                 "properties": {
                     "#comment": {
@@ -15431,7 +15377,6 @@
                     }
                 },
                 "additionalProperties": false
-            }
         },
         "-appearance": {
             "description": "SF X3DAppearance content",
@@ -17175,9 +17120,6 @@
                 "properties": {
                     "HAnimSite": {
                         "$ref": "#/definitions/HAnimSite"
-                    },
-                    "Viewpoint": {
-                        "$ref": "#/definitions/Viewpoint"
                     },
                     "ProtoInstance": {
                         "$ref": "#/definitions/ProtoInstance"
