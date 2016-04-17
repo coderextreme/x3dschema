@@ -14096,7 +14096,7 @@
                     "@value": {},
                     "-value": {
                         "$ref": "#/definitions/-oneNode"
-		    },
+                    },
                     "-children": {
                         "$ref": "#/definitions/-allNodes"
                     }
