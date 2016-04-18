@@ -4691,6 +4691,27 @@
                 "@geoSystem": {
                     "$ref": "#/definitions/@geoSystem"
                 },
+                "@navType": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": [
+                        {
+                            "type": "string",
+                            "default": "EXAMINE"
+                        },
+                        {
+                            "type": "string",
+                            "default": "ANY"
+                        }
+                    ],
+                    "additionalItems": {
+                        "type": "string"
+                    }
+                },
+                "@headlight": {
+                    "type": "boolean",
+                    "default": true
+                },
                 "@jump": {
                     "type": "boolean",
                     "default": true
