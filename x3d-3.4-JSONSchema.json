@@ -5558,7 +5558,7 @@
             },
             "additionalProperties": false
         },
-        "IndexedTrangleSet": {
+        "IndexedTriangleSet": {
             "type": "object",
             "properties": {
                 "@DEF": {
@@ -14947,7 +14947,7 @@
                         "$ref": "#/definitions/IndexedTriangleFanSet"
                     },
                     "IndexedTriangleSet": {
-                        "$ref": "#/definitions/IndexedTrangleSet"
+                        "$ref": "#/definitions/IndexedTriangleSet"
                     },
                     "IndexedTriangleStripSet": {
                         "$ref": "#/definitions/IndexedTriangleStripSet"
@@ -16451,7 +16451,7 @@
                     "$ref": "#/definitions/IndexedTriangleFanSet"
                 },
                 "IndexedTriangleSet": {
-                    "$ref": "#/definitions/IndexedTrangleSet"
+                    "$ref": "#/definitions/IndexedTriangleSet"
                 },
                 "IndexedTriangleStripSet": {
                     "$ref": "#/definitions/IndexedTriangleStripSet"
