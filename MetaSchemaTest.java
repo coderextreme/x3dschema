@@ -24,7 +24,7 @@ public class MetaSchemaTest {
 
     JSONObject jsonSchema = new JSONObject(new JSONTokener(
         MetaSchemaTest.class
-            .getResourceAsStream("json-schema-draft-04.json")));
+            .getResourceAsStream("json-schema-draft-06.json")));
 
     JSONObject jsonSubject = new JSONObject(new JSONTokener(
         MetaSchemaTest.class
