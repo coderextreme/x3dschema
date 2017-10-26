@@ -26,7 +26,7 @@ for (var sversion in overallversions) {
 function testValid(versions, valids, v, file, ajvValidate, hello) {
 	// console.log(valids[0], valids[1], v);
 	// change v == ? and set ? to 0 for my schema reports and set ? to 1 for roy's schema reports
-	if (valids[0] !== valids[1] && v == 1) {
+	if (valids[0] !== valids[1] && v == 0) {
 	    var errs = ajvValidate[versions[v]].errors;
 	    for (var e in errs) {
 		if (e == 0) {
