@@ -5401,6 +5401,10 @@
             "IS": {
               "$ref": "#/definitions/IS"
             },
+            "@address": {
+              "default": "localhost",
+              "type": "string"
+            },
             "@applicationID": {
               "default": 0,
               "type": "integer"
@@ -6100,6 +6104,10 @@
           "properties": {
             "IS": {
               "$ref": "#/definitions/IS"
+            },
+            "@address": {
+              "default": "localhost",
+              "type": "string"
             },
             "@applicationID": {
               "default": 0,
@@ -8496,10 +8504,10 @@
             "@geoSystem": {
               "$ref": "#/definitions/@geoSystem"
             },
-	    "@headlight": {
-		"type": "boolean",
-		"default": true
-	    },
+            "@headlight": {
+              "default": true,
+              "type": "boolean"
+            },
             "@isBound": {
               "type": "boolean"
             },
@@ -17141,6 +17149,10 @@
             "IS": {
               "$ref": "#/definitions/IS"
             },
+            "@address": {
+              "default": "localhost",
+              "type": "string"
+            },
             "@applicationID": {
               "default": 0,
               "type": "integer"
@@ -18651,6 +18663,10 @@
             },
             "IS": {
               "$ref": "#/definitions/IS"
+            },
+            "@address": {
+              "default": "localhost",
+              "type": "string"
             },
             "@applicationID": {
               "default": 0,
@@ -22066,6 +22082,10 @@
             },
             "IS": {
               "$ref": "#/definitions/IS"
+            },
+            "@address": {
+              "default": "localhost",
+              "type": "string"
             },
             "@antennaLocation": {
               "type": "array",
