@@ -1,0 +1,969 @@
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/ImportExportSyntax.json
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 1 > EXPORT
+ value: {"@AS":"NI","@localDEF":"LocalNavInfo"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/ImportExportSyntax.json
+ version: 6.0
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 2 > Transform > -children > 2 > IMPORT
+ value: {"@AS":"NewImportedNodeName","@importedDEF":"SomeRemoteNodeNameInsideInlinedScene","@inlineDEF":"CoordinateAxes"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/ImportExportSyntax.json
+ version: 6.0
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 6 > IMPORT
+ value: {"@AS":"I1Root","@importedDEF":"rootTransform","@inlineDEF":"I1"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/ImportExportSyntax.json
+ version: 6.0
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 14 > EXPORT
+ value: {"@AS":"rootTransform","@localDEF":"T1"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/ImportExportSyntax.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/MetadataExamples.json
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 12 > Group > -children > 1 > Transform > -metadata > MetadataFloat > -metadata > MetadataDouble
+ value: {"@USE":"MetadataDoubleInstance"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/MetadataExamples.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/RenderingComponentPrototypes.json
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 1 > ProtoDeclare > ProtoBody > -children > 4 > Group > -metadata > MetadataSet
+ value: {"IS":"|omitted|"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/RenderingComponentPrototypes.json
+ version: 6.0
+
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 3 > ProtoDeclare > ProtoBody > -children > 1 > Group > -children > 2 > Group > -metadata > MetadataString
+ value: {"IS":"|omitted|"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/RenderingComponentPrototypes.json
+ version: 6.0
+
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 5 > ProtoDeclare > ProtoBody > -children > 1 > Group > -children > 2 > Group > -metadata > MetadataString
+ value: {"IS":"|omitted|"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/RenderingComponentPrototypes.json
+ version: 6.0
+
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 7 > ProtoDeclare > ProtoBody > -children > 1 > Group > -children > 2 > Group > -metadata > MetadataString
+ value: {"IS":"|omitted|"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/RenderingComponentPrototypes.json
+ version: 6.0
+
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 9 > ProtoDeclare > ProtoBody > -children > 1 > Group > -children > 2 > Group > -metadata > MetadataString
+ value: {"IS":"|omitted|"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/RenderingComponentPrototypes.json
+ version: 6.0
+
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 11 > ProtoDeclare > ProtoBody > -children > 1 > Group > -children > 2 > Group > -metadata > MetadataString
+ value: {"IS":"|omitted|"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/RenderingComponentPrototypes.json
+ version: 6.0
+
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 13 > ProtoDeclare > ProtoBody > -children > 1 > Group > -children > 2 > Group > -metadata > MetadataString
+ value: {"IS":"|omitted|"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/RenderingComponentPrototypes.json
+ version: 6.0
+
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestDiagnosticOverloadedChildNodes.json SyntaxError: Unexpected token { in JSON at position 2359
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestMetadataNodes.json
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 0 > Group > -metadata > MetadataSet
+ value: {"@DEF":"M1","-value":"|omitted|","-children":"|omitted|","-metadata":"|omitted|"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestMetadataNodes.json
+ version: 6.0
+
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 0 > Group > -metadata > MetadataSet > -metadata > MetadataString
+ value: {"@DEF":"M5","@value":"|omitted|"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestMetadataNodes.json
+ version: 6.0
+
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 0 > Group > -metadata > MetadataSet > -value > 0 > MetadataDouble
+ value: {"@DEF":"M2","@value":"|omitted|"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestMetadataNodes.json
+ version: 6.0
+
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 0 > Group > -metadata > MetadataSet > -value > 1 > MetadataFloat
+ value: {"@DEF":"M3","@value":"|omitted|"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestMetadataNodes.json
+ version: 6.0
+
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 0 > Group > -metadata > MetadataSet > -value > 2 > MetadataInteger
+ value: {"@DEF":"M4","@value":"|omitted|"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestMetadataNodes.json
+ version: 6.0
+
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 0 > Group > -metadata > MetadataSet > -value > 3 > MetadataSet
+ value: {"@DEF":"M6","-children":"|omitted|"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestMetadataNodes.json
+ version: 6.0
+
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestRegularExpressionChecks.json SyntaxError: Unexpected token . in JSON at position 3047
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestSchematronDiagnostics.json SyntaxError: Unexpected token a in JSON at position 21973
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/UnquotedTokensNavigationInfoAndFontStyle.json SyntaxError: Unexpected token I in JSON at position 2944
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > Transform > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > Transform > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 4 > Transform > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 4 > Transform > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 4 > Transform > -children > 4 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 5 > Transform > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 5 > Transform > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 5 > Transform > -children > 4 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 6 > Transform > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 6 > Transform > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 6 > Transform > -children > 4 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 7 > Transform > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 7 > Transform > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 7 > Transform > -children > 4 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 8 > Transform > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 8 > Transform > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 8 > Transform > -children > 4 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 9 > Transform > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 9 > Transform > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 9 > Transform > -children > 4 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 9 > Transform > -children > 4 > Transform > -children > 2 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 9 > Transform > -children > 5 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 9 > Transform > -children > 5 > Transform > -children > 2 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeRound.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeRound.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeRound.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 4 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeRound.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeVector.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeVector.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeVector.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 4 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeVector.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeFaceFlags.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeFaceFlags.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeFaceFlags.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 4 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeFaceFlags.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeNumberOfDivisions.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeNumberOfDivisions.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeNumberOfDivisions.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 4 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeNumberOfDivisions.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeShellType.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeShellType.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeShellType.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeTexture.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeTexture.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeTexture.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 4 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeTexture.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 4 > Transform > -children > 2 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeTexture.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 5 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeTexture.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 5 > Transform > -children > 2 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeTexture.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeVertexRound.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeVertexRound.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeVertexRound.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 4 > Transform > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeVertexRound.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelBaby.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 0 > Group > -children > 0 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelBaby.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 0 > Group > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelBaby.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > Group > -children > 0 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelBaby.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Group > -children > 0 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelBaby.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Group > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelBaby.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > Group > -children > 0 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelBaby.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > Group > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelBaby.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelDolphin.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 0 > Group > -children > 0 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelDolphin.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelHand.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 0 > Group > -children > 0 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelHand.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 0 > Group > -children > 1 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelHand.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelOctopus.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 0 > Group > -children > 0 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelOctopus.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > Group > -children > 0 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelOctopus.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Group > -children > 0 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelOctopus.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > Group > -children > 0 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelOctopus.json
+ version: 6.0
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 4 > Group > -children > 0 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelOctopus.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelStar.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 0 > Transform > -children > 0 > Group > -children > 0 > Shape > -geometry
+ value: {"XvlShell":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"XvlShell"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelStar.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/X3dHeaderPrototypeSyntaxExamples.json
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 18 > IMPORT
+ value: {"@AS":"someInlineRoot","@importedDEF":"someName","@inlineDEF":"someInline"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/X3dHeaderPrototypeSyntaxExamples.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2942E5237DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2942E5237DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2942E5238DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2942E5238DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2942E5239DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2942E5239DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2942E5240DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2942E5240DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2943E5237DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2943E5237DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2943E5238DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2943E5238DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2943E5239DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2943E5239DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2944E5237DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2944E5237DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2944E5238DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2944E5238DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2944E5239DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2944E5239DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2944E5240DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2944E5240DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2945E5237DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2945E5237DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2945E5238DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2945E5238DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2945E5239DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2945E5239DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2945E5240DTED2.json
+
+ keyword: minItems
+ dataPath: X3D > Scene > -children > 0 > GeoMetadata > @summary
+ value: ["DTED2 N290E520"]
+ message: should NOT have less than 2 items
+ params: {"limit":2}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/SouthernCaliforniaBorder/N2945E5240DTED2.json
+ version: 6.0
+
+0 Ajv 6.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForWebAuthors/Chapter15Metadata/MetadataNodeExamples.json
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 2 > WorldInfo > -metadata > MetadataSet > -metadata > MetadataSet > -value > 0 > MetadataString
+ value: {"@USE":"MyMetadataStringNode"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForWebAuthors/Chapter15Metadata/MetadataNodeExamples.json
+ version: 6.0
+
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 2 > WorldInfo > -metadata > MetadataSet > -metadata > MetadataSet > -value > 1 > MetadataInteger
+ value: {"@USE":"MyMetadataIntegerNode"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForWebAuthors/Chapter15Metadata/MetadataNodeExamples.json
+ version: 6.0
+
+
+ keyword: required
+ dataPath: X3D > Scene > -children > 2 > WorldInfo > -metadata > MetadataSet > -metadata > MetadataSet > -value > 2 > MetadataFloat
+ value: {"@USE":"MyMetadataFloatNode"}
+ message: should have required property '@name'
+ params: {"missingProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForWebAuthors/Chapter15Metadata/MetadataNodeExamples.json
+ version: 6.0
+
