@@ -9,7 +9,7 @@ javac -classpath $CLASSPATH *.java
 java -classpath $CLASSPATH MetaSchemaTest
 
 
-find $WEB3D/x3d/content/examples/ -name '*.json' -print0 |xargs -0 node validatex3djson.js | tee results.txt
-find $WEB3D/x3d/content/examples/ -name '*.json' -print0 |xargs -0 java -classpath $CLASSPATH ObjectTest | tee javaresults.txt
+find $WEB3D/x3d/content/examples/ -name '*.json' -print0 | xargs -0 grep -lv --null \"@name\":\"error\" | xargs -0 node validatex3djson.js | tee results.txt
+find $WEB3D/x3d/content/examples/ -name '*.json' -print0 | xargs -0 grep -lv --null \"@name\":\"error\" | xargs -0 java -classpath $CLASSPATH ObjectTest | tee javaresults.txt
 grep -w Validation javaresults.txt| sed 's/[^:]*://'| sed 's/\/c\/x3d-code\/www.web3d.org\/x3d\/content\/examples\/\/.*//'| sort |uniq -c|sort -nr > ordered.txt
 egrep 'BEGIN|json-parse' javaresults.txt > jsonparseresults.txt
