@@ -1,15 +1,12 @@
 {
-  "name": "x3dschema",
-  "description": "X3D JSON schema validate",
-  "main": "validatex3djson.js",
+  "name": "schema.visualization",
+  "description": "X3D JSON schema visualization",
+  "main": "app.js",
   "dependencies": {
     "express": "*",
-    "ajv": "*",
-    "is-my-json-valid": "*",
-    "jjv": "*",
     "d3-force-3d": "*"
   },
   "scripts": {
-    "validate": "node validatex3djson.js"
+    "start": "node app.js"
   }
 }
