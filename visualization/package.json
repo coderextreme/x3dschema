@@ -3,9 +3,11 @@
   "description": "X3D JSON schema validate",
   "main": "validatex3djson.js",
   "dependencies": {
+    "express": "*",
     "ajv": "*",
     "is-my-json-valid": "*",
-    "jjv": "*"
+    "jjv": "*",
+    "d3-force-3d": "*"
   },
   "scripts": {
     "validate": "node validatex3djson.js"
