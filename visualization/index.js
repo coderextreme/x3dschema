@@ -2,7 +2,7 @@ const Graph = ForceGraph3D()
 	(document.getElementById("3d-graph"));
 
 let curDataSetIdx,
-	numDim = 2;
+	numDim = 3;
 
 const dataSets = getGraphDataSets();
 
