@@ -110,5 +110,42 @@ function getGraphDataSets() {
     };
     loadJSONSchema3.description = "<em>X3D V3.3 JSON Schema</em> data, no duplicates";
 
-    return [loadJSONSchema, loadJSONSchema2, loadJSONSchema3];
+    const loadJSON4 = function(Graph) {
+        $.getJSON('HelloWWW9.json', function(schema) {
+		const keys = {};
+		let newkey = 0;
+		const nodes = [];
+		const links = [];
+
+		jsongraph(schema, "X3D JSON");
+
+		Graph
+			.nodeId('id')
+			.nodeLabel('element')
+			.nodeAutoColorBy('element')
+			.graphData({ nodes, links });
+
+		function jsongraph(object, parentKey, parentid) {
+			var id = newkey++;
+			var node = { id: id, element: parentKey };
+			nodes.push(node);
+			if (typeof object === 'object') {
+				for (var key in object) {
+					var childid = jsongraph(object[key], key, id);
+					var link = { source: id , target: childid};
+					links.push(link);
+				}
+			} else {
+				var childid = newkey++;
+				node = { id: childid, element: object };
+				nodes.push(node);
+				var link = { source: id , target: childid};
+				links.push(link);
+			}
+			return id;
+		}
+	 });
+    };
+    loadJSON4.description = "<em>HelloWWW9</em>";
+    return [loadJSONSchema, loadJSONSchema2, loadJSONSchema3, loadJSON4];
 }

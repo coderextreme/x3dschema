@@ -3,8 +3,7 @@
   "description": "X3D JSON schema visualization",
   "main": "app.js",
   "dependencies": {
-    "express": "*",
-    "d3-force-3d": "*"
+    "express": "*"
   },
   "scripts": {
     "start": "node app.js"
