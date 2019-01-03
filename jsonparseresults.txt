@@ -1,0 +1,5 @@
+json-parse json Expected a ':' after a key at 2487 [character 24 line 80] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestDiagnosticOverloadedChildNodes.json
+json-parse json Expected a ':' after a key at 31329 [character 24 line 1181] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestSchematronDiagnostics.json
+json-parse json Expected a ',' or ']' at 2949 [character 162 line 82] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/UnquotedTokensNavigationInfoAndFontStyle.json
+json-parse json JSONObject["@version"] not a string. C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloWorldCommentedAlternativeEncoding.json
+json-parse json JSONObject["@version"] not a string. C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloWorldCommentedOriginalEncoding.json
