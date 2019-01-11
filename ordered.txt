@@ -1,0 +1,136 @@
+      1  #/X3D/Scene/-children: 64 schema violations found C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/CarDemoMain.json
+      1  #/X3D/Scene/-children/9/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+      1  #/X3D/Scene/-children/8/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+      1  #/X3D/Scene/-children/8/Transform: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Viewpoint/jumpcut_proximitysensor.json
+      1  #/X3D/Scene/-children/7/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+      1  #/X3D/Scene/-children/7/LOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyStandShootRifleM24.json
+      1  #/X3D/Scene/-children/7/Group: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/QuadTreeExamples.json
+      1  #/X3D/Scene/-children/6/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+      1  #/X3D/Scene/-children/5/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeTexture.json
+      1  #/X3D/Scene/-children/5/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+      1  #/X3D/Scene/-children/5/ProtoDeclare/ProtoBody/-children/1/Group: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.json
+      1  #/X3D/Scene/-children/5/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/AllenDuttonBlurryMotion.json
+      1  #/X3D/Scene/-children/5/Group: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/Squaw.json
+      1  #/X3D/Scene/-children/4/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeVertexRound.json
+      1  #/X3D/Scene/-children/4/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeTexture.json
+      1  #/X3D/Scene/-children/4/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeNumberOfDivisions.json
+      1  #/X3D/Scene/-children/4/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeFaceFlags.json
+      1  #/X3D/Scene/-children/4/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeVector.json
+      1  #/X3D/Scene/-children/4/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeRound.json
+      1  #/X3D/Scene/-children/4/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+      1  #/X3D/Scene/-children/4/Transform: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Query.json
+      1  #/X3D/Scene/-children/4/Group: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelOctopus.json
+      1  #/X3D/Scene/-children/4/GeoViewpoint: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/Squaw.json
+      1  #/X3D/Scene/-children/3/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeVertexRound.json
+      1  #/X3D/Scene/-children/3/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeTexture.json
+      1  #/X3D/Scene/-children/3/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeShellType.json
+      1  #/X3D/Scene/-children/3/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeNumberOfDivisions.json
+      1  #/X3D/Scene/-children/3/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeFaceFlags.json
+      1  #/X3D/Scene/-children/3/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeVector.json
+      1  #/X3D/Scene/-children/3/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeRound.json
+      1  #/X3D/Scene/-children/3/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeAll.json
+      1  #/X3D/Scene/-children/3/ScalarInterpolator: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestRegularExpressionChecks.json
+      1  #/X3D/Scene/-children/3/RigidBodyCollection: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BounceTrimesh.json
+      1  #/X3D/Scene/-children/3/RigidBodyCollection: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounce.json
+      1  #/X3D/Scene/-children/3/ProtoDeclare/ProtoBody/-children/1/Group: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.json
+      1  #/X3D/Scene/-children/3/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/BoxMan.json
+      1  #/X3D/Scene/-children/3/Group: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelOctopus.json
+      1  #/X3D/Scene/-children/3/Group: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelBaby.json
+      1  #/X3D/Scene/-children/3/Group: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter30Scripts/Figure30_1ScriptSlidingBall.json
+      1  #/X3D/Scene/-children/24/ProtoDeclare/ProtoInterface/field: 3 schema violations found C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/X3dRetreatProtoExercise.json
+      1  #/X3D/Scene/-children/2/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeVertexRound.json
+      1  #/X3D/Scene/-children/2/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeTexture.json
+      1  #/X3D/Scene/-children/2/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeShellType.json
+      1  #/X3D/Scene/-children/2/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeNumberOfDivisions.json
+      1  #/X3D/Scene/-children/2/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeFaceFlags.json
+      1  #/X3D/Scene/-children/2/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeVector.json
+      1  #/X3D/Scene/-children/2/Transform: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellAttributeEdgeRound.json
+      1  #/X3D/Scene/-children/2/Shape: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/TextSize.json
+      1  #/X3D/Scene/-children/2/Shape: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/TextFont.json
+      1  #/X3D/Scene/-children/2/ScalarInterpolator: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestRegularExpressionChecks.json
+      1  #/X3D/Scene/-children/2/RigidBodyCollection: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SingleHingeJoint.json
+      1  #/X3D/Scene/-children/2/RigidBodyCollection: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallJoint.json
+      1  #/X3D/Scene/-children/2/RigidBodyCollection: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounceSimple.json
+      1  #/X3D/Scene/-children/2/ProtoDeclare/ProtoBody/-children/0/Transform: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Cut.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter12Sun.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter11Min.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter10Mi.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter09Ru.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter08Da.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter07No.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter06Ga.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter05Ju.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter04Young.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter03Hyun.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter02Chul.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter01Jin.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/DiamondManLOA_1.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/DiamondManLOA_0.json
+      1  #/X3D/Scene/-children/2/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/BoxManAnimationPanel.json
+      1  #/X3D/Scene/-children/2/Group: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelOctopus.json
+      1  #/X3D/Scene/-children/2/Group: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelBaby.json
+      1  #/X3D/Scene/-children/2/Group: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyDiving.json
+      1  #/X3D/Scene/-children/2/CADAssembly: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/CAD/CADPartChildTransformationAlternativeC.json
+      1  #/X3D/Scene/-children/2/CADAssembly: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/CAD/CADPartChildTransformationAlternativeB.json
+      1  #/X3D/Scene/-children/19/Switch: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/InterchangableActorsViaDynamicRoutingPrototypes.json
+      1  #/X3D/Scene/-children/17/ProtoDeclare/ProtoInterface/field: 3 schema violations found C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/X3dRetreatProtoExercise.json
+      1  #/X3D/Scene/-children/14/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Motion.json
+      1  #/X3D/Scene/-children/14/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Invisible.json
+      1  #/X3D/Scene/-children/14/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Illustrated.json
+      1  #/X3D/Scene/-children/1/Shape: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/TextSize.json
+      1  #/X3D/Scene/-children/1/Shape: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/TextFont.json
+      1  #/X3D/Scene/-children/1/RigidBodyCollection: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/UniversalJoint.json
+      1  #/X3D/Scene/-children/1/RigidBodyCollection: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SliderJoint.json
+      1  #/X3D/Scene/-children/1/RigidBodyCollection: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MovingBody.json
+      1  #/X3D/Scene/-children/1/RigidBodyCollection: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MotorJoint.json
+      1  #/X3D/Scene/-children/1/RigidBodyCollection: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/DoubleHingeJoint.json
+      1  #/X3D/Scene/-children/1/RigidBodyCollection: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BodyGeometry.json
+      1  #/X3D/Scene/-children/1/NavigationInfo: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/SubWorld.json
+      1  #/X3D/Scene/-children/1/LOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestContainerFieldValues.json
+      1  #/X3D/Scene/-children/1/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/DiamondManLOA_2.json
+      1  #/X3D/Scene/-children/1/Group: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelOctopus.json
+      1  #/X3D/Scene/-children/1/Group: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelBaby.json
+      1  #/X3D/Scene/-children/1/Group: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Viewpoint/viewinline.json
+      1  #/X3D/Scene/-children/0/Transform: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelStar.json
+      1  #/X3D/Scene/-children/0/TimeSensor: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/SchemaTest.json
+      1  #/X3D/Scene/-children/0/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyNativeTags.json
+      1  #/X3D/Scene/-children/0/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimModelHandRight.json
+      1  #/X3D/Scene/-children/0/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimModelHandLeft.json
+      1  #/X3D/Scene/-children/0/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimModelFootRight.json
+      1  #/X3D/Scene/-children/0/HAnimHumanoid: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimModelFootLeft.json
+      1  #/X3D/Scene/-children/0/Group: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelOctopus.json
+      1  #/X3D/Scene/-children/0/Group: #: only 1 subschema matches out of 2 C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelBaby.json
+      1  #/X3D/Scene/-children/0/Group: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForAdvancedModeling/Scanning/X3dMeshDesignPattern.json
+      1  #/X3D/Scene/-children/0/Group: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelHand.json
+      1  #/X3D/Scene/-children/0/Group: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/XvlShellModelDolphin.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD029.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD028.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD027.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD026.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD025.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD024.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD023.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD022.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD021.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD020.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD019.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD018.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD017.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD016.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD015.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD014.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD013.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD012.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD011.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD010.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD009.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD008.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD007.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD006.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD005.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD004.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD003.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD002.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD001.json
+      1  #/X3D/Scene/-children/0/GeoLOD: #: 0 subschemas matched instead of one C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/Geospatial/SquawLOD000.json
+      1  #/X3D/head/component: 2 schema violations found C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/CarDemoMain.json
