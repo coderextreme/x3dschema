@@ -1,4 +1,4 @@
-Failed JSON parse C:/Users/coderextreme/X3DJSONLD/src/main/data/ifs.json SyntaxError: Unexpected token N in JSON at position 1901077
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.json SyntaxError: Unexpected token , in JSON at position 10413
     at JSON.parse (<anonymous>)
     at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
     at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
@@ -9,53 +9,1417 @@ Failed JSON parse C:/Users/coderextreme/X3DJSONLD/src/main/data/ifs.json SyntaxE
     at Function.Module._load (internal/modules/cjs/loader.js:552:3)
     at Function.Module.runMain (internal/modules/cjs/loader.js:774:12)
     at executeUserCode (internal/bootstrap/node.js:499:15)
-0 Ajv 3.0 Validation failed on C:/Users/coderextreme/X3DJSONLD/src/main/data/NancyPrototypes.json
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestDiagnosticOverloadedChildNodes.json SyntaxError: Unexpected token { in JSON at position 2360
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (internal/modules/cjs/loader.js:721:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:732:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:774:12)
+    at executeUserCode (internal/bootstrap/node.js:499:15)
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestRegularExpressionChecks.json SyntaxError: Unexpected token . in JSON at position 3048
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (internal/modules/cjs/loader.js:721:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:732:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:774:12)
+    at executeUserCode (internal/bootstrap/node.js:499:15)
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestSchematronDiagnostics.json SyntaxError: Unexpected token a in JSON at position 22016
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (internal/modules/cjs/loader.js:721:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:732:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:774:12)
+    at executeUserCode (internal/bootstrap/node.js:499:15)
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/UnquotedTokensNavigationInfoAndFontStyle.json SyntaxError: Unexpected token I in JSON at position 2948
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (internal/modules/cjs/loader.js:721:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:732:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:774:12)
+    at executeUserCode (internal/bootstrap/node.js:499:15)
+0 Ajv 3.0 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/X3dRetreatProtoExercise.json
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 17 > ProtoDeclare > ProtoInterface > field > 0 > @type
+ value: "Plane"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["SFBool","MFBool","SFColor","MFColor","SFColorRGBA","MFColorRGBA","SFDouble","MFDouble","SFFloat","MFFloat","SFImage","MFImage","SFInt32","SFNode","MFNode","MFInt32","SFRotation","MFRotation","SFString","MFString","SFTime","MFTime","SFVec2d","MFVec2d","SFVec2f","MFVec2f","SFVec3d","MFVec3d","SFVec3f","MFVec3f"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/X3dRetreatProtoExercise.json
+ version: 3.0
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/AllenDuttonBlurryMotion.json
 
  keyword: additionalProperties
- dataPath: X3D > Scene > -children > 6 > ProtoInstance
- value: {"@name":"Humanoid","@DEF":"Humanoid","fieldValue":"|omitted|"}
+ dataPath: X3D > Scene > -children > 5 > HAnimHumanoid
+ value: {"@name":"Humanoid","@DEF":"Humanoid","@info":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
  message: should NOT have additional properties
  params: {"additionalProperty":"@name"}
- file: C:/Users/coderextreme/X3DJSONLD/src/main/data/NancyPrototypes.json
- version: 3.0
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/AllenDuttonBlurryMotion.json
+ version: 3.3
 
 
- keyword: additionalProperties
- dataPath: X3D > Scene > -children > 6 > ProtoInstance > fieldValue > 4 > -children > 0 > ProtoInstance
- value: {"@name":"Joint","@USE":"hanim_HumanoidRoot"}
- message: should NOT have additional properties
- params: {"additionalProperty":"@name"}
- file: C:/Users/coderextreme/X3DJSONLD/src/main/data/NancyPrototypes.json
- version: 3.0
-
-
- keyword: additionalProperties
- dataPath: X3D > Scene > -children > 6 > ProtoInstance > fieldValue > 4 > -children > 0 > ProtoInstance
- value: {"@name":"Joint","@USE":"hanim_HumanoidRoot"}
- message: should NOT have additional properties
- params: {"additionalProperty":"@USE"}
- file: C:/Users/coderextreme/X3DJSONLD/src/main/data/NancyPrototypes.json
- version: 3.0
+ keyword: enum
+ dataPath: X3D > Scene > -children > 5 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/AllenDuttonBlurryMotion.json
+ version: 3.3
 
 
  keyword: oneOf
- dataPath: X3D > Scene > -children > 6 > ProtoInstance > fieldValue > 4 > -children > 0 > ProtoInstance
- value: {"@name":"Joint","@USE":"hanim_HumanoidRoot"}
+ dataPath: X3D > Scene > -children > 5 > HAnimHumanoid
+ value: {"@name":"Humanoid","@DEF":"Humanoid","@info":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
  message: should match exactly one schema in oneOf
  params: {"passingSchemas":null}
- file: C:/Users/coderextreme/X3DJSONLD/src/main/data/NancyPrototypes.json
- version: 3.0
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/AllenDuttonBlurryMotion.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/BoxMan.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > HAnimHumanoid
+ value: {"@name":"Humanoid","@DEF":"boxman_Humanoid","@info":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-children":"|omitted|","-skinCoord":"|omitted|","-skin":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-sites":"|omitted|","-viewpoints":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/BoxMan.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 3 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/BoxMan.json
+ version: 3.3
 
 
  keyword: oneOf
- dataPath: X3D > Scene > -children > 6 > ProtoInstance
- value: {"@name":"Humanoid","@DEF":"Humanoid","fieldValue":"|omitted|"}
+ dataPath: X3D > Scene > -children > 3 > HAnimHumanoid
+ value: {"@name":"Humanoid","@DEF":"boxman_Humanoid","@info":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-children":"|omitted|","-skinCoord":"|omitted|","-skin":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-sites":"|omitted|","-viewpoints":"|omitted|"}
  message: should match exactly one schema in oneOf
  params: {"passingSchemas":null}
- file: C:/Users/coderextreme/X3DJSONLD/src/main/data/NancyPrototypes.json
- version: 3.0
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/BoxMan.json
+ version: 3.3
 
-Failed JSON parse C:/Users/coderextreme/X3DJSONLD/src/main/data/text.new.json SyntaxError: Unexpected string in JSON at position 4278
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/BoxManAnimationPanel.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Humanoid","@DEF":"boxman_Humanoid","@info":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-children":"|omitted|","-skinCoord":"|omitted|","-skin":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-sites":"|omitted|","-viewpoints":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/BoxManAnimationPanel.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/BoxManAnimationPanel.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Humanoid","@DEF":"boxman_Humanoid","@info":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-children":"|omitted|","-skinCoord":"|omitted|","-skin":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-sites":"|omitted|","-viewpoints":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/BoxManAnimationPanel.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/DiamondManLOA_0.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"humanoid","@DEF":"DiamondMan","@info":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-viewpoints":"|omitted|","-sites":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/DiamondManLOA_0.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/DiamondManLOA_0.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"humanoid","@DEF":"DiamondMan","@info":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-viewpoints":"|omitted|","-sites":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/DiamondManLOA_0.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Illustrated.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 14 > HAnimHumanoid
+ value: {"@name":"humanoid","@DEF":"hanim_humanoid","@info":"|omitted|","@version":"2.2","-children":"|omitted|","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-sites":"|omitted|","-viewpoints":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Illustrated.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 14 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Illustrated.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 14 > HAnimHumanoid
+ value: {"@name":"humanoid","@DEF":"hanim_humanoid","@info":"|omitted|","@version":"2.2","-children":"|omitted|","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-sites":"|omitted|","-viewpoints":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Illustrated.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Invisible.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 14 > HAnimHumanoid
+ value: {"@name":"humanoid","@DEF":"hanim_humanoid","@info":"|omitted|","@version":"2.2","-children":"|omitted|","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-sites":"|omitted|","-viewpoints":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Invisible.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 14 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Invisible.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 14 > HAnimHumanoid
+ value: {"@name":"humanoid","@DEF":"hanim_humanoid","@info":"|omitted|","@version":"2.2","-children":"|omitted|","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-sites":"|omitted|","-viewpoints":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Invisible.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Motion.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 14 > HAnimHumanoid
+ value: {"@name":"humanoid","@DEF":"hanim_humanoid","@info":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-children":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-sites":"|omitted|","-viewpoints":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Motion.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 14 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Motion.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 14 > HAnimHumanoid
+ value: {"@name":"humanoid","@DEF":"hanim_humanoid","@info":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-children":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-sites":"|omitted|","-viewpoints":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3Motion.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/InterchangableActorsViaDynamicRoutingPrototypes.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 19 > Switch
+ value: {"@DEF":"AvatarSwitch","@whichChoice":0,"-children":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/InterchangableActorsViaDynamicRoutingPrototypes.json
+ version: 3.3
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 19 > Switch > -children > 3 > HAnimHumanoid
+ value: {"@name":"Humanoid","@DEF":"BoxMan","@version":"2.2","-skeleton":"|omitted|","-children":"|omitted|","-skinCoord":"|omitted|","-skin":"|omitted|","-joints":"|omitted|","-sites":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/InterchangableActorsViaDynamicRoutingPrototypes.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 19 > Switch > -children > 3 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/InterchangableActorsViaDynamicRoutingPrototypes.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 19 > Switch > -children > 3 > HAnimHumanoid
+ value: {"@name":"Humanoid","@DEF":"BoxMan","@version":"2.2","-skeleton":"|omitted|","-children":"|omitted|","-skinCoord":"|omitted|","-skin":"|omitted|","-joints":"|omitted|","-sites":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/InterchangableActorsViaDynamicRoutingPrototypes.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 19 > Switch
+ value: {"@DEF":"AvatarSwitch","@whichChoice":0,"-children":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/InterchangableActorsViaDynamicRoutingPrototypes.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter01Jin.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Jin","@DEF":"hanim_Jin","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter01Jin.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter01Jin.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Jin","@DEF":"hanim_Jin","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter01Jin.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter02Chul.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Chul","@DEF":"hanim_Chul","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter02Chul.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter02Chul.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Chul","@DEF":"hanim_Chul","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter02Chul.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter03Hyun.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Hyun","@DEF":"hanim_Hyun","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter03Hyun.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter03Hyun.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Hyun","@DEF":"hanim_Hyun","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter03Hyun.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter04Young.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Young","@DEF":"hanim_Young","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter04Young.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter04Young.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Young","@DEF":"hanim_Young","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter04Young.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter05Ju.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Ju","@DEF":"hanim_Ju","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter05Ju.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter05Ju.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Ju","@DEF":"hanim_Ju","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter05Ju.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter06Ga.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Ga","@DEF":"hanim_Ga","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter06Ga.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter06Ga.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Ga","@DEF":"hanim_Ga","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter06Ga.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter07No.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"No","@DEF":"hanim_No","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter07No.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter07No.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"No","@DEF":"hanim_No","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter07No.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter08Da.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Da","@DEF":"hanim_Da","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter08Da.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter08Da.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Da","@DEF":"hanim_Da","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter08Da.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter09Ru.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Ru","@DEF":"hanim_Ru","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter09Ru.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter09Ru.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Ru","@DEF":"hanim_Ru","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter09Ru.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter10Mi.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Mi","@DEF":"hanim_Mi","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter10Mi.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter10Mi.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Mi","@DEF":"hanim_Mi","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter10Mi.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter11Min.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Min","@DEF":"hanim_Min","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter11Min.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter11Min.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Min","@DEF":"hanim_Min","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter11Min.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter12Sun.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Sun","@DEF":"hanim_Sun","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter12Sun.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter12Sun.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > HAnimHumanoid
+ value: {"@name":"Sun","@DEF":"hanim_Sun","@info":"|omitted|","@scale":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/KoreanCharacter12Sun.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyDiving.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Group
+ value: {"@DEF":"HighResolution","-children":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyDiving.json
+ version: 3.3
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Group > -children > 0 > Transform
+ value: {"@rotation":"|omitted|","-children":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@rotation"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyDiving.json
+ version: 3.3
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Group > -children > 0 > Transform > -children > 0 > Transform
+ value: {"@rotation":"|omitted|","-children":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@rotation"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyDiving.json
+ version: 3.3
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Group > -children > 0 > Transform > -children > 0 > Transform > -children > 1 > Transform
+ value: {"@translation":"|omitted|","-children":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@translation"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyDiving.json
+ version: 3.3
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > Group > -children > 0 > Transform > -children > 0 > Transform > -children > 1 > Transform > -children > 0 > HAnimHumanoid
+ value: {"@name":"Nancy","@DEF":"Humanoid","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyDiving.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 2 > Group > -children > 0 > Transform > -children > 0 > Transform > -children > 1 > Transform > -children > 0 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyDiving.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > Group > -children > 0 > Transform > -children > 0 > Transform > -children > 1 > Transform > -children > 0 > HAnimHumanoid
+ value: {"@name":"Nancy","@DEF":"Humanoid","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyDiving.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > Group > -children > 0 > Transform > -children > 0 > Transform > -children > 1 > Transform
+ value: {"@translation":"|omitted|","-children":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyDiving.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > Group > -children > 0 > Transform > -children > 0 > Transform
+ value: {"@rotation":"|omitted|","-children":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyDiving.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > Group > -children > 0 > Transform
+ value: {"@rotation":"|omitted|","-children":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyDiving.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > Group
+ value: {"@DEF":"HighResolution","-children":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyDiving.json
+ version: 3.3
+
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyNativeTags.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 0 > HAnimHumanoid
+ value: {"@name":"nancy","@DEF":"Humanoid","@info":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-viewpoints":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@name"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyNativeTags.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 0 > HAnimHumanoid > @version
+ value: "2.2"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["1.0","1.1","2.0"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyNativeTags.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 0 > HAnimHumanoid
+ value: {"@name":"nancy","@DEF":"Humanoid","@info":"|omitted|","@version":"2.2","-skeleton":"|omitted|","-joints":"|omitted|","-segments":"|omitted|","-viewpoints":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyNativeTags.json
+ version: 3.3
+
+0 Ajv 3.2 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounce.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > RigidBodyCollection
+ value: {"@DEF":"BODY-COLLECTION","-bodies":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounce.json
+ version: 3.2
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@position":"|omitted|","-geometry":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounce.json
+ version: 3.2
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 3 > RigidBodyCollection > -bodies > 0 > RigidBody > -geometry
+ value: {"CollidableShape":"|omitted|"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounce.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 3 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@position":"|omitted|","-geometry":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounce.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 3 > RigidBodyCollection
+ value: {"@DEF":"BODY-COLLECTION","-bodies":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounce.json
+ version: 3.2
+
+0 Ajv 3.2 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounceSimple.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection
+ value: {"@DEF":"BODY-COLLECTION","-bodies":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounceSimple.json
+ version: 3.2
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@position":"|omitted|","-geometry":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounceSimple.json
+ version: 3.2
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection > -bodies > 0 > RigidBody > -geometry
+ value: {"CollidableShape":"|omitted|"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounceSimple.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@position":"|omitted|","-geometry":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounceSimple.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection
+ value: {"@DEF":"BODY-COLLECTION","-bodies":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounceSimple.json
+ version: 3.2
+
+0 Ajv 3.2 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallJoint.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection
+ value: {"-bodies":"|omitted|","-joints":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"-bodies"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallJoint.json
+ version: 3.2
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@mass":10000,"@useGlobalGravity":false,"-geometry":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallJoint.json
+ version: 3.2
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection > -bodies > 0 > RigidBody > -geometry
+ value: {"CollidableShape":"|omitted|"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallJoint.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@mass":10000,"@useGlobalGravity":false,"-geometry":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallJoint.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection
+ value: {"-bodies":"|omitted|","-joints":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallJoint.json
+ version: 3.2
+
+0 Ajv 3.2 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BodyGeometry.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection
+ value: {"-bodies":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"-bodies"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BodyGeometry.json
+ version: 3.2
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","-geometry":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BodyGeometry.json
+ version: 3.2
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody > -geometry
+ value: {"CollidableShape":"|omitted|"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BodyGeometry.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","-geometry":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BodyGeometry.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection
+ value: {"-bodies":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BodyGeometry.json
+ version: 3.2
+
+0 Ajv 3.2 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BounceTrimesh.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > RigidBodyCollection
+ value: {"@DEF":"BODY-COLLECTION","-bodies":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BounceTrimesh.json
+ version: 3.2
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 3 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@position":"|omitted|","-geometry":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BounceTrimesh.json
+ version: 3.2
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 3 > RigidBodyCollection > -bodies > 0 > RigidBody > -geometry
+ value: {"CollidableShape":"|omitted|"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BounceTrimesh.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 3 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@position":"|omitted|","-geometry":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BounceTrimesh.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 3 > RigidBodyCollection
+ value: {"@DEF":"BODY-COLLECTION","-bodies":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BounceTrimesh.json
+ version: 3.2
+
+0 Ajv 3.2 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/DoubleHingeJoint.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection
+ value: {"-bodies":"|omitted|","-joints":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"-bodies"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/DoubleHingeJoint.json
+ version: 3.2
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@mass":0.1,"@position":"|omitted|","@useGlobalGravity":false,"-geometry":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/DoubleHingeJoint.json
+ version: 3.2
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody > -geometry
+ value: {"CollidableShape":"|omitted|"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/DoubleHingeJoint.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@mass":0.1,"@position":"|omitted|","@useGlobalGravity":false,"-geometry":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/DoubleHingeJoint.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection
+ value: {"-bodies":"|omitted|","-joints":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/DoubleHingeJoint.json
+ version: 3.2
+
+0 Ajv 3.2 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MotorJoint.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection
+ value: {"-bodies":"|omitted|","-joints":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"-bodies"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MotorJoint.json
+ version: 3.2
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@mass":0.1,"@position":"|omitted|","@useGlobalGravity":false,"-geometry":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MotorJoint.json
+ version: 3.2
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody > -geometry
+ value: {"CollidableShape":"|omitted|"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MotorJoint.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@mass":0.1,"@position":"|omitted|","@useGlobalGravity":false,"-geometry":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MotorJoint.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection
+ value: {"-bodies":"|omitted|","-joints":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MotorJoint.json
+ version: 3.2
+
+0 Ajv 3.2 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MovingBody.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection
+ value: {"@DEF":"BODY-COLLECTION","-bodies":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MovingBody.json
+ version: 3.2
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@linearVelocity":"|omitted|","@mass":0.1,"@position":"|omitted|","-geometry":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MovingBody.json
+ version: 3.2
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody > -geometry
+ value: {"CollidableShape":"|omitted|"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MovingBody.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@linearVelocity":"|omitted|","@mass":0.1,"@position":"|omitted|","-geometry":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MovingBody.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection
+ value: {"@DEF":"BODY-COLLECTION","-bodies":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/MovingBody.json
+ version: 3.2
+
+0 Ajv 3.2 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SingleHingeJoint.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection
+ value: {"-bodies":"|omitted|","-joints":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"-bodies"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SingleHingeJoint.json
+ version: 3.2
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@mass":10000,"@position":"|omitted|","@useGlobalGravity":false,"-geometry":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SingleHingeJoint.json
+ version: 3.2
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection > -bodies > 0 > RigidBody > -geometry
+ value: {"CollidableShape":"|omitted|"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SingleHingeJoint.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@mass":10000,"@position":"|omitted|","@useGlobalGravity":false,"-geometry":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SingleHingeJoint.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 2 > RigidBodyCollection
+ value: {"-bodies":"|omitted|","-joints":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SingleHingeJoint.json
+ version: 3.2
+
+0 Ajv 3.2 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SliderJoint.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection
+ value: {"-bodies":"|omitted|","-joints":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"-bodies"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SliderJoint.json
+ version: 3.2
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@mass":0.1,"@position":"|omitted|","@useGlobalGravity":false,"-geometry":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SliderJoint.json
+ version: 3.2
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody > -geometry
+ value: {"CollidableShape":"|omitted|"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SliderJoint.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@mass":0.1,"@position":"|omitted|","@useGlobalGravity":false,"-geometry":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SliderJoint.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection
+ value: {"-bodies":"|omitted|","-joints":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/SliderJoint.json
+ version: 3.2
+
+0 Ajv 3.2 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/UniversalJoint.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection
+ value: {"-bodies":"|omitted|","-joints":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"-bodies"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/UniversalJoint.json
+ version: 3.2
+
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@angularVelocity":"|omitted|","@mass":0.1,"@position":"|omitted|","@useGlobalGravity":false,"-geometry":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@DEF"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/UniversalJoint.json
+ version: 3.2
+
+
+ keyword: type
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody > -geometry
+ value: {"CollidableShape":"|omitted|"}
+ message: should be array
+ params: {"type":"array"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/UniversalJoint.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection > -bodies > 0 > RigidBody
+ value: {"@DEF":"BODY-1","@angularVelocity":"|omitted|","@mass":0.1,"@position":"|omitted|","@useGlobalGravity":false,"-geometry":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/UniversalJoint.json
+ version: 3.2
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 1 > RigidBodyCollection
+ value: {"-bodies":"|omitted|","-joints":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/UniversalJoint.json
+ version: 3.2
+
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Viewpoint/jumpcut_proximitysensor.json SyntaxError: Unexpected token , in JSON at position 6705
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (internal/modules/cjs/loader.js:721:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:732:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:774:12)
+    at executeUserCode (internal/bootstrap/node.js:499:15)
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Viewpoint/viewinline.json SyntaxError: Unexpected token , in JSON at position 15644
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (internal/modules/cjs/loader.js:721:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:732:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:774:12)
+    at executeUserCode (internal/bootstrap/node.js:499:15)
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/GroundVehicles/Jeep/Jeep.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 0 > NavigationInfo
+ value: {"@type":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@type"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/GroundVehicles/Jeep/Jeep.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 0 > NavigationInfo > @type > 0
+ value: "EXAMINE ANY"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["ANY","WALK","EXAMINE","FLY","LOOKAT","NONE","EXPLORE"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/GroundVehicles/Jeep/Jeep.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 0 > NavigationInfo
+ value: {"@type":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Savage/GroundVehicles/Jeep/Jeep.json
+ version: 3.3
+
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Button.json SyntaxError: Unexpected token , in JSON at position 3487
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (internal/modules/cjs/loader.js:721:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:732:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:774:12)
+    at executeUserCode (internal/bootstrap/node.js:499:15)
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Cut.json SyntaxError: Unexpected token , in JSON at position 12319
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (internal/modules/cjs/loader.js:721:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:732:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:774:12)
+    at executeUserCode (internal/bootstrap/node.js:499:15)
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Loader.json SyntaxError: Unexpected token , in JSON at position 8231
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (internal/modules/cjs/loader.js:721:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:732:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:774:12)
+    at executeUserCode (internal/bootstrap/node.js:499:15)
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Query.json SyntaxError: Unexpected token , in JSON at position 4342
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (internal/modules/cjs/loader.js:721:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:732:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:774:12)
+    at executeUserCode (internal/bootstrap/node.js:499:15)
+0 Ajv 3.3 Validation failed on C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/SubWorld.json
+
+ keyword: additionalProperties
+ dataPath: X3D > Scene > -children > 1 > NavigationInfo
+ value: {"@type":"|omitted|"}
+ message: should NOT have additional properties
+ params: {"additionalProperty":"@type"}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/SubWorld.json
+ version: 3.3
+
+
+ keyword: enum
+ dataPath: X3D > Scene > -children > 1 > NavigationInfo > @type > 1
+ value: "ALL"
+ message: should be equal to one of the allowed values
+ params: {"allowedValues":["ANY","WALK","EXAMINE","FLY","LOOKAT","NONE","EXPLORE"]}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/SubWorld.json
+ version: 3.3
+
+
+ keyword: oneOf
+ dataPath: X3D > Scene > -children > 1 > NavigationInfo
+ value: {"@type":"|omitted|"}
+ message: should match exactly one schema in oneOf
+ params: {"passingSchemas":null}
+ file: C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/SubWorld.json
+ version: 3.3
+
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/TextFont.json SyntaxError: Unexpected token , in JSON at position 3918
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (internal/modules/cjs/loader.js:721:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:732:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:774:12)
+    at executeUserCode (internal/bootstrap/node.js:499:15)
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/TextSize.json SyntaxError: Unexpected token , in JSON at position 3958
+    at JSON.parse (<anonymous>)
+    at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
+    at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)
+    at Module._compile (internal/modules/cjs/loader.js:721:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:732:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:774:12)
+    at executeUserCode (internal/bootstrap/node.js:499:15)
+Failed JSON parse C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForWebAuthors/Chapter14Prototypes/HudKelpForest.json SyntaxError: Unexpected token , in JSON at position 12368
     at JSON.parse (<anonymous>)
     at validateFile (C:\Users\coderextreme\x3dschema\validatex3djson.js:64:20)
     at Object.<anonymous> (C:\Users\coderextreme\x3dschema\validatex3djson.js:86:2)

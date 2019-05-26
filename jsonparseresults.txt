@@ -1,0 +1,2 @@
+json-parse json Duplicate key "connect" at 4321 [character 62 line 113] C:/Users/coderextreme/X3DJSONLD/src/main/data/flowerproto.new.json
+json-parse json Expected a ',' or ']' at 4279 [character 30 line 141] C:/Users/coderextreme/X3DJSONLD/src/main/data/text.new.json

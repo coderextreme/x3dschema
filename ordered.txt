@@ -1,0 +1,2 @@
+      1  #/X3D/Scene/-children/6/ProtoInstance: #: 0 subschemas matched instead of one C:/Users/coderextreme/X3DJSONLD/src/main/data/NancyPrototypes.json
+      1  #/X3D/Scene/-children/0/Group: #: 0 subschemas matched instead of one C:/Users/coderextreme/X3DJSONLD/src/main/data/ifs.json
