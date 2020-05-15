@@ -24,11 +24,12 @@ public class MetaSchemaTest {
 
     JSONObject jsonSchema = new JSONObject(new JSONTokener(
         MetaSchemaTest.class
-            .getResourceAsStream("json-schema-draft-06.json")));
+            .getResourceAsStream("json-schema-draft-07.json")));
 
     JSONObject jsonSubject = new JSONObject(new JSONTokener(
         MetaSchemaTest.class
             .getResourceAsStream("x3d-3.3-JSONSchema.json")));
+            // .getResourceAsStream("json-schema-draft-07.json"))); // metaschema
 
     Schema schema = SchemaLoader.load(jsonSchema);
     schema.validate(jsonSubject);
