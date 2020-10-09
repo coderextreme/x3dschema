@@ -1,5 +1,19 @@
 json-parse json Expected a ':' after a key at 2487 [character 24 line 80] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestDiagnosticOverloadedChildNodes.json
 json-parse json Expected a ':' after a key at 31329 [character 24 line 1181] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/TestSchematronDiagnostics.json
 json-parse json Expected a ',' or ']' at 2949 [character 162 line 82] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/development/UnquotedTokensNavigationInfoAndFontStyle.json
+json-parse json Expected a ',' or '}' at 3334 [character 35 line 98] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/originals/LOA3ExampleSourceWithDiamondsOriginalBsContactExport.json
+json-parse json Expected a ',' or '}' at 2510 [character 32 line 69] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/save/NancyNativeTagsWrapped.json
+json-parse json Expected a ',' or '}' at 507 [character 29 line 15] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/javasrc/Lv_Java_v0_31/CodeBase/Demo/baby.json
+json-parse json Expected a ',' or '}' at 670 [character 35 line 19] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/javasrc/Lv_Java_v0_31/CodeBase/Demo/communicator/communicator.json
+json-parse json Expected a ',' or '}' at 507 [character 29 line 15] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/javasrc/Lv_Java_v0_31/CodeBase/Demo/dolphin.json
+json-parse json Expected a ',' or '}' at 507 [character 29 line 15] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/javasrc/Lv_Java_v0_31/CodeBase/Demo/hand.json
+json-parse json Expected a ',' or '}' at 507 [character 29 line 15] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/javasrc/Lv_Java_v0_31/CodeBase/Demo/octopus.json
+json-parse json Expected a ',' or '}' at 507 [character 29 line 15] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/LatticeXvl/javasrc/Lv_Java_v0_31/CodeBase/Demo/oni.json
+json-parse json Duplicate key "-children" at 1429 [character 20 line 53] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/NURBS/originals/mobius.json
+json-parse json Expected a ',' or '}' at 3476 [character 57 line 112] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/NURBS/originals/nrbduck_0.json
+json-parse json Duplicate key "-children" at 1442 [character 20 line 53] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/NURBS/originals/nurbs_patch_solid.json
+json-parse json Duplicate key "-children" at 1507 [character 20 line 53] C:/x3d-code/www.web3d.org/x3d/content/examples/Basic/NURBS/originals/trimmed_nurbs_with_hole.json
+json-parse json Duplicate key "-children" at 1242 [character 20 line 44] C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForAdvancedModeling/AdditiveManufacturing/originals/PubChem-2519-sticks-color.json
 json-parse json JSONObject["@version"] not a string. C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloWorldCommentedAlternativeEncoding.json
 json-parse json JSONObject["@version"] not a string. C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloWorldCommentedOriginalEncoding.json
+json-parse json Duplicate key "-children" at 509 [character 20 line 16] C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForAdvancedModeling/Scanning/originals/CyberBanana.json
