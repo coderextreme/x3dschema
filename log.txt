@@ -1,0 +1,279 @@
+Buildfile: C:\Users\john\x3dschema\build.xml
+
+default:
+     [echo] Build modules:
+     [echo] Compile: with classpath C:/Users/john/pythonSAI/X3DJSAIL.4.0.full.jar;.
+     [echo] Run:
+
+run:
+  [foreach] The nested fileset element is deprectated, use a nested path instead
+
+runone:
+     [echo] Validate C:\Users\john\x3dschema\examples\HelloWorldProgramOutput.json with classpath C:/Users/john/pythonSAI/X3DJSAIL.4.0.full.jar;.
+     [java] Validating C:\Users\john\x3dschema\examples\HelloWorldProgramOutput.json
+     [java] [X3DLoaderDOM] <meta name='info' content='continued development and testing in progress'/>
+     [java] ***[X3DLoaderDOM warning] ProtoInstance NewWorldInfo found and node type is WorldInfo but containerField is missing, assuming default value 'children'java.lang.ClassCastException: class org.web3d.x3d.jsail.DIS.DISEntityManager cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.DIS.DISEntityManager and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java] ***[X3DLoaderDOM warning] ProtoInstance NewWorldInfo found and node type is WorldInfo but containerField is missing, assuming default value 'children'
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] ***[X3DLoaderDOM warning] ProtoInstance ShaderProto found and node type is ProgramShader but containerField is missing, assuming default value 'children'	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)*** [X3DLoaderDOM error] Parent-child node relationship not found! (parent DISEntityManager, child DISEntityTypeMapping, containerField='') Please report this problem to brutzman@nps.edu
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 
+     [java] 	at Validate.main(Unknown Source)
+     [java] java.lang.ClassCastException: class org.web3d.x3d.jsail.DIS.DISEntityManager cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.DIS.DISEntityManager and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java] *** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=DISEntityManager (DISEntityManager), child="DISEntityTypeMapping", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.DIS.DISEntityManager cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.DIS.DISEntityManager and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 	at Validate.main(Unknown Source)
+     [java] *** [X3DLoaderDOM error] Parent-child node relationship not found! (parent DISEntityManager, child DISEntityTypeMapping, containerField='') Please report this problem to brutzman@nps.edu
+     [java] java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java] *** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=DISEntityManager (DISEntityManager), child="DISEntityTypeMapping", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.DIS.DISEntityManager cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.DIS.DISEntityManager and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java] 	at Validate.main(Unknown Source)
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] *** [X3DLoaderDOM error] Parent-child node relationship not found! (parent LoadSensor, child Anchor, containerField='') Please report this problem to brutzman@nps.edujava.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] *** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=LoadSensor (LoadSensor), child="Anchor", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 	at Validate.main(Unknown Source)
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] *** [X3DLoaderDOM error] Parent-child node relationship not found! (parent LoadSensor, child Inline, containerField='') Please report this problem to brutzman@nps.edu
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] *** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=LoadSensor (LoadSensor), child="Inline", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 
+     [java] 	at Validate.main(Unknown Source)    X3D node typing is strict, check or validate your scene graph!
+     [java] 
+     [java] java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] *** [X3DLoaderDOM error] Parent-child node relationship not found! (parent LoadSensor, child DISEntityTypeMapping, containerField='') Please report this problem to brutzman@nps.edu
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 	at Validate.main(Unknown Source)
+     [java] *** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=LoadSensor (LoadSensor), child="DISEntityTypeMapping", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] *** [X3DLoaderDOM error] Parent-child node relationship not found! (parent LoadSensor, child GeoMetadata, containerField='') Please report this problem to brutzman@nps.edu
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)*** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=LoadSensor (LoadSensor), child="GeoMetadata", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 	at Validate.main(Unknown Source)
+     [java] 
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java] java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] *** [X3DLoaderDOM error] Parent-child node relationship not found! (parent LoadSensor, child AudioClip, containerField='') Please report this problem to brutzman@nps.edu
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 	at Validate.main(Unknown Source)
+     [java] java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')*** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=LoadSensor (LoadSensor), child="AudioClip", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 	at Validate.main(Unknown Source)
+     [java] 
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] *** [X3DLoaderDOM error] Parent-child node relationship not found! (parent LoadSensor, child ImageCubeMapTexture, containerField='') Please report this problem to brutzman@nps.edu
+     [java] java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] *** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=LoadSensor (LoadSensor), child="ImageCubeMapTexture", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)    This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java] 
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java] 	at Validate.main(Unknown Source)
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)*** [X3DLoaderDOM error] Parent-child node relationship not found! (parent LoadSensor, child ImageTexture3D, containerField='') Please report this problem to brutzman@nps.edu
+     [java] 
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 	at Validate.main(Unknown Source)
+     [java] *** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=LoadSensor (LoadSensor), child="ImageTexture3D", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java] java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] *** [X3DLoaderDOM error] Parent-child node relationship not found! (parent LoadSensor, child ImageTexture, containerField='') Please report this problem to brutzman@nps.edu
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 	at Validate.main(Unknown Source)
+     [java] *** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=LoadSensor (LoadSensor), child="ImageTexture", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java] java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] *** [X3DLoaderDOM error] Parent-child node relationship not found! (parent LoadSensor, child MovieTexture, containerField='') Please report this problem to brutzman@nps.edu
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 	at Validate.main(Unknown Source)
+     [java] java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java] *** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=LoadSensor (LoadSensor), child="MovieTexture", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 	at Validate.main(Unknown Source)
+     [java] *** [X3DLoaderDOM error] Parent-child node relationship not found! (parent LoadSensor, child Script, containerField='') Please report this problem to brutzman@nps.edu
+     [java] java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:1352)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] *** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=LoadSensor (LoadSensor), child="Script", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 	at Validate.main(Unknown Source)
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] *** [X3DLoaderDOM error] Parent-child node relationship not found! (parent LoadSensor, child PackagedShader, containerField='') Please report this problem to brutzman@nps.edu
+     [java] *** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=LoadSensor (LoadSensor), child="PackagedShader", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] *** [X3DLoaderDOM error] Parent-child node relationship not found! (parent LoadSensor, child ShaderPart, containerField='') Please report this problem to brutzman@nps.edu
+     [java] *** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=LoadSensor (LoadSensor), child="ShaderPart", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] *** [X3DLoaderDOM error] Parent-child node relationship not found! (parent LoadSensor, child ShaderProgram, containerField='') Please report this problem to brutzman@nps.edu
+     [java] *** [X3DLoaderDOM error] Incorrectly handled X3DJSAIL object construction, current elementObject=LoadSensor (LoadSensor), child="ShaderProgram", containerField="", java.lang.ClassCastException: class org.web3d.x3d.jsail.Networking.LoadSensor cannot be cast to class org.web3d.x3d.sai.Grouping.X3DGroupingNode (org.web3d.x3d.jsail.Networking.LoadSensor and org.web3d.x3d.sai.Grouping.X3DGroupingNode are in unnamed module of loader 'app')
+     [java]     This error can be caused by incorrect parent-child node relationships or incorrect containerField values.
+     [java]     X3D node typing is strict, check or validate your scene graph!
+     [java]     This error can also be caused by X3DLoaderDOM DOM omissions in X3DJSAIL. Please report mysterious problems, thank you.
+     [java] 
+     [java] 
+     [java] <meta content='continued development and testing in progress' name='info'/>
+     [java] 
+     [java] WARNING_PROTOINSTANCE_NOT_FOUND, ProtoDeclare NewWorldInfo has no corresponding ProtoInstance attached to the scene graph. 
+     [java] WARNING_PROTOINSTANCE_NOT_FOUND, ProtoDeclare ShaderProto has no corresponding ProtoInstance attached to the scene graph.
+
+runone:
+     [echo] Validate C:\Users\john\x3dschema\examples\IFS.json with classpath C:/Users/john/pythonSAI/X3DJSAIL.4.0.full.jar;.
+     [java] Validating C:\Users\john\x3dschema\examples\IFS.json
+
+runone:
+     [echo] Validate C:\Users\john\x3dschema\examples\Java.json with classpath C:/Users/john/pythonSAI/X3DJSAIL.4.0.full.jar;.
+     [java] Validating C:\Users\john\x3dschema\examples\Java.json
+     [java] [X3DLoaderDOM] <meta name='info' content='tested sat: name value cannot contain embedded space character'/>
+     [java] 
+     [java] <meta content='tested sat: name value cannot contain embedded space character' name='info'/>
+     [java] 
+     [java] WARNING_MESSAGE: duplicate statement found: <meta name='reference' content='X3D JSON encoding: https://www.web3d.org/wiki/index.php/X3D_JSON_Encoding'/>
+
+runone:
+     [echo] Validate C:\Users\john\x3dschema\examples\JoeSkeletonSkinSiteSaluteWalk.JV.json with classpath C:/Users/john/pythonSAI/X3DJSAIL.4.0.full.jar;.
+     [java] Validating C:\Users\john\x3dschema\examples\JoeSkeletonSkinSiteSaluteWalk.JV.json
+     [java] [X3DLoaderDOM] <meta name='warning' content='Under development, numerous errors and warnings'/>
+     [java] org.web3d.x3d.sai.InvalidFieldValueException: Invalid setContainerFieldOverride() value='skinCoord', legal values for Coordinate are containerField_ALTERNATE_VALUES='"coord"'
+     [java] Invalid C:\Users\john\x3dschema\examples\JoeSkeletonSkinSiteSaluteWalk.JV.json
+     [java] 	at org.web3d.x3d.jsail.X3DConcreteNode.setContainerFieldOverride(X3DConcreteNode.java:401)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:631)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 	at Validate.main(Unknown Source)
+
+runone:
+     [echo] Validate C:\Users\john\x3dschema\examples\JoeSkeletonSkinSiteSaluteWalk.json with classpath C:/Users/john/pythonSAI/X3DJSAIL.4.0.full.jar;.
+     [java] Validating C:\Users\john\x3dschema\examples\JoeSkeletonSkinSiteSaluteWalk.json
+     [java] [X3DLoaderDOM] <meta name='warning' content='Under development, numerous errors and warnings'/>
+     [java] Invalid C:\Users\john\x3dschema\examples\JoeSkeletonSkinSiteSaluteWalk.json
+     [java] org.web3d.x3d.sai.InvalidFieldValueException: Invalid setContainerFieldOverride() value='skinCoord', legal values for Coordinate are containerField_ALTERNATE_VALUES='"coord"'
+     [java] 	at org.web3d.x3d.jsail.X3DConcreteNode.setContainerFieldOverride(X3DConcreteNode.java:401)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:631)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:619)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:490)
+     [java] 	at org.web3d.x3d.jsail.X3DLoaderDOM.toX3dModelInstance(X3DLoaderDOM.java:453)
+     [java] 	at Validate.main(Unknown Source)
+
+runone:
+     [echo] Validate C:\Users\john\x3dschema\examples\JohnJoint.json with classpath C:/Users/john/pythonSAI/X3DJSAIL.4.0.full.jar;.
+     [java] Validating C:\Users\john\x3dschema\examples\JohnJoint.json
+
+runone:
+     [echo] Validate C:\Users\john\x3dschema\examples\pp3.json with classpath C:/Users/john/pythonSAI/X3DJSAIL.4.0.full.jar;.
+     [java] Validating C:\Users\john\x3dschema\examples\pp3.json
+     [java] ***[X3DLoaderDOM warning] ProtoInstance Process found and node type is Group but containerField is missing, assuming default value 'children'
+     [java] ***[X3DLoaderDOM warning] ProtoInstance Process found and node type is Group but containerField is missing, assuming default value 'children'
+     [java] ***[X3DLoaderDOM warning] ProtoInstance Process found and node type is Group but containerField is missing, assuming default value 'children'
+     [java] 
+     [java] WARNING_PROTOINSTANCE_NOT_FOUND, ProtoDeclare Process has no corresponding ProtoInstance attached to the scene graph.
+
+BUILD SUCCESSFUL
+Total time: 3 seconds

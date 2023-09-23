@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "JSON Schema X3D V3.3",
+    "description": "Experimental JSON Schema for X3D V3.3 ",
+    "type": "object",
+    "properties": {
+        "MovieTexture": {
+            "type": "object",
+            "properties": {
+                "@startTime": {
+                    "type": "number",
+                    "default": 0
+                }
+            }
+       }
+   }
+}

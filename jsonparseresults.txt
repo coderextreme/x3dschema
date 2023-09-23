@@ -1,0 +1,10 @@
+json-parse json Expected a ':' after a key at 6302 [character 24 line 181] /c/x3d-code/www.web3d.org/x3d/content/examples/X3dForWebAuthors/Chapter15Metadata/XmpMetadataEmbedded.json
+json-parse json JSONObject["@version"] is not a string. /c/x3d-code/www.web3d.org/x3d/content/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloWorldCommentedOriginalEncoding.json
+json-parse json JSONObject["@version"] is not a string. /c/x3d-code/www.web3d.org/x3d/content/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloWorldCommentedAlternativeEncoding.json
+json-parse json Expected a ':' after a key at 7275 [character 31 line 193] /c/x3d-code/www.web3d.org/x3d/content/examples/X3dForAdvancedModeling/AudioSpatialSound/SplitChannels.json
+json-parse json Expected a ':' after a key at 8735 [character 37 line 240] /c/x3d-code/www.web3d.org/x3d/content/examples/X3dForAdvancedModeling/AudioSpatialSound/SpatialAudioCameraAnimation.json
+json-parse json Duplicate key "-children" at 21909 [character 20 line 537] /c/x3d-code/www.web3d.org/x3d/content/examples/X3dForAdvancedModeling/Scanning/ScannerMetadataExample33.json
+json-parse json Expected a ',' or ']' at 11317 [character 34 line 260] /c/x3d-code/www.web3d.org/x3d/content/examples/Savage/Scenarios/LimitedObjectiveExperimentPortHueneme/LimitedObjectiveExperimentPortHuenemeDIS.json
+json-parse json Expected a ',' or ']' at 10446 [character 34 line 241] /c/x3d-code/www.web3d.org/x3d/content/examples/Savage/Scenarios/LimitedObjectiveExperimentPortHueneme/LimitedObjectiveExperimentPortHueneme.json
+json-parse json Expected a ',' or ']' at 5199 [character 30 line 178] /c/x3d-code/www.web3d.org/x3d/content/examples/Savage/Locations/PanamaCityFlorida/PanamaCityGeo.json
+json-parse json Expected a ',' or ']' at 23535 [character 31 line 523] /c/x3d-code/www.web3d.org/x3d/content/examples/Savage/Weapons/UnderwaterMines/SphericalMinePrototype.json

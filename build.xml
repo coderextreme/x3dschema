@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Java JSON Schema validation" default="default" basedir=".">
+    <description>Builds, tests, and runs Validate for JSON validation.</description>
+    <property name="fork"         value="true"/>
+    <property name="examples"     value="/x3d-code/www.web3d.org/x3d/content/examples/ConformanceNist"/>
+    <!--
+    <property name="examples"     value="examples"/>
+    -->
+    <property name="classpath"     value=".;../pythonSAI/X3DJSAIL.4.0.full.jar"/>
+
+<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+  <classpath>
+    <pathelement location="C:/apache-ant-1.10.12-bin/apache-ant-1.10.12/lib/ant-contrib-1.0b3.jar"/>
+  </classpath>
+</taskdef>
+
+    <target name="default" description="build and test" depends="compile,batch">
+    </target>
+    <target name="compile" description="build">
+	<echo message="Build modules:"/>
+	<echo message="Compile: with classpath ${classpath}"/>
+	<javac includes="Validate.java,ValidateXML.java,X3DJSONLD.java" srcdir="." destdir="." classpath="${classpath}" includeantruntime="false" fork="${fork}"/>
+    </target>
+    <!--
+	<target name="run">
+	  <foreach target="runone" param="theFile">
+            <path>
+	      <fileset dir="${examples}" casesensitive="yes">
+		    <include name="**/HelloWorldProgramOutput*.json"/>
+	     </fileset>
+            </path>
+	  </foreach>
+	</target>
+
+	<target name="runone">
+		<echo message="Validate ${theFile} with classpath ${classpath}"/>
+		<java classname="Validate" classpath="${classpath}" fork="${fork}">
+			<arg value="${theFile}"/>
+		</java>
+	</target>
+	-->
+
+	<target name="batch" depends="compile">
+	  <echo message="Run batch:"/>
+	  <apply executable="java">
+	    <arg value="-cp"/>
+	    <arg value="${classpath}"/>
+	    <arg value="Validate"/>
+	    <srcfile/>
+	    <fileset dir="${examples}" casesensitive="yes">
+		<include name="**/*.json"/>
+		<include name="**/*.x3dj"/>
+		<include name="**/*.xml"/>
+		<include name="**/*.x3d"/>
+	    </fileset>
+	  </apply>
+	</target>
+	
+	<target name="batchx3d" depends="compile">
+	  <echo message="Run batch:"/>
+	  <apply executable="java">
+	    <arg value="-cp"/>
+	    <arg value="${classpath}"/>
+	    <arg value="Validate"/>
+	    <srcfile/>
+	    <fileset dir="${examples}" casesensitive="yes">
+		<include name="**/*.x3d"/>
+	    </fileset>
+	  </apply>
+	</target>
+	
+	<target name="commandline" depends="compile">
+	  <apply executable="java">
+	    <arg value="-cp"/>
+	    <arg value="${classpath}"/>
+	    <arg value="org.web3d.x3d.jsail.CommandLine"/>
+	    <arg value="-validate"/>
+	    <srcfile/>
+	    <fileset dir="${examples}" casesensitive="yes">
+		<include name="**/lilyBlender.x3d"/>
+		<!--
+		<include name="**/*.xml"/>
+		<include name="**/*.x3d"/>
+		-->
+	    </fileset>
+	  </apply>
+	</target>
+</project>
+
+

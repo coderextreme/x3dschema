@@ -1,0 +1,148 @@
+#X3D V4.0 utf8 X_ITE V8.12.0
+
+PROFILE Immersive
+
+META "title" "x3dconnector"
+META "creator" "Lost, Doug Sanden I think"
+META "generator" "manual"
+META "identifier" "https://coderextreme.net/X3DJSONLD/src/main/data/x3dconnectorProto.x3d"
+META "description" "a generic proto to connect two objects"
+META "converter" "x3d-tidy V1.0.93, https://www.npmjs.com/package/x3d-tidy"
+META "converted" "Thu, 14 Sep 2023 20:42:32 GMT"
+
+PROTO x3dconnector [
+  initializeOnly SFNode  startnode NULL
+  initializeOnly SFNode  endnode NULL
+  initializeOnly SFNode  transnode NULL
+  initializeOnly SFNode  rotscalenode NULL
+  inputOnly      SFVec3f set_startpoint
+  inputOnly      SFVec3f set_endpoint
+]
+{
+  DEF S1 Script {
+    initializeOnly SFNode  startnode IS startnode
+    initializeOnly SFNode  endnode IS endnode
+    initializeOnly SFNode  transnode IS transnode
+    initializeOnly SFNode  rotscalenode IS rotscalenode
+    inputOnly      SFVec3f set_startpoint IS set_startpoint
+    inputOnly      SFVec3f set_endpoint IS set_endpoint
+
+    url "ecmascript:
+        function recompute(startpoint,endpoint){
+	    if (typeof endpoint === 'undefined') {
+		return;
+	    }
+            var dif = endpoint.subtract(startpoint);
+            var dist = dif.length()*0.5;
+            var dif2 = dif.multiply(0.5);
+            var norm = dif.normalize();
+            var transl = startpoint.add(dif2);
+	    if (typeof Quaternion !== 'undefined') {
+		    return {
+			    scale : new SFVec3f(1.0,dist,1.0),
+			    translation : transl,
+			    rotation : new Quaternion.rotateFromTo(new SFVec3f(0.0,1.0,0.0), norm)
+		    };
+	    } else {
+		    return {
+			    scale : new SFVec3f(1.0,dist,1.0),
+			    translation : transl,
+			    rotation : new SFRotation(new SFVec3f(0.0,1.0,0.0),norm)
+		    };
+	    }
+	}
+	function recompute_and_route(startpoint, endpoint) {
+	      var trafo = recompute(startpoint, endpoint);
+	      if (trafo) {
+		      transnode.translation = trafo.translation;
+		      rotscalenode.rotation = trafo.rotation;
+		      rotscalenode.scale = trafo.scale;
+	      }
+	}
+        function initialize(){
+            recompute_and_route(startnode.translation,endnode.translation);
+        }
+        function set_startpoint(val,t){
+            recompute_and_route(val,endnode.translation);
+        }
+        function set_endpoint(val,t){
+            recompute_and_route(startnode.translation,val);
+        }
+            "
+  }
+}
+
+Viewpoint {
+  description "Only Viewpoint"
+  position 0 0 5
+}
+
+Background {
+  skyColor 0.4 0.4 0.4
+}
+
+DEF G1 Transform {
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.7 0.2 0.2
+        }
+      }
+      geometry Sphere {
+        radius 0.1
+      }
+    }
+    DEF PS1 PlaneSensor {
+      description "Grab to move"
+    }
+  ]
+}
+
+DEF G2 Transform {
+  translation 1 -1 0.01
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.2 0.7 0.2
+        }
+      }
+      geometry Sphere {
+        radius 0.1
+      }
+    }
+    DEF PS2 PlaneSensor {
+      description "Grab to move"
+      offset 1 -1 0.01
+    }
+  ]
+}
+
+DEF transC1 Transform {
+  children DEF rotscaleC1 Transform {
+    children Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.2 0.7 0.7
+          transparency 0.5
+        }
+      }
+      geometry Cylinder {
+        radius 0.05
+      }
+    }
+  }
+}
+
+DEF connector1 x3dconnector {
+  startnode USE G1
+  endnode USE G2
+  transnode USE transC1
+  rotscalenode USE rotscaleC1
+}
+
+ROUTE PS1.translation_changed TO G1.set_translation
+ROUTE PS2.translation_changed TO G2.set_translation
+ROUTE G1.translation_changed TO connector1.set_startpoint
+ROUTE G2.translation_changed TO connector1.set_endpoint

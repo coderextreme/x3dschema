@@ -1,0 +1,11 @@
+{
+  "name": "schema.visualization",
+  "description": "X3D JSON schema visualization",
+  "main": "app.js",
+  "dependencies": {
+    "express": "*"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
