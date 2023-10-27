@@ -73,7 +73,8 @@
                 <Transform DEF="ArchTransform">
                     <Shape DEF="Arch">
                         <!--"note that convex='false' (meaning concave geometry) is crucial for this IFS of a geometric chord to render properly"-->
-                        <IndexedFaceSet DEF="ArchIndex" convex="false" solid="false">
+                        <IndexedFaceSet DEF="ArchIndex"
+                            containerField="geometry" convex="false" solid="false">
                             <Coordinate DEF="ArchChord"/>
                         </IndexedFaceSet>
                         <Appearance>

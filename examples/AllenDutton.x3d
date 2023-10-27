@@ -2,14 +2,15 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
 <X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
-    <component level='1' name='HAnim'/>
+    <component level='1' name='H-Anim'/>
     <meta content='AllenDutton.x3d' name='title'/>
     <meta content='Articulated human model developed from laser-scan data using X3D native tags, rather than prototypes.' name='description'/>
     <meta content='Allen Dutton' name='creator'/>
     <meta content='Ozan APAYDIN' name='translator'/>
     <meta content='8 June 2001' name='created'/>
     <meta content='9 January 2002' name='translated'/>
-    <meta content='4 July 2020' name='modified'/>
+    <meta content='2 July 2023' name='modified'/>
+    <meta content='Legacy model, not valid as X3D4 HAnim version 2.0 since HAnim version 1.0 has significant differences and is no longer directly supported' name='error'/>
     <meta content='X3D Validator reports numerous warnings are present' name='warning'/>
     <meta content='http://www.cyberware.com' name='reference'/>
     <meta content='AllenDuttonBlurryMotion.x3d' name='reference'/>
@@ -23,7 +24,7 @@
   <Scene>
     <!-- Start scene graph. -->
     <WorldInfo title='AllenDutton.x3d'/>
-    <HAnimHumanoid DEF='hanim_Humanoid' name='Humanoid' version='2.0'>
+    <HAnimHumanoid DEF='hanim_Humanoid' name='Humanoid' version='1.0'>
       <HAnimJoint DEF='hanim_humanoid_root' center='-0.00405 0.855 -0.000113' containerField='skeleton' name='humanoid_root'>
         <HAnimJoint DEF='hanim_sacroiliac' center='0 1.01 -0.0204' name='sacroiliac'>
           <HAnimSegment DEF='hanim_pelvis' name='pelvis'>

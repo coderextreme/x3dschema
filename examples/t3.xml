@@ -35,7 +35,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="0 0.300000011920929 1"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -45,7 +45,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="0.600000023841858 0 0.600000023841858"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -55,7 +55,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="0.600000023841858 0 0.600000023841858"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -65,7 +65,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="1 0 0.200000002980232"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -75,7 +75,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="0.600000023841858 0 0.600000023841858"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -85,7 +85,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="0 0.300000011920929 1"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -95,7 +95,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="0 0.300000011920929 1"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -105,7 +105,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="0 0.300000011920929 1"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -115,7 +115,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="1 0 0.200000002980232"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -125,7 +125,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="0 0.300000011920929 1"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -135,7 +135,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="0 0.300000011920929 1"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -145,7 +145,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="0 0.300000011920929 1"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -155,7 +155,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="0 0.300000011920929 1"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -165,7 +165,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="1 0 0.200000002980232"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>
@@ -175,7 +175,7 @@
                         <Appearance>
                             <Material diffuseColor="1 1 1" emissiveColor="0 0.300000011920929 1"/>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </Anchor>

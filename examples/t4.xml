@@ -43,7 +43,7 @@
                                 </IS>
                             </Material>
                         </Appearance>
-                        <Sphere radius="5.10000002384186"/>
+                        <Sphere containerField="geometry" radius="5.10000002384186"/>
                     </Shape>
                 </Transform>
             </ProtoBody>

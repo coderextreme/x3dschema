@@ -30,17 +30,17 @@
         <WorldInfo title="HAnimHumanoid skin design patterns for apparel, medical"/>
         <Background skyColor="0 0.6 0.6"/>
         <Group DEF="MultipleHumanoids">
-            <MetadataString containerField="value"
-                name="HAnimArchitecture"
+            <MetadataString name="HAnimArchitecture"
                 reference="https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/Guidelines.html#MultipleHumanoidsPerFile" value="&quot;E.4 Multiple humanoids per file&quot;"/>
             <!--"=============================="-->
             <HAnimHumanoid DEF="a_SimpleSkeleton" name="SimpleSkeleton" version="2.0">
                 <HAnimJoint containerField="skeleton" llimit="0 0 0"
                     name="humanoid_root" ulimit="0 0 0">
-                    <HAnimSegment name="sacrum">
+                    <HAnimSegment containerField="children" name="sacrum">
                         <Shape DEF="JointVisualization"/>
                         <Shape DEF="SegmentVisualization"/>
-                        <HAnimSite DEF="a_feature01_tip" name="feature01_tip">
+                        <HAnimSite DEF="a_feature01_tip"
+                            containerField="children" name="feature01_tip">
                             <Shape DEF="SiteVisualization"/>
                         </HAnimSite>
                     </HAnimSegment>
@@ -51,9 +51,9 @@
                 name="SimpleSkeletonMesh" version="2.0">
                 <HAnimJoint containerField="skeleton" llimit="0 0 0"
                     name="humanoid_root" ulimit="0 0 0">
-                    <HAnimSegment name="sacrum">
+                    <HAnimSegment containerField="children" name="sacrum">
                         <Shape>
-                            <IndexedFaceSet DEF="SegmentBoneMesh"/>
+                            <IndexedFaceSet DEF="SegmentBoneMesh" containerField="geometry"/>
                         </Shape>
                     </HAnimSegment>
                 </HAnimJoint>
@@ -63,7 +63,7 @@
                 name="SkinIndexedGeometry" version="2.0">
                 <HAnimJoint containerField="skeleton" llimit="0 0 0"
                     name="humanoid_root" ulimit="0 0 0">
-                    <HAnimSegment name="sacrum"/>
+                    <HAnimSegment containerField="children" name="sacrum"/>
                 </HAnimJoint>
                 <IndexedFaceSet DEF="SkinMeshIFS" containerField="skin"/>
             </HAnimHumanoid>
@@ -72,10 +72,10 @@
                 name="SkinShapeIndexedGeometry" version="2.0">
                 <HAnimJoint containerField="skeleton" llimit="0 0 0"
                     name="humanoid_root" ulimit="0 0 0">
-                    <HAnimSegment name="sacrum"/>
+                    <HAnimSegment containerField="children" name="sacrum"/>
                 </HAnimJoint>
                 <Shape containerField="skin">
-                    <IndexedFaceSet USE="SkinMeshIFS"/>
+                    <IndexedFaceSet USE="SkinMeshIFS" containerField="geometry"/>
                 </Shape>
             </HAnimHumanoid>
             <!--"=============================="-->
@@ -83,11 +83,11 @@
                 name="SkinSwitchShapeIndexedGeometry" version="2.0">
                 <HAnimJoint containerField="skeleton" llimit="0 0 0"
                     name="humanoid_root" ulimit="0 0 0">
-                    <HAnimSegment name="sacrum"/>
+                    <HAnimSegment containerField="children" name="sacrum"/>
                 </HAnimJoint>
                 <!--"TODO show X3D4.0 addition of <Switch DEF='AlternativeSkins' containerField='skin'>"-->
                 <Shape containerField="skin">
-                    <IndexedFaceSet DEF="IndexedSkinMeshIFS">
+                    <IndexedFaceSet DEF="IndexedSkinMeshIFS" containerField="geometry">
                         <Coordinate DEF="SkinMeshCoordinate"/>
                     </IndexedFaceSet>
                 </Shape>
@@ -99,10 +99,10 @@
                 name="SynthesizedSkinShapeIndexedTwoPartGeometry" version="2.0">
                 <HAnimJoint containerField="skeleton" llimit="0 0 0"
                     name="humanoid_root" ulimit="0 0 0">
-                    <HAnimSegment name="sacrum"/>
+                    <HAnimSegment containerField="children" name="sacrum"/>
                 </HAnimJoint>
                 <Shape containerField="skin">
-                    <IndexedFaceSet DEF="TwoPartIndexedSkinMesh">
+                    <IndexedFaceSet DEF="TwoPartIndexedSkinMesh" containerField="geometry">
                         <Coordinate DEF="TwoPartSkinMesh"/>
                     </IndexedFaceSet>
                 </Shape>
@@ -113,7 +113,7 @@
                 name="ApparelSkinIndexedGeometryMultipleShapes" version="2.0">
                 <HAnimJoint containerField="skeleton" llimit="0 0 0"
                     name="humanoid_root" ulimit="0 0 0">
-                    <HAnimSegment name="sacrum"/>
+                    <HAnimSegment containerField="children" name="sacrum"/>
                 </HAnimJoint>
                 <Shape containerField="skin"/>
                 <!--"allow multiple Shape nodes with containerField='apparel', one for each layer of clothing"-->
@@ -125,7 +125,7 @@
                 name="AnatomySkinIndexedGeometryMultipleShapes" version="2.0">
                 <HAnimJoint containerField="skeleton" llimit="0 0 0"
                     name="humanoid_root" ulimit="0 0 0">
-                    <HAnimSegment name="sacrum"/>
+                    <HAnimSegment containerField="children" name="sacrum"/>
                 </HAnimJoint>
                 <!--"allow multiple Shape nodes with containerField='skin', one for each layer of skin"-->
                 <Shape containerField="skin"/>
@@ -140,7 +140,7 @@
             parameter="&quot;target=blank&quot;" url="&quot;https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Skin/DesignPatternsApparelMedicalSkinLayersIndex.html&quot;">
             <Shape>
                 <!--"TODO adjust Text string and Box size, then set Material transparency='1'"-->
-                <Text string="&quot;DesignPatternsApparelMedicalSkinLayers.x3d&quot; &quot;&quot; &quot;explores potential apparel approaches&quot;">
+                <Text containerField="geometry" string="&quot;DesignPatternsApparelMedicalSkinLayers.x3d&quot; &quot;&quot; &quot;explores potential apparel approaches&quot;">
                     <FontStyle family="&quot;SANS&quot;"
                         justify="&quot;MIDDLE&quot; &quot;MIDDLE&quot;"
                         size="0.6" style="BOLD"/>
@@ -151,7 +151,7 @@
             </Shape>
             <Shape>
                 <!--"Author TODO: to adjust transparent Box as text-selection assist, set width and height to match size, then set transparency='1' to make invisible."-->
-                <Box size="11 2 0.001"/>
+                <Box containerField="geometry" size="11 2 0.001"/>
                 <Appearance>
                     <Material transparency="1"/>
                 </Appearance>

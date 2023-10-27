@@ -16,12 +16,14 @@
                     <Appearance DEF="ARROW_APPEARANCE">
                         <Material diffuseColor="0.3 0.3 1" emissiveColor="0.3 0.3 0.33"/>
                     </Appearance>
-                    <Cylinder bottom="false" radius="0.025" top="false"/>
+                    <Cylinder bottom="false" containerField="geometry"
+                        radius="0.025" top="false"/>
                 </Shape>
                 <Transform translation="0 1 0">
                     <Shape DEF="ARROW_POINTER">
                         <Appearance USE="ARROW_APPEARANCE"/>
-                        <Cone bottomRadius="0.05" height="0.1"/>
+                        <Cone bottomRadius="0.05"
+                            containerField="geometry" height="0.1"/>
                     </Shape>
                 </Transform>
                 <Transform rotation="1 0 0 3.1416" translation="0 -1 0">
@@ -34,7 +36,7 @@
                         <Appearance DEF="LABEL_APPEARANCE">
                             <Material diffuseColor="1 1 0.3" emissiveColor="0.33 0.33 0.1"/>
                         </Appearance>
-                        <Text string="&quot;Y&quot;">
+                        <Text containerField="geometry" string="&quot;Y&quot;">
                             <FontStyle DEF="LABEL_FONT"
                                 family="&quot;SANS&quot;"
                                 justify="&quot;MIDDLE&quot;" size="0.2"/>
@@ -50,7 +52,7 @@
                     <Billboard>
                         <Shape>
                             <Appearance USE="LABEL_APPEARANCE"/>
-                            <Text string="&quot;X&quot;">
+                            <Text containerField="geometry" string="&quot;X&quot;">
                                 <FontStyle USE="LABEL_FONT"/>
                             </Text>
                         </Shape>
@@ -65,7 +67,7 @@
                     <Billboard>
                         <Shape>
                             <Appearance USE="LABEL_APPEARANCE"/>
-                            <Text string="&quot;Z&quot;">
+                            <Text containerField="geometry" string="&quot;Z&quot;">
                                 <FontStyle USE="LABEL_FONT"/>
                             </Text>
                         </Shape>

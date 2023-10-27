@@ -209,7 +209,7 @@
         <Anchor description="InterchangableActorsViaDynamicRouting"
             parameter="&quot;target=_blank&quot;" url="&quot;InterchangableActorsViaDynamicRouting.x3d&quot; &quot;https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/InterchangableActorsViaDynamicRouting.x3d&quot; &quot;InterchangableActorsViaDynamicRouting.wrl&quot; &quot;https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/InterchangableActorsViaDynamicRouting.wrl&quot;">
             <Shape>
-                <Text string="&quot;LOA1_KneelAnimation.x3d&quot; &quot;defines a prototype&quot; &quot;for animating a humanoid.&quot; &quot;&quot; &quot;Click this text to see&quot; &quot;InterchangableActorsViaDynamicRouting example.&quot;">
+                <Text containerField="geometry" string="&quot;LOA1_KneelAnimation.x3d&quot; &quot;defines a prototype&quot; &quot;for animating a humanoid.&quot; &quot;&quot; &quot;Click this text to see&quot; &quot;InterchangableActorsViaDynamicRouting example.&quot;">
                     <FontStyle
                         justify="&quot;MIDDLE&quot; &quot;MIDDLE&quot;" size="0.8"/>
                 </Text>

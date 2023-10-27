@@ -3,8 +3,8 @@
 <X3D profile="Immersive" version="4.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-4.0.xsd">
 <head>
   <component level='1' name='HAnim'/>
-  <meta content='Humanoid3NoSegSite.x3d' name='title'/>
-  <meta name='identifier' content='http://www.web3d.org/x3d/content/examples/HumanoidAnimation/Humanoid3NoSegSite.x3d'/>
+  <meta content='JohnBoy.x3d' name='title'/>
+  <meta name='identifier' content='http://www.web3d.org/x3d/content/examples/HumanoidAnimation/JohnBoy.x3d'/>
   <meta name='description' content='An attempt at a standard LOA-4 skeleton'/>
   <meta name='generator' content='h2.pl'/>
   <meta name='modified' content="14 Jan 2023"/>
@@ -80,7 +80,7 @@
             </Appearance>
           </Shape>
           <!-- </LOD> -->
-          <Coordinate USE='TheSkinCoord'/>
+          <Coordinate USE='TheSkinCoord' containerField='skinCoord'/>
 <HAnimJoint DEF='hanim_humanoid_root' name='humanoid_root' containerField='skeleton' center='0.0000 0.8240 0.0277' skinCoordIndex=' 0 ' skinCoordWeight=' 0 '>
   <HAnimJoint DEF='hanim_sacroiliac' name='sacroiliac' center='0.0000 0.9149 0.0016' skinCoordIndex=' 0 ' skinCoordWeight=' 0 '>
     <HAnimJoint DEF='hanim_l_hip' name='l_hip' center='0.0961 0.9124 -0.0001' skinCoordIndex=' 0 ' skinCoordWeight=' 0 '>

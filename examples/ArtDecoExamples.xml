@@ -155,7 +155,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco00"/>
                         </Appearance>
-                        <Sphere DEF="Ball" radius="0.5"/>
+                        <Sphere DEF="Ball" containerField="geometry" radius="0.5"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -165,7 +165,7 @@
                             <Appearance>
                                 <Material DEF="TextMat" diffuseColor="1.0 1.0 1.0"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco00&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco00&quot;">
                                 <FontStyle DEF="Style"
                                     family="&quot;SANS&quot;"
                                     justify="&quot;MIDDLE&quot; &quot;MIDDLE&quot;"
@@ -182,7 +182,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco01"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -192,7 +192,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco01&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco01&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -206,7 +206,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco02"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -216,7 +216,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco02&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco02&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -230,7 +230,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco03"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -240,7 +240,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco03&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco03&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -254,7 +254,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco04"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -264,7 +264,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco04&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco04&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -278,7 +278,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco05"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -288,7 +288,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco05&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco05&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -302,7 +302,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco06"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -312,7 +312,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco06&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco06&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -326,7 +326,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco07"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -336,7 +336,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco07&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco07&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -350,7 +350,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco08"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -360,7 +360,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco08&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco08&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -374,7 +374,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco09"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -384,7 +384,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco09&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco09&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -398,7 +398,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco10"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -408,7 +408,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco10&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco10&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -422,7 +422,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco11"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -432,7 +432,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco11&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco11&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -446,7 +446,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco12"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -456,7 +456,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco12&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco12&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -470,7 +470,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco13"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -480,7 +480,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco13&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco13&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -494,7 +494,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco14"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -504,7 +504,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco14&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco14&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -518,7 +518,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco15"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -528,7 +528,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco15&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco15&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -542,7 +542,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco16"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -552,7 +552,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco16&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco16&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -566,7 +566,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco17"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -576,7 +576,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco17&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco17&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -590,7 +590,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco18"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -600,7 +600,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco18&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco18&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -614,7 +614,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco19"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -624,7 +624,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco19&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco19&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -638,7 +638,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco20"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -648,7 +648,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco20&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco20&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -662,7 +662,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco21"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -672,7 +672,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco21&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco21&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -686,7 +686,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco22"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -696,7 +696,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco22&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco22&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -710,7 +710,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco23"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -720,7 +720,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco23&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco23&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -734,7 +734,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco24"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -744,7 +744,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco24&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco24&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -758,7 +758,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco25"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -768,7 +768,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco25&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco25&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -782,7 +782,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco26"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -792,7 +792,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco26&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco26&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -806,7 +806,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco27"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -816,7 +816,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco27&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco27&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -830,7 +830,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco28"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -840,7 +840,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco28&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco28&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -854,7 +854,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco29"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -864,7 +864,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco29&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco29&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -878,7 +878,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco30"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -888,7 +888,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco30&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco30&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -902,7 +902,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco31"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -912,7 +912,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco31&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco31&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -926,7 +926,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco32"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -936,7 +936,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco32&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco32&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -950,7 +950,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco33"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -960,7 +960,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco33&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco33&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>
@@ -974,7 +974,7 @@
                         <Appearance>
                             <ProtoInstance name="ArtDeco34"/>
                         </Appearance>
-                        <Sphere USE="Ball"/>
+                        <Sphere USE="Ball" containerField="geometry"/>
                     </Shape>
                 </Anchor>
                 <Transform translation="0.0 0.3 0.5">
@@ -984,7 +984,7 @@
                             <Appearance>
                                 <Material USE="TextMat"/>
                             </Appearance>
-                            <Text string="&quot;ArtDeco34&quot;">
+                            <Text containerField="geometry" string="&quot;ArtDeco34&quot;">
                                 <FontStyle USE="Style"/>
                             </Text>
                         </Shape>

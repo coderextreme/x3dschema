@@ -39,7 +39,7 @@
                 <Appearance>
                     <Material/>
                 </Appearance>
-                <Box/>
+                <Box containerField="geometry"/>
             </Shape>
         </Transform>
         <Script DEF="MYSCRIPT" url="&quot;jumpcut_loadurl.js&quot; &quot;https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/NavigationInfo/jumpcut_loadurl.js&quot;">

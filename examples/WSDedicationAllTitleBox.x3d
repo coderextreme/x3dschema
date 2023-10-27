@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+  </head>
+  <Scene>
+    <WorldInfo title='WSDedicationAllTitleBox.x3d'/> 
+
+    <Viewpoint DEF='WSDedicationAllTitleView' position='10 11 -5' orientation='-0.15 0 0 0.2' 
+centerOfRotation='0 0 0' description='Look at Dedication title'/>
+
+ <Transform DEF="WSDedicationAllTitle" translation='10 10 -10' >
+
+  <Shape>
+   <Box
+    size="4 3 0.25" />
+   <Appearance>
+    <ImageTexture
+     url='"WSDedicationAll.png"' />
+    <Material />
+   </Appearance>
+  </Shape>
+ </Transform>
+
+
+  </Scene>
+</X3D>

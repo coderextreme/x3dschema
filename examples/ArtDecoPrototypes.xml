@@ -306,7 +306,7 @@
                 <Appearance>
                     <Material diffuseColor="0.8 0.4 0"/>
                 </Appearance>
-                <Text string="&quot;ArtDecoExamples.x3d&quot; &quot;is a Materials Prototype declaration file.&quot; &quot;&quot; &quot;For an example scene using these node,&quot; &quot;click this text and view&quot; &quot;ArtDecoExamples.x3d&quot;">
+                <Text containerField="geometry" string="&quot;ArtDecoExamples.x3d&quot; &quot;is a Materials Prototype declaration file.&quot; &quot;&quot; &quot;For an example scene using these node,&quot; &quot;click this text and view&quot; &quot;ArtDecoExamples.x3d&quot;">
                     <FontStyle
                         justify="&quot;MIDDLE&quot; &quot;MIDDLE&quot;" size="0.8"/>
                 </Text>

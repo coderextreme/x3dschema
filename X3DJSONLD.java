@@ -60,6 +60,8 @@ public class X3DJSONLD {
 			// JSON Schema
 		} else if (key.equals("ncoding")) {
 			// encoding, UTF-8
+		} else if (value == null) {
+			element.setAttribute(key, null);
 		} else {
 			// System.err.println(key+"= SA "+value);
 			element.setAttribute(key, stripQuotes(value));
@@ -69,19 +71,29 @@ public class X3DJSONLD {
 	public Element CreateElement(Document document, String key, String containerField) {
 		Element child = document.createElement(key);
 		if (containerField != null &&
-				!containerField.equals("children") &&
-				!containerField.equals("shaders")  &&
-				!containerField.equals("coord")  &&
-				!containerField.equals("fontStyle")  &&
-				!containerField.equals("appearance")  &&
-				!containerField.equals("geometry")  &&
-				!containerField.equals("parts")  &&
-				!containerField.equals("color")  &&
-				!containerField.equals("texture")  &&
-				!containerField.equals("texCoord")  &&
-				!containerField.equals("sites")  &&
-				// !containerField.equals("joints")  &&
-				!containerField.equals("material") ) {
+				((containerField.equals("geometry")  && key.equals("IndexedFaceSet")) ||
+				 (containerField.equals("geometry")  && key.equals("Text")) ||
+				 (containerField.equals("geometry")  && key.equals("IndexedTriangleSet")) ||
+				 (containerField.equals("geometry")  && key.equals("Sphere")) ||
+				 (containerField.equals("geometry")  && key.equals("Cylinder")) ||
+				 (containerField.equals("geometry")  && key.equals("Cone")) ||
+				 (containerField.equals("geometry")  && key.equals("LineSet")) ||
+				 (containerField.equals("geometry")  && key.equals("IndexedLineSet")) ||
+				 (containerField.equals("geometry")  && key.equals("Box")) ||
+				 (containerField.equals("geometry")  && key.equals("Extrusion")) ||
+				 (containerField.equals("geometry")  && key.equals("GeoElevationGrid")) ||
+				 (containerField.equals("shape")  && key.equals("Shape")) ||
+				 (containerField.equals("skin")  && key.equals("Shape")) ||
+				 (containerField.endsWith("exture")  && key.equals("ImageTexture")) ||
+				 (key.equals("HAnimSegment")) ||
+				 (key.equals("HAnimSite")) ||
+				 (key.equals("HAnimMotion")) ||
+				 (containerField.equals("skinCoord")  && key.equals("Coordinate")) || // overwrite coord with skinCoord, if set
+				 (containerField.equals("skin")  && key.equals("IndexedFaceSet")) ||
+				 ((containerField.equals("skinBindingCoords") || containerField.equals("skinCoord")) && key.equals("Coordinate")) ||
+				 ((containerField.equals("normal") || containerField.equals("skinBindingNormals") || containerField.equals("skinNormal")) && key.equals("Normal")) ||
+				 ((containerField.equals("skeleton") || containerField.equals("children") || containerField.equals("joints"))  && key.equals("HAnimJoint"))
+				)) {
 			elementSetAttribute(child, "containerField", containerField);
 		}
 		return child;
@@ -211,6 +223,12 @@ public class X3DJSONLD {
 		if (kii || parentkey.startsWith("-")) {
 			child = element;
 		} else {
+			if ((containerField == null || containerField.equals("children")) && parentkey.equals("HAnimJoint") && element.getTagName().equals("HAnimHumanoid")) {
+				containerField = "joints";
+			}
+			if ((containerField == null || containerField.equals("coord")) && parentkey.equals("Coordinate") && element.getTagName().equals("HAnimHumanoid")) {
+				containerField = "skinCoord";
+			}
 			child = CreateElement(document, parentkey, containerField);
 		}
 		Iterator<String> keyiter = object.keySet().iterator();

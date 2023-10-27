@@ -22,7 +22,7 @@
     <Scene>
         <Transform translation="0 2 0">
             <Shape>
-                <Text string="&quot;Compare special character escaping&quot;">
+                <Text containerField="geometry" string="&quot;Compare special character escaping&quot;">
                     <FontStyle DEF="testFontStyle"
                         justify="&quot;MIDDLE&quot; &quot;MIDDLE&quot;" size="0.8"/>
                 </Text>
@@ -33,7 +33,7 @@
         </Transform>
         <Transform translation="-3 0 0">
             <Shape>
-                <Text string="&quot;I don't think so&quot; &quot;&quot; &quot;he said \&quot;Hi\&quot;&quot;">
+                <Text containerField="geometry" string="&quot;I don't think so&quot; &quot;&quot; &quot;he said \&quot;Hi\&quot;&quot;">
                     <FontStyle USE="testFontStyle"/>
                 </Text>
                 <Appearance USE="LightBlueAppearance"/>
@@ -41,7 +41,7 @@
         </Transform>
         <Transform translation="3 0 0">
             <Shape>
-                <Text string="&quot;I don't think so&quot; &quot;&quot; &quot;he said \&quot;Hi\&quot;&quot;">
+                <Text containerField="geometry" string="&quot;I don't think so&quot; &quot;&quot; &quot;he said \&quot;Hi\&quot;&quot;">
                     <FontStyle USE="testFontStyle"/>
                 </Text>
                 <Appearance USE="LightBlueAppearance"/>

@@ -4,12 +4,17 @@
   <head>
     <meta content='GrandKidsBox.x3d' name='title'/>
     <meta content='This model contains three children for the main scene.' name='description'/>
-    <meta content='Joe Williams and Katy Schildmeyer' name='creator'/>
-    <meta content='' name='translator'/>
+    <meta content='Joe D. Williams' name='creator'/>
+    <meta content='Katy Schildmeyer' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
     <meta content='TODO from Version Control' name='created'/>
-    <meta content='*enter date of translation here*' name='translated'/>
-    <meta content='10 SEP 2023' name='modified'/>
+    <meta content='TODO from Version Control' name='translated'/>
+    <meta content='19 September 2023' name='modified'/>
     <meta content='TODO link to project documentation' name='reference'/>
+    <meta content='https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/originals/Leif73Final.x3dv' name='reference'/>
+    <meta content='https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/originals/Leif73Final.x3dv' name='reference'/>
+    <meta content='https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/originals/Tufani73Final.x3dv' name='reference'/>
+    <meta content='update JointCoordinateAxes to .x3d' name='TODO'/>
     <meta content='TODO screen shot' name='Image'/>
     <meta content='TODO common keyword for all Winter and Spring models' name='subject'/>
     <meta content='Unrestricted open source' name='accessRights'/>
@@ -18,18 +23,19 @@
     <meta content='X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit' name='generator'/>
   </head>
   <Scene>
-    <WorldInfo title='GrandKidsBox'/>
-    <NavigationInfo headlight='false'/>
+    <WorldInfo title='GrandKidsBox.x3d'/>
+    <Background skyColor='1 1 1'/>
+    <NavigationInfo headlight='true'/>
     <TimeSensor DEF='z100sTimer' cycleInterval='100' enabled='true' loop='true'/>
     <Group DEF='GrandKidsGroup'>
       <!-- Leif -->
       <Transform DEF='Leif' rotation='0 0 1 0' scale='1 1 1' translation='0 0 0'>
         <Transform DEF='LeifBox' translation='-7.9962 0.0046 3.000'>
-          <Inline url='"JointCoordinateAxes.x3dv"'/>
+          <Inline DEF='JointCoordinateAxes' url='"JointCoordinateAxes.x3dv"'/>
           <Viewpoint DEF='Leifview' centerOfRotation='0 0 0' description='Look at Leif' orientation='-0.25 0 0 0.5' position='0 4 9'/>
           <Transform translation='0 0 0'>
             <Transform DEF='LeifModel' rotation='0 0 1 0' scale='1 1 1' translation='0 0 0'>
-              <Inline url='"originals/Leif73Final.x3dv"'/>
+              <Inline DEF='LeifInline' url='"Leif.x3d" "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/Leif.x3d"'/>
             </Transform>
           </Transform>
         </Transform>
@@ -41,11 +47,11 @@
       <!-- Lily -->
       <Transform DEF='Lily' rotation='0 0 1 0' scale='1 1 1' translation='0 0 0'>
         <Transform DEF='LilyBox' translation='-8.0962 0.0046 5.600'>
-          <Inline url='"JointCoordinateAxes.x3dv"'/>
+          <Inline USE='JointCoordinateAxes'/>
           <Viewpoint DEF='Lilyview' centerOfRotation='0 0 0' description='Look at Lily' orientation='-0.25 0 0 0.5' position='0 4 9'/>
           <Transform translation='0 0 0'>
             <Transform DEF='LilyModel' rotation='0 0 1 0' scale='1 1 1' translation='0 0 0'>
-              <Inline url='"originals/Lily73Final0823Test4.x3dv"'/>
+              <Inline DEF='LilyInline' url='"Lily.x3d" "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/Lily.x3d"'/>
             </Transform>
           </Transform>
         </Transform>
@@ -57,11 +63,11 @@
       <!-- Tufani -->
       <Transform DEF='Tufani' rotation='0 0 1 0' scale='1 1 1' translation='0 0 0'>
         <Transform DEF='TufaniBox' translation='-8.0962 0.0046 6.400'>
-          <Inline url='"JointCoordinateAxes.x3dv"'/>
+          <Inline USE='JointCoordinateAxes'/>
           <Viewpoint DEF='Tufaniview' centerOfRotation='0 0 0' description='Look at Tufani' orientation='-0.25 0 0 0.5' position='0 4 9'/>
           <Transform translation='0 0 0'>
             <Transform DEF='TufaniModel' rotation='0 0 1 0' scale='1 1 1' translation='0 0 0'>
-              <Inline url='"originals/Tufani73Final.x3dv"'/>
+              <Inline DEF='TufaniInline' url='"Tufani.x3d" "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/Tufani.x3d"'/>
             </Transform>
           </Transform>
         </Transform>

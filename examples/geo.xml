@@ -2,8 +2,13 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
 
 <X3D profile="Immersive" version="4.0"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-4.0.xsd">
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-4.0.xsd">
     <head>
+        <meta content="geo.x3d" name="title"/>
+        <meta content="John Carlson" name="creator"/>
+        <meta content="manual" name="generator"/>
+        <meta
+            content="https://coderextreme.net/X3DJSONLD/src/main/data/geo.x3d" name="identifier"/>
         <component level="1" name="Scripting"/>
         <component level="3" name="EnvironmentalEffects"/>
         <component level="1" name="Shaders"/>
@@ -13,17 +18,10 @@
         <component level="4" name="Shape"/>
         <component level="3" name="Grouping"/>
         <component level="1" name="Core"/>
-        <meta content="geo.x3d" name="title"/>
-        <meta content="John Carlson" name="creator"/>
-        <meta content="manual" name="generator"/>
-        <meta
-            content="https://coderextreme.net/X3DJSONLD/src/main/data/geo.x3d" name="identifier"/>
-        <meta content="a sphere" name="description"/>
     </head>
     <Scene>
         <NavigationInfo type="&quot;ANY&quot; &quot;EXAMINE&quot; &quot;FLY&quot; &quot;LOOKAT&quot;"/>
         <Viewpoint DEF="Tour" description="Tour Views"/>
-        <!--"Viewpoint position='0 0 4' description='sphere in road'/"-->
         <Background
             backUrl="&quot;../resources/images/bBK.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/bBK.png&quot;"
             bottomUrl="&quot;../resources/images/bBT.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/bBT.png&quot;"
@@ -32,18 +30,12 @@
             rightUrl="&quot;../resources/images/bRT.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/bRT.png&quot;" topUrl="&quot;../resources/images/bTP.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/bTP.png&quot;"/>
         <Transform>
             <Shape>
-                <Sphere/>
                 <Appearance>
                     <Material diffuseColor="0.7 0.7 0.7" specularColor="0.5 0.5 0.5"/>
-                    <ComposedCubeMapTexture DEF="texture">
-                        <ImageTexture containerField="back" url="&quot;../resources/images/bBK.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/bBK.png&quot;"/>
-                        <ImageTexture containerField="bottom" url="&quot;../resources/images/bBT.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/bBT.png&quot;"/>
-                        <ImageTexture containerField="front" url="&quot;../resources/images/bFR.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/bFR.png&quot;"/>
-                        <ImageTexture containerField="left" url="&quot;../resources/images/bLF.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/bLF.png&quot;"/>
-                        <ImageTexture containerField="right" url="&quot;../resources/images/bRT.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/bRT.png&quot;"/>
-                        <ImageTexture containerField="top" url="&quot;../resources/images/bTP.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/bTP.png&quot;"/>
-                    </ComposedCubeMapTexture>
+                    <ComposedCubeMapTexture DEF="texture"/>
                     <ComposedShader language="GLSL">
+                        <ShaderPart url="&quot;../shaders/x3dom.vs&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom.vs&quot;"/>
+                        <ShaderPart DEF="common" type="FRAGMENT" url="&quot;../shaders/common.fs&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/shaders/common.fs&quot;"/>
                         <field accessType="inputOutput"
                             name="chromaticDispertion" type="SFVec3f" value="0.98 1 1.033"/>
                         <field accessType="inputOutput" name="cube" type="SFNode">
@@ -55,10 +47,10 @@
                             type="SFFloat" value="0.5"/>
                         <field accessType="inputOutput" name="power"
                             type="SFFloat" value="2"/>
-                        <ShaderPart type="VERTEX" url="&quot;../shaders/x3dom.vs&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom.vs&quot;"/>
-                        <ShaderPart DEF="common" type="FRAGMENT" url="&quot;../shaders/common.fs&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/shaders/common.fs&quot;"/>
                     </ComposedShader>
                     <ComposedShader language="GLSL">
+                        <ShaderPart url="&quot;../shaders/x_ite.vs&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/shaders/x_ite.vs&quot;"/>
+                        <ShaderPart type="FRAGMENT" url="&quot;../shaders/x_ite.fs&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/shaders/x_ite.fs&quot;"/>
                         <field accessType="initializeOnly"
                             name="chromaticDispertion" type="SFVec3f" value="0.98 1 1.033"/>
                         <field accessType="initializeOnly" name="cube" type="SFNode">
@@ -70,10 +62,9 @@
                             type="SFFloat" value="0.5"/>
                         <field accessType="initializeOnly" name="power"
                             type="SFFloat" value="2"/>
-                        <ShaderPart type="VERTEX" url="&quot;../shaders/x_ite.vs&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/shaders/x_ite.vs&quot;"/>
-                        <ShaderPart type="FRAGMENT" url="&quot;../shaders/x_ite.fs&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/shaders/x_ite.fs&quot;"/>
                     </ComposedShader>
                 </Appearance>
+                <Sphere containerField="geometry"/>
             </Shape>
         </Transform>
     </Scene>

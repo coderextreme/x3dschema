@@ -41,7 +41,7 @@
                     image="2 2 4 4278190335 16711935 4294967295 4294902015"
                     repeatS="false" repeatT="false"/>
             </Appearance>
-            <IndexedFaceSet coordIndex="0 1 3 2 -1 4 5 7 6 -1 6 7 1 0 -1 2 3 5 4 -1 6 0 2 4 -1 1 7 5 3 -1">
+            <IndexedFaceSet containerField="geometry" coordIndex="0 1 3 2 -1 4 5 7 6 -1 6 7 1 0 -1 2 3 5 4 -1 6 0 2 4 -1 1 7 5 3 -1">
                 <Coordinate point="-2 1.5 1 -2 -1.5 1 2 1.5 1 2 -1.5 1 2 1.5 -1 2 -1.5 -1 -2 1.5 -1 -2 -1.5 -1"/>
             </IndexedFaceSet>
         </Shape>

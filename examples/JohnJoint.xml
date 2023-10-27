@@ -20,7 +20,7 @@
             <Shape DEF="AxisLinesShape">
                 <!--"RGB lines showing XYZ axes"-->
                 <IndexedLineSet colorIndex="0 1 2"
-                    colorPerVertex="false" coordIndex="0 1 -1 0 2 -1 0 3 -1">
+                    colorPerVertex="false" containerField="geometry" coordIndex="0 1 -1 0 2 -1 0 3 -1">
                     <Coordinate point="0 0 0 0.1 0 0 0 0.1 0 0 0 0.1"/>
                     <Color color="1 0 0 0 0.6 0 0 0 1"/>
                 </IndexedLineSet>
@@ -32,7 +32,7 @@
                 <!--"<Transform translation='0 2 0' scale='1 1 1'> <Shape DEF='HAnimRootShape'> <Sphere radius='0.02' /> <Appearance> <Material DEF='HAnimRootMaterial' diffuseColor='0.8 0 0' transparency='0.3'/> </Appearance> </Shape> </Transform>"-->
                 <Transform translation="0 2.1 0">
                     <Shape DEF="HAnimJointShape">
-                        <Sphere radius="0.02"/>
+                        <Sphere containerField="geometry" radius="0.02"/>
                         <Appearance>
                             <Material DEF="HAnimJointMaterial"
                                 diffuseColor="0 0 0.8" transparency="0.3"/>
@@ -41,7 +41,7 @@
                 </Transform>
                 <Transform translation="0 2.05 0">
                     <Shape DEF="HAnimSegmentLine">
-                        <LineSet vertexCount="2">
+                        <LineSet containerField="geometry" vertexCount="2">
                             <ColorRGBA DEF="HAnimSegmentLineColorRGBA" color="1 1 0 1 1 1 0 0.1"/>
                             <Coordinate point="-0.05 0 0 0.05 0 0"/>
                         </LineSet>

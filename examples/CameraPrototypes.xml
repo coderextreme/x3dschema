@@ -1180,7 +1180,7 @@
         <Anchor description="launch CameraExample scene" url="&quot;CameraExamples.x3d&quot; &quot;https://www.web3d.org/x3d/content/examples/Basic/development/CameraExamples.x3d&quot; &quot;CameraExamples.wrl&quot; &quot;https://www.web3d.org/x3d/content/examples/Basic/development/CameraExamples.wrl&quot;">
             <Transform>
                 <Shape>
-                    <Text string="&quot;CameraPrototypes.x3d&quot; &quot;defines multiple prototype nodes&quot; &quot;&quot; &quot;Click on this text to see&quot; &quot;CameraExamples.x3d scene&quot;">
+                    <Text containerField="geometry" string="&quot;CameraPrototypes.x3d&quot; &quot;defines multiple prototype nodes&quot; &quot;&quot; &quot;Click on this text to see&quot; &quot;CameraExamples.x3d scene&quot;">
                         <FontStyle justify="&quot;MIDDLE&quot; &quot;MIDDLE&quot;"/>
                     </Text>
                     <Appearance>

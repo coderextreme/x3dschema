@@ -35,7 +35,7 @@
         </Viewpoint>
         <Transform DEF="TextRoot">
             <Shape DEF="ModelDescriptionText">
-                <Text string="&quot;This scene tests&quot; &quot;&quot; &quot;experimental approaches&quot; &quot;&quot; &quot;for human animation&quot;">
+                <Text containerField="geometry" string="&quot;This scene tests&quot; &quot;&quot; &quot;experimental approaches&quot; &quot;&quot; &quot;for human animation&quot;">
                     <FontStyle family="&quot;SANS&quot;"
                         justify="&quot;MIDDLE&quot; &quot;MIDDLE&quot;"
                         size="0.8" style="BOLD"/>
@@ -53,22 +53,22 @@
         <PositionInterpolator
             DEF="Gramps_HumanoidRoot_TranslationInterpolator"
             key="0 0.09 0.11 0.22 0.043 0.55 0.63 0.73 0.85 0.86 1" keyValue="6.8557 0.95 0.5 6.8557 0.95 0.5 6.8557 0.95 0.5 9.8557 0.95 3.5 9.8557 0.95 3.5 9.8557 0.95 3.5 14.3558 0.95 8.0 16.8558 0.95 15.0 21.3557 0.95 24.5 21.3557 0.95 24.5 21.3557 0.95 24.5">
-            <MetadataString containerField="metadata" name="poses" value="&quot;Gramps_Stand01&quot; &quot;Gramps_Stand01&quot; &quot;Gramps_Walk01&quot; &quot;Gramps_Stand02&quot; &quot;Gramps_Turn01&quot; &quot;Gramps_Walk01&quot; &quot;Gramps_Walk02&quot; &quot;Gramps_Skip01&quot; &quot;Gramps_Stand03&quot; &quot;Gramps_Stand03&quot; &quot;Gramps_Stand03&quot;"/>
+            <MetadataString name="poses" value="&quot;Gramps_Stand01&quot; &quot;Gramps_Stand01&quot; &quot;Gramps_Walk01&quot; &quot;Gramps_Stand02&quot; &quot;Gramps_Turn01&quot; &quot;Gramps_Walk01&quot; &quot;Gramps_Walk02&quot; &quot;Gramps_Skip01&quot; &quot;Gramps_Stand03&quot; &quot;Gramps_Stand03&quot; &quot;Gramps_Stand03&quot;"/>
         </PositionInterpolator>
         <PositionInterpolator
             DEF="Leif_HumanoidRoot_TranslationInterpolator"
             key="0 0.09 0.11 0.223 0.043 0.55 0.63 0.73 0.85 0.86 1" keyValue="-7.9962 0.400 3.000 -7.9962 0.400 3.000 -7.9962 0.400 3.000 -7.9962 0.400 3.000 9.004 0.475 3.4999 11.5048 0.475 3.3699 16.0038 0.475 7.8699 18.5038 0.475 14.8699 23.0038 0.475 24.3699 23.0038 0.475 24.3699 23.0038 0.475 24.3699">
-            <MetadataString containerField="metadata" name="poses" value="&quot;Leif_Stand01&quot; &quot;Leif_Stand01&quot; &quot;Leif_Stand01&quot; &quot;Leif_Run01&quot; &quot;Leif_Turn01&quot; &quot;Leif_Walk01&quot; &quot;Leif_Walk01&quot; &quot;Leif_Skip01&quot; &quot;Leif_Stand01&quot; &quot;Leif_Stand01&quot; &quot;Leif_Stand01&quot;"/>
+            <MetadataString name="poses" value="&quot;Leif_Stand01&quot; &quot;Leif_Stand01&quot; &quot;Leif_Stand01&quot; &quot;Leif_Run01&quot; &quot;Leif_Turn01&quot; &quot;Leif_Walk01&quot; &quot;Leif_Walk01&quot; &quot;Leif_Skip01&quot; &quot;Leif_Stand01&quot; &quot;Leif_Stand01&quot; &quot;Leif_Stand01&quot;"/>
         </PositionInterpolator>
         <PositionInterpolator
             DEF="Lily_HumanoidRoot_TranslationInterpolator"
             key="0 0.09 0.11 0.225 0.043 0.55 0.63 0.73 0.85 0.86 1" keyValue="-8.0962 0.400 5.600 -8.0962 0.400 5.600 -8.0962 0.400 5.600 -8.0962 0.400 5.600 8.9038 0.475 4.0999 10.6538 0.475 3.3499 15.1538 0.475 7.8499 17.6538 0.475 14.8499 22.1538 0.475 24.3499 22.1538 0.475 24.3499 22.1538 0.475 24.3499">
-            <MetadataString containerField="metadata" name="poses" value="&quot;Lily_Stand01&quot; &quot;Lily_Stand01&quot; &quot;Lily_Stand01&quot; &quot;Leif_Run01&quot; &quot;Lily_Turn01&quot; &quot;Lily_Walk01&quot; &quot;Lily_Walk01&quot; &quot;Lily_Skip01&quot; &quot;Lily_Stand01&quot; &quot;Lily_Stand01&quot; &quot;Lily_Stand01&quot;"/>
+            <MetadataString name="poses" value="&quot;Lily_Stand01&quot; &quot;Lily_Stand01&quot; &quot;Lily_Stand01&quot; &quot;Leif_Run01&quot; &quot;Lily_Turn01&quot; &quot;Lily_Walk01&quot; &quot;Lily_Walk01&quot; &quot;Lily_Skip01&quot; &quot;Lily_Stand01&quot; &quot;Lily_Stand01&quot; &quot;Lily_Stand01&quot;"/>
         </PositionInterpolator>
         <PositionInterpolator
             DEF="Tufani_HumanoidRoot_TranslationInterpolator"
             key="0 0.09 0.11 0.227 0.043 0.55 0.63 0.73 0.85 0.86 1" keyValue="-8.0962 0.400 6.400 -8.0962 0.400 6.400 -8.0962 0.400 6.400 -8.0962 0.400 6.400 9.40338 0.475 4.3999 9.1538 0.475 3.2699 13.6538 0.475 7.7699 16.1538 0.475 14.7699 20.6538 0.475 24.2699 20.6538 0.475 24.2699 20.6538 0.475 24.2699">
-            <MetadataString containerField="metadata" name="poses" value="&quot;Tufani_Stand01&quot; &quot;Tufani_Stand01&quot; &quot;Tufani_Stand01&quot; &quot;Tufani_Run01&quot; &quot;Tufani_Turn01&quot; &quot;Tufani_Walk01&quot; &quot;Tufani_Walk01&quot; &quot;Tufani_Skip01&quot; &quot;Tufani_Stand01&quot; &quot;Tufani_Stand01&quot; &quot;Tufani_Stand01&quot;"/>
+            <MetadataString name="poses" value="&quot;Tufani_Stand01&quot; &quot;Tufani_Stand01&quot; &quot;Tufani_Stand01&quot; &quot;Tufani_Run01&quot; &quot;Tufani_Turn01&quot; &quot;Tufani_Walk01&quot; &quot;Tufani_Walk01&quot; &quot;Tufani_Skip01&quot; &quot;Tufani_Stand01&quot; &quot;Tufani_Stand01&quot; &quot;Tufani_Stand01&quot;"/>
         </PositionInterpolator>
         <!--"Now add Background nodes with corresponding timing, as controlled by an identical key array"-->
         <!--"TODO are we missing Background1 and Background2?"-->

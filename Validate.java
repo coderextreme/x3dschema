@@ -44,9 +44,13 @@ public class Validate {
 		DocumentBuilder db = dbf.newDocumentBuilder();
 		for (int i = 0; i < args.length; i++) {
 			try {
+				//if (args[i].contains(File.separator+"originals"+File.separator)) {
+					//continue;
+				//}
 				X3DLoaderDOM xmlLoader = new X3DLoaderDOM();
 				Document document;
 				File f = new File(args[i]);
+				System.out.println("Processing "+args[i]);
 				if (args[i].endsWith(".json") || args[i].endsWith(".x3dj")) {
 					X3DJSONLD loader = new X3DJSONLD();
 					JsonObject jsobj = loader.readJsonFile(f);
