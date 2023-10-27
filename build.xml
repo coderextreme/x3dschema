@@ -2,7 +2,7 @@
 <project name="Java JSON Schema validation" default="default" basedir=".">
     <description>Builds, tests, and runs Validate for JSON validation.</description>
     <property name="fork"         value="true"/>
-    <property name="examples"     value="/x3d-code/www.web3d.org/x3d/content/examples/ConformanceNist"/>
+    <property name="examples"     value="/x3d-code/www.web3d.org/x3d/content/examples/HumanoidAnimation"/>
     <!--
     <property name="examples"     value="examples"/>
     -->
@@ -19,7 +19,7 @@
     <target name="compile" description="build">
 	<echo message="Build modules:"/>
 	<echo message="Compile: with classpath ${classpath}"/>
-	<javac includes="Validate.java,ValidateXML.java,X3DJSONLD.java" srcdir="." destdir="." classpath="${classpath}" includeantruntime="false" fork="${fork}"/>
+	<javac includes="RunSaxon.java,Validate.java,ValidateXML.java,X3DJSONLD.java" srcdir="." destdir="." classpath="${classpath}" includeantruntime="false" fork="${fork}"/>
     </target>
     <!--
 	<target name="run">
@@ -52,6 +52,7 @@
 		<include name="**/*.x3dj"/>
 		<include name="**/*.xml"/>
 		<include name="**/*.x3d"/>
+		<exclude name="**/*.tidy.new.xml"/>
 	    </fileset>
 	  </apply>
 	</target>
@@ -65,6 +66,48 @@
 	    <srcfile/>
 	    <fileset dir="${examples}" casesensitive="yes">
 		<include name="**/*.x3d"/>
+		<exclude name="**/originals/*.x3d"/>
+	    </fileset>
+	  </apply>
+	</target>
+	
+	
+	<target name="batchxml" depends="compile">
+	  <echo message="Run batch:"/>
+	  <apply executable="java">
+	    <arg value="-cp"/>
+	    <arg value="${classpath}"/>
+	    <arg value="Validate"/>
+	    <srcfile/>
+	    <fileset dir="${examples}" casesensitive="yes">
+		<include name="**/*.xml"/>
+		<exclude name="**/*.tidy.new.xml"/>
+	    </fileset>
+	  </apply>
+	</target>
+	
+	<target name="batchtidy" depends="compile">
+	  <echo message="Run tidy:"/>
+	  <apply executable="java">
+	    <arg value="-cp"/>
+	    <arg value="${classpath}"/>
+	    <arg value="RunSaxon"/>
+	    <arg value="-tidy.new.xml"/>
+	    <arg value="--X3dTidy.xslt"/>
+	    <arg value="---"/>
+	    <srcfile/>
+	    <fileset dir="${examples}" casesensitive="yes">
+		    <!--
+		    -->
+		<include name="**/KoreanCharacterMotionAnnexD01Jin.x3d"/>
+		<!--
+		<include name="**/KoreanCharacterMotionAnnexD01Jin.xml"/>
+		<include name="**/KoreanCharacterMotionAnnexD01Jin.tidy.new.xml"/>
+		-->
+		<!--
+		<include name="**/*.xml"/>
+		<exclude name="**/*.tidy.new.xml"/>
+		-->
 	    </fileset>
 	  </apply>
 	</target>
@@ -77,11 +120,9 @@
 	    <arg value="-validate"/>
 	    <srcfile/>
 	    <fileset dir="${examples}" casesensitive="yes">
-		<include name="**/lilyBlender.x3d"/>
-		<!--
 		<include name="**/*.xml"/>
 		<include name="**/*.x3d"/>
-		-->
+		<exclude name="**/*.tidy.new.xml"/>
 	    </fileset>
 	  </apply>
 	</target>
