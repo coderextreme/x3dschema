@@ -12,3 +12,5 @@ Try this command, if you have Java and ant installed:
 $ ant
 
 there are additional targets in the build.xml to choose from.
+
+Also, downloading and configuring location of X3DJSAIL.4.0.full.jar is essential.
