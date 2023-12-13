@@ -7,7 +7,7 @@ in the build.xml
 
 There are also the options to include and exclude filename patterns
 
-Try this command, if you have Java and and installed:
+Try this command, if you have Java and ant installed:
 
 $ ant
 
