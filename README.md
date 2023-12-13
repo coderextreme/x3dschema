@@ -7,6 +7,9 @@ in the build.xml
 
 There are also the options to include and exclude filename patterns
 
-$ ant  				# works with X3DJSAIL (not JSON schema at this point)
+Try this command, if you have Java and abt installed:
+$ ant
+
+# works with X3DJSAIL (not JSON schema at this point)
 
 there are additional targets in the build.xml to choose from.
