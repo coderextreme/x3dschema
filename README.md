@@ -11,6 +11,4 @@ Try this command, if you have Java and and installed:
 
 $ ant
 
-# works with X3DJSAIL (not JSON schema at this point)
-
 there are additional targets in the build.xml to choose from.
