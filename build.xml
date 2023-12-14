@@ -2,10 +2,11 @@
 <project name="Java JSON Schema validation" default="default" basedir=".">
     <description>Builds, tests, and runs Validate for JSON validation.</description>
     <property name="fork"         value="true"/>
-    <property name="examples"     value="/x3d-code/www.web3d.org/x3d/content/examples/HumanoidAnimation"/>
     <!--
-    <property name="examples"     value="examples"/>
+    <property name="examples"     value="/x3d-code/www.web3d.org/x3d/content/examples"/>
+    <property name="examples"     value="/x3d-code/www.web3d.org/x3d/content/examples/HumanoidAnimation"/>
     -->
+    <property name="examples"     value="examples"/>
     <property name="classpath"     value=".;../pythonSAI/X3DJSAIL.4.0.full.jar"/>
 
 <taskdef resource="net/sf/antcontrib/antcontrib.properties">
