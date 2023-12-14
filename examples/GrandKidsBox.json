@@ -16,10 +16,15 @@
           },
           {
             "@name":"creator",
-            "@content":"Joe Williams and Katy Schildmeyer"
+            "@content":"Joe D. Williams"
           },
           {
-            "@name":"translator"
+            "@name":"creator",
+            "@content":"Katy Schildmeyer"
+          },
+          {
+            "@name":"translator",
+            "@content":"Don Brutzman"
           },
           {
             "@name":"created",
@@ -27,15 +32,31 @@
           },
           {
             "@name":"translated",
-            "@content":"*enter date of translation here*"
+            "@content":"TODO from Version Control"
           },
           {
             "@name":"modified",
-            "@content":"10 SEP 2023"
+            "@content":"19 September 2023"
           },
           {
             "@name":"reference",
             "@content":"TODO link to project documentation"
+          },
+          {
+            "@name":"reference",
+            "@content":"https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/originals/Leif73Final.x3dv"
+          },
+          {
+            "@name":"reference",
+            "@content":"https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/originals/Leif73Final.x3dv"
+          },
+          {
+            "@name":"reference",
+            "@content":"https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/originals/Tufani73Final.x3dv"
+          },
+          {
+            "@name":"TODO",
+            "@content":"update JointCoordinateAxes to .x3d"
           },
           {
             "@name":"Image",
@@ -63,7 +84,7 @@
           },
           {
             "@name":"translated",
-            "@content":"14 September 2023"
+            "@content":"23 November 2023"
           },
           {
             "@name":"generator",
@@ -79,12 +100,16 @@
         "-children":[
           { "WorldInfo":
             {
-              "@title":"GrandKidsBox"
+              "@title":"GrandKidsBox.x3d"
+            }
+          },
+          { "Background":
+            {
+              "@skyColor":[1,1,1]
             }
           },
           { "NavigationInfo":
             {
-              "@headlight":false
             }
           },
           { "TimeSensor":
@@ -112,6 +137,7 @@
                           "-children":[
                             { "Inline":
                               {
+                                "@DEF":"JointCoordinateAxes",
                                 "@url":["JointCoordinateAxes.x3dv"]
                               }
                             },
@@ -132,7 +158,8 @@
                                       "-children":[
                                         { "Inline":
                                           {
-                                            "@url":["originals/Leif73Final.x3dv"]
+                                            "@DEF":"LeifInline",
+                                            "@url":["Leif.x3d","https://www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/Leif.x3d"]
                                           }
                                         }
                                       ]
@@ -187,7 +214,7 @@
                           "-children":[
                             { "Inline":
                               {
-                                "@url":["JointCoordinateAxes.x3dv"]
+                                "@USE":"JointCoordinateAxes"
                               }
                             },
                             { "Viewpoint":
@@ -207,7 +234,8 @@
                                       "-children":[
                                         { "Inline":
                                           {
-                                            "@url":["originals/Lily73Final0823Test4.x3dv"]
+                                            "@DEF":"LilyInline",
+                                            "@url":["Lily.x3d","https://www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/Lily.x3d"]
                                           }
                                         }
                                       ]
@@ -262,7 +290,7 @@
                           "-children":[
                             { "Inline":
                               {
-                                "@url":["JointCoordinateAxes.x3dv"]
+                                "@USE":"JointCoordinateAxes"
                               }
                             },
                             { "Viewpoint":
@@ -282,7 +310,8 @@
                                       "-children":[
                                         { "Inline":
                                           {
-                                            "@url":["originals/Tufani73Final.x3dv"]
+                                            "@DEF":"TufaniInline",
+                                            "@url":["Tufani.x3d","https://www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/Tufani.x3d"]
                                           }
                                         }
                                       ]

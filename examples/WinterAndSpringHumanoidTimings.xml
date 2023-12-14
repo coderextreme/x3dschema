@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
 <X3D profile="Immersive" version="3.3"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd">
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" >
     <head>
         <meta content="WinterAndSpringHumanoidTimings.x3d" name="title"/>
         <meta
             content="Example animation timings, manually translated from tool outputs and export." name="description"/>
-        <meta content="originals/WinterAndSpringHumanoidTimings.x3dv" name="reference"/>
+        <meta
+            content="https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/originals/WinterAndSpringHumanoidTimings.x3dv" name="reference"/>
         <meta
             content="reference .x3dv model successfully translated by Castle Game Engine, IICM, and Xj3D import (with loss of comments)" name="info"/>
         <meta content="Katy Schildmeyer" name="creator"/>
@@ -15,7 +16,7 @@
         <meta content="Don Brutzman" name="translator"/>
         <meta content="2 July 2023" name="created"/>
         <meta content="9 July 2023" name="translated"/>
-        <meta content="16 July 2023" name="modified"/>
+        <meta content="19 September 2023" name="modified"/>
         <meta
             content="MetadataString approach for name=poses sequence, matching the key/keyValue pairs, is experimental but seems unambiguous." name="hint"/>
         <meta

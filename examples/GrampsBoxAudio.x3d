@@ -13,7 +13,7 @@
     <!-- startTime for GrampsBoxTimer from AudioClip startTime -->
     <!-- enabled for GrampsBoxTimer from AudioClip isActive -->
     <Sound DEF='SceneMusic' direction='0 1 1' intensity='1' location='9 4 7' maxBack='50' maxFront='50' minBack='10' minFront='10' priority='0'>
-      <AudioClip DEF='Melodies' description='John Harrison with the Wichita State University Chamber' loop='true' pitch='1.0' startTime='0' stopTime='0' url='"winter spring rv2_keyed (143).wav"'/>
+      <AudioClip DEF='Melodies' description='John Harrison with the Wichita State University Chamber' loop='true' url='"audio/winter_spring_rv2_keyed_143.wav"'/>
     </Sound>
     <ROUTE fromField='startTime' fromNode='Melodies' toField='set_startTime' toNode='GrampsBoxTimer'/>
     <ROUTE fromField='isActive' fromNode='Melodies' toField='set_enabled' toNode='GrampsBoxTimer'/>

@@ -16,7 +16,7 @@
           },
           {
             "@name":"reference",
-            "@content":"originals/WinterAndSpringHumanoidTimings.x3dv"
+            "@content":"https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/originals/WinterAndSpringHumanoidTimings.x3dv"
           },
           {
             "@name":"info",
@@ -48,7 +48,7 @@
           },
           {
             "@name":"modified",
-            "@content":"16 July 2023"
+            "@content":"19 September 2023"
           },
           {
             "@name":"hint",
@@ -72,7 +72,7 @@
           },
           {
             "@name":"translated",
-            "@content":"14 September 2023"
+            "@content":"23 November 2023"
           },
           {
             "@name":"generator",

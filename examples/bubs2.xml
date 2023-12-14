@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
 <X3D profile="Immersive" version="4.0"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-4.0.xsd">
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" >
     <head>
         <meta content="bubs2.x3d" name="title"/>
         <meta content="John Carlson" name="creator"/>
@@ -11,6 +11,7 @@
             content="X3dToJson.xslt, https://www.web3d.org/x3d/stylesheets/X3dToJson.html" name="generator"/>
         <meta
             content="https://coderextreme.net/X3DJSONLD/src/main/data/geo.x3d" name="identifier"/>
+        <meta content="13 March 2016" name="translated"/>
         <component level="1" name="Scripting"/>
     </head>
     <Scene>

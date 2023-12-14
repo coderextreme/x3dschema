@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
 <X3D profile="Immersive" version="4.0"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-4.0.xsd">
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" >
     <head>
         <component level="1" name="HAnim"/>
         <meta content="WinterAndSpringTest.x3d" name="title"/>
@@ -9,8 +9,8 @@
             content="3D Male Scan combined with JoeKick, 3 Korean characters Ru,Mi,Min from HAnim, CCBYSA music plus designs from Rhino. MaleScan modified in Cinema4D for articulation and translations, geometric values from Rhino, txt file for centers. Models vary. HAnim version 2 LOA-3 Humanoids with textured skin, 3 Korean characters, plus scan. Math for lines and intersections." name="description"/>
         <meta
             content="Carol McDonald, Katy Schildmeyer, Joe D. Williams and Don Brutzman" name="creator"/>
-        <meta content="May through September 2023" name="created"/>
-        <meta content="2 June 2023" name="modified"/>
+        <meta content="1 May 2023" name="created"/>
+        <meta content="24 September 2023" name="modified"/>
         <meta
             content="https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter09Ru.x3d" name="reference"/>
         <meta
@@ -20,11 +20,12 @@
         <meta
             content="https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/WinterAndSpringTest.x3d" name="identifier"/>
         <meta content="../license.html" name="license"/>
+        <meta content="X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit" name="generator"/>
     </head>
     <Scene>
         <WorldInfo
             info="&quot;X3D Humanoid LOA3 skeleton plus others&quot; &quot;Lots points&quot;" title="X3D HANIM LOA3 (modified) Skeleton, Lots points Skin, texcoords, Displacer, translations"/>
-        <NavigationInfo DEF="Start_NavigationInfo" headlight="false"/>
+        <NavigationInfo DEF="Start_NavigationInfo"/>
         <Viewpoint centerOfRotation="0 1 0" description="Male" position="0 1 -2"/>
         <Background DEF="gray_Background"/>
         <Background DEF="dark_gray_Background"/>
@@ -88,7 +89,7 @@
                                     <Color color="1 0 0 0 0.6 0 0 0 1"/>
                                     </IndexedLineSet>
                                 </Shape>
-                                <Shape DEF="OldMan_Shape" containerField="skin">
+                                <Shape DEF="OldMan_Shape">
                                     <Appearance DEF="OldMan_skin_Appearance">
                                     <Material
                                     DEF="OldMan_skin_Material"
@@ -382,13 +383,14 @@
                                     <HAnimJoint
                                     DEF="OldMan_l_acromioclavicular"
                                     containerField="children"
-                                    llimit="0 0 0" ulimit="0 0 0">
+                                    llimit="0 0 0"
+                                    name="l_acromioclavicular" ulimit="0 0 0">
 
                                     <HAnimJoint
                                     DEF="OldMan_l_sternoclavicular"
                                     containerField="children"
                                     llimit="0 0 0"
-                                    name="l_acromioclavicular" ulimit="0 0 0">
+                                    name="l_sternoclavicular" ulimit="0 0 0">
 
                                     <HAnimJoint
                                     DEF="OldMan_l_shoulder"

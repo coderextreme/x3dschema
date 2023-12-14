@@ -38,6 +38,7 @@ import java.io.FileWriter;
 import javax.xml.parsers.*;
 
 public class X3DJSONLD {
+	private boolean x3dTidy = false;
 	public String stripQuotes(String value) {
 		if (value.charAt(0) == '"' && value.charAt(value.length()-1) == '"') {
 			return value.substring(1, value.length()-1);
@@ -202,7 +203,8 @@ public class X3DJSONLD {
 	public String fixXML(String str, String version) {
 		String y = str;
 		// System.err.println("fixXML replacing "+ y);
-		str = str.replace("?>", "?>\n<!DOCTYPE X3D PUBLIC \"ISO//Web3D//DTD X3D "+version+"//EN\" \"http://www.web3d.org/specifications/x3d-"+version+".dtd\">");
+		// str = str.replace("?>", "?>\n<!DOCTYPE X3D PUBLIC \"ISO//Web3D//DTD X3D "+version+"//EN\" \"https://www.web3d.org/specifications/x3d-"+version+".dtd\">");
+		// str = str.replaceFirst("xsd:noNamespaceSchemaLocation=\"[^\"]*\"", "");
 		if (!y.equals(str)) {
 		// System.err.println("with             "+ str);
 		} else {
@@ -277,7 +279,7 @@ public class X3DJSONLD {
 		List<JsonValue> localArray = new ArrayList<JsonValue>();
 		Integer arraysize = array.size();
 		if ("meta".equals(parentkey)) {
-			arraysize = array.size() - 3;  // skip meta statements added by X3dToJson.xslt
+			arraysize = array.size() - (this.x3dTidy ? 2 : 3);  // skip meta statements added by X3dToJson.xslt and x3d-tidy
 		}
 		for (int key = 0; key < arraysize; key++) {
 			JsonValue ok = array.get(key);
@@ -329,15 +331,23 @@ public class X3DJSONLD {
 		return element;
 	}
 
-	public Document loadJsonIntoDocument(JsonObject jsobj) throws ParserConfigurationException {
+	public Document loadJsonIntoDocument(JsonObject jsobj, String version, boolean x3dTidy) throws ParserConfigurationException {
+		this.x3dTidy = x3dTidy;
+		String unenversion = version.toString().replaceAll("%22", "").replaceAll("\"", "");
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
 		Document document = db.newDocument();
 		Element element = CreateElement(document, "X3D", null);
 		elementSetAttribute(element,  "xmlns:xsd",  "http://www.w3.org/2001/XMLSchema-instance");
+		// elementSetAttribute(element,  "xsi:schemaLocation",  "https://www.web3d.org/specifications/x3d-"+unenversion+".xsd");
+		// ((JsonObject)jsobj.get("X3D")).remove("xsd:noNamespaceSchemaLocation");
 		convertJsonObject(document, (JsonObject)jsobj.get("X3D"), "-", element, null);
+		// element.removeAttribute("xsd:noNamespaceSchemaLocation");
 		// convertProperty(document, "X3D", (JsonObject)(jsobj.get("X3D")), element, null);
 		document.appendChild(element);
+		DOMImplementation domImplementation = db.getDOMImplementation();
+		DocumentType doctype = domImplementation.createDocumentType("X3D", "ISO//Web3D//DTD X3D "+unenversion+"//EN", "https://www.web3d.org/specifications/x3d-"+unenversion+".dtd");
+		document.insertBefore(doctype, element);
 		return document;
 	}
 
@@ -359,7 +369,7 @@ public class X3DJSONLD {
 		try {
 			X3DJSONLD loader = new X3DJSONLD();
 			JsonObject jsobj = loader.readJsonFile(new File(args[0]));
-			Document document = loader.loadJsonIntoDocument(jsobj);
+			Document document = loader.loadJsonIntoDocument(jsobj, loader.getX3DVersion(jsobj), args[0].endsWith(".x3dj"));
 			System.out.println(loader.serializeDOM(loader.getX3DVersion(jsobj), document));
 		} catch (Exception e) {
 			e.printStackTrace();

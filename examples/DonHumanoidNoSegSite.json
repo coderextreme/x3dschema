@@ -46,7 +46,7 @@
           },
           {
             "@name":"translated",
-            "@content":"23 November 2023"
+            "@content":"14 December 2023"
           },
           {
             "@name":"generator",
@@ -337,7 +337,7 @@
               "-skeleton":[
                 { "HAnimJoint":
                   {
-                    "@name":"",
+                    "@name":"hanim_",
                     "@DEF":"hanim_",
                     "@ulimit":[0,0,0],
                     "@llimit":[0,0,0]

@@ -1107,7 +1107,7 @@
           <ProtoInstance USE='Nancy_hanim_skull'/>
         </fieldValue>
       </ProtoInstance>
-      <HAnimHumanoid DEF='Boxman_Humanoid' name='Humanoid' version='1.0'>
+      <HAnimHumanoid DEF='Boxman_Humanoid' name='Humanoid' version='2.0'>
         <HAnimJoint DEF='Boxman_humanoid_root' center='0 .9723 -.0728' containerField='skeleton' name='humanoid_root' skinCoordIndex='0 1 2 3 4 5 6 7 8 9 10 11' skinCoordWeight='1 1 1 1 1 1 1 1 1 1 1 1'>
           <HAnimSegment DEF='Boxman_sacrum' name='sacrum'>
             <Inline url='"centres/sacrum.wrl" "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/CharactersLegacy/centres/sacrum.wrl"'/>

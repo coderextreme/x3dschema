@@ -26,11 +26,11 @@
           },
           {
             "@name":"created",
-            "@content":"May through September 2023"
+            "@content":"1 May 2023"
           },
           {
             "@name":"modified",
-            "@content":"2 June 2023"
+            "@content":"24 September 2023"
           },
           {
             "@name":"reference",
@@ -53,8 +53,12 @@
             "@content":"../license.html"
           },
           {
+            "@name":"generator",
+            "@content":"X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+          },
+          {
             "@name":"translated",
-            "@content":"14 September 2023"
+            "@content":"23 November 2023"
           },
           {
             "@name":"generator",
@@ -76,8 +80,7 @@
           },
           { "NavigationInfo":
             {
-              "@DEF":"Start_NavigationInfo",
-              "@headlight":false
+              "@DEF":"Start_NavigationInfo"
             }
           },
           { "Viewpoint":
@@ -315,9 +318,7 @@
                                                       }
                                                     }
                                                 }
-                                              }
-                                            ],
-                                            "-skin":[
+                                              },
                                               { "Shape":
                                                 {
                                                   "@DEF":"OldMan_Shape",
@@ -820,13 +821,14 @@
                                                                                                                                         },
                                                                                                                                         { "HAnimJoint":
                                                                                                                                           {
+                                                                                                                                            "@name":"l_acromioclavicular",
                                                                                                                                             "@DEF":"OldMan_l_acromioclavicular",
                                                                                                                                             "@ulimit":[0,0,0],
                                                                                                                                             "@llimit":[0,0,0],
                                                                                                                                             "-children":[
                                                                                                                                               { "HAnimJoint":
                                                                                                                                                 {
-                                                                                                                                                  "@name":"l_acromioclavicular",
+                                                                                                                                                  "@name":"l_sternoclavicular",
                                                                                                                                                   "@DEF":"OldMan_l_sternoclavicular",
                                                                                                                                                   "@ulimit":[0,0,0],
                                                                                                                                                   "@llimit":[0,0,0],

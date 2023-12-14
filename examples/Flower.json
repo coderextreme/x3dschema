@@ -28,11 +28,11 @@
           },
           {
             "@name":"modified",
-            "@content":"27 May 2023"
+            "@content":"19 September 2023"
           },
           {
             "@name":"reference",
-            "@content":"originals/flower.x3dv"
+            "@content":"https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/originals/flower.x3dv"
           },
           {
             "@name":"identifier",
@@ -48,7 +48,7 @@
           },
           {
             "@name":"translated",
-            "@content":"14 September 2023"
+            "@content":"23 November 2023"
           },
           {
             "@name":"generator",
