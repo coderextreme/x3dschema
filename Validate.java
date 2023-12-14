@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2022. John Carlson
+ * Copyright (c) 2022-2023. John Carlson
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -62,6 +62,12 @@ public class Validate {
 
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
+
+		SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+		Schema schema = sf.newSchema(new File("x3d-4.0.xsd"));
+		Validator validator = schema.newValidator();
+		validator.setErrorHandler(new MyDefaultHandler());
+
 		for (int i = 0; i < args.length; i++) {
 			try {
 				//if (args[i].contains(File.separator+"originals"+File.separator)) {
@@ -83,12 +89,7 @@ public class Validate {
 				}
 
 				// Validate with XML Schema
-				DOMSource source = new DOMSource((Node)document);
-				SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-				Schema schema = sf.newSchema(new File("x3d-4.0.xsd"));
-
-				Validator validator = schema.newValidator();
-				validator.setErrorHandler(new MyDefaultHandler());
+				DOMSource source = new DOMSource(document.getElementsByTagName("X3D").item(0));
 				validator.validate(source);
 
 				/*
