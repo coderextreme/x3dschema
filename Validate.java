@@ -98,7 +98,7 @@ public class Validate {
 				String validationResults = X3D0.validationReport();
 				if (validationResults.startsWith("\n")) {
 					System.out.println("Validation report for "+args[i]);
-					System.err.println(validationResults.trim());
+					System.out.println(validationResults.trim());
 				} else {
 					System.out.println("Valid "+args[i]);
 				}
