@@ -88,7 +88,7 @@ public class Validate {
 				Schema schema = sf.newSchema(new File("x3d-4.0.xsd"));
 
 				Validator validator = schema.newValidator();
-				validator.setErrorHandler(new DefaultHandler());
+				validator.setErrorHandler(new MyDefaultHandler());
 				validator.validate(source);
 
 				/*

@@ -202,7 +202,7 @@ public class X3DJSONLD {
 	public String fixXML(String str, String version) {
 		String y = str;
 		// System.err.println("fixXML replacing "+ y);
-		str = str.replace("?>", "?>\n<!DOCTYPE X3D PUBLIC \"ISO//Web3D//DTD X3D "+version+"//EN\" \"http://www.web3d.org/specifications/x3d-"+version+".dtd\">\n");
+		str = str.replace("?>", "?>\n<!DOCTYPE X3D PUBLIC \"ISO//Web3D//DTD X3D "+version+"//EN\" \"http://www.web3d.org/specifications/x3d-"+version+".dtd\">");
 		if (!y.equals(str)) {
 		// System.err.println("with             "+ str);
 		} else {
