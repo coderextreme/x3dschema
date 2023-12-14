@@ -29,6 +29,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 
 */
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import javax.json.JsonObject;
 import java.io.File;
 import java.io.FileWriter;
@@ -36,6 +37,25 @@ import org.web3d.x3d.jsail.X3DLoaderDOM;
 import org.web3d.x3d.jsail.Core.X3D;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.XMLConstants;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
+import org.xml.sax.helpers.DefaultHandler;
+import org.xml.sax.SAXParseException;
+
+class MyDefaultHandler extends DefaultHandler {
+	public void warning(SAXParseException e) {
+		e.printStackTrace();
+	}
+	public void error(SAXParseException e) {
+		e.printStackTrace();
+	}
+	public void fatalError(SAXParseException e) {
+		e.printStackTrace();
+	}
+}
 
 public class Validate {
 	public static void main(String [] args) throws Exception {
@@ -61,6 +81,18 @@ public class Validate {
 				} else {
 					document = db.parse(f);
 				}
+
+				// Validate with XML Schema
+				DOMSource source = new DOMSource((Node)document);
+				SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+				Schema schema = sf.newSchema(new File("x3d-4.0.xsd"));
+
+				Validator validator = schema.newValidator();
+				validator.setErrorHandler(new DefaultHandler());
+				validator.validate(source);
+
+				/*
+				// Validate with X3DJSAIL
 				X3D X3D0 = (X3D)xmlLoader.toX3dModelInstance(document);
 				String validationResults = X3D0.validationReport();
 				if (validationResults.startsWith("\n")) {
@@ -69,6 +101,7 @@ public class Validate {
 				} else {
 					System.out.println("Valid "+args[i]);
 				}
+				*/
 			} catch (Exception e) {
 				System.out.println("Invalid "+args[i]);
 				e.printStackTrace();
