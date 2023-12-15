@@ -1,37 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
-<X3D profile="Immersive" version="4.0"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" >
-    <head>
-        <meta content="MyBounce.x3d" name="title"/>
-        <meta content="John Carlson" name="creator"/>
-        <meta content="3 prismatic spheres" name="description"/>
-        <meta
-            content="https://coderextreme.net/X3DJSONLD/src/main/data/SFVec3f.x3d" name="identifier"/>
-        <component level="1" name="Scripting"/>
-    </head>
-    <Scene>
-        <NavigationInfo/>
-        <Transform DEF="transform">
-            <Shape>
-                <Appearance>
-                    <Material diffuseColor="0.7 0.7 0.7" specularColor="0.5 0.5 0.5"/>
-                </Appearance>
-                <Sphere containerField="geometry"/>
-            </Shape>
-        </Transform>
-        <Script DEF="Bounce2">
-            <field accessType="inputOnly" name="set_translation" type="SFVec3f"/>
-            <field accessType="outputOnly" name="translation_changed" type="SFVec3f"/>
-            <field accessType="inputOutput" name="translation" type="SFVec3f"/>
-            <field accessType="inputOutput" name="velocity"
-                type="SFVec3f" value="0.2848157 -0.1888265 0.3982354"/>
-            <field accessType="inputOnly" name="set_fraction" type="SFTime"/>
-        </Script>
-        <TimeSensor DEF="TourTime" cycleInterval="0.15" loop="true"/>
-        <ROUTE fromField="cycleTime" fromNode="TourTime"
-            toField="set_fraction" toNode="Bounce2"/>
-        <ROUTE fromField="translation_changed" fromNode="Bounce2"
-            toField="translation" toNode="transform"/>
-    </Scene>
+<!DOCTYPE X3D
+  PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+      profile="Immersive"
+      version="3.3"
+      xsd:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-3.3.xsd">
+   <head>
+      <component level="1" name="Scripting"/>
+      <meta content="MyBounce.x3d" name="title"/>
+      <meta content="John Carlson" name="creator"/>
+      <meta content="3 prismatic spheres" name="description"/>
+      <meta content="https://coderextreme.net/X3DJSONLD/src/main/data/SFVec3f.x3d"
+             name="identifier"/>
+   </head>
+   <Scene>
+      <NavigationInfo/>
+      <Transform DEF="transform">
+         <Shape>
+            <Appearance>
+               <Material diffuseColor="0.7 0.7 0.7" specularColor="0.5 0.5 0.5"/>
+            </Appearance>
+            <Sphere containerField="geometry"/>
+         </Shape>
+      </Transform>
+      <Script DEF="Bounce2">
+         <field accessType="inputOnly"
+                 name="set_translation"
+                 type="SFVec3f"
+                 value="0 0 0"/>
+         <field accessType="outputOnly"
+                 name="translation_changed"
+                 type="SFVec3f"
+                 value="0 0 0"/>
+         <field accessType="inputOutput"
+                 name="translation"
+                 type="SFVec3f"
+                 value="0 0 0"/>
+         <field accessType="inputOutput"
+                 name="velocity"
+                 type="SFVec3f"
+                 value="0 0 0"/>
+         <field accessType="inputOnly" name="set_fraction" type="SFTime"/>""&#xD;
+"ecmascript:"&#xD;
+"\t\t\tfunction newBubble() {"&#xD;
+"\t\t\t    translation = new SFVec3f(0, 0, 0);"&#xD;
+"\t\t\t    velocity = new SFVec3f("&#xD;
+"\t\t\t    \tMath.random() - 0.5,"&#xD;
+"\t\t\t\tMath.random() - 0.5,"&#xD;
+"\t\t\t\tMath.random() - 0.5);"&#xD;
+"\t\t\t}"&#xD;
+"\t\t\tfunction set_fraction() {"&#xD;
+"\t\t\t    translation = new SFVec3f("&#xD;
+"\t\t\t    \ttranslation.x + velocity.x,"&#xD;
+"\t\t\t\ttranslation.y + velocity.y,"&#xD;
+"\t\t\t\ttranslation.z + velocity.z);"&#xD;
+"\t\t\t\tif (Math.abs(translation.x) &gt; 10) {"&#xD;
+"\t\t\t\t\tnewBubble();"&#xD;
+"\t\t\t\t} else if (Math.abs(translation.y) &gt; 10) {"&#xD;
+"\t\t\t\t\tnewBubble();"&#xD;
+"\t\t\t\t} else if (Math.abs(translation.z) &gt; 10) {"&#xD;
+"\t\t\t\t\tnewBubble();"&#xD;
+"\t\t\t\t} else {"&#xD;
+"\t\t\t\t\tvelocity = new SFVec3f("&#xD;
+"\t\t\t\t\t\tvelocity.x + Math.random() * 0.2 - 0.1,"&#xD;
+"\t\t\t\t\t\tvelocity.y + Math.random() * 0.2 - 0.1,"&#xD;
+"\t\t\t\t\t\tvelocity.z + Math.random() * 0.2 - 0.1"&#xD;
+"\t\t\t\t\t);"&#xD;
+"\t\t\t\t}"&#xD;
+"\t\t\t}"&#xD;
+""&#xD;
+"\t\t\tfunction initialize() {"&#xD;
+"\t\t\t     newBubble();"&#xD;
+"\t\t\t}"&#xD;
+""&#xD;
+""&#xD;
+""</Script>
+      <TimeSensor DEF="TourTime" cycleInterval="0.150" loop="true"/>
+      <ROUTE fromField="cycleTime"
+              fromNode="TourTime"
+              toField="set_fraction"
+              toNode="Bounce2"/>
+      <ROUTE fromField="translation_changed"
+              fromNode="Bounce2"
+              toField="set_translation"
+              toNode="transform"/>
+   </Scene>
 </X3D>

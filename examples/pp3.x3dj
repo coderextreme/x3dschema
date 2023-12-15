@@ -24,7 +24,7 @@
         },
         {
           "@name": "modified",
-          "@content": "23 Dec 2022"
+          "@content": "Thu, 14 Dec 2023 22:37:29 GMT"
         },
         {
           "@name": "description",
@@ -39,12 +39,8 @@
           "@content": "manual"
         },
         {
-          "@name": "converter",
-          "@content": "x3d-tidy V1.0.56, https://www.npmjs.com/package/x3d-tidy"
-        },
-        {
-          "@name": "converted",
-          "@content": "Sat, 02 Sep 2023 21:20:55 GMT"
+          "@name": "generator",
+          "@content": "x3d-tidy V1.0.117, https://www.npmjs.com/package/x3d-tidy"
         }
       ]
     },
@@ -417,7 +413,7 @@
                         "@name": "rightlines"
                       }
                     ],
-                    "#sourceText": [
+                    "#sourceCode": [
                       "ecmascript:\r",
                       "\r",
                       "function initialize() {\r",
@@ -445,7 +441,7 @@
                         "@name": "uplines"
                       }
                     ],
-                    "#sourceText": [
+                    "#sourceCode": [
                       "ecmascript:\r",
                       "\r",
                       "function initialize() {\r",
@@ -473,7 +469,7 @@
                         "@name": "centerlines"
                       }
                     ],
-                    "#sourceText": [
+                    "#sourceCode": [
                       "ecmascript:\r",
                       "\r",
                       "function initialize() {\r",

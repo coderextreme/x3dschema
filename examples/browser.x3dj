@@ -19,6 +19,10 @@
           "@content": "manual"
         },
         {
+          "@name": "generator",
+          "@content": "x3d-tidy V1.0.117, https://www.npmjs.com/package/x3d-tidy"
+        },
+        {
           "@name": "identifier",
           "@content": "https://coderextreme.net/X3DJSONLD/src/main/data/browser.x3d"
         },
@@ -27,12 +31,8 @@
           "@content": "a script test with embedded \\n between single quotes, a double backslash \\\\\\\\ a backslash \\\\ and a closing quote \""
         },
         {
-          "@name": "converter",
-          "@content": "x3d-tidy V1.0.56, https://www.npmjs.com/package/x3d-tidy"
-        },
-        {
-          "@name": "converted",
-          "@content": "Sat, 02 Sep 2023 21:17:58 GMT"
+          "@name": "modified",
+          "@content": "Thu, 14 Dec 2023 22:17:43 GMT"
         }
       ]
     },
@@ -41,7 +41,7 @@
         { "Script":
           {
             "@DEF": "Browser",
-            "#sourceText": [
+            "#sourceCode": [
               "ecmascript:\r",
               "                function initialize() {\r",
               "\t\t    Browser.print('DUDES\\n'+'\"DUDETTES');\r",
@@ -53,7 +53,7 @@
         { "Script":
           {
             "@DEF": "Clouds",
-            "#sourceText": [
+            "#sourceCode": [
               "\r",
               "ecmascript:\r",
               "\r",

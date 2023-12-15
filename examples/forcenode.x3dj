@@ -31,12 +31,12 @@
           "@content": "Vim, X3D-Edit, https://savage.nps.edu/X3D-Edit"
         },
         {
-          "@name": "converter",
-          "@content": "x3d-tidy V1.0.56, https://www.npmjs.com/package/x3d-tidy"
+          "@name": "generator",
+          "@content": "x3d-tidy V1.0.117, https://www.npmjs.com/package/x3d-tidy"
         },
         {
-          "@name": "converted",
-          "@content": "Sat, 02 Sep 2023 21:19:13 GMT"
+          "@name": "modified",
+          "@content": "Thu, 14 Dec 2023 22:22:45 GMT"
         }
       ]
     },
@@ -166,7 +166,7 @@
                               "@name": "keyValue"
                             }
                           ],
-                          "#sourceText": [
+                          "#sourceCode": [
                             "\r",
                             "ecmascript:\r",
                             "\t\t\t\t\tfunction set_cycle(value) {\r",
@@ -227,7 +227,7 @@
         },
         { "ProtoDeclare":
           {
-            "@name":"cylinder",
+            "@name":"cyl",
             "ProtoInterface": {
               "field": [
                 {
@@ -313,7 +313,7 @@
                               "@name": "set_endB"
                             }
                           ],
-                          "#sourceText": [
+                          "#sourceCode": [
                             "\r",
                             "ecmascript:\r",
                             "\r",
@@ -383,7 +383,13 @@
               { "ProtoInstance":
                 {
                   "@DEF": "nodeA",
-                  "@name": "node"
+                  "@name": "node",
+                  "fieldValue": [
+                    {
+                      "@name": "position",
+                      "@value": [ 0, 1.111667, 0 ]
+                    }
+                  ]
                 }
               },
               { "ProtoInstance":
@@ -393,7 +399,7 @@
                   "fieldValue": [
                     {
                       "@name": "position",
-                      "@value": [ 50, 50, 50 ]
+                      "@value": [ 0, 1.111667, 0 ]
                     }
                   ]
                 }
@@ -405,7 +411,7 @@
                   "fieldValue": [
                     {
                       "@name": "position",
-                      "@value": [ -50, -50, -50 ]
+                      "@value": [ 0, 1.111667, 0 ]
                     }
                   ]
                 }
@@ -417,7 +423,7 @@
                   "fieldValue": [
                     {
                       "@name": "position",
-                      "@value": [ 50, 50, -50 ]
+                      "@value": [ 0, 1.111667, 0 ]
                     }
                   ]
                 }
@@ -425,19 +431,19 @@
               { "ProtoInstance":
                 {
                   "@DEF": "linkA",
-                  "@name": "cylinder"
+                  "@name": "cyl"
                 }
               },
               { "ProtoInstance":
                 {
                   "@DEF": "linkB",
-                  "@name": "cylinder"
+                  "@name": "cyl"
                 }
               },
               { "ProtoInstance":
                 {
                   "@DEF": "linkC",
-                  "@name": "cylinder"
+                  "@name": "cyl"
                 }
               }
             ]
@@ -463,7 +469,7 @@
                 "@name": "add_node"
               }
             ],
-            "#sourceText": [
+            "#sourceCode": [
               "\r",
               "ecmascript:\r",
               "\tfunction add_node(value) {\r",

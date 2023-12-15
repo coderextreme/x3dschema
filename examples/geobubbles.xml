@@ -1,49 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
-<X3D profile="Immersive" version="4.0"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" >
-    <head>
-        <meta content="geobubbles.x3d" name="title"/>
-        <meta content="John Carlson" name="creator"/>
-        <meta content="manual" name="generator"/>
-        <meta
-            content="https://coderextreme.net/X3DJSONLD/src/main/data/geobubbles.x3d" name="identifier"/>
-        <meta content="geo bubbles" name="description"/>
-        <component level="1" name="Geospatial"/>
-    </head>
-    <Scene>
-        <GeoViewpoint DEF="Tour" description="Tour Views" position="0 0 4"/>
-        <Background
-            backUrl="&quot;../resources/images/BK.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/BK.png&quot;"
-            bottomUrl="&quot;../resources/images/BT.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/BT.png&quot;"
-            frontUrl="&quot;../resources/images/FR.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/FR.png&quot;"
-            leftUrl="&quot;../resources/images/LF.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/LF.png&quot;"
-            rightUrl="&quot;../resources/images/RT.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/RT.png&quot;" topUrl="&quot;../resources/images/TP.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/TP.png&quot;"/>
-        <Transform>
-            <Shape>
-                <Appearance>
-                    <Material diffuseColor="0.7 0.7 0.7" specularColor="0.5 0.5 0.5"/>
-                </Appearance>
-                <Sphere containerField="geometry"/>
-            </Shape>
-        </Transform>
-        <TimeSensor DEF="TourTime" cycleInterval="5" loop="true"/>
-        <GeoPositionInterpolator DEF="TourPosition" key="0 1" keyValue="0.0015708 0 4 0 0.0015708 4"/>
-        <Script DEF="RandomTourTime">
-            <field accessType="inputOnly" name="set_cycle" type="SFTime"/>
-            <field accessType="inputOutput" name="val" type="SFFloat"/>
-            <field accessType="inputOutput" name="positions"
-                type="MFVec3d" value="0.0015708 0 4 0 0.0015708 4"/>
-            <field accessType="inputOutput" name="position"
-                type="MFVec3d" value="0.0015708 0 4 0 0.0015708 4"/>
-        </Script>
-        <ROUTE fromField="cycleTime" fromNode="TourTime"
-            toField="set_cycle" toNode="RandomTourTime"/>
-        <ROUTE fromField="position" fromNode="RandomTourTime"
-            toField="keyValue" toNode="TourPosition"/>
-        <ROUTE fromField="fraction_changed" fromNode="TourTime"
-            toField="set_fraction" toNode="TourPosition"/>
-        <ROUTE fromField="geovalue_changed" fromNode="TourPosition"
-            toField="position" toNode="Tour"/>
-    </Scene>
+<!DOCTYPE X3D
+  PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+      profile="Immersive"
+      version="3.3"
+      xsd:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-3.3.xsd">
+   <head>
+      <component level="1" name="Geospatial"/>
+      <meta content="geobubbles.x3d" name="title"/>
+      <meta content="John Carlson" name="creator"/>
+      <meta content="manual" name="generator"/>
+      <meta content="https://coderextreme.net/X3DJSONLD/src/main/data/geobubbles.x3d"
+             name="identifier"/>
+      <meta content="geo bubbles" name="description"/>
+   </head>
+   <Scene><!--"Viewpoint DEF='Tour' position='0 0 4' orientation='1 0 0 0' description='Tour Views'/"--><!--"PositionInterpolator DEF='TourPosition' key='0 1' keyValue='-0.5 -0.5 4 -0.5 0.5 4'/"-->
+      <GeoViewpoint DEF="Tour"
+                     description="Tour Views"
+                     orientation="1 0 0 0"
+                     position="0 0 4"/>
+      <Background backUrl="&#34;../resources/images/BK.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/BK.png&#34;"
+                   bottomUrl="&#34;../resources/images/BT.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/BT.png&#34;"
+                   frontUrl="&#34;../resources/images/FR.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/FR.png&#34;"
+                   leftUrl="&#34;../resources/images/LF.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/LF.png&#34;"
+                   rightUrl="&#34;../resources/images/RT.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/RT.png&#34;"
+                   topUrl="&#34;../resources/images/TP.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/TP.png&#34;"/>
+      <Transform>
+         <Shape>
+            <Sphere containerField="geometry"/>
+            <Appearance>
+               <Material diffuseColor="0.7 0.7 0.7" specularColor="0.5 0.5 0.5"/>
+            </Appearance>
+         </Shape>
+      </Transform>
+      <TimeSensor DEF="TourTime" cycleInterval="5" loop="true"/>
+      <GeoPositionInterpolator DEF="TourPosition" key="0 1" keyValue="0.0015708 0 4 0 0.0015708 4"/>
+      <Script DEF="RandomTourTime">
+         <field accessType="inputOnly" name="set_cycle" type="SFTime"/>
+         <field accessType="inputOutput" name="val" type="SFFloat" value="0"/>
+         <field accessType="inputOutput"
+                 name="positions"
+                 type="MFVec3d"
+                 value="0.0015708 0 4 0 0.0015708 4"/>
+         <field accessType="inputOutput"
+                 name="position"
+                 type="MFVec3d"
+                 value="0.0015708 0 4 0 0.0015708 4"/>"ecmascript:"&#xD;
+""&#xD;
+"               function set_cycle(value) {"&#xD;
+"                        var cartesianMult = -150;  // -150 if cartesian, 1 if geo"&#xD;
+"                        var ov = val;"&#xD;
+"\t\t\t// Browser.print('old '+ov);"&#xD;
+"                        do {"&#xD;
+"                                val = Math.floor(Math.random()*2);"&#xD;
+"                                var vc = val;"&#xD;
+"                                positions[vc] = new SFVec3d(Math.round(Math.random()*2)*0.0015708*cartesianMult, Math.round(Math.random()*2)*0.0015708*cartesianMult, 4);"&#xD;
+"                        } while ( positions[ov][0] === positions[vc][0] &amp;&amp; positions[ov][1] === positions[vc][1] &amp;&amp; positions[ov][2] === positions[vc][2]);"&#xD;
+"\t\t\t// Browser.println(positions[ov]);"&#xD;
+"\t\t\t// Browser.println(positions[vc]);"&#xD;
+"                        position = new MFVec3d();"&#xD;
+"                        position[0] = new SFVec3d(positions[ov][0],positions[ov][1],positions[ov][2]);"&#xD;
+"                        position[1] = new SFVec3d(positions[vc][0],positions[vc][1],positions[vc][2]);"&#xD;
+"               }"</Script>
+      <ROUTE fromField="cycleTime"
+              fromNode="TourTime"
+              toField="set_cycle"
+              toNode="RandomTourTime"/>
+      <ROUTE fromField="position"
+              fromNode="RandomTourTime"
+              toField="keyValue"
+              toNode="TourPosition"/>
+      <ROUTE fromField="fraction_changed"
+              fromNode="TourTime"
+              toField="set_fraction"
+              toNode="TourPosition"/>
+      <ROUTE fromField="geovalue_changed"
+              fromNode="TourPosition"
+              toField="set_position"
+              toNode="Tour"/>
+   </Scene>
 </X3D>

@@ -1,46 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
-<X3D profile="Immersive" version="4.0"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" >
-    <head>
-        <meta content="John W Carlson" name="creator"/>
-        <meta content="December 13 2015" name="created"/>
-        <meta content="text.x3d" name="title"/>
-        <meta
-            content="https://coderextreme.net/X3DJSONLD/src/main/data/text.x3d" name="identifier"/>
-        <meta content="test \\n text" name="description"/>
-        <meta content="Vim, X3D-Edit, https://savage.nps.edu/X3D-Edit" name="generator"/>
-    </head>
-    <Scene>
-        <Transform>
-            <Shape>
-                <Appearance>
-                    <Material/>
-                </Appearance>
-                <Text containerField="geometry" string="&quot;Node\&quot;\&quot;\&quot;&quot;">
-                    <FontStyle/>
-                </Text>
-            </Shape>
-            <Shape>
-                <Appearance>
-                    <Material/>
-                </Appearance>
-                <Text containerField="geometry" string="&quot;Node2&quot; &quot;\\&quot; &quot;\\\\&quot; &quot;Node2&quot;">
-                    <FontStyle/>
-                </Text>
-            </Shape>
-            <Shape>
-                <Appearance>
-                    <Material/>
-                </Appearance>
-                <Text containerField="geometry" string="&quot;Node3 \\\\ \\ &quot; &quot;Node3\&quot;\&quot;\&quot;&quot;">
-                    <FontStyle/>
-                </Text>
-            </Shape>
-            <Script>
-                <field accessType="initializeOnly" name="frontUrls"
-                    type="MFString" value="&quot;rnl_front.png&quot; &quot;uffizi_front.png&quot;"/>
-            </Script>
-        </Transform>
-    </Scene>
+<!DOCTYPE X3D
+  PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+      profile="Immersive"
+      version="3.3"
+      xsd:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-3.3.xsd">
+   <head>
+      <meta content="John W Carlson" name="creator"/>
+      <meta content="December 13 2015" name="created"/>
+      <meta content="text.x3d" name="title"/>
+      <meta content="https://coderextreme.net/X3DJSONLD/src/main/data/text.x3d"
+             name="identifier"/>
+      <meta content="test \n text" name="description"/>
+      <meta content="Vim, X3D-Edit, https://savage.nps.edu/X3D-Edit"
+             name="generator"/>
+   </head>
+   <Scene>
+      <Transform>
+         <Shape>
+            <Text containerField="geometry" string="&#34;Node\&#34;\&#34;\&#34;&#34;">
+               <FontStyle/>
+            </Text>
+            <Appearance>
+               <Material/>
+            </Appearance>
+         </Shape>
+         <Shape>
+            <Text containerField="geometry" string="&#34;Node2&#34; &#34;\\&#34; &#34;\\\\&#34; &#34;Node2&#34;">
+               <FontStyle/>
+            </Text>
+            <Appearance>
+               <Material/>
+            </Appearance>
+         </Shape>
+         <Shape>
+            <Text containerField="geometry" string="&#34;Node3 \\\\ \\ &#34; &#34;Node3\&#34;\&#34;\&#34;&#34;">
+               <FontStyle/>
+            </Text>
+            <Appearance>
+               <Material/>
+            </Appearance>
+         </Shape>
+         <Script>
+            <field accessType="initializeOnly"
+                    name="frontUrls"
+                    type="MFString"
+                    value="&#34;rnl_front.png&#34; &#34;uffizi_front.png&#34;"/>""&#xD;
+"\t\t\t    ecmascript:"&#xD;
+"\t\t\t    var me = '\"1\" \"\"2\" \"\n3\"';"&#xD;
+"\t\t\t    "&#xD;
+"\t\t\t"</Script>
+      </Transform>
+   </Scene>
 </X3D>

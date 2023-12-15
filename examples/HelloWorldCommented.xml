@@ -1,75 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile="Immersive" version="3.3"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" >
-    <head>
-        <meta content="HelloWorldCommented.x3d" name="title"/>
-        <meta
-            content="Numerous comments added to simple X3D scene example for testing JSON encoding alternatives." name="description"/>
-        <meta content="19 December 2015" name="created"/>
-        <meta content="20 October 2019" name="modified"/>
-        <meta content="Don Brutzman" name="creator"/>
-        <meta
-            content="HelloWorldCommented.json is most current, HelloWorldCommentedOriginalEncoding.json and HelloWorldCommentedAlternativeEncoding.json were experimental." name="info"/>
-        <meta content="HelloWorldCommented.json" name="reference"/>
-        <meta content="HelloWorldCommentedOriginalEncoding.json" name="reference"/>
-        <meta content="HelloWorldCommentedAlternativeEncoding.json" name="reference"/>
-        <meta
-            content="https://x3dgraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloWorldCommented.x3d" name="identifier"/>
-        <meta
-            content="https://www.web3d.org/x3d/content/examples/license.html" name="license"/>
-        <meta content="X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit" name="generator"/>
-    </head>
-    <Scene>
-        <!--"Example scene to illustrate comments interspersed among X3D nodes and fields (XML elements and attributes)"-->
-        <!--"WorldInfo begin"-->
-        <WorldInfo title="Hello world!"/>
-        <!--"WorldInfo complete, Group begin"-->
-        <Group>
-            <!--"Viewpoint begin"-->
-            <Viewpoint DEF="ViewUpClose" centerOfRotation="0 -1 0"
-                description="Hello world!" position="0 -1 7"/>
-            <!--"Viewpoint complete, Transform begin"-->
-            <Transform rotation="0 1 0 3">
-                <!--"Shape begin"-->
-                <Shape>
-                    <!--"Sphere begin"-->
-                    <!--"Sphere complete, Appearance begin"-->
-                    <!--"Appearance complete"-->
-                    <Sphere containerField="geometry"/>
-                    <Appearance>
-                        <!--"Material begin"-->
-                        <!--"Material complete, ImageTexture begin"-->
-                        <!--"ImageTexture complete"-->
-                        <Material DEF="MaterialLightBlue" diffuseColor="0.1 0.5 1"/>
-                        <ImageTexture DEF="ImageCloudlessEarth"
-                            containerField="texture" url="&quot;earth-topo.png&quot; &quot;earth-topo.jpg&quot; &quot;earth-topo-small.gif&quot; &quot;https://www.web3d.org/x3d/content/examples/Basic/earth-topo.png&quot; &quot;https://www.web3d.org/x3d/content/examples/Basic/earth-topo.jpg&quot; &quot;https://www.web3d.org/x3d/content/examples/Basic/earth-topo-small.gif&quot;"/>
-                    </Appearance>
-                </Shape>
-                <!--"Shape complete"-->
-            </Transform>
-            <!--"Transform complete, Transform begin"-->
-            <Transform translation="0 -2 0">
-                <!--"Shape begin"-->
-                <Shape>
-                    <!--"Text begin"-->
-                    <!--"Text complete, Appearance begin"-->
-                    <!--"Appearance complete"-->
-                    <Text DEF="TextMessage" containerField="geometry" string="&quot;Hello&quot; &quot;world!&quot;">
-                        <!--"FontStyle begin"-->
-                        <!--"FontStyle complete"-->
-                        <FontStyle justify="&quot;MIDDLE&quot; &quot;MIDDLE&quot;"/>
-                    </Text>
-                    <Appearance>
-                        <!--"Material begin"-->
-                        <!--"Material complete"-->
-                        <Material USE="MaterialLightBlue"/>
-                    </Appearance>
-                </Shape>
-                <!--"Shape complete"-->
-            </Transform>
-            <!--"Transform complete"-->
-        </Group>
-        <!--"Group complete"-->
-    </Scene>
+<!DOCTYPE X3D
+  PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+      profile="Immersive"
+      version="3.3"
+      xsd:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-3.3.xsd">
+   <head>
+      <meta content="HelloWorldCommented.x3d" name="title"/>
+      <meta content="Numerous comments added to simple X3D scene example for testing JSON encoding alternatives."
+             name="description"/>
+      <meta content="19 December 2015" name="created"/>
+      <meta content="20 October 2019" name="modified"/>
+      <meta content="Don Brutzman" name="creator"/>
+      <meta content="HelloWorldCommented.json is most current, HelloWorldCommentedOriginalEncoding.json and HelloWorldCommentedAlternativeEncoding.json were experimental."
+             name="info"/>
+      <meta content="HelloWorldCommented.json" name="reference"/>
+      <meta content="HelloWorldCommentedOriginalEncoding.json" name="reference"/>
+      <meta content="HelloWorldCommentedAlternativeEncoding.json" name="reference"/>
+      <meta content="https://x3dgraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloWorldCommented.x3d"
+             name="identifier"/>
+      <meta content="https://www.web3d.org/x3d/content/examples/license.html"
+             name="license"/>
+      <meta content="X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+             name="generator"/>
+   </head>
+   <Scene><!--"Example scene to illustrate comments interspersed among X3D nodes and fields (XML elements and attributes)"--><!--"WorldInfo begin"-->
+      <WorldInfo title="Hello world!"/>
+      <!--"WorldInfo complete, Group begin"-->
+      <Group><!--"Viewpoint begin"-->
+         <Viewpoint DEF="ViewUpClose"
+                     centerOfRotation="0 -1 0"
+                     description="Hello world!"
+                     position="0 -1 7"/>
+         <!--"Viewpoint complete, Transform begin"-->
+         <Transform rotation="0 1 0 3"><!--"Shape begin"-->
+            <Shape><!--"Sphere begin"--><!--"Sphere complete, Appearance begin"--><!--"Appearance complete"-->
+               <Sphere containerField="geometry"/>
+               <Appearance><!--"Material begin"--><!--"Material complete, ImageTexture begin"--><!--"ImageTexture complete"-->
+                  <Material DEF="MaterialLightBlue" diffuseColor="0.1 0.5 1"/>
+                  <ImageTexture DEF="ImageCloudlessEarth"
+                                 containerField="texture"
+                                 url="&#34;earth-topo.png&#34; &#34;earth-topo.jpg&#34; &#34;earth-topo-small.gif&#34; &#34;https://www.web3d.org/x3d/content/examples/Basic/earth-topo.png&#34; &#34;https://www.web3d.org/x3d/content/examples/Basic/earth-topo.jpg&#34; &#34;https://www.web3d.org/x3d/content/examples/Basic/earth-topo-small.gif&#34;"/>
+               </Appearance>
+            </Shape>
+            <!--"Shape complete"-->
+         </Transform>
+         <!--"Transform complete, Transform begin"-->
+         <Transform translation="0 -2 0"><!--"Shape begin"-->
+            <Shape><!--"Text begin"--><!--"Text complete, Appearance begin"--><!--"Appearance complete"-->
+               <Text DEF="TextMessage"
+                      containerField="geometry"
+                      string="&#34;Hello&#34; &#34;world!&#34;"><!--"FontStyle begin"--><!--"FontStyle complete"-->
+                  <FontStyle justify="&#34;MIDDLE&#34; &#34;MIDDLE&#34;"/>
+               </Text>
+               <Appearance><!--"Material begin"--><!--"Material complete"-->
+                  <Material USE="MaterialLightBlue"/>
+               </Appearance>
+            </Shape>
+            <!--"Shape complete"-->
+         </Transform>
+         <!--"Transform complete"-->
+      </Group>
+      <!--"Group complete"-->
+   </Scene>
 </X3D>

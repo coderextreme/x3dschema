@@ -24,7 +24,7 @@
         },
         {
           "@name": "modified",
-          "@content": "23 May 2020"
+          "@content": "Thu, 14 Dec 2023 22:18:10 GMT"
         },
         {
           "@name": "identifier",
@@ -35,16 +35,12 @@
           "@content": "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
         },
         {
+          "@name": "generator",
+          "@content": "x3d-tidy V1.0.117, https://www.npmjs.com/package/x3d-tidy"
+        },
+        {
           "@name": "license",
           "@content": "../license.html"
-        },
-        {
-          "@name": "converter",
-          "@content": "x3d-tidy V1.0.56, https://www.npmjs.com/package/x3d-tidy"
-        },
-        {
-          "@name": "converted",
-          "@content": "Sat, 02 Sep 2023 21:18:11 GMT"
         }
       ]
     },
@@ -266,6 +262,7 @@
                           { "Transform":
                             {
                               "@DEF": "bubble1",
+                              "@translation": [ 0.82205, 0.82205, 0.82205 ],
                               "-children": [
                                 { "Shape":
                                   {
@@ -292,6 +289,7 @@
                           { "Transform":
                             {
                               "@DEF": "bubble2",
+                              "@translation": [ 0.4210715, 0.5, 0.4909405 ],
                               "-children": [
                                 { "Shape":
                                   {
@@ -318,6 +316,7 @@
                           { "Transform":
                             {
                               "@DEF": "bubble3",
+                              "@translation": [ 0.65846, 0.66409, 0.0065353 ],
                               "-children": [
                                 { "Shape":
                                   {
@@ -344,6 +343,7 @@
                           { "Transform":
                             {
                               "@DEF": "bubble4",
+                              "@translation": [ 0.672375, 0.672375, 0.00672375 ],
                               "-children": [
                                 { "Shape":
                                   {
@@ -370,6 +370,7 @@
                           { "Transform":
                             {
                               "@DEF": "bubble5",
+                              "@translation": [ 0.8954042, 0.8127378, 0.01978929 ],
                               "-children": [
                                 { "Shape":
                                   {
@@ -396,6 +397,7 @@
                           { "Transform":
                             {
                               "@DEF": "bubble6",
+                              "@translation": [ 0.7356578, 0.8401174, 0.04947012 ],
                               "-children": [
                                 { "Shape":
                                   {
@@ -422,6 +424,7 @@
                           { "Transform":
                             {
                               "@DEF": "bubble7",
+                              "@translation": [ 0.706803, 0.7504969, 0.009277316 ],
                               "-children": [
                                 { "Shape":
                                   {
@@ -448,6 +451,7 @@
                           { "Transform":
                             {
                               "@DEF": "bubble8",
+                              "@translation": [ 0.6778989, 0.4047151, 0.007009545 ],
                               "-children": [
                                 { "Shape":
                                   {
@@ -474,6 +478,7 @@
                           { "Transform":
                             {
                               "@DEF": "bubble9",
+                              "@translation": [ 0.6447992, 0.6450894, 0.02633629 ],
                               "-children": [
                                 { "Shape":
                                   {
@@ -500,6 +505,7 @@
                           { "Transform":
                             {
                               "@DEF": "bubble10",
+                              "@translation": [ 0.7702979, 0.7556361, 0.009585355 ],
                               "-children": [
                                 { "Shape":
                                   {

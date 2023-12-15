@@ -19,6 +19,10 @@
           "@content": "manual"
         },
         {
+          "@name": "generator",
+          "@content": "x3d-tidy V1.0.117, https://www.npmjs.com/package/x3d-tidy"
+        },
+        {
           "@name": "identifier",
           "@content": "https://coderextreme.net/X3DJSONLD/src/main/data/flower3.x3d"
         },
@@ -27,12 +31,8 @@
           "@content": "a flower"
         },
         {
-          "@name": "converter",
-          "@content": "x3d-tidy V1.0.56, https://www.npmjs.com/package/x3d-tidy"
-        },
-        {
-          "@name": "converted",
-          "@content": "Sat, 02 Sep 2023 21:18:42 GMT"
+          "@name": "modified",
+          "@content": "Thu, 14 Dec 2023 22:21:37 GMT"
         }
       ]
     },
@@ -82,16 +82,9 @@
                     {
                       "@DEF": "Orbit",
                       "@convex": false,
-                      "@coordIndex": [
-                        0,
-                        -1
-                      ],
                       "-coord": { "Coordinate":
                         {
-                          "@DEF": "OrbitCoordinates",
-                          "@point": [
-                            "NaN", "NaN", "NaN"
-                          ]
+                          "@DEF": "OrbitCoordinates"
                         }
                       }
                     }
@@ -121,7 +114,7 @@
                 "@name": "coordIndexes"
               }
             ],
-            "#sourceText": [
+            "#sourceCode": [
               "ecmascript:\r",
               "    \r",
               "var e = 5;\r",

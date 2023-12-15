@@ -27,6 +27,10 @@
           "@content": "X3dToJson.xslt, https://www.web3d.org/x3d/stylesheets/X3dToJson.html"
         },
         {
+          "@name": "generator",
+          "@content": "x3d-tidy V1.0.117, https://www.npmjs.com/package/x3d-tidy"
+        },
+        {
           "@name": "identifier",
           "@content": "https://coderextreme.net/X3DJSONLD/src/main/data/geo.x3d"
         },
@@ -35,12 +39,8 @@
           "@content": "13 March 2016"
         },
         {
-          "@name": "converter",
-          "@content": "x3d-tidy V1.0.56, https://www.npmjs.com/package/x3d-tidy"
-        },
-        {
-          "@name": "converted",
-          "@content": "Sat, 02 Sep 2023 21:18:20 GMT"
+          "@name": "modified",
+          "@content": "Thu, 14 Dec 2023 22:18:27 GMT"
         }
       ],
       "component": [
@@ -114,7 +114,7 @@
                               "@name": "set_fraction"
                             }
                           ],
-                          "#sourceText": [
+                          "#sourceCode": [
                             "ecmascript:\r",
                             "function initialize() {\r",
                             "    velocity = new SFVec3f(Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125);\r",

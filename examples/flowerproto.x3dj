@@ -23,16 +23,16 @@
           "@content": "X3D-Edit, https://savage.nps.edu/X3D-Edit"
         },
         {
+          "@name": "generator",
+          "@content": "x3d-tidy V1.0.117, https://www.npmjs.com/package/x3d-tidy"
+        },
+        {
           "@name": "identifier",
           "@content": "https://coderextreme.net/X3DJSONLD/src/main/data/flowerproto.x3d"
         },
         {
-          "@name": "converter",
-          "@content": "x3d-tidy V1.0.56, https://www.npmjs.com/package/x3d-tidy"
-        },
-        {
-          "@name": "converted",
-          "@content": "Sat, 02 Sep 2023 22:18:58 GMT"
+          "@name": "modified",
+          "@content": "Thu, 14 Dec 2023 22:21:47 GMT"
         }
       ],
       "component": [
@@ -117,7 +117,55 @@
                               },
                               "-texture": { "ComposedCubeMapTexture":
                                 {
-                                  "@DEF": "texture"
+                                  "@DEF": "texture",
+                                  "-frontTexture": { "ImageTexture":
+                                    {
+                                      "@url": [
+                                        "../resources/images/all_probes/stpeters_cross/stpeters_front.png",
+                                        "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_front.png"
+                                      ]
+                                    }
+                                  },
+                                  "-backTexture": { "ImageTexture":
+                                    {
+                                      "@url": [
+                                        "../resources/images/all_probes/stpeters_cross/stpeters_back.png",
+                                        "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_back.png"
+                                      ]
+                                    }
+                                  },
+                                  "-leftTexture": { "ImageTexture":
+                                    {
+                                      "@url": [
+                                        "../resources/images/all_probes/stpeters_cross/stpeters_left.png",
+                                        "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_left.png"
+                                      ]
+                                    }
+                                  },
+                                  "-rightTexture": { "ImageTexture":
+                                    {
+                                      "@url": [
+                                        "../resources/images/all_probes/stpeters_cross/stpeters_right.png",
+                                        "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_right.png"
+                                      ]
+                                    }
+                                  },
+                                  "-topTexture": { "ImageTexture":
+                                    {
+                                      "@url": [
+                                        "../resources/images/all_probes/stpeters_cross/stpeters_top.png",
+                                        "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_top.png"
+                                      ]
+                                    }
+                                  },
+                                  "-bottomTexture": { "ImageTexture":
+                                    {
+                                      "@url": [
+                                        "../resources/images/all_probes/stpeters_cross/stpeters_bottom.png",
+                                        "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_bottom.png"
+                                      ]
+                                    }
+                                  }
                                 }
                               },
                               "-shaders": [
@@ -128,7 +176,7 @@
                                     "-parts": [
                                       { "ShaderPart":
                                         {
-                                          "#sourceText": [
+                                          "#sourceCode": [
                                             "../shaders/gl_flowers_chromatic.vs"
                                           ],
                                           "IS": {
@@ -144,7 +192,7 @@
                                       { "ShaderPart":
                                         {
                                           "@type": "FRAGMENT",
-                                          "#sourceText": [
+                                          "#sourceCode": [
                                             "../shaders/pc_flowers.fs"
                                           ],
                                           "IS": {
@@ -290,7 +338,7 @@
                               "@value": 0.5
                             }
                           ],
-                          "#sourceText": [
+                          "#sourceCode": [
                             "\r",
                             "  \r",
                             "ecmascript:\r",

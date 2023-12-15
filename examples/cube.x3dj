@@ -27,6 +27,10 @@
           "@content": "manual"
         },
         {
+          "@name": "generator",
+          "@content": "x3d-tidy V1.0.117, https://www.npmjs.com/package/x3d-tidy"
+        },
+        {
           "@name": "license",
           "@content": "../license.html"
         },
@@ -35,12 +39,8 @@
           "@content": "https://coderextreme.net/X3DJSONLD/src/main/data/cube.x3d"
         },
         {
-          "@name": "converter",
-          "@content": "x3d-tidy V1.0.56, https://www.npmjs.com/package/x3d-tidy"
-        },
-        {
-          "@name": "converted",
-          "@content": "Sat, 02 Sep 2023 21:18:29 GMT"
+          "@name": "modified",
+          "@content": "Thu, 14 Dec 2023 22:19:53 GMT"
         }
       ]
     },

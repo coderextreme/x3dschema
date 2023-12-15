@@ -1,69 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
-<X3D profile="Immersive" version="4.0"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" >
-    <head>
-        <meta content="flowers4.x3d" name="title"/>
-        <meta content="John Carlson" name="creator"/>
-        <meta content="manual" name="generator"/>
-        <meta
-            content="https://coderextreme.net/X3DJSONLD/src/main/data/flowers4.x3d" name="identifier"/>
-        <meta content="an animated flower" name="description"/>
-        <component level="1" name="Scripting"/>
-        <component level="3" name="EnvironmentalEffects"/>
-        <component level="1" name="Shaders"/>
-        <component level="1" name="CubeMapTexturing"/>
-        <component level="1" name="Texturing"/>
-        <component level="1" name="Rendering"/>
-        <component level="4" name="Shape"/>
-        <component level="3" name="Grouping"/>
-        <component level="1" name="Core"/>
-    </head>
-    <Scene>
-        <NavigationInfo/>
-        <Background
-            backUrl="&quot;../resources/images/all_probes/stpeters_cross/stpeters_back.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_back.png&quot;"
-            bottomUrl="&quot;../resources/images/all_probes/stpeters_cross/stpeters_bottom.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_bottom.png&quot;"
-            frontUrl="&quot;../resources/images/all_probes/stpeters_cross/stpeters_front.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_front.png&quot;"
-            leftUrl="&quot;../resources/images/all_probes/stpeters_cross/stpeters_left.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_left.png&quot;"
-            rightUrl="&quot;../resources/images/all_probes/stpeters_cross/stpeters_right.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_right.png&quot;" topUrl="&quot;../resources/images/all_probes/stpeters_cross/stpeters_top.png&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_top.png&quot;"/>
-        <Transform DEF="transform">
-            <Shape>
-                <Appearance>
-                    <Material diffuseColor="0.7 0.7 0.7" specularColor="0.5 0.5 0.5"/>
-                    <ComposedCubeMapTexture/>
-                    <ComposedShader DEF="shader" language="GLSL">
-                        <ShaderPart url="&quot;../shaders/x3dom.vs&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom.vs&quot;"/>
-                        <ShaderPart type="FRAGMENT" url="&quot;../shaders/pc_bubbles.fs&quot; &quot;https://coderextreme.net/X3DJSONLD/src/main/shaders/pc_bubbles.fs&quot;"/>
-                        <field accessType="inputOutput" name="cube" type="SFInt32"/>
-                        <field accessType="inputOutput"
-                            name="chromaticDispertion" type="SFVec3f" value="0.98 1 1.033"/>
-                        <field accessType="inputOutput" name="bias"
-                            type="SFFloat" value="0.5"/>
-                        <field accessType="inputOutput" name="scale"
-                            type="SFFloat" value="0.5"/>
-                        <field accessType="inputOutput" name="power"
-                            type="SFFloat" value="2"/>
-                    </ComposedShader>
-                </Appearance>
-                <IndexedFaceSet DEF="Orbit" containerField="geometry"
-                    convex="false" coordIndex="0 -1">
-                    <Coordinate DEF="OrbitCoordinates" point="&quot;NaN&quot; &quot;NaN&quot; &quot;NaN&quot;"/>
-                </IndexedFaceSet>
-            </Shape>
-        </Transform>
-        <Script DEF="OrbitScript">
-            <field accessType="inputOnly" name="set_fraction" type="SFFloat"/>
-            <field accessType="inputOutput" name="coordinates"
-                type="MFVec3f" value="&quot;NaN&quot; &quot;NaN&quot; &quot;NaN&quot;"/>
-            <field accessType="outputOnly" name="coordIndexes" type="MFInt32"/>
-        </Script>
-        <TimeSensor DEF="Clock" cycleInterval="16" loop="true"/>
-        <ROUTE fromField="coordIndexes" fromNode="OrbitScript"
-            toField="set_coordIndex" toNode="Orbit"/>
-        <ROUTE fromField="coordinates" fromNode="OrbitScript"
-            toField="point" toNode="OrbitCoordinates"/>
-        <ROUTE fromField="fraction_changed" fromNode="Clock"
-            toField="set_fraction" toNode="OrbitScript"/>
-    </Scene>
+<!DOCTYPE X3D
+  PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+      profile="Immersive"
+      version="4.0"
+      xsd:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-4.0.xsd">
+   <head>
+      <component level="1" name="Scripting"/>
+      <component level="3" name="EnvironmentalEffects"/>
+      <component level="1" name="Shaders"/>
+      <component level="1" name="CubeMapTexturing"/>
+      <component level="1" name="Texturing"/>
+      <component level="1" name="Rendering"/>
+      <component level="4" name="Shape"/>
+      <component level="3" name="Grouping"/>
+      <component level="1" name="Core"/>
+      <meta content="flowers4.x3d" name="title"/>
+      <meta content="John Carlson" name="creator"/>
+      <meta content="manual" name="generator"/>
+      <meta content="https://coderextreme.net/X3DJSONLD/src/main/data/flowers4.x3d"
+             name="identifier"/>
+      <meta content="an animated flower" name="description"/>
+   </head>
+   <Scene>
+      <NavigationInfo/>
+      <Background backUrl="&#34;../resources/images/all_probes/stpeters_cross/stpeters_back.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_back.png&#34;"
+                   bottomUrl="&#34;../resources/images/all_probes/stpeters_cross/stpeters_bottom.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_bottom.png&#34;"
+                   frontUrl="&#34;../resources/images/all_probes/stpeters_cross/stpeters_front.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_front.png&#34;"
+                   leftUrl="&#34;../resources/images/all_probes/stpeters_cross/stpeters_left.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_left.png&#34;"
+                   rightUrl="&#34;../resources/images/all_probes/stpeters_cross/stpeters_right.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_right.png&#34;"
+                   topUrl="&#34;../resources/images/all_probes/stpeters_cross/stpeters_top.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_top.png&#34;"/>
+      <Transform DEF="transform">
+         <Shape>
+            <Appearance>
+               <Material diffuseColor="0.7 0.7 0.7" specularColor="0.5 0.5 0.5"/>
+               <ComposedCubeMapTexture>
+                  <ImageTexture url="&#34;../resources/images/all_probes/stpeters_cross/stpeters_back.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_back.png&#34;"/>
+                  <ImageTexture url="&#34;../resources/images/all_probes/stpeters_cross/stpeters_bottom.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_bottom.png&#34;"/>
+                  <ImageTexture url="&#34;../resources/images/all_probes/stpeters_cross/stpeters_front.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_front.png&#34;"/>
+                  <ImageTexture url="&#34;../resources/images/all_probes/stpeters_cross/stpeters_left.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_left.png&#34;"/>
+                  <ImageTexture url="&#34;../resources/images/all_probes/stpeters_cross/stpeters_right.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_right.png&#34;"/>
+                  <ImageTexture url="&#34;../resources/images/all_probes/stpeters_cross/stpeters_top.png&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_top.png&#34;"/>
+               </ComposedCubeMapTexture>
+               <ComposedShader DEF="shader" language="GLSL">
+                  <field accessType="inputOutput" name="cube" type="SFInt32" value="0"/>
+                  <field accessType="inputOutput"
+                          name="chromaticDispertion"
+                          type="SFVec3f"
+                          value="0.98 1.0 1.033"/>
+                  <field accessType="inputOutput" name="bias" type="SFFloat" value="0.5"/>
+                  <field accessType="inputOutput"
+                          name="scale"
+                          type="SFFloat"
+                          value="0.5"/>
+                  <field accessType="inputOutput" name="power" type="SFFloat" value="2"/>
+                  <ShaderPart type="VERTEX"
+                               url="&#34;../shaders/x3dom.vs&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom.vs&#34;"/>
+                  <ShaderPart type="FRAGMENT"
+                               url="&#34;../shaders/pc_bubbles.fs&#34; &#34;https://coderextreme.net/X3DJSONLD/src/main/shaders/pc_bubbles.fs&#34;"/>
+               </ComposedShader>
+            </Appearance>
+            <!--"<Sphere>"-->
+            <IndexedFaceSet DEF="Orbit" containerField="geometry" convex="false">
+               <Coordinate DEF="OrbitCoordinates"/>
+            </IndexedFaceSet>
+         </Shape>
+      </Transform>
+      <Script DEF="OrbitScript">
+         <field accessType="inputOnly" name="set_fraction" type="SFFloat"/>
+         <field accessType="inputOutput" name="coordinates" type="MFVec3f"/>
+         <field accessType="outputOnly" name="coordIndexes" type="MFInt32"/>""&#xD;
+""&#xD;
+""&#xD;
+"ecmascript:"&#xD;
+""&#xD;
+"var e = 5;"&#xD;
+"var f = 5;"&#xD;
+"var g = 5;"&#xD;
+"var h = 5;"&#xD;
+""&#xD;
+"function initialize() {"&#xD;
+"     var resolution = 100;"&#xD;
+"     updateCoordinates(resolution);"&#xD;
+"     var cis = [];"&#xD;
+"     for ( i = 0; i &lt; resolution-1; i++) {"&#xD;
+"     \tfor ( j = 0; j &lt; resolution-1; j++) {"&#xD;
+"\t     cis.push(i*resolution+j);"&#xD;
+"\t     cis.push(i*resolution+j+1);"&#xD;
+"\t     cis.push((i+1)*resolution+j+1);"&#xD;
+"\t     cis.push((i+1)*resolution+j);"&#xD;
+"\t     cis.push(-1);"&#xD;
+"\t}"&#xD;
+"    }"&#xD;
+"    coordIndexes = new MFInt32(cis);"&#xD;
+"}"&#xD;
+""&#xD;
+"function updateCoordinates(resolution) {"&#xD;
+"     var theta = 0.0;"&#xD;
+"     var phi = 0.0;"&#xD;
+"     var delta = (2 * 3.141592653) / (resolution-1);"&#xD;
+"     var crds = [];"&#xD;
+"     for ( i = 0; i &lt; resolution; i++) {"&#xD;
+"     \tfor ( j = 0; j &lt; resolution; j++) {"&#xD;
+"\t\tvar rho = e + f * Math.cos(g * theta) * Math.cos(h * phi);"&#xD;
+"\t\tcrds.push(new SFVec3f("&#xD;
+"\t\t\trho * Math.cos(phi) * Math.cos(theta),"&#xD;
+"\t\t\trho * Math.cos(phi) * Math.sin(theta),"&#xD;
+"\t\t\trho * Math.sin(phi)"&#xD;
+"\t\t));"&#xD;
+"\t\ttheta += delta;"&#xD;
+"\t}"&#xD;
+"\tphi += delta;"&#xD;
+"     }"&#xD;
+"     coordinates = new MFVec3f(crds);"&#xD;
+"}"&#xD;
+""&#xD;
+"function set_fraction(fraction, eventTime) {"&#xD;
+"\tvar choice = Math.floor(Math.random() * 4);"&#xD;
+"\tswitch (choice) {"&#xD;
+"\tcase 0:"&#xD;
+"\t\te += Math.floor(Math.random() * 2) * 2 - 1;"&#xD;
+"\t\tbreak;"&#xD;
+"\tcase 1:"&#xD;
+"\t\tf += Math.floor(Math.random() * 2) * 2 - 1;"&#xD;
+"\t\tbreak;"&#xD;
+"\tcase 2:"&#xD;
+"\t\tg += Math.floor(Math.random() * 2) * 2 - 1;"&#xD;
+"\t\tbreak;"&#xD;
+"\tcase 3:"&#xD;
+"\t\th += Math.floor(Math.random() * 2) * 2 - 1;"&#xD;
+"\t\tbreak;"&#xD;
+"\t}"&#xD;
+"\tif (f &lt; 1) {"&#xD;
+"\t\tf = 10;"&#xD;
+"\t}"&#xD;
+"\tif (g &lt; 1) {"&#xD;
+"\t\tg = 4;"&#xD;
+"\t}"&#xD;
+"\tif (h &lt; 1) {"&#xD;
+"\t\th = 4;"&#xD;
+"\t}"&#xD;
+"\tvar resolution = 100;"&#xD;
+"\tupdateCoordinates(resolution);"&#xD;
+"}"&#xD;
+""</Script>
+      <TimeSensor DEF="Clock" cycleInterval="16" loop="true"/>
+      <ROUTE fromField="coordIndexes"
+              fromNode="OrbitScript"
+              toField="set_coordIndex"
+              toNode="Orbit"/>
+      <ROUTE fromField="coordinates"
+              fromNode="OrbitScript"
+              toField="set_point"
+              toNode="OrbitCoordinates"/>
+      <ROUTE fromField="fraction_changed"
+              fromNode="Clock"
+              toField="set_fraction"
+              toNode="OrbitScript"/>
+   </Scene>
 </X3D>
