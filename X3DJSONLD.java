@@ -105,25 +105,20 @@ public class X3DJSONLD {
 		StringBuffer sb = new StringBuffer();
 		for (int i = 0; i < value.size(); i++) {
 			if (i > 0) {
-				sb.append("\r\n");
+				sb.append("\n");
 			}
-			sb.append(value.get(i).toString());
-		}
-		String y = sb.toString();
-		// System.err.println("CDATA Replacing "+y);
-		String str = y;
-		str = str
+			sb.append(value.get(i).toString()
+			// .replaceAll("&#xD;", "")
+			.replaceAll("^\"", "")
+			.replaceAll("\\\\t", "\t")
+			.replaceAll("\"$", "")
 			.replaceAll("&lt;", "<")
 			.replaceAll("&gt;", ">")
 			.replaceAll("&amp;", "&")
-			.replaceAll("&quot;", "\"")
-			.replaceAll("'([^'\r\n]*)\n([^']*)'", "'$1\\r\\n$2'");
-		if (!str.equals(y)) {
-		// System.err.println("with            "+y);
-		} else {
-		// System.err.println("ok");
+			.replaceAll("&quot;", "\""));
+			// .replaceAll("'([^'\r\n]*)\n([^']*)'", "'$1\\r\\n$2'")
 		}
-
+		String str = sb.toString();
 		CDATASection cdata = document.createCDATASection(str);
 		element.appendChild(cdata);
 	}

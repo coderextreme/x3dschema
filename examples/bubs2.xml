@@ -6,7 +6,6 @@
       version="3.3"
       xsd:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-3.3.xsd">
    <head>
-      <component level="1" name="Scripting"/>
       <meta content="bubs2.x3d" name="title"/>
       <meta content="John Carlson" name="creator"/>
       <meta content="Tour around a prismatic sphere" name="description"/>
@@ -16,6 +15,7 @@
       <meta content="13 March 2016" name="translated"/>
       <meta content="X3dToJson.xslt, https://www.web3d.org/x3d/stylesheets/X3dToJson.html"
              name="generator"/>
+      <component level="1" name="Scripting"/>
    </head>
    <Scene>
       <NavigationInfo type="&#34;EXAMINE&#34;"/>

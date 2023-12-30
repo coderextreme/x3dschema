@@ -17,7 +17,8 @@
             "@content":"blenderSkeleton.x3d"
           },
           {
-            "@name":"copyright"
+            "@name":"copyright",
+            "@content":"2023"
           },
           {
             "@name":"reference",

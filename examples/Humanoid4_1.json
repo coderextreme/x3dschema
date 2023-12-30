@@ -277,7 +277,7 @@
               "-skinCoord":
                 { "Coordinate":
                   {
-                    "@USE":"TheSkinCoord"
+                    "@DEF":"TheSkinCoord"
                   }
                 },
               "-skeleton":[

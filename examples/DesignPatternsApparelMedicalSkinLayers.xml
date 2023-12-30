@@ -6,6 +6,7 @@
       version="4.0"
       xsd:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-4.0.xsd">
    <head>
+      <component level="2" name="HAnim"/>
       <meta content="DesignPatternsApparelMedicalSkinLayers.x3d" name="title"/>
       <meta content="Design patterns for skin and apparel using HAnim2 standard in X3D4"
              name="description"/>

@@ -67,6 +67,18 @@ class MyDefaultHandler extends DefaultHandler {
 public class Validate {
 	public static void main(String [] args) throws Exception {
 
+		TransformerFactory transformerFactory = TransformerFactory.newInstance();
+		Transformer transformer = transformerFactory.newTransformer();
+		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+		transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
+		transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+		transformer.setOutputProperty(OutputKeys.CDATA_SECTION_ELEMENTS, "Script");
+
+		SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+		Schema schema = sf.newSchema(new File("x3d-4.0.xsd"));
+		Validator validator = schema.newValidator();
+		validator.setErrorHandler(new MyDefaultHandler());
+
 		for (int i = 0; i < args.length; i++) {
 			try {
 				//if (args[i].contains(File.separator+"originals"+File.separator)) {
@@ -86,15 +98,10 @@ public class Validate {
 					    "ISO//Web3D//DTD X3D "+version+"//EN",
 					    "https://www.web3d.org/specifications/x3d-"+version+".dtd");
 					// document.insertBefore(doctype, document.getDocumentElement().getNextChild());
-					File xmlf = new File(args[i].substring(0, args[i].lastIndexOf("."))+".xml");
-					FileWriter fw = new FileWriter(xmlf);
-					TransformerFactory transformerFactory = TransformerFactory.newInstance();
-					Transformer transformer = transformerFactory.newTransformer();
-					transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-					transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
-					transformer.setOutputProperty(OutputKeys.METHOD, "xml");
 					transformer.setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, doctype.getPublicId());
 					transformer.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, doctype.getSystemId());
+					File xmlf = new File(args[i].substring(0, args[i].lastIndexOf("."))+".xml");
+					FileWriter fw = new FileWriter(xmlf);
 					DOMSource source = new DOMSource(document);
 					StreamResult streamResult = new StreamResult(fw);
 					DOMResult domResult = new DOMResult();
@@ -114,10 +121,6 @@ public class Validate {
 
 				// Validate with XML Schema
 				DOMSource source = new DOMSource(document);
-				SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-				Schema schema = sf.newSchema(new File("x3d-4.0.xsd"));
-				Validator validator = schema.newValidator();
-				validator.setErrorHandler(new MyDefaultHandler());
 				validator.validate(source);
 
 				/*

@@ -254,13 +254,13 @@
       <Transform DEF='Flower3c' translation='1.5 0.25 1.5'>
         <Shape USE='FlowerSet'/>
       </Transform>
-      <Transform DEF='Flower3a' translation='0 0.25 2.25'>
+      <Transform DEF='Flower4a' translation='0 0.25 2.25'>
         <Shape USE='FlowerSet'/>
       </Transform>
-      <Transform DEF='Flower3b' translation='0.75 0.25 2.25'>
+      <Transform DEF='Flower4b' translation='0.75 0.25 2.25'>
         <Shape USE='FlowerSet'/>
       </Transform>
-      <Transform DEF='Flower3c' scale='1 2 1' translation='1.5 0.25 2.25'>
+      <Transform DEF='Flower4c' scale='1 2 1' translation='1.5 0.25 2.25'>
         <Shape USE='FlowerSet'/>
       </Transform>
     </Transform>

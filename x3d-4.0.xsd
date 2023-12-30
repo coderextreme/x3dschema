@@ -3324,7 +3324,7 @@ Open-source license:
     <xs:simpleType name="generatedCubeMapTextureUpdateChoices">
         <xs:annotation>
             <xs:appinfo>generatedCubeMapTextureUpdateChoices are strictly allowed enumeration values for GeneratedCubeMapTexture field named 'update'. This list is bounded, no additional values are allowed.</xs:appinfo>
-            <xs:documentation source="https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-IS.proof/Part01/components/environmentalTexturing#GeneratedCubeMapTexture"/>
+            <xs:documentation source="https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-IS.proof/Part01/components/environmentalTexturing.html#GeneratedCubeMapTexture"/>
         </xs:annotation>
         <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="NONE">
@@ -6077,7 +6077,7 @@ Open-source license:
                 <xs:attribute name="componentLevel" type="xs:positiveInteger" fixed="1"/>
                 Base type for all nodes that specify cubic environment map sources for texture images.
             </xs:appinfo>
-            <xs:documentation source="https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-IS.proof/Part01/components/environmentalTexturing#X3DEnvironmentTextureNode"/>
+            <xs:documentation source="https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-IS.proof/Part01/components/environmentalTexturing.html#X3DEnvironmentTextureNode"/>
         </xs:annotation>
         <xs:complexContent>
             <xs:extension base="X3DTextureNode"/>
@@ -21598,11 +21598,11 @@ Open-source license:
                         </xs:appinfo>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="textureProperties" type="SFNode" fixed="initializeOnlyField"/>
+                <xs:element name="textureProperties" type="SFNode" default="TextureProperties" fixed="initializeOnlyField"/>
                 <xs:attribute name="componentName" type="componentNameChoices" fixed="CubeMapTexturing"/>
                 <xs:attribute name="componentLevel" type="xs:positiveInteger" fixed="1"/>
             </xs:appinfo>
-            <xs:documentation source="https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-IS.proof/Part01/components/environmentalTexturing#ComposedCubeMapTexture"/>
+            <xs:documentation source="https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-IS.proof/Part01/components/environmentalTexturing.html#ComposedCubeMapTexture"/>
         </xs:annotation>
         <xs:complexType>
             <xs:complexContent>
@@ -21639,7 +21639,7 @@ Open-source license:
                 <xs:attribute name="componentName" type="componentNameChoices" fixed="CubeMapTexturing"/>
                 <xs:attribute name="componentLevel" type="xs:positiveInteger" fixed="3"/>
             </xs:appinfo>
-            <xs:documentation source="https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-IS.proof/Part01/components/environmentalTexturing#GeneratedCubeMapTexture"/>
+            <xs:documentation source="https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-IS.proof/Part01/components/environmentalTexturing.html#GeneratedCubeMapTexture"/>
         </xs:annotation>
         <xs:complexType>
             <xs:complexContent>
@@ -21676,7 +21676,7 @@ Open-source license:
                 <xs:attribute name="componentName" type="componentNameChoices" fixed="CubeMapTexturing"/>
                 <xs:attribute name="componentLevel" type="xs:positiveInteger" fixed="2"/>
             </xs:appinfo>
-            <xs:documentation source="https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-IS.proof/Part01/components/environmentalTexturing#ImageCubeMapTexture"/>
+            <xs:documentation source="https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-IS.proof/Part01/components/environmentalTexturing.html#ImageCubeMapTexture"/>
         </xs:annotation>
         <xs:complexType>
             <xs:complexContent>

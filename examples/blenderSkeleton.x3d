@@ -4,7 +4,7 @@
   <head>
     <component level='3' name='HAnim'/>
     <meta content='blenderSkeleton.x3d' name='filename'/>
-    <meta name='copyright'/>
+    <meta content='2023' name='copyright'/>
     <meta content='http://www.web3D.org' name='reference'/>
     <meta content='Blender 3.6.4' name='generator'/>
     <meta content='io_scene_x3dv' name='exporter'/>

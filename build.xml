@@ -49,8 +49,10 @@
 	    <arg value="Validate"/>
 	    <srcfile/>
 	    <fileset dir="${examples}" casesensitive="yes">
-		<include name="**/*.json"/>
+		    <!--
 		<include name="**/*.x3dj"/>
+		-->
+		<include name="**/*.json"/>
 		<include name="**/*.xml"/>
 		<include name="**/*.x3d"/>
 		<exclude name="**/*.tidy.new.xml"/>
@@ -98,17 +100,8 @@
 	    <arg value="---"/>
 	    <srcfile/>
 	    <fileset dir="${examples}" casesensitive="yes">
-		    <!--
-		    -->
-		<include name="**/KoreanCharacterMotionAnnexD01Jin.x3d"/>
-		<!--
-		<include name="**/KoreanCharacterMotionAnnexD01Jin.xml"/>
-		<include name="**/KoreanCharacterMotionAnnexD01Jin.tidy.new.xml"/>
-		-->
-		<!--
-		<include name="**/*.xml"/>
+		<include name="**/*.x3d"/>
 		<exclude name="**/*.tidy.new.xml"/>
-		-->
 	    </fileset>
 	  </apply>
 	</target>
