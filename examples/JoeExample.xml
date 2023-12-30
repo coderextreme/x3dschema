@@ -16,27 +16,27 @@
          <field accessType="initializeOnly"
                  name="unlocked"
                  type="SFBool"
-                 value="false"/>""&#xD;
-""&#xD;
-""&#xD;
-""&#xD;
-"      ecmascript:"&#xD;
-""&#xD;
-"      function combinationEntered (value) {"&#xD;
-""&#xD;
-"        unlocked = value;"&#xD;
-""&#xD;
-"      }"&#xD;
-""&#xD;
-"      function openVault(value) {"&#xD;
-""&#xD;
-"      if (unlocked) vaultUnlocked = value;"&#xD;
-""&#xD;
-"      }"&#xD;
-""&#xD;
-""&#xD;
-""&#xD;
-""</Script>
+                 value="false"/><![CDATA[
+
+
+
+      ecmascript:
+
+      function combinationEntered (value) {
+
+        unlocked = value;
+
+      }
+
+      function openVault(value) {
+
+      if (unlocked) vaultUnlocked = value;
+
+      }
+
+
+
+]]></Script>
       <Shape>
          <Appearance>
             <Material diffuseColor="1 0 0"/>

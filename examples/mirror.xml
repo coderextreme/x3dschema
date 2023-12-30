@@ -131,27 +131,27 @@
             <field accessType="outputOnly" name="top_changed" type="MFString"/>
             <field accessType="outputOnly" name="bottom_changed" type="MFString"/>
             <field accessType="inputOnly" name="set_fraction" type="SFFloat"/>
-            <field accessType="inputOutput" name="old" type="SFInt32" value="-1"/>""&#xD;
-""&#xD;
-"ecmascript:"&#xD;
-"        function set_fraction( f, tm ) {"&#xD;
-"\t    var side = Math.floor(f*frontUrls.length);"&#xD;
-"\t    if (side &gt; frontUrls.length-1) {"&#xD;
-"\t    \tside = 0;"&#xD;
-"\t    }"&#xD;
-"\t    if (side != old) {"&#xD;
-"\t    \t    Browser.print(f+\" \"+side);"&#xD;
-"\t    \t    old = side;"&#xD;
-"\t\t    front_changed[0] = frontUrls[side];"&#xD;
-"\t\t    back_changed[0] = backUrls[side];"&#xD;
-"\t\t    left_changed[0] = leftUrls[side];"&#xD;
-"\t\t    right_changed[0] = rightUrls[side];"&#xD;
-"\t\t    top_changed[0] = topUrls[side];"&#xD;
-"\t\t    bottom_changed[0] = bottomUrls[side];"&#xD;
-"            }"&#xD;
-"        }"&#xD;
-""&#xD;
-""</Script>
+            <field accessType="inputOutput" name="old" type="SFInt32" value="-1"/><![CDATA[
+
+ecmascript:
+        function set_fraction( f, tm ) {
+	    var side = Math.floor(f*frontUrls.length);
+	    if (side > frontUrls.length-1) {
+	    	side = 0;
+	    }
+	    if (side != old) {
+	    	    Browser.print(f+\" \"+side);
+	    	    old = side;
+		    front_changed[0] = frontUrls[side];
+		    back_changed[0] = backUrls[side];
+		    left_changed[0] = leftUrls[side];
+		    right_changed[0] = rightUrls[side];
+		    top_changed[0] = topUrls[side];
+		    bottom_changed[0] = bottomUrls[side];
+            }
+        }
+
+]]></Script>
          <TimeSensor DEF="Clock" cycleInterval="45" loop="true"/>
          <ROUTE fromField="fraction_changed"
                  fromNode="Clock"

@@ -32,82 +32,82 @@
          <field accessType="inputOnly" name="set_fraction" type="SFFloat"/>
          <field accessType="outputOnly" name="coordinates" type="MFVec3f"/>
          <field accessType="outputOnly" name="coordIndexes" type="MFInt32"/>
-         <!--"<field accessType="inputOutput" name="e" type="SFFloat" value="5"/> <field accessType="inputOutput" name="f" type="SFFloat" value="5"/> <field accessType="inputOutput" name="g" type="SFFloat" value="5"/> <field accessType="inputOutput" name="h" type="SFFloat" value="5"/> <field accessType="inputOutput" name="t" type="SFFloat" value="0"/> <field accessType="inputOutput" name="p" type="SFFloat" value="0"/> <field accessType="initializeOnly" name="resolution" type="SFInt32" value="100"/>"-->""&#xD;
-"ecmascript:"&#xD;
-""&#xD;
-"var e = 5;"&#xD;
-"var f = 5;"&#xD;
-"var g = 5;"&#xD;
-"var h = 5;"&#xD;
-"var resolution = 100;"&#xD;
-"var t = 0;"&#xD;
-"var p = 0;"&#xD;
-""&#xD;
-"function initialize() {"&#xD;
-"     generateCoordinates(resolution);"&#xD;
-"     var localci = [];"&#xD;
-"     for ( i = 0; i &lt; resolution-1; i++) {"&#xD;
-"     \tfor ( j = 0; j &lt; resolution-1; j++) {"&#xD;
-"\t     localci.push(i*resolution+j);"&#xD;
-"\t     localci.push(i*resolution+j+1);"&#xD;
-"\t     localci.push((i+1)*resolution+j+1);"&#xD;
-"\t     localci.push((i+1)*resolution+j);"&#xD;
-"\t     localci.push(-1);"&#xD;
-"\t}"&#xD;
-"    }"&#xD;
-"    coordIndexes = new MFInt32(localci);"&#xD;
-"}"&#xD;
-""&#xD;
-"function generateCoordinates(resolution) {"&#xD;
-"     var theta = 0.0;"&#xD;
-"     var phi = 0.0;"&#xD;
-"     var delta = (2 * 3.141592653) / (resolution-1);"&#xD;
-"     var localc = [];"&#xD;
-"     for (var  i = 0; i &lt; resolution; i++) {"&#xD;
-"     \tfor (var  j = 0; j &lt; resolution; j++) {"&#xD;
-"\t\tvar rho = e + f * Math.cos(g * theta) * Math.cos(h * phi);"&#xD;
-"\t\tlocalc.push(new SFVec3f("&#xD;
-"\t\t\trho * Math.cos(phi) * Math.cos(theta),"&#xD;
-"\t\t\trho * Math.cos(phi) * Math.sin(theta),"&#xD;
-"\t\t\trho * Math.sin(phi)"&#xD;
-"\t\t));"&#xD;
-"\t\ttheta += delta;"&#xD;
-"\t}"&#xD;
-"\tphi += delta;"&#xD;
-"     }"&#xD;
-"     coordinates = new MFVec3f(localc);"&#xD;
-"}"&#xD;
-""&#xD;
-"function set_fraction(fraction, eventTime) {"&#xD;
-"\tt += 0.5;"&#xD;
-"\tp += 0.5;"&#xD;
-"\tvar choice = Math.floor(Math.random() * 4);"&#xD;
-"\tswitch (choice) {"&#xD;
-"\tcase 0:"&#xD;
-"\t\te += Math.floor(Math.random() * 2) * 2 - 1;"&#xD;
-"\t\tbreak;"&#xD;
-"\tcase 1:"&#xD;
-"\t\tf += Math.floor(Math.random() * 2) * 2 - 1;"&#xD;
-"\t\tbreak;"&#xD;
-"\tcase 2:"&#xD;
-"\t\tg += Math.floor(Math.random() * 2) * 2 - 1;"&#xD;
-"\t\tbreak;"&#xD;
-"\tcase 3:"&#xD;
-"\t\th += Math.floor(Math.random() * 2) * 2 - 1;"&#xD;
-"\t\tbreak;"&#xD;
-"\t}"&#xD;
-"\tif (f &lt; 1) {"&#xD;
-"\t\tf = 10;"&#xD;
-"\t}"&#xD;
-"\tif (g &lt; 1) {"&#xD;
-"\t\tg = 4;"&#xD;
-"\t}"&#xD;
-"\tif (h &lt; 1) {"&#xD;
-"\t\th = 4;"&#xD;
-"\t}"&#xD;
-"\tgenerateCoordinates(resolution);"&#xD;
-"}"&#xD;
-""</Script>
+         <!--"<field accessType="inputOutput" name="e" type="SFFloat" value="5"/> <field accessType="inputOutput" name="f" type="SFFloat" value="5"/> <field accessType="inputOutput" name="g" type="SFFloat" value="5"/> <field accessType="inputOutput" name="h" type="SFFloat" value="5"/> <field accessType="inputOutput" name="t" type="SFFloat" value="0"/> <field accessType="inputOutput" name="p" type="SFFloat" value="0"/> <field accessType="initializeOnly" name="resolution" type="SFInt32" value="100"/>"--><![CDATA[
+ecmascript:
+
+var e = 5;
+var f = 5;
+var g = 5;
+var h = 5;
+var resolution = 100;
+var t = 0;
+var p = 0;
+
+function initialize() {
+     generateCoordinates(resolution);
+     var localci = [];
+     for ( i = 0; i < resolution-1; i++) {
+     	for ( j = 0; j < resolution-1; j++) {
+	     localci.push(i*resolution+j);
+	     localci.push(i*resolution+j+1);
+	     localci.push((i+1)*resolution+j+1);
+	     localci.push((i+1)*resolution+j);
+	     localci.push(-1);
+	}
+    }
+    coordIndexes = new MFInt32(localci);
+}
+
+function generateCoordinates(resolution) {
+     var theta = 0.0;
+     var phi = 0.0;
+     var delta = (2 * 3.141592653) / (resolution-1);
+     var localc = [];
+     for (var  i = 0; i < resolution; i++) {
+     	for (var  j = 0; j < resolution; j++) {
+		var rho = e + f * Math.cos(g * theta) * Math.cos(h * phi);
+		localc.push(new SFVec3f(
+			rho * Math.cos(phi) * Math.cos(theta),
+			rho * Math.cos(phi) * Math.sin(theta),
+			rho * Math.sin(phi)
+		));
+		theta += delta;
+	}
+	phi += delta;
+     }
+     coordinates = new MFVec3f(localc);
+}
+
+function set_fraction(fraction, eventTime) {
+	t += 0.5;
+	p += 0.5;
+	var choice = Math.floor(Math.random() * 4);
+	switch (choice) {
+	case 0:
+		e += Math.floor(Math.random() * 2) * 2 - 1;
+		break;
+	case 1:
+		f += Math.floor(Math.random() * 2) * 2 - 1;
+		break;
+	case 2:
+		g += Math.floor(Math.random() * 2) * 2 - 1;
+		break;
+	case 3:
+		h += Math.floor(Math.random() * 2) * 2 - 1;
+		break;
+	}
+	if (f < 1) {
+		f = 10;
+	}
+	if (g < 1) {
+		g = 4;
+	}
+	if (h < 1) {
+		h = 4;
+	}
+	generateCoordinates(resolution);
+}
+]]></Script>
       <TimeSensor DEF="Clock" cycleInterval="16" loop="true"/>
       <ROUTE fromField="coordIndexes"
               fromNode="OrbitScript"

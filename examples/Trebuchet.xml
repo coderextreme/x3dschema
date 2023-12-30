@@ -603,71 +603,71 @@
             <Script DEF="WeightScript">
                <field accessType="inputOnly" name="set_boolean" type="SFBool"/>
                <field accessType="outputOnly" name="whichchoice" type="SFInt32"/>
-               <field accessType="outputOnly" name="CounterWeight" type="SFFloat"/>""&#xD;
-""&#xD;
-"ecmascript:"&#xD;
-""&#xD;
-""&#xD;
-"function initialize ()"&#xD;
-"{"&#xD;
-"\twhichchoice =0;"&#xD;
-"\tCounterWeight=100;"&#xD;
-"}"&#xD;
-""&#xD;
-"function set_boolean ( boolean_input, eventTime)"&#xD;
-"{"&#xD;
-""&#xD;
-"\tif ( boolean_input== false ) { return; } // ignore the unclick"&#xD;
-"        whichchoice = whichchoice +1;"&#xD;
-"\tif (whichchoice == 0)CounterWeight=50.00;"&#xD;
-"\tif (whichchoice == 1)CounterWeight=500.00;"&#xD;
-"\tif (whichchoice == 2)CounterWeight=1000.00;"&#xD;
-"\tif (whichchoice == 3)CounterWeight=10000.00;"&#xD;
-"        if ( whichchoice ==4 ) { whichchoice = 0; CounterWeight=50; }"&#xD;
-""&#xD;
-""&#xD;
-"        Browser.print ('CounterWeight ='+CounterWeight);"&#xD;
-"}"&#xD;
-""&#xD;
-""</Script>
+               <field accessType="outputOnly" name="CounterWeight" type="SFFloat"/><![CDATA[
+
+ecmascript:
+
+
+function initialize ()
+{
+	whichchoice =0;
+	CounterWeight=100;
+}
+
+function set_boolean ( boolean_input, eventTime)
+{
+
+	if ( boolean_input== false ) { return; } // ignore the unclick
+        whichchoice = whichchoice +1;
+	if (whichchoice == 0)CounterWeight=50.00;
+	if (whichchoice == 1)CounterWeight=500.00;
+	if (whichchoice == 2)CounterWeight=1000.00;
+	if (whichchoice == 3)CounterWeight=10000.00;
+        if ( whichchoice ==4 ) { whichchoice = 0; CounterWeight=50; }
+
+
+        Browser.print ('CounterWeight ='+CounterWeight);
+}
+
+]]></Script>
             <Script DEF="LauncheeScript">
                <field accessType="inputOnly" name="set_boolean" type="SFBool"/>
                <field accessType="outputOnly" name="whichchoice" type="SFInt32"/>
-               <field accessType="outputOnly" name="ProjectileWeight" type="SFFloat"/>""&#xD;
-""&#xD;
-"ecmascript:"&#xD;
-""&#xD;
-"function set_boolean (boolean_input, eventTime)"&#xD;
-"{"&#xD;
-"\tif ( boolean_input== false ) { return; } // ignore unclick"&#xD;
-"        whichchoice = whichchoice +1;"&#xD;
-"        if (whichchoice == 0)ProjectileWeight=10.00;"&#xD;
-"        if (whichchoice == 1)ProjectileWeight=1000.00;"&#xD;
-"\tif (whichchoice == 2)ProjectileWeight=5;"&#xD;
-""&#xD;
-"\tif ( whichchoice ==3 ) { whichchoice = 0; ProjectileWeight=10.00; }"&#xD;
-"\tBrowser.print ('Projectile Weight'+ProjectileWeight);"&#xD;
-"}"&#xD;
-""&#xD;
-""</Script>
+               <field accessType="outputOnly" name="ProjectileWeight" type="SFFloat"/><![CDATA[
+
+ecmascript:
+
+function set_boolean (boolean_input, eventTime)
+{
+	if ( boolean_input== false ) { return; } // ignore unclick
+        whichchoice = whichchoice +1;
+        if (whichchoice == 0)ProjectileWeight=10.00;
+        if (whichchoice == 1)ProjectileWeight=1000.00;
+	if (whichchoice == 2)ProjectileWeight=5;
+
+	if ( whichchoice ==3 ) { whichchoice = 0; ProjectileWeight=10.00; }
+	Browser.print ('Projectile Weight'+ProjectileWeight);
+}
+
+]]></Script>
             <Script DEF="PigdogMonkScript">
                <field accessType="inputOnly" name="set_boolean" type="SFBool"/>
-               <field accessType="outputOnly" name="whichchoice" type="SFInt32"/>""&#xD;
-""&#xD;
-"ecmascript:"&#xD;
-""&#xD;
-"function set_boolean (boolean_input, eventTime)"&#xD;
-"{"&#xD;
-"\tif ( boolean_input== false ) { return; } // ignore unclick"&#xD;
-""&#xD;
-"        whichchoice = whichchoice +1;"&#xD;
-""&#xD;
-"        if ( whichchoice ==2 )  whichchoice = 0;"&#xD;
-""&#xD;
-""&#xD;
-"}"&#xD;
-""&#xD;
-""</Script>
+               <field accessType="outputOnly" name="whichchoice" type="SFInt32"/><![CDATA[
+
+ecmascript:
+
+function set_boolean (boolean_input, eventTime)
+{
+	if ( boolean_input== false ) { return; } // ignore unclick
+
+        whichchoice = whichchoice +1;
+
+        if ( whichchoice ==2 )  whichchoice = 0;
+
+
+}
+
+]]></Script>
             <Script DEF="Mover">
                <field accessType="inputOnly" name="set_fraction" type="SFFloat"/>
                <field accessType="inputOnly" name="set_MassCounterWeight" type="SFFloat"/>
@@ -683,51 +683,51 @@
                        type="SFFloat"
                        value="1"/>
                <field accessType="outputOnly" name="transparent" type="SFVec3f"/>
-               <field accessType="outputOnly" name="value_changed" type="SFVec3f"/>""&#xD;
-""&#xD;
-"ecmascript:"&#xD;
-""&#xD;
-"function initialize ()"&#xD;
-"{"&#xD;
-"\tMassCounterWeight=100;"&#xD;
-"\tMassProjectileWeight=10;"&#xD;
-"\tBrowser.print ('MassCounterWeight =' + MassCounterWeight);"&#xD;
-"\tBrowser.print ('MassProjectileWeight =' + MassProjectileWeight);"&#xD;
-"}"&#xD;
-""&#xD;
-"function set_MassProjectileWeight (value, timestamp)"&#xD;
-"{"&#xD;
-"\tMassProjectileWeight = value;"&#xD;
-"\tBrowser.print ('new MassProjectileWeight =' + MassProjectileWeight);"&#xD;
-"}"&#xD;
-"function set_MassCounterWeight (value2, timestamp)"&#xD;
-"{"&#xD;
-"\tMassCounterWeight = value2;"&#xD;
-"\tBrowser.print ('new MassCounterWeight =' + MassCounterWeight);"&#xD;
-"}"&#xD;
-""&#xD;
-""&#xD;
-"function set_fraction ( fraction, eventTime )"&#xD;
-"{"&#xD;
-"\tvar TrebuchetHeight=45;"&#xD;
-"\tvar Height =25;"&#xD;
-"      \tx = (2*(MassCounterWeight/MassProjectileWeight)*Height*fraction)-.5*TrebuchetHeight;"&#xD;
-"\t// start at TrebuchetHeight and keep along z axis (z=zero)"&#xD;
-"\ty =  (MassCounterWeight/MassProjectileWeight)*Height*Math.sin(fraction*3.14);"&#xD;
-"        z = 0;"&#xD;
-"        transparent = new SFVec3f (1,1,1);"&#xD;
-"     if (y &lt;1.5*TrebuchetHeight  )if (x&lt;TrebuchetHeight)"&#xD;
-"\t\t{"&#xD;
-"\t\tx=x-10;"&#xD;
-"\t\ty=y+1;"&#xD;
-"\t\ttransparent = new SFVec3f(.01, .01, .01);"&#xD;
-"\t\t\t}"&#xD;
-""&#xD;
-"\tvalue_changed = new SFVec3f (x, y, z);"&#xD;
-"\tBrowser.print ('x=' + value_changed[0] + ' y=' + value_changed[1] + ' z=' + value_changed[2]);"&#xD;
-"}"&#xD;
-""&#xD;
-""</Script>
+               <field accessType="outputOnly" name="value_changed" type="SFVec3f"/><![CDATA[
+
+ecmascript:
+
+function initialize ()
+{
+	MassCounterWeight=100;
+	MassProjectileWeight=10;
+	Browser.print ('MassCounterWeight =' + MassCounterWeight);
+	Browser.print ('MassProjectileWeight =' + MassProjectileWeight);
+}
+
+function set_MassProjectileWeight (value, timestamp)
+{
+	MassProjectileWeight = value;
+	Browser.print ('new MassProjectileWeight =' + MassProjectileWeight);
+}
+function set_MassCounterWeight (value2, timestamp)
+{
+	MassCounterWeight = value2;
+	Browser.print ('new MassCounterWeight =' + MassCounterWeight);
+}
+
+
+function set_fraction ( fraction, eventTime )
+{
+	var TrebuchetHeight=45;
+	var Height =25;
+      	x = (2*(MassCounterWeight/MassProjectileWeight)*Height*fraction)-.5*TrebuchetHeight;
+	// start at TrebuchetHeight and keep along z axis (z=zero)
+	y =  (MassCounterWeight/MassProjectileWeight)*Height*Math.sin(fraction*3.14);
+        z = 0;
+        transparent = new SFVec3f (1,1,1);
+     if (y <1.5*TrebuchetHeight  )if (x<TrebuchetHeight)
+		{
+		x=x-10;
+		y=y+1;
+		transparent = new SFVec3f(.01, .01, .01);
+			}
+
+	value_changed = new SFVec3f (x, y, z);
+	Browser.print ('x=' + value_changed[0] + ' y=' + value_changed[1] + ' z=' + value_changed[2]);
+}
+
+]]></Script>
          </Transform>
       </Transform>
       <TimeSensor DEF="clock" cycleInterval="10"/>

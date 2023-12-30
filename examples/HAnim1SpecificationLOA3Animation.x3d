@@ -49,7 +49,7 @@
     <Viewpoint centerOfRotation='0 0.9149 0.0016' description='Humanoid LOA 3 Left Side Close' orientation='0 1 0 -1.2' position='-1 0.8 0.5'/>
     <Viewpoint centerOfRotation='0 0.9149 0.0016' description='Humanoid LOA 3 Left Side' orientation='0 1 0 -1.5708' position='-2.6 0.8 0'/>
     <Viewpoint centerOfRotation='0 0.9149 0.0016' description='Humanoid LOA 3 Top' orientation='1 0 0 -1.5708' position='0 3.5 0'/>
-    <HAnimHumanoid DEF='hanim_humanoid' info='"authorName=Matthew T. Beitler Joe D. Williams Don Brutzman" "authorEmail=HAnim@web3D.org" "copyright=none" "creationDate=12 May 1999" "usageRestrictions=none" "humanoidVersion=1.0" "height=1.7504"' name='humanoid' version='1.0'>
+    <HAnimHumanoid DEF='hanim_humanoid' info='"authorName=Matthew T. Beitler Joe D. Williams Don Brutzman" "authorEmail=HAnim@web3D.org" "copyright=none" "creationDate=12 May 1999" "usageRestrictions=none" "humanoidVersion=1.0" "height=1.7504"' name='humanoid' version='2.0'>
       <HAnimJoint DEF='hanim_humanoid_root' center='0 0.824 0.0277' containerField='skeleton' name='humanoid_root'>
         <HAnimSegment DEF='hanim_sacrum' name='sacrum'>
           <!-- <HAnimJoint name='humanoid_root'/> visualization sphere within <HAnimSegment name='sacrum'/> -->

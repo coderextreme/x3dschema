@@ -45,11 +45,11 @@
             <field accessType="initializeOnly"
                     name="frontUrls"
                     type="MFString"
-                    value="&#34;rnl_front.png&#34; &#34;uffizi_front.png&#34;"/>""&#xD;
-"\t\t\t    ecmascript:"&#xD;
-"\t\t\t    var me = '\"1\" \"\"2\" \"\n3\"';"&#xD;
-"\t\t\t    "&#xD;
-"\t\t\t"</Script>
+                    value="&#34;rnl_front.png&#34; &#34;uffizi_front.png&#34;"/><![CDATA[
+			    ecmascript:
+			    var me = '\"1\" \"\"2\" \"\n3\"';
+			    
+			]]></Script>
       </Transform>
    </Scene>
 </X3D>

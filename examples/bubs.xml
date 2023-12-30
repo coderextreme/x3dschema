@@ -51,48 +51,48 @@
                           name="scalvel"
                           type="SFVec3f"
                           value="0 0 0"/>
-                  <field accessType="inputOnly" name="set_fraction" type="SFFloat"/>""&#xD;
-"ecmascript:"&#xD;
-"function initialize() {"&#xD;
-"    velocity = new SFVec3f(Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125);"&#xD;
-""&#xD;
-"    scalvel = new SFVec3f(Math.random() * 0.4, Math.random() * 0.4, Math.random() * 0.4);"&#xD;
-"}"&#xD;
-""&#xD;
-"function set_fraction(value) {"&#xD;
-"    translation = new SFVec3f(\ttranslation.x + velocity.x, translation.y + velocity.y, translation.z + velocity.z);"&#xD;
-"    scale = new SFVec3f(scale.x + scalvel.x, scale.y + scalvel.y, scale.z + scalvel.z);"&#xD;
-"    // if you get to far away or too big, explode"&#xD;
-"    if ( Math.abs(translation.x) &gt; 256) {"&#xD;
-"\ttranslation.x = 0;"&#xD;
-"\tinitialize();"&#xD;
-"    }"&#xD;
-"    if ( Math.abs(translation.y) &gt; 256) {"&#xD;
-"\ttranslation.y = 0;"&#xD;
-"\tinitialize();"&#xD;
-"    }"&#xD;
-"    if ( Math.abs(translation.z) &gt; 256) {"&#xD;
-"\ttranslation.z = 0;"&#xD;
-"\tinitialize();"&#xD;
-"    }"&#xD;
-"    if (Math.abs(scale.x) &gt; 20) {"&#xD;
-"\tscale.x = scale.x/20;"&#xD;
-"\ttranslation.x = 0;"&#xD;
-"\tinitialize();"&#xD;
-"    }"&#xD;
-"    if (Math.abs(scale.y) &gt; 20) {"&#xD;
-"\tscale.y = scale.y/20;"&#xD;
-"\ttranslation.y = 0;"&#xD;
-"\tinitialize();"&#xD;
-"    }"&#xD;
-"    if (Math.abs(scale.z) &gt; 20) {"&#xD;
-"\tscale.z = scale.z/20;"&#xD;
-"\ttranslation.z = 0;"&#xD;
-"\tinitialize();"&#xD;
-"    }"&#xD;
-"}"&#xD;
-""&#xD;
-"\t\t\t"</Script>
+                  <field accessType="inputOnly" name="set_fraction" type="SFFloat"/><![CDATA[
+ecmascript:
+function initialize() {
+    velocity = new SFVec3f(Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125);
+
+    scalvel = new SFVec3f(Math.random() * 0.4, Math.random() * 0.4, Math.random() * 0.4);
+}
+
+function set_fraction(value) {
+    translation = new SFVec3f(	translation.x + velocity.x, translation.y + velocity.y, translation.z + velocity.z);
+    scale = new SFVec3f(scale.x + scalvel.x, scale.y + scalvel.y, scale.z + scalvel.z);
+    // if you get to far away or too big, explode
+    if ( Math.abs(translation.x) > 256) {
+	translation.x = 0;
+	initialize();
+    }
+    if ( Math.abs(translation.y) > 256) {
+	translation.y = 0;
+	initialize();
+    }
+    if ( Math.abs(translation.z) > 256) {
+	translation.z = 0;
+	initialize();
+    }
+    if (Math.abs(scale.x) > 20) {
+	scale.x = scale.x/20;
+	translation.x = 0;
+	initialize();
+    }
+    if (Math.abs(scale.y) > 20) {
+	scale.y = scale.y/20;
+	translation.y = 0;
+	initialize();
+    }
+    if (Math.abs(scale.z) > 20) {
+	scale.z = scale.z/20;
+	translation.z = 0;
+	initialize();
+    }
+}
+
+			]]></Script>
                <TimeSensor DEF="bubbleClock" cycleInterval="10" loop="true"/>
                <ROUTE fromField="translation_changed"
                        fromNode="bounce1"

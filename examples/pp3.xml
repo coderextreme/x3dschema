@@ -111,43 +111,43 @@
             </Group>
             <Script DEF="RightSingleToMultiString">
                <field accessType="inputOnly" name="set_rightstring" type="SFString"/>
-               <field accessType="outputOnly" name="rightlines" type="MFString"/>""&#xD;
-"ecmascript:"&#xD;
-""&#xD;
-"function initialize() {"&#xD;
-"\trightlines = new MFString(\"\");"&#xD;
-"}"&#xD;
-""&#xD;
-"function set_rightstring(rightstr) {"&#xD;
-"\trightlines = new MFString(rightstr);"&#xD;
-"}"&#xD;
-""</Script>
+               <field accessType="outputOnly" name="rightlines" type="MFString"/><![CDATA[
+ecmascript:
+
+function initialize() {
+	rightlines = new MFString(\"\");
+}
+
+function set_rightstring(rightstr) {
+	rightlines = new MFString(rightstr);
+}
+]]></Script>
             <Script DEF="UpSingleToMultiString">
                <field accessType="inputOnly" name="set_upstring" type="SFString"/>
-               <field accessType="outputOnly" name="uplines" type="MFString"/>""&#xD;
-"ecmascript:"&#xD;
-""&#xD;
-"function initialize() {"&#xD;
-"\tuplines = new MFString(\"\");"&#xD;
-"}"&#xD;
-""&#xD;
-"function set_upstring(upstr) {"&#xD;
-"\tuplines = new MFString(upstr);"&#xD;
-"}"&#xD;
-""</Script>
+               <field accessType="outputOnly" name="uplines" type="MFString"/><![CDATA[
+ecmascript:
+
+function initialize() {
+	uplines = new MFString(\"\");
+}
+
+function set_upstring(upstr) {
+	uplines = new MFString(upstr);
+}
+]]></Script>
             <Script DEF="CenterSingleToMultiString">
                <field accessType="inputOnly" name="set_centerstring" type="SFString"/>
-               <field accessType="outputOnly" name="centerlines" type="MFString"/>""&#xD;
-"ecmascript:"&#xD;
-""&#xD;
-"function initialize() {"&#xD;
-"\tcenterlines = new MFString(\"\");"&#xD;
-"}"&#xD;
-""&#xD;
-"function set_centerstring(centerstr) {"&#xD;
-"\tcenterlines = new MFString(centerstr);"&#xD;
-"}"&#xD;
-""</Script>
+               <field accessType="outputOnly" name="centerlines" type="MFString"/><![CDATA[
+ecmascript:
+
+function initialize() {
+	centerlines = new MFString(\"\");
+}
+
+function set_centerstring(centerstr) {
+	centerlines = new MFString(centerstr);
+}
+]]></Script>
             <ROUTE fromField="enteredText"
                     fromNode="CenterSensor"
                     toField="set_centerstring"

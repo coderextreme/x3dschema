@@ -15,26 +15,26 @@
              name="description"/>
    </head>
    <Scene>
-      <Script DEF="Browser">""&#xD;
-"ecmascript:"&#xD;
-"                function initialize() {"&#xD;
-"\t\t    Browser.print('DUDES\n'+'\"DUDETTES');"&#xD;
-"                }"&#xD;
-""&#xD;
-""</Script>
-      <Script DEF="Clouds">""&#xD;
-""&#xD;
-"ecmascript:"&#xD;
-""&#xD;
-""&#xD;
-"function cumulustranslation() // These values designate the boundary location of the cloud"&#xD;
-"{"&#xD;
-"var xxx = ' '+' '+"&#xD;
-"'\tTransform\t\t\n'+"&#xD;
-"'    ' + '               \t\n';"&#xD;
-""&#xD;
-"}"&#xD;
-""&#xD;
-""</Script>
+      <Script DEF="Browser"><![CDATA[
+ecmascript:
+                function initialize() {
+		    Browser.print('DUDES\n'+'\"DUDETTES');
+                }
+
+]]></Script>
+      <Script DEF="Clouds"><![CDATA[
+
+ecmascript:
+
+
+function cumulustranslation() // These values designate the boundary location of the cloud
+{
+var xxx = ' '+' '+
+'	Transform		\n'+
+'    ' + '               	\n';
+
+}
+
+]]></Script>
    </Scene>
 </X3D>

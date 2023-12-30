@@ -127,50 +127,50 @@
                   <connect nodeField="rotscalenode" protoField="rotscalenode"/>
                   <connect nodeField="set_startpoint" protoField="set_startpoint"/>
                   <connect nodeField="set_endpoint" protoField="set_endpoint"/>
-               </IS>""&#xD;
-"            ecmascript:"&#xD;
-"        function recompute(startpoint,endpoint){"&#xD;
-"\t    if (typeof endpoint === 'undefined') {"&#xD;
-"\t\treturn;"&#xD;
-"\t    }"&#xD;
-"            var dif = endpoint.subtract(startpoint);"&#xD;
-"            var dist = dif.length()*0.5;"&#xD;
-"            var dif2 = dif.multiply(0.5);"&#xD;
-"            var norm = dif.normalize();"&#xD;
-"            var transl = startpoint.add(dif2);"&#xD;
-"\t    if (typeof Quaternion !== 'undefined') {"&#xD;
-"\t\t    return {"&#xD;
-"\t\t\t    scale : new SFVec3f(1.0,dist,1.0),"&#xD;
-"\t\t\t    translation : transl,"&#xD;
-"\t\t\t    rotation : new Quaternion.rotateFromTo(new SFVec3f(0.0,1.0,0.0), norm)"&#xD;
-"\t\t    };"&#xD;
-"\t    } else {"&#xD;
-"\t\t    return {"&#xD;
-"\t\t\t    scale : new SFVec3f(1.0,dist,1.0),"&#xD;
-"\t\t\t    translation : transl,"&#xD;
-"\t\t\t    rotation : new SFRotation(new SFVec3f(0.0,1.0,0.0),norm)"&#xD;
-"\t\t    };"&#xD;
-"\t    }"&#xD;
-"\t}"&#xD;
-"\tfunction recompute_and_route(startpoint, endpoint) {"&#xD;
-"\t      var trafo = recompute(startpoint, endpoint);"&#xD;
-"\t      if (trafo) {"&#xD;
-"\t\t      transnode.translation = trafo.translation;"&#xD;
-"\t\t      rotscalenode.rotation = trafo.rotation;"&#xD;
-"\t\t      rotscalenode.scale = trafo.scale;"&#xD;
-"\t      }"&#xD;
-"\t}"&#xD;
-"        function initialize(){"&#xD;
-"            recompute_and_route(startnode.translation,endnode.translation);"&#xD;
-"        }"&#xD;
-"        function set_startpoint(val,t){"&#xD;
-"            recompute_and_route(val,endnode.translation);"&#xD;
-"        }"&#xD;
-"        function set_endpoint(val,t){"&#xD;
-"            recompute_and_route(startnode.translation,val);"&#xD;
-"        }"&#xD;
-""&#xD;
-""</Script>
+               </IS><![CDATA[
+            ecmascript:
+        function recompute(startpoint,endpoint){
+	    if (typeof endpoint === 'undefined') {
+		return;
+	    }
+            var dif = endpoint.subtract(startpoint);
+            var dist = dif.length()*0.5;
+            var dif2 = dif.multiply(0.5);
+            var norm = dif.normalize();
+            var transl = startpoint.add(dif2);
+	    if (typeof Quaternion !== 'undefined') {
+		    return {
+			    scale : new SFVec3f(1.0,dist,1.0),
+			    translation : transl,
+			    rotation : new Quaternion.rotateFromTo(new SFVec3f(0.0,1.0,0.0), norm)
+		    };
+	    } else {
+		    return {
+			    scale : new SFVec3f(1.0,dist,1.0),
+			    translation : transl,
+			    rotation : new SFRotation(new SFVec3f(0.0,1.0,0.0),norm)
+		    };
+	    }
+	}
+	function recompute_and_route(startpoint, endpoint) {
+	      var trafo = recompute(startpoint, endpoint);
+	      if (trafo) {
+		      transnode.translation = trafo.translation;
+		      rotscalenode.rotation = trafo.rotation;
+		      rotscalenode.scale = trafo.scale;
+	      }
+	}
+        function initialize(){
+            recompute_and_route(startnode.translation,endnode.translation);
+        }
+        function set_startpoint(val,t){
+            recompute_and_route(val,endnode.translation);
+        }
+        function set_endpoint(val,t){
+            recompute_and_route(startnode.translation,val);
+        }
+
+]]></Script>
          </ProtoBody>
       </ProtoDeclare>
       <ProtoInstance DEF="connector1" name="x3dconnector">
