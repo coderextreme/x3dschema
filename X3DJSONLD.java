@@ -381,7 +381,7 @@ public class X3DJSONLD {
 		output.setEncoding("UTF-8");
 		ser.write(document, output);
 		String xml = writer.toString();
-		xml = fixXML(xml, x3dVersion);
+		// xml = fixXML(xml, x3dVersion);
 		return xml;
 	}
 }

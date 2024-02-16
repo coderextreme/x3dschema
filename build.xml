@@ -17,10 +17,25 @@
 
     <target name="default" description="build and test" depends="compile,batch">
     </target>
+    <target name="match" description="build and match" depends="compile">
+		<echo message="Match with classpath ${classpath}"/>
+		<java classname="Match" classpath="${classpath}" fork="${fork}">
+			<arg value="-Xss4g"/>
+			<arg value="-Xmx4g"/>
+		</java>
+    </target>
+    <target name="jin" description="build and test" depends="compile">
+		<echo message="Scale Jin with classpath ${classpath}"/>
+		<java classname="Jin" classpath="${classpath}" fork="${fork}">
+			<arg value="-Xss4g"/>
+			<arg value="-Xmx4g"/>
+			<arg value="JinLOA4"/>
+		</java>
+    </target>
     <target name="compile" description="build">
 	<echo message="Build modules:"/>
 	<echo message="Compile: with classpath ${classpath}"/>
-	<javac includes="RunSaxon.java,Validate.java,ValidateXML.java,X3DJSONLD.java" srcdir="." destdir="." classpath="${classpath}" includeantruntime="false" fork="${fork}"/>
+	<javac includes="RunSaxon.java,X3DRoots.java,Validate.java,ValidateXML.java,X3DJSONLD.java,JinLOA4.java,Jin.java,Match.java" srcdir="." destdir="." classpath="${classpath}" includeantruntime="false" fork="${fork}"/>
     </target>
     <!--
 	<target name="run">
@@ -51,11 +66,14 @@
 	    <fileset dir="${examples}" casesensitive="yes">
 		    <!--
 		<include name="**/*.x3dj"/>
-		-->
 		<include name="**/*.json"/>
 		<include name="**/*.xml"/>
-		<include name="**/*.x3d"/>
+		-->
+		<include name="**/DiamondManLOA0.from.archive.x3d"/>
+		<include name="**/DiamondManLOA0.from.X3DJSAIL.x3d"/>
+		    <!--
 		<exclude name="**/*.tidy.new.xml"/>
+		-->
 	    </fileset>
 	  </apply>
 	</target>
