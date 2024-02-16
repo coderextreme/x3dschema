@@ -27,6 +27,7 @@
     <target name="jin" description="build and test" depends="compile">
 		<echo message="Scale Jin with classpath ${classpath}"/>
 		<java classname="Jin" classpath="${classpath}" fork="${fork}">
+			<arg value="-proc:full"/>
 			<arg value="-Xss4g"/>
 			<arg value="-Xmx4g"/>
 			<arg value="JinLOA4"/>

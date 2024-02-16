@@ -8,6 +8,7 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.OutputKeys;
 import org.w3c.dom.Document;
 import org.web3d.x3d.jsail.X3DLoaderDOM;
+import org.web3d.x3d.jsail.X3DConcreteElement;
 import org.web3d.x3d.jsail.Core.X3D;
 import org.web3d.x3d.sai.Core.X3DNode;
 import org.web3d.x3d.sai.Shape.X3DAppearanceNode;
@@ -18,10 +19,14 @@ import org.web3d.x3d.jsail.HAnim.HAnimJoint;
 import org.web3d.x3d.jsail.HAnim.HAnimSite;
 import org.web3d.x3d.jsail.HAnim.HAnimSegment;
 import org.web3d.x3d.jsail.Grouping.Transform;
+import org.web3d.x3d.jsail.Grouping.Group;
 import org.web3d.x3d.jsail.Shape.Shape;
 import org.web3d.x3d.jsail.Geometry3D.IndexedFaceSet;
 import org.web3d.x3d.jsail.Shape.Appearance;
 import org.web3d.x3d.jsail.Rendering.Coordinate;
+import org.web3d.x3d.jsail.Core.WorldInfo;
+import org.web3d.x3d.jsail.Navigation.Viewpoint;
+import org.web3d.x3d.jsail.Navigation.NavigationInfo;
 
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -47,6 +52,8 @@ class Jin {
 	public static void main(String [] args) throws Exception {
 		for (int a = 0; a < args.length; a++) {
 			if (args[a].startsWith("-X")) {
+				continue;
+			} else if (args[a].startsWith("-proc")) {
 				continue;
 			}
 			/*
@@ -82,50 +89,115 @@ class Jin {
 			Iterator<X3D> i = rots.iterator();
 			int count = 0;
 			while (i.hasNext()) {
-				count++;
 				X3D X3D0 = i.next();
-				HAnimHumanoid human = (HAnimHumanoid)X3D0.getScene().getChildren().get(HUMANCHILD);
-				scale = human.getScale();
-				human.setScale(new float[] { 1, 1, 1 });
-				System.err.println(human.getName());
-				System.err.println(scale[0]+" "+scale[1]+" "+scale[2]+" ");
-				HAnimJoint root = (HAnimJoint)human.getSkeleton()[0];
-				System.err.println(root.getName());
-				float[] center = root.getCenter();
-				System.err.println(center[0]+" "+center[1]+" "+center[2]+" ");
-				x = center[0];
-				y = center[1];
-				maxy = center[1];
-				z = center[2];
-				float [] translation = new float[] {0, 0, 0};
-				try {
-					centering(root);
-					x = (l_x + r_x) / 2;
-					z = (l_z + r_z) / 2;
-					yscale = maxy - y;
-					scaledHeight = yscale * scale[1];
-					System.err.println("max y "+maxy+" y "+y+" yscale "+yscale+" height "+height);
-					transform(root, translation);
-				} catch (Exception e) {
-					e.printStackTrace(System.err);
-				}
-				X3D0.toFileX3D("examples/"+args[a]+"scaled"+count+".x3d");
+				List<HAnimHumanoid> humanoids = new ArrayList<>();
+				traverseSceneGraph(X3D0.getScene().getChildren(), humanoids);
+				for (HAnimHumanoid humanoid : humanoids) {
+					count++;
+					scale = humanoid.getScale();
+					humanoid.setScale(new float[] { 1, 1, 1 });
+					System.err.println(humanoid.getName());
+					System.err.println(scale[0]+" "+scale[1]+" "+scale[2]+" ");
+					HAnimJoint root = (HAnimJoint)humanoid.getSkeleton()[0];
+					System.err.println(root.getName());
+					float[] center = root.getCenter();
+					System.err.println(center[0]+" "+center[1]+" "+center[2]+" ");
+					x = center[0];
+					y = center[1];
+					maxy = center[1];
+					z = center[2];
+					float [] translation = new float[] {0, 0, 0};
+					try {
+						centering(root);
+						x = (l_x + r_x) / 2;
+						z = (l_z + r_z) / 2;
+						yscale = maxy - y;
+						scaledHeight = yscale * scale[1];
+						System.err.println("max y "+maxy+" y "+y+" yscale "+yscale+" height "+height);
+						transform(root, translation);
+					} catch (Exception e) {
+						e.printStackTrace(System.err);
+					}
+					X3D0.toFileX3D("examples/"+args[a]+"scaled"+count+".x3d");
 
-				HUMANCHILD = 3;
-				height = 1.87f;
-				scaledHeight = 0;
-				x = 0;
-				y = 0;
-				l_x = 0;
-				l_z = 0;
-				r_x = 0;
-				r_z = 0;
-				maxy = 0;
-				z = 0;
-				scale = new float[] { 1, 1, 1 };
-				yscale = 1;
+					HUMANCHILD = 3;
+					height = 1.87f;
+					scaledHeight = 0;
+					x = 0;
+					y = 0;
+					l_x = 0;
+					l_z = 0;
+					r_x = 0;
+					r_z = 0;
+					maxy = 0;
+					z = 0;
+					scale = new float[] { 1, 1, 1 };
+					yscale = 1;
+					}
 			}
 		}
+	}
+
+	static boolean traverseSceneGraph(List<X3DNode> children, List<HAnimHumanoid> humanoids) {
+		if (children != null) {
+			for (int ch = 0; ch < children.size(); ch++) {
+				X3DNode child = children.get(ch);
+				if (!traverseSceneGraph(child, humanoids)) {
+					System.err.println("Unpacking child in "+child.getClass().getName()+" failed");
+				}
+			}
+			return true;
+		}
+		return false;
+	}
+
+	static boolean traverseSceneGraph(X3DNode child, List<HAnimHumanoid> humanoids) {
+		ArrayList<X3DNode> children = null;
+		if (child instanceof HAnimJoint) {
+			HAnimJoint joint = (HAnimJoint)child;
+			children = joint.getChildrenList();
+		} else if (child instanceof HAnimSite) {
+			HAnimSite site = (HAnimSite)child;
+			children = site.getChildrenList();
+		} else if (child instanceof HAnimSegment) {
+			HAnimSegment segment = (HAnimSegment)child;
+			children = segment.getChildrenList();
+		} else if (child instanceof Group) {
+			Group group = (Group)child;
+			children = group.getChildrenList();
+		} else if (child instanceof Transform) {
+			Transform trans = (Transform)child;
+			children = trans.getChildrenList();
+		} else if (child instanceof Shape) {
+			Shape shape = (Shape)child;
+			X3DAppearanceNode appearance = shape.getAppearance();
+			if (!traverseSceneGraph(appearance, humanoids)) {
+				System.err.println("Unpacking appearance in Shape failed");
+			}
+			X3DGeometryNode geometry = shape.getGeometry();
+			if (!traverseSceneGraph(geometry, humanoids)) {
+				System.err.println("Unpacking geometry in Shape failed");
+			}
+		} else if (child instanceof IndexedFaceSet) {
+			IndexedFaceSet ifs = (IndexedFaceSet)child;
+			X3DCoordinateNode coord = ifs.getCoord();
+			if (!traverseSceneGraph(coord, humanoids)) {
+				System.err.println("Unpacking coord in IndexedFaceSet failed");
+			}
+		} else if (child instanceof Appearance) {
+		} else if (child instanceof Coordinate) {
+		} else if (child instanceof WorldInfo) {
+		} else if (child instanceof NavigationInfo) {
+		} else if (child instanceof Viewpoint) {
+		} else if (child instanceof HAnimHumanoid) {
+			humanoids.add((HAnimHumanoid) child);
+		} else if (child != null) {
+			System.err.println("Unhandled class is "+child.getClass().getName());
+		} else {
+			System.err.println("Node is "+child);
+			return false;
+		}
+		return true;
 	}
 	static void centering(HAnimJoint joint) {
 		float [] center = joint.getCenter();
