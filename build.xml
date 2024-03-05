@@ -27,8 +27,7 @@
     <target name="jin" description="build and test" depends="compile">
 		<echo message="Scale Jin with classpath ${classpath}"/>
 		<java classname="Jin" classpath="${classpath}" fork="${fork}">
-			<arg value="-proc:full"/>
-			<arg value="-Xss4g"/>
+			<arg value="-Xss1g"/>
 			<arg value="-Xmx4g"/>
 			<arg value="JinLOA4"/>
 		</java>
@@ -36,7 +35,11 @@
     <target name="compile" description="build">
 	<echo message="Build modules:"/>
 	<echo message="Compile: with classpath ${classpath}"/>
-	<javac includes="RunSaxon.java,X3DRoots.java,Validate.java,ValidateXML.java,X3DJSONLD.java,JinLOA4.java,Jin.java,Match.java" srcdir="." destdir="." classpath="${classpath}" includeantruntime="false" fork="${fork}"/>
+	<javac includes="RunSaxon.java,X3DRoots.java,Validate.java,ValidateXML.java,X3DJSONLD.java,JinLOA4.java,Jin.java,Match.java" srcdir="." destdir="." classpath="${classpath}" includeantruntime="false" fork="${fork}">
+			<compilerarg value="-proc:full"/>
+			<compilerarg value="-J-Xss1g"/>
+			<compilerarg value="-J-Xmx4g"/>
+	</javac>
     </target>
     <!--
 	<target name="run">
