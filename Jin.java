@@ -205,11 +205,19 @@ class Jin {
 		// System.err.println(name);
 		// System.err.println(center[0]+" "+center[1]+" "+center[2]+" ");
 		switch (name) {
+			/*
 			case HAnimJoint.NAME_L_TARSAL_DISTAL_INTERPHALANGEAL_5:
 				l_x = center[0];
 				l_z = center[2];
 				break;
 			case HAnimJoint.NAME_R_TARSAL_DISTAL_INTERPHALANGEAL_5:
+				r_x = center[0];
+				r_z = center[2];
+				break;
+			*/
+			case HAnimJoint.NAME_HUMANOID_ROOT:
+				l_x = center[0];
+				l_z = center[2];
 				r_x = center[0];
 				r_z = center[2];
 				break;
@@ -230,13 +238,15 @@ class Jin {
 	}
 	static void transform(float[] point, int point_offset, float [] translation) {
 		/// System.err.println("OLD "+point[point_offset+0]+" "+point[point_offset+1]+" "+point[point_offset+2]+" ");
+		/*
 		point[point_offset+0] -= x;
 		point[point_offset+1] -= y;
 		point[point_offset+2] -= z;
+		*/
 
-		point[point_offset+0] *= scale[0] * height / scaledHeight;
-		point[point_offset+1] *= scale[1] * height / scaledHeight;
-		point[point_offset+2] *= scale[2] * height / scaledHeight;
+		point[point_offset+0] *= scale[0]; // * height / scaledHeight;
+		point[point_offset+1] *= scale[1]; // * height / scaledHeight;
+		point[point_offset+2] *= scale[2]; // * height / scaledHeight;
 
 		point[point_offset+0] += translation[0];
 		point[point_offset+1] += translation[1];
