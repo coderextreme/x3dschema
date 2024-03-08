@@ -19,14 +19,14 @@
     </target>
     <target name="match" description="build and match" depends="compile">
 		<java classname="Match" classpath="." fork="${fork}">
-			<arg value="-Xss1g"/>
+			<jvmarg value="-Xss1g"/>
 		</java>
     </target>
     <target name="jin" description="build and test" depends="compile">
 		<echo message="Scale Jin with classpath ${classpath}"/>
 		<java classname="Jin" classpath="${classpath}" fork="${fork}">
-			<arg value="-Xss1g"/>
-			<arg value="-Xmx4g"/>
+			<jvmarg value="-Xss1g"/>
+			<jvmarg value="-Xmx4g"/>
 			<arg value="JinLOA4"/>
 		</java>
     </target>
@@ -66,17 +66,10 @@
 	    <arg value="Validate"/>
 	    <srcfile/>
 	    <fileset dir="${examples}" casesensitive="yes">
-		    <!--
 		<include name="**/*.x3dj"/>
 		<include name="**/*.json"/>
 		<include name="**/*.xml"/>
-		-->
-		<include name="**/DiamondManLOA0.from.archive.x3d"/>
-		<include name="**/DiamondManLOA0.from.X3DJSAIL.x3d"/>
-		<include name="**/reorient.x3d"/>
-		    <!--
 		<exclude name="**/*.tidy.new.xml"/>
-		-->
 	    </fileset>
 	  </apply>
 	</target>
