@@ -18,10 +18,8 @@
     <target name="default" description="build and test" depends="compile,batch">
     </target>
     <target name="match" description="build and match" depends="compile">
-		<echo message="Match with classpath ${classpath}"/>
-		<java classname="Match" classpath="${classpath}" fork="${fork}">
-			<arg value="-Xss4g"/>
-			<arg value="-Xmx4g"/>
+		<java classname="Match" classpath="." fork="${fork}">
+			<arg value="-Xss1g"/>
 		</java>
     </target>
     <target name="jin" description="build and test" depends="compile">
@@ -75,6 +73,7 @@
 		-->
 		<include name="**/DiamondManLOA0.from.archive.x3d"/>
 		<include name="**/DiamondManLOA0.from.X3DJSAIL.x3d"/>
+		<include name="**/reorient.x3d"/>
 		    <!--
 		<exclude name="**/*.tidy.new.xml"/>
 		-->
