@@ -1,0 +1,163 @@
+#X3D V4.0 utf8 X_ITE V9.5.2
+
+PROFILE Immersive
+
+COMPONENT EnvironmentalEffects : 3
+COMPONENT Shaders : 1
+COMPONENT CubeMapTexturing : 1
+COMPONENT Texturing : 1
+COMPONENT Rendering : 1
+COMPONENT Grouping : 3
+COMPONENT Core : 1
+COMPONENT ParticleSystems : 3
+
+META "title" "particleflowers.x3d"
+META "creator" "John Carlson"
+META "description" "A flower particle system"
+META "identifier" "https://coderextreme.net/X3DJSONLD/src/main/data/particleflowers.x3d"
+META "generator" "x3d-tidy V1.0.139, https://www.npmjs.com/package/x3d-tidy"
+META "modified" "Mon, 29 Apr 2024 08:04:49 GMT"
+
+WorldInfo {
+  title "particleflowers.x3d"
+}
+
+NavigationInfo {
+  type [
+    "ANY",
+    "EXAMINE",
+    "FLY",
+    "LOOKAT"
+  ]
+}
+
+Viewpoint {
+  description "Tour Views"
+  position 0 0 12
+}
+
+Background {
+  frontUrl [
+    "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_front.png",
+    "../resources/images/all_probes/stpeters_cross/stpeters_front.png"
+  ]
+  backUrl [
+    "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_back.png",
+    "../resources/images/all_probes/stpeters_cross/stpeters_back.png"
+  ]
+  leftUrl [
+    "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_left.png",
+    "../resources/images/all_probes/stpeters_cross/stpeters_left.png"
+  ]
+  rightUrl [
+    "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_right.png",
+    "../resources/images/all_probes/stpeters_cross/stpeters_right.png"
+  ]
+  topUrl [
+    "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_top.png",
+    "../resources/images/all_probes/stpeters_cross/stpeters_top.png"
+  ]
+  bottomUrl [
+    "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_bottom.png",
+    "../resources/images/all_probes/stpeters_cross/stpeters_bottom.png"
+  ]
+}
+
+Transform {
+  children ParticleSystem {
+    geometryType "GEOMETRY"
+    maxParticles 20
+    emitter ExplosionEmitter {
+      speed 2
+      variation 0.75
+    }
+    physics BoundedPhysicsModel {
+      geometry Sphere {
+        radius 100
+      }
+    }
+    appearance Appearance {
+      material Material {
+        diffuseColor 0.7 0.7 0.7
+        specularColor 0.5 0.5 0.5
+      }
+      texture DEF texture ComposedCubeMapTexture {
+        frontTexture ImageTexture {
+          url [
+            "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_front.png",
+            "../resources/images/all_probes/stpeters_cross/stpeters_front.png"
+          ]
+        }
+        backTexture ImageTexture {
+          url [
+            "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_back.png",
+            "../resources/images/all_probes/stpeters_cross/stpeters_back.png"
+          ]
+        }
+        leftTexture ImageTexture {
+          url [
+            "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_left.png",
+            "../resources/images/all_probes/stpeters_cross/stpeters_left.png"
+          ]
+        }
+        rightTexture ImageTexture {
+          url [
+            "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_right.png",
+            "../resources/images/all_probes/stpeters_cross/stpeters_right.png"
+          ]
+        }
+        topTexture ImageTexture {
+          url [
+            "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_top.png",
+            "../resources/images/all_probes/stpeters_cross/stpeters_top.png"
+          ]
+        }
+        bottomTexture ImageTexture {
+          url [
+            "https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/stpeters_cross/stpeters_bottom.png",
+            "../resources/images/all_probes/stpeters_cross/stpeters_bottom.png"
+          ]
+        }
+      }
+      shaders DEF x_ite ComposedShader {
+        initializeOnly SFVec3f chromaticDispertion 0.98 1 1.033
+        initializeOnly SFNode  cube USE texture
+        initializeOnly SFFloat bias 0.5
+        initializeOnly SFFloat scale 0.5
+        initializeOnly SFFloat power 2
+        inputOutput    SFFloat a 2
+        inputOutput    SFFloat b 1
+        inputOutput    SFFloat c 5
+        inputOutput    SFFloat d 5
+        inputOutput    SFFloat tdelta 0
+        inputOutput    SFFloat pdelta 0
+
+        language "GLSL"
+        parts [
+          ShaderPart {
+            url [
+              "https://coderextreme.net/X3DJSONLD/src/main/shaders/x_ite_flower_particles.vs",
+              "../shaders/x_ite_flower_particles.vs"
+            ]
+          }
+          ShaderPart {
+            type "FRAGMENT"
+            url [
+              "https://coderextreme.net/X3DJSONLD/src/main/shaders/commonnew.fs",
+              "../shaders/commonnew.fs"
+            ]
+          }
+        ]
+      }
+    }
+    geometry Sphere { }
+  }
+}
+
+ROUTE TourTime.fraction_changed TO Animate.set_fraction
+ROUTE Animate.a_changed TO x_ite.set_a
+ROUTE Animate.b_changed TO x_ite.set_b
+ROUTE Animate.c_changed TO x_ite.set_c
+ROUTE Animate.d_changed TO x_ite.set_d
+ROUTE Animate.pdelta_changed TO x_ite.set_pdelta
+ROUTE Animate.tdelta_changed TO x_ite.set_tdelta
