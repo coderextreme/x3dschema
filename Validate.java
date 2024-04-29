@@ -85,7 +85,7 @@ public class Validate {
 					//continue;
 				//}
 				X3DLoaderDOM xmlLoader = new X3DLoaderDOM();
-				Document document;
+				Document document = null;
 				File f = new File(args[i]);
 				System.err.println("Processing "+args[i]);
 				if (args[i].endsWith(".json") || args[i].endsWith(".x3dj")) {
