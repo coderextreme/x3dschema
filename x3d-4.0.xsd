@@ -13408,7 +13408,9 @@ Open-source license:
 					<xs:sequence>
 						<xs:element ref="head" minOccurs="0"/>
 						<xs:element ref="Scene"/>
+						<!--
 						<xs:element ref="ds:Signature" minOccurs="0"/>
+						-->
 					</xs:sequence>
 					<xs:attribute name="version" type="x3dVersionChoices" use="required">
 						<xs:annotation>
