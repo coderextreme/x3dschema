@@ -12,7 +12,7 @@
           },
           {
             "@name":"identifier",
-            "@content":"http://coderextreme.net/X3DJSONLD/src/main/data/ifscubeworks.x3d"
+            "@content":"http://coderextreme.net/X3DJSONLD/src/main/personal/ifscubeworks.x3d"
           },
           {
             "@name":"description",
@@ -28,7 +28,7 @@
           },
           {
             "@name":"license",
-            "@content":"https://www.web3d.org/x3d/content/examples/license.html"
+            "@content":"https://coderextreme.net/X3DJSONLD/LICENSE"
           },
           {
             "@name":"generator",
