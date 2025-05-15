@@ -132,37 +132,19 @@
                             ]
                         },
                         "-children":[
-                          { "ProtoInstance":
+                          { "sphereproto":
                             {
-                              "@name":"sphereproto",
-                              "fieldValue": [
-                                {
-                                  "@name":"xtranslation",
-                                  "@value":[0,0,0]
-                                }
-                              ]
+                                  "@xtranslation":[0,0,0]
                             }
                           },
-                          { "ProtoInstance":
+                          { "sphereproto":
                             {
-                              "@name":"sphereproto",
-                              "fieldValue": [
-                                {
-                                  "@name":"xtranslation",
-                                  "@value":[2,0,0]
-                                }
-                              ]
+                                  "@xtranslation":[2,0,0]
                             }
                           },
-                          { "ProtoInstance":
+                          { "sphereproto":
                             {
-                              "@name":"sphereproto",
-                              "fieldValue": [
-                                {
-                                  "@name":"xtranslation",
-                                  "@value":[-2,0,0]
-                                }
-                              ]
+                                  "@xtranslation":[-2,0,0]
                             }
                           }
                         ]
@@ -198,37 +180,19 @@
                             ]
                         },
                         "-children":[
-                          { "ProtoInstance":
+                          { "three":
                             {
-                              "@name":"three",
-                              "fieldValue": [
-                                {
-                                  "@name":"ytranslation",
-                                  "@value":[0,0,0]
-                                }
-                              ]
+                                  "@ytranslation":[0,0,0]
                             }
                           },
-                          { "ProtoInstance":
+                          { "three":
                             {
-                              "@name":"three",
-                              "fieldValue": [
-                                {
-                                  "@name":"ytranslation",
-                                  "@value":[0,2,0]
-                                }
-                              ]
+                                  "@ytranslation":[0,2,0]
                             }
                           },
-                          { "ProtoInstance":
+                          { "three":
                             {
-                              "@name":"three",
-                              "fieldValue": [
-                                {
-                                  "@name":"ytranslation",
-                                  "@value":[0,-2,0]
-                                }
-                              ]
+                                  "@ytranslation":[0,-2,0]
                             }
                           }
                         ]
@@ -264,37 +228,19 @@
                             ]
                         },
                         "-children":[
-                          { "ProtoInstance":
+                          { "nine":
                             {
-                              "@name":"nine",
-                              "fieldValue": [
-                                {
-                                  "@name":"ztranslation",
-                                  "@value":[0,0,0]
-                                }
-                              ]
+                                  "@ztranslation":[0,0,0]
                             }
                           },
-                          { "ProtoInstance":
+                          { "nine":
                             {
-                              "@name":"nine",
-                              "fieldValue": [
-                                {
-                                  "@name":"ztranslation",
-                                  "@value":[0,0,2]
-                                }
-                              ]
+                                  "@ztranslation":[0,0,2]
                             }
                           },
-                          { "ProtoInstance":
+                          { "nine":
                             {
-                              "@name":"nine",
-                              "fieldValue": [
-                                {
-                                  "@name":"ztranslation",
-                                  "@value":[0,0,-2]
-                                }
-                              ]
+                                  "@ztranslation":[0,0,-2]
                             }
                           }
                         ]
@@ -304,15 +250,9 @@
               }
             }
           },
-          { "ProtoInstance":
+          { "twentyseven":
             {
-              "@name":"twentyseven",
-              "fieldValue": [
-                {
-                  "@name":"ttranslation",
-                  "@value":[0,0,0]
-                }
-              ]
+                  "@ttranslation":[0,0,0]
             }
           }
         ]

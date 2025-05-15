@@ -66,6 +66,9 @@
 	    <arg value="Validate"/>
 	    <srcfile/>
 	    <fileset dir="${examples}" casesensitive="yes">
+		<!--
+		<include name="**/rubik.json"/>
+		-->
 		<include name="**/*.x3dj"/>
 		<include name="**/*.json"/>
 		<include name="**/*.xml"/>

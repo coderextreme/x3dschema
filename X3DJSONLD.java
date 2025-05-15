@@ -39,6 +39,7 @@ import javax.xml.parsers.*;
 
 public class X3DJSONLD {
 	private boolean x3dTidy = false;
+	private HashMap<String, JsonObject> protos = new HashMap<String, JsonObject>();
 	public String stripQuotes(String value) {
 		if (value.charAt(0) == '"' && value.charAt(value.length()-1) == '"') {
 			return value.substring(1, value.length()-1);
@@ -46,7 +47,7 @@ public class X3DJSONLD {
 			return value;
 		}
 	}
-	public void elementSetAttribute(Element element, String key, List<JsonValue> value) {
+	public void elementSetAttribute(Element element, String key, List<JsonValue> value, Document document) {
 		StringBuffer sb = new StringBuffer();
 		for (int i = 0; i < value.size(); i++) {
 			if (i > 0) {
@@ -54,10 +55,24 @@ public class X3DJSONLD {
 			}
 			sb.append(value.get(i));
 		}
-		element.setAttribute(key, sb.toString());
+		if (key.equals("name")) {
+			element.setAttribute(key, sb.toString());
+		} else if (element.getNodeName().equals("ProtoInstance") && !key.equals("DEF") && !key.equals("name")) {
+			Element fieldValue = document.createElement("fieldValue");
+			fieldValue.setAttribute("name", key);
+			fieldValue.setAttribute("value", sb.toString());
+			element.appendChild(fieldValue);
+		} else {
+			element.setAttribute(key, sb.toString());
+		}
 	}
-	public void elementSetAttribute(Element element, String key, String value) {
-		if (key.equals("SON schema")) {
+	public void elementSetAttribute(Element element, String key, String value, Document document) {
+		if (element.getNodeName().equals("ProtoInstance") && !key.equals("DEF") && !key.equals("name")) {
+			Element fieldValue = document.createElement("fieldValue");
+			fieldValue.setAttribute("name", key);
+			fieldValue.setAttribute("value", value);
+			element.appendChild(fieldValue);
+		} else if (key.equals("SON schema")) {
 			// JSON Schema
 		} else if (key.equals("ncoding")) {
 			// encoding, UTF-8
@@ -69,8 +84,34 @@ public class X3DJSONLD {
 		}
 	}
 
-	public Element CreateElement(Document document, String key, String containerField) {
-		Element child = document.createElement(key);
+	public Element CreateElement(Document document, String key, String containerField, JsonObject object) {
+		if (key.equals("ProtoDeclare") || key.equals("ExternProtoDeclare")) {
+			if (object.get("@name") != null) {
+				String name = stripQuotes(object.get("@name").toString());
+				System.err.println("PROTO name "+name);
+				if (name != null) {
+					protos.put(name, object);
+				}
+			}
+			if (object.get("@DEF") != null) {
+				String DEF = stripQuotes(object.get("@DEF").toString());
+				System.err.println("PROTO DEF "+DEF);
+				if (DEF != null) {
+					System.err.println("Found PROTO "+DEF);
+					protos.put(DEF, object);
+				}
+			}
+		}
+		JsonObject new_object = protos.get(key);
+		Element child = null;
+		if (new_object != null) {
+			String new_key = "ProtoInstance";
+			child = document.createElement(new_key);
+			System.err.println("Creating "+new_key);
+			child.setAttribute("name", key);
+		} else {
+			child = document.createElement(key);
+		}
 		if (containerField != null &&
 				((containerField.equals("geometry")  && key.equals("IndexedFaceSet")) ||
 				 (containerField.equals("geometry")  && key.equals("Text")) ||
@@ -95,7 +136,7 @@ public class X3DJSONLD {
 				 ((containerField.equals("normal") || containerField.equals("skinBindingNormals") || containerField.equals("skinNormal")) && key.equals("Normal")) ||
 				 ((containerField.equals("skeleton") || containerField.equals("children") || containerField.equals("joints"))  && key.equals("HAnimJoint"))
 				)) {
-			elementSetAttribute(child, "containerField", containerField);
+			elementSetAttribute(child, "containerField", containerField, document);
 		}
 		return child;
 	}
@@ -226,7 +267,7 @@ public class X3DJSONLD {
 			if ((containerField == null || containerField.equals("coord")) && parentkey.equals("Coordinate") && element.getTagName().equals("HAnimHumanoid")) {
 				containerField = "skinCoord";
 			}
-			child = CreateElement(document, parentkey, containerField);
+			child = CreateElement(document, parentkey, containerField, object);
 		}
 		Iterator<String> keyiter = object.keySet().iterator();
 		while (keyiter.hasNext()) {
@@ -235,7 +276,7 @@ public class X3DJSONLD {
 			// System.err.println(key+"= O "+ok);
 			if (ok instanceof JsonObject) {
 				if (key.equals("@type") && parentkey.equals("NavigationInfo") && ok instanceof JsonString) {
-					elementSetAttribute(child, key.substring(1), NavigationInfoTypeToXML(ok.toString()));
+					elementSetAttribute(child, key.substring(1), NavigationInfoTypeToXML(ok.toString()), document);
 				} else if (key.substring(0,1).equals("@")) {
 					convertProperty(document, key, (JsonObject)ok, child, containerField);
 				} else if (key.substring(0,1).equals("-")) {
@@ -246,19 +287,19 @@ public class X3DJSONLD {
 			} else if (ok instanceof JsonArray) {
 				convertJsonArray(document, (JsonArray)ok, key, child, containerField);
 			} else if (ok instanceof JsonNumber) {
-				elementSetAttribute(child, key.substring(1),ok.toString());
+				elementSetAttribute(child, key.substring(1),ok.toString(), document);
 			} else if (ok instanceof JsonString) {
 				if (key.equals("#comment")) {
 					Comment comment = document.createComment(CommentStringToXML(ok.toString()));
 					child.appendChild(comment);
 				} else if (key.equals("@type") && parentkey.equals("NavigationInfo")) {
-					elementSetAttribute(child, key.substring(1), NavigationInfoTypeToXML(ok.toString()));
+					elementSetAttribute(child, key.substring(1), NavigationInfoTypeToXML(ok.toString()), document);
 				} else {
 					// ordinary string attributes
-					elementSetAttribute(child, key.substring(1), ok.toString());
+					elementSetAttribute(child, key.substring(1), ok.toString(), document);
 				}
 			} else if (ok == JsonValue.FALSE || ok == JsonValue.TRUE || ok == JsonValue.NULL) {
-				elementSetAttribute(child, key.substring(1),ok.toString());
+				elementSetAttribute(child, key.substring(1),ok.toString(), document);
 			} else if (ok == null) {
 			} else {
 			}
@@ -309,7 +350,7 @@ public class X3DJSONLD {
 			// System.err.println("FOUND SOURCE 3");
 			CDATACreateFunction(document, element, array);
 		} else if (parentkey.substring(0,1).equals("@")) {
-			elementSetAttribute(element, parentkey.substring(1), localArray);
+			elementSetAttribute(element, parentkey.substring(1), localArray, document);
 		} else if (parentkey.equals("#sourceCode")) {
 			// System.err.println("FOUND SOURCE 4");
 			CDATACreateFunction(document, element, array);
@@ -332,9 +373,9 @@ public class X3DJSONLD {
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
 		Document document = db.newDocument();
-		Element element = CreateElement(document, "X3D", null);
-		elementSetAttribute(element,  "xmlns:xsd",  "http://www.w3.org/2001/XMLSchema-instance");
-		// elementSetAttribute(element,  "xsi:schemaLocation",  "https://www.web3d.org/specifications/x3d-"+unenversion+".xsd");
+		Element element = CreateElement(document, "X3D", null, null);
+		elementSetAttribute(element,  "xmlns:xsd",  "http://www.w3.org/2001/XMLSchema-instance", document);
+		// elementSetAttribute(element,  "xsi:schemaLocation",  "https://www.web3d.org/specifications/x3d-"+unenversion+".xsd", document);
 		// ((JsonObject)jsobj.get("X3D")).remove("xsd:noNamespaceSchemaLocation");
 		convertJsonObject(document, (JsonObject)jsobj.get("X3D"), "-", element, null);
 		// element.removeAttribute("xsd:noNamespaceSchemaLocation");
