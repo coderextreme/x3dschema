@@ -7,6 +7,7 @@
     <property name="examples"     value="/x3d-code/www.web3d.org/x3d/content/examples/HumanoidAnimation"/>
     -->
     <property name="examples"     value="examples"/>
+    <property name="bad"     value="examples.bad"/>
     <property name="classpath"     value=".;../pythonSAI/X3DJSAIL.4.0.full.jar"/>
 
 <taskdef resource="net/sf/antcontrib/antcontrib.properties">
@@ -66,9 +67,19 @@
 	    <arg value="Validate"/>
 	    <srcfile/>
 	    <fileset dir="${examples}" casesensitive="yes">
-		<!--
-		<include name="**/rubik.json"/>
-		-->
+		<include name="**/*.x3dj"/>
+		<include name="**/*.json"/>
+		<include name="**/*.xml"/>
+		<exclude name="**/*.tidy.new.xml"/>
+	    </fileset>
+	  </apply>
+	  <echo message="Run bad batch:"/>
+	  <apply executable="java">
+	    <arg value="-cp"/>
+	    <arg value="${classpath}"/>
+	    <arg value="Validate"/>
+	    <srcfile/>
+	    <fileset dir="${bad}" casesensitive="yes">
 		<include name="**/*.x3dj"/>
 		<include name="**/*.json"/>
 		<include name="**/*.xml"/>
