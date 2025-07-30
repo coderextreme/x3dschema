@@ -9,13 +9,6 @@
     <property name="examples"     value="examples"/>
     <property name="bad"     value="examples.bad"/>
     <property name="classpath"     value=".;../pythonSAI/X3DJSAIL.4.0.full.jar"/>
-
-<taskdef resource="net/sf/antcontrib/antcontrib.properties">
-  <classpath>
-    <pathelement location="C:/apache-ant-1.10.12-bin/apache-ant-1.10.12/lib/ant-contrib-1.0b3.jar"/>
-  </classpath>
-</taskdef>
-
     <target name="default" description="build and test" depends="compile,batch">
     </target>
     <target name="match" description="build and match" depends="compile">
@@ -40,25 +33,6 @@
 			<compilerarg value="-J-Xmx4g"/>
 	</javac>
     </target>
-    <!--
-	<target name="run">
-	  <foreach target="runone" param="theFile">
-            <path>
-	      <fileset dir="${examples}" casesensitive="yes">
-		    <include name="**/HelloWorldProgramOutput*.json"/>
-	     </fileset>
-            </path>
-	  </foreach>
-	</target>
-
-	<target name="runone">
-		<echo message="Validate ${theFile} with classpath ${classpath}"/>
-		<java classname="Validate" classpath="${classpath}" fork="${fork}">
-			<arg value="${theFile}"/>
-		</java>
-	</target>
-	-->
-
 	<target name="batch" depends="compile">
 	  <echo message="Run batch:"/>
 	  <apply executable="java">
