@@ -6,7 +6,7 @@ var selectObjectFromJson = require('./selectObjectFromJson');
 
 addFormats(ajv);
 
-var schema = JSON.parse(fs.readFileSync('x3d-4.0-JSONSchema.json').toString());
+var schema = JSON.parse(fs.readFileSync('schemas/x3d-4.0-JSONSchema.json').toString());
 // var schema = JSON.parse(fs.readFileSync('X3dXml4.0SchemaConvertedToJson2020-12Schema.json').toString());
 function validateFile(file) {
 	try {

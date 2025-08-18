@@ -19,7 +19,7 @@ var ajvValidate = {};
 
 var overallversions = ["3.0", "3.1", "3.2", "3.3", "4.0", "4.0H"];
 for (var sversion in overallversions) {
-	schemas[overallversions[sversion]] = JSON.parse(fs.readFileSync('x3d-'+overallversions[sversion]+'-JSONSchema.json').toString());
+	schemas[overallversions[sversion]] = JSON.parse(fs.readFileSync('schemas/x3d-'+overallversions[sversion]+'-JSONSchema.json').toString());
 	ajvValidate[overallversions[sversion]] = ajv.compile(schemas[overallversions[sversion]]);
 }
 

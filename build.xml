@@ -14,6 +14,9 @@
     <target name="match" description="build and match" depends="compile">
 		<java classname="Match" classpath="." fork="${fork}">
 			<jvmarg value="-Xss1g"/>
+			<jvmarg value="-Djdk.xml.entityExpansionLimit=120000"/>
+			<jvmarg value="-Djdk.xml.totalEntitySizeLimit=50000000"/>
+			<jvmarg value="-Djdk.xml.maxGeneralEntitySizeLimit=50000000"/>
 		</java>
     </target>
     <target name="jin" description="build and test" depends="compile">
@@ -36,6 +39,9 @@
 	<target name="batch" depends="compile">
 	  <echo message="Run batch:"/>
 	  <apply executable="java">
+	    <arg value="-Djdk.xml.entityExpansionLimit=120000"/>
+	    <arg value="-Djdk.xml.totalEntitySizeLimit=50000000"/>
+	    <arg value="-Djdk.xml.maxGeneralEntitySizeLimit=50000000"/>
 	    <arg value="-cp"/>
 	    <arg value="${classpath}"/>
 	    <arg value="Validate"/>
@@ -49,6 +55,9 @@
 	  </apply>
 	  <echo message="Run bad batch:"/>
 	  <apply executable="java">
+	    <arg value="-Djdk.xml.entityExpansionLimit=120000"/>
+	    <arg value="-Djdk.xml.totalEntitySizeLimit=50000000"/>
+	    <arg value="-Djdk.xml.maxGeneralEntitySizeLimit=50000000"/>
 	    <arg value="-cp"/>
 	    <arg value="${classpath}"/>
 	    <arg value="Validate"/>
@@ -65,6 +74,9 @@
 	<target name="batchx3d" depends="compile">
 	  <echo message="Run batch:"/>
 	  <apply executable="java">
+	    <arg value="-Djdk.xml.entityExpansionLimit=120000"/>
+	    <arg value="-Djdk.xml.totalEntitySizeLimit=50000000"/>
+	    <arg value="-Djdk.xml.maxGeneralEntitySizeLimit=50000000"/>
 	    <arg value="-cp"/>
 	    <arg value="${classpath}"/>
 	    <arg value="Validate"/>
@@ -80,6 +92,9 @@
 	<target name="batchxml" depends="compile">
 	  <echo message="Run batch:"/>
 	  <apply executable="java">
+	    <arg value="-Djdk.xml.entityExpansionLimit=120000"/>
+	    <arg value="-Djdk.xml.totalEntitySizeLimit=50000000"/>
+	    <arg value="-Djdk.xml.maxGeneralEntitySizeLimit=50000000"/>
 	    <arg value="-cp"/>
 	    <arg value="${classpath}"/>
 	    <arg value="Validate"/>
@@ -94,6 +109,9 @@
 	<target name="batchtidy" depends="compile">
 	  <echo message="Run tidy:"/>
 	  <apply executable="java">
+	    <arg value="-Djdk.xml.entityExpansionLimit=120000"/>
+	    <arg value="-Djdk.xml.totalEntitySizeLimit=50000000"/>
+	    <arg value="-Djdk.xml.maxGeneralEntitySizeLimit=50000000"/>
 	    <arg value="-cp"/>
 	    <arg value="${classpath}"/>
 	    <arg value="RunSaxon"/>
@@ -110,6 +128,9 @@
 	
 	<target name="commandline" depends="compile">
 	  <apply executable="java">
+	    <arg value="-Djdk.xml.entityExpansionLimit=120000"/>
+	    <arg value="-Djdk.xml.totalEntitySizeLimit=50000000"/>
+	    <arg value="-Djdk.xml.maxGeneralEntitySizeLimit=50000000"/>
 	    <arg value="-cp"/>
 	    <arg value="${classpath}"/>
 	    <arg value="org.web3d.x3d.jsail.CommandLine"/>
