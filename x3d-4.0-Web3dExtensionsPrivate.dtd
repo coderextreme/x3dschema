@@ -2,7 +2,7 @@
 #
 # X3D Web3D Extensions Private DTD:
 #
-#	http://www.web3d.org/specifications/x3d-4.0-Web3dExtensionsPrivate.dtd
+#	https://www.web3d.org/specifications/x3d-4.0-Web3dExtensionsPrivate.dtd
 #
 #	   this version:  4.0 draft
 #	current version:  3.3
@@ -18,16 +18,16 @@
 # and x3d-4.0-Web3dExtensionsPrivate.dtd
 #
 # X3D Specification DTDs:
-#	http://www.web3d.org/specifications/x3d-4.0.dtd
-#	http://www.web3d.org/specifications/x3d-4.0-InputOutputFields.dtd
-#	http://www.web3d.org/specifications/x3d-4.0-Web3dExtensionsPublic.dtd
-#	http://www.web3d.org/specifications/x3d-4.0-Web3dExtensionsPrivate.dtd
+#	https://www.web3d.org/specifications/x3d-4.0.dtd
+#	https://www.web3d.org/specifications/x3d-4.0-InputOutputFields.dtd
+#	https://www.web3d.org/specifications/x3d-4.0-Web3dExtensionsPublic.dtd
+#	https://www.web3d.org/specifications/x3d-4.0-Web3dExtensionsPrivate.dtd
 #
 # Web3D extensions update URL:
-#	http://www.web3d.org/x3d/content/x3d-4.0-Web3dExtensionsPublic.dtd
+#	https://www.web3d.org/x3d/content/x3d-4.0-Web3dExtensionsPublic.dtd
 #
 # changelog:
-#	http://www.web3d.org/specifications/x3d-dtd-changelog.txt
+#	https://www.web3d.org/specifications/x3d-dtd-changelog.txt
 #
 -->
 
