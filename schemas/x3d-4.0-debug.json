@@ -1,7 +1,7 @@
 {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$id": "https://www.web3d.org/specifications/x3d-4.0-JSONSchema.json",
-        "title": "X3D V4.0 JSON Schema, generated 2025/08/15 10:17:05",
+        "title": "X3D V4.0 JSON Schema, generated 2025/09/16 01:04:45",
         "description": "Experimental JSON Schema for X3D V4.0",
         "type": "object",
         "properties": {
@@ -12233,6 +12233,7 @@
 						"items": false
 					},
 					"@scale" : {
+						"exclusiveMinimum" : 0,
 						"$comment":"SFVec3f inputOutput",
 						"type":"array",
 						"$comment":"SFVec3f inputOutput",
@@ -12241,6 +12242,7 @@
 						"maxItems" : 3,
 						"items": {
 							"default":1,
+						"exclusiveMinimum" : 0,
 						"type":"number"
 						}					},
 					"@scaleOrientation" : {
@@ -15282,8 +15284,8 @@
 						"prefixItems": [
 							{
 								"enum": [
-									"LEFT",
 									"RIGHT",
+									"LEFT",
 									"CENTER"
 								],
 								"default":"CENTER",
@@ -15325,9 +15327,9 @@
 						"prefixItems": [
 							{
 								"enum": [
-									"PIXEL",
+									"WORLD",
 									"FRACTION",
-									"WORLD"
+									"PIXEL"
 								],
 								"default":"WORLD",
 								"type":"string"
@@ -15335,9 +15337,9 @@
 							,
 							{
 								"enum": [
-									"PIXEL",
+									"WORLD",
 									"FRACTION",
-									"WORLD"
+									"PIXEL"
 								],
 								"default":"WORLD",
 								"type":"string"
@@ -15353,8 +15355,8 @@
 						"prefixItems": [
 							{
 								"enum": [
-									"PIXEL",
 									"FRACTION",
+									"PIXEL",
 									"STRETCH",
 									"NONE"
 								],
@@ -15364,8 +15366,8 @@
 							,
 							{
 								"enum": [
-									"PIXEL",
 									"FRACTION",
+									"PIXEL",
 									"STRETCH",
 									"NONE"
 								],
@@ -15392,9 +15394,9 @@
 						"prefixItems": [
 							{
 								"enum": [
-									"PIXEL",
+									"WORLD",
 									"FRACTION",
-									"WORLD"
+									"PIXEL"
 								],
 								"default":"WORLD",
 								"type":"string"
@@ -15402,9 +15404,9 @@
 							,
 							{
 								"enum": [
-									"PIXEL",
+									"WORLD",
 									"FRACTION",
-									"WORLD"
+									"PIXEL"
 								],
 								"default":"WORLD",
 								"type":"string"
@@ -18141,12 +18143,12 @@
 						"prefixItems": [
 						{
 							"enum": [
+								"FLY",
+								"ANY",
 								"EXPLORE",
 								"LOOKAT",
-								"FLY",
 								"EXAMINE",
 								"WALK",
-								"ANY",
 								"NONE"
 							],
 								"default":"EXAMINE",
@@ -20206,6 +20208,9 @@
 						"default":0,
 						"$comment":"SFTime inputOutput",
 						"type":"number"
+					},
+					"-periodicWave" : {
+						"$ref":"#/$defs/-PeriodicWaveSFNode"
 					},
 					"@resumeTime" : {
 						"default":0,
@@ -27227,9 +27232,13 @@
 						"$ref":"#/$defs/-X3DMetadataObjectSFNode"
 					},
 					"@streamIdentifier" : {
-						"$comment":"SFString inputOutput",
+						"$comment":"MFString inputOutput",
+						"type":"array",
+						"$comment":"MFString inputOutput",
+						"type":"array",
+						"items": {
 						"type":"string"
-					},
+						}					},
 					"@DEF" : {
 						"$comment":"SFString inputOutput",
 						"type":"string"
@@ -27348,9 +27357,13 @@
 						"type":"number"
 					},
 					"@streamIdentifier" : {
-						"$comment":"SFString inputOutput",
+						"$comment":"MFString inputOutput",
+						"type":"array",
+						"$comment":"MFString inputOutput",
+						"type":"array",
+						"items": {
 						"type":"string"
-					},
+						}					},
 					"@DEF" : {
 						"$comment":"SFString inputOutput",
 						"type":"string"
@@ -32227,6 +32240,14 @@
 					"-children" : {
 						"$ref":"#/$defs/-Analyser-AudioClip-AudioDestination-BiquadFilter-BufferAudioSource-ChannelMerger-ChannelSelector-ChannelSplitter-Convolver-Delay-DynamicsCompressor-Gain-ListenerPointSource-MicrophoneSource-MovieTexture-OscillatorSource-Sound-SpatialSound-StreamAudioDestination-StreamAudioSource-WaveShaperMFNode"
 					},
+					"@curve" : {
+						"$comment":"MFFloat inputOutput",
+						"type":"array",
+						"$comment":"MFFloat inputOutput",
+						"type":"array",
+						"items": {
+						"type":"number"
+						}					},
 					"@description" : {
 						"$comment":"SFString inputOutput",
 						"type":"string"
@@ -33102,6 +33123,37 @@
 				"additionalProperties": false
 		},
 		"IORMaterialExtension" : {
+			"type": "object",
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"@class": {
+                            "$comment": "SFString inputOutput",
+                            "type": "string"
+                        },
+                           "@USE": {
+                              "$comment": "SFString inputOutput",
+                               "type": "string"
+                            },
+                            "-children": {
+                                    "type": "array",
+                                    "minItems": 1,
+                                    "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                    "#comment": { "type": "string", "$comment": "#comment statements are the only allowed in -children node when using a USE field" }
+                                            },
+                                            "additionalProperties": false
+                                    }
+                            }
+                    },
+                    "required": [
+                        "@USE"
+                    ],
+					"additionalProperties": false
+				},
+				{
                                  "type": "object",
                                  "properties": {
                                 "-children": {
@@ -33115,9 +33167,15 @@
 						"default":1.5,
 						"$comment":"SFFloat inputOutput",
 						"type":"number"
+					},
+					"@DEF" : {
+						"$comment":"SFString inputOutput",
+						"type":"string"
 					}
 				},
 				"additionalProperties": false
+			}
+		]
 		},
 		"InstancedShape" : {
                                  "type": "object",
@@ -33227,6 +33285,37 @@
 				"additionalProperties": false
 		},
 		"IridescenceMaterialExtension" : {
+			"type": "object",
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"@class": {
+                            "$comment": "SFString inputOutput",
+                            "type": "string"
+                        },
+                           "@USE": {
+                              "$comment": "SFString inputOutput",
+                               "type": "string"
+                            },
+                            "-children": {
+                                    "type": "array",
+                                    "minItems": 1,
+                                    "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                    "#comment": { "type": "string", "$comment": "#comment statements are the only allowed in -children node when using a USE field" }
+                                            },
+                                            "additionalProperties": false
+                                    }
+                            }
+                    },
+                    "required": [
+                        "@USE"
+                    ],
+					"additionalProperties": false
+				},
+				{
                                  "type": "object",
                                  "properties": {
                                 "-children": {
@@ -33274,9 +33363,15 @@
 					},
 					"-iridescenceThicknessTexture" : {
 						"$ref":"#/$defs/-X3DSingleTextureNodeSFNode"
+					},
+					"@DEF" : {
+						"$comment":"SFString inputOutput",
+						"type":"string"
 					}
 				},
 				"additionalProperties": false
+			}
+		]
 		},
 		"SheenMaterialExtension" : {
                                  "type": "object",
@@ -35228,9 +35323,6 @@
 					"-X3DTextureTransformNodeSFNode" : {
 							"type": "object",
 							"properties": {
-								"MultiTextureTransform" : {
-									"$ref":"#/$defs/MultiTextureTransform"
-								},
 								"TextureTransform" : {
 									"$ref":"#/$defs/TextureTransform"
 								},
@@ -35239,6 +35331,9 @@
 								},
 								"TextureTransformMatrix3D" : {
 									"$ref":"#/$defs/TextureTransformMatrix3D"
+								},
+								"MultiTextureTransform" : {
+									"$ref":"#/$defs/MultiTextureTransform"
 								},
 								"ProtoInstance" : {
 									"$ref":"#/$defs/ProtoInstance"
@@ -36448,9 +36543,6 @@
 								"MultiTexture" : {
 									"$ref":"#/$defs/MultiTexture"
 								},
-								"MultiTextureTransform" : {
-									"$ref":"#/$defs/MultiTextureTransform"
-								},
 								"TextureTransform" : {
 									"$ref":"#/$defs/TextureTransform"
 								},
@@ -36459,6 +36551,9 @@
 								},
 								"TextureTransformMatrix3D" : {
 									"$ref":"#/$defs/TextureTransformMatrix3D"
+								},
+								"MultiTextureTransform" : {
+									"$ref":"#/$defs/MultiTextureTransform"
 								},
 								"AcousticProperties" : {
 									"$ref":"#/$defs/AcousticProperties"
@@ -37845,6 +37940,15 @@
 								"#comment": {
 									"type": "string"
 								},
+								"TextureTransform" : {
+									"$ref":"#/$defs/TextureTransform"
+								},
+								"TextureTransform3D" : {
+									"$ref":"#/$defs/TextureTransform3D"
+								},
+								"TextureTransformMatrix3D" : {
+									"$ref":"#/$defs/TextureTransformMatrix3D"
+								},
 								"ProtoInstance" : {
 									"$ref":"#/$defs/ProtoInstance"
 								}
@@ -37978,6 +38082,18 @@
 								},
 								"ImageTextureAtlas" : {
 									"$ref":"#/$defs/ImageTextureAtlas"
+								},
+								"ProtoInstance" : {
+									"$ref":"#/$defs/ProtoInstance"
+								}
+							},
+							"additionalProperties": false
+					},
+					"-PeriodicWaveSFNode" : {
+							"type": "object",
+							"properties": {
+								"PeriodicWave" : {
+									"$ref":"#/$defs/PeriodicWave"
 								},
 								"ProtoInstance" : {
 									"$ref":"#/$defs/ProtoInstance"
