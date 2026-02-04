@@ -17,7 +17,7 @@ try {
     */
 var ajvValidate = {};
 
-var overallversions = ["3.0", "3.1", "3.2", "3.3", "4.0", "4.0H"];
+var overallversions = ["3.0", "3.1", "3.2", "3.3", "4.0", "4.1", "4.0H"];
 for (var sversion in overallversions) {
 	schemas[overallversions[sversion]] = JSON.parse(fs.readFileSync('schemas/x3d-'+overallversions[sversion]+'-JSONSchema.json').toString());
 	ajvValidate[overallversions[sversion]] = ajv.compile(schemas[overallversions[sversion]]);
@@ -64,7 +64,7 @@ function validateFile(file) {
 		var hello = JSON.parse(fs.readFileSync(file).toString());
 		var version = hello["X3D"]["@version"];
 
-		var versions = [ version, "4.0H" ];
+		var versions = [ version, "4.1" ];
 		var valids = ["NOT YOU", "NOT ME"]
 		for (var v in versions) {
     			var valid = ajvValidate[versions[v]](hello);

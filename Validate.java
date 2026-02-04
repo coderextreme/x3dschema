@@ -75,7 +75,7 @@ public class Validate {
 		transformer.setOutputProperty(OutputKeys.CDATA_SECTION_ELEMENTS, "Script");
 
 		SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-		Schema schema = sf.newSchema(new File("x3d-4.0.xsd"));
+		Schema schema = sf.newSchema(new File("x3d-4.1.xsd"));
 		Validator validator = schema.newValidator();
 		validator.setErrorHandler(new MyDefaultHandler());
 

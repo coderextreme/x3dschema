@@ -52,7 +52,7 @@ public class JinLOA4 implements X3DRoots {
     	return list;
     }
     public X3D initialize() {
-      X3D X3D0 =  new X3D().setProfile("Immersive").setVersion("4.0")
+      X3D X3D0 =  new X3D().setProfile("Immersive").setVersion("4.1")
       .setHead(new head()
         .addComponent(new component().setName("HAnim").setLevel(1))
         .addMeta(new meta().setName("title").setContent("JinLOA4.x3d"))

@@ -3,8 +3,7 @@
 #
 #	https://www.web3d.org/specifications/x3d-4.0.dtd
 #
-#	   this version:  4.0 draft
-#	current version:  3.3
+#	this version:     4.0
 #
 #	created:          30 April 2005
 #	revised:          see version control history
@@ -60,7 +59,7 @@
 <!ENTITY % X3dInputOutputFields "INCLUDE">
 <!ENTITY % X3dExtensions "IGNORE">
 <!ENTITY % profileNames "(Core|Interchange|CADInterchange|Interactive|Immersive|MedicalInterchange|MPEG4Interactive|Full)">
-<!-- H-Anim is an allowed value for backwards validation of X3D version 3 HAnim version 1 models -->
+<!-- H-Anim is an allowed value for backwards validation of X3D version 3 HAnim version 1 models, but is not legal for X3D version 4 HAnim version 2 -->
 <!ENTITY % componentNames "(Core|CADGeometry|CubeMapTexturing|DIS|EnvironmentalEffects|EnvironmentalSensor|EventUtilities|Followers|Geometry2D|Geometry3D|Geospatial|Grouping|HAnim|H-Anim|Interpolation|KeyDeviceSensor|Layering|Layout|Lighting|Navigation|Networking|NURBS|ParticleSystems|Picking|PointingDeviceSensor|Rendering|RigidBodyPhysics|Scripting|Shaders|Shape|Sound|Text|TextureProjection|Texturing|Texturing3D|Time|VolumeRendering)">
 <!ENTITY % componentLevels "(1|2|3|4|5)">
 <!ENTITY % X3dFieldTypes "SFBool|MFBool|SFColor|MFColor|SFColorRGBA|MFColorRGBA|SFDouble|MFDouble|SFFloat|MFFloat|SFImage|MFImage|SFInt32|MFInt32|SFNode|MFNode|SFRotation|MFRotation|SFString|MFString|SFTime|MFTime|SFVec2f|MFVec2f|SFVec2d|MFVec2d|SFVec3f|MFVec3f|SFVec3d|MFVec3d|SFMatrix3d|MFMatrix3d|SFMatrix3f|MFMatrix3f|SFMatrix4d|MFMatrix4d|SFMatrix4f|MFMatrix4f|SFVec4d|MFVec4d|SFVec4f|MFVec4f">
@@ -123,7 +122,7 @@
 <!ENTITY % containerFieldChoicesX3DTexture2DNode       "(texture | children | source | back | bottom | front | left | right | top | backTexture | bottomTexture | frontTexture | leftTexture | rightTexture | topTexture | baseTexture | emissiveTexture | metallicRoughnessTexture | normalTexture | occlusionTexture)" >
 <!ENTITY % containerFieldChoicesX3DTexture3DNode       "(texture|gradients|segmentIdentifiers|surfaceNormals|voxels|children|watchList)" >
 <!ENTITY % containerFieldChoicesX3DUrlObject           "(children|watchList)" >
-<!ENTITY % containerFieldChoicesX3DUrlObjectTexture    "(texture | children | watchList | source | back | bottom | front | left | right | top | backTexture | bottomTexture | frontTexture | leftTexture | rightTexture | topTexture | baseTexture | emissiveTexture | metallicRoughnessTexture | normalTexture | occlusionTexture)" >
+<!ENTITY % containerFieldChoicesX3DUrlObjectTexture    "(texture | children | watchList | source | back | bottom | front | left | right | top | backTexture | bottomTexture | frontTexture | leftTexture | rightTexture | topTexture | ambientTexture | baseTexture | diffuseTexture | emissiveTexture | metallicRoughnessTexture | normalTexture | occlusionTexture | shininessTexture | specularTexture)" >
 
 <!ENTITY % DisNetworkModeValues             "(standAlone|networkReader|networkWriter)" >
 <!ENTITY % TextureBoundaryModeValues        "(CLAMP|CLAMP_TO_EDGE|CLAMP_TO_BOUNDARY|MIRRORED_REPEAT|REPEAT)">
@@ -327,7 +326,7 @@
 
 <!ENTITY % GeometryNodes    	" %GeometryNodeExtensions; %GeoElevationGridNode; %NurbsGeometryNodes; %CadGeometryNodes; %Web3dExtensionGeometryNodes; %Geometry2DNodes; Box|Cone|Cylinder|ElevationGrid|Extrusion|IndexedFaceSet|IndexedLineSet|LineSet|PointSet|Sphere|Text|IndexedTriangleFanSet|IndexedTriangleSet|IndexedTriangleStripSet|TriangleFanSet|TriangleSet|TriangleStripSet " >
 
-<!ENTITY % GroupingNodes    	" %GroupingNodeExtensions; %DISGroupingNodes; %GeoGroupingNodes; %HAnimGroupingNodes; %CadGroupingNodes; %RigidBodyPhysicsGroupingNodes; %Web3dExtensionGroupingNodes; Anchor|Billboard|Collision|Group|Inline|LOD|StaticGroup|Switch|Transform " >
+<!ENTITY % GroupingNodes    	" %GroupingNodeExtensions; %DISGroupingNodes; %GeoGroupingNodes; %HAnimGroupingNodes; %CadGroupingNodes; %RigidBodyPhysicsGroupingNodes; %Web3dExtensionGroupingNodes; Anchor|Billboard|Collision|Group|Inline|LOD|ScreenGroup|StaticGroup|Switch|Transform " >
 ]]>
 <![%ImmersiveProfile;[
 <!ENTITY % LightNodes       	" %LightNodeExtensions; DirectionalLight|SpotLight|PointLight " >
@@ -787,7 +786,6 @@
 	description %SFString; #IMPLIED
 	autoOffset %SFBool;     "true"
 	axisRotation %SFRotation; "0 0 1 0"
-	description %SFString; #IMPLIED
 	diskAngle  %SFFloat;    "0.26179167"
 	maxAngle   %SFFloat;    "-1"
 	minAngle   %SFFloat;    "0"
@@ -984,9 +982,9 @@
 	containerField NMTOKEN "fontStyle"
 	class NMTOKENS   #IMPLIED
         id    NMTOKEN    #IMPLIED
-	style %SFString; #IMPLIED
 	DEF         ID          #IMPLIED
 	USE         IDREF       #IMPLIED>
+<!-- cannot override style field for CSS, but can apply CSS style information to parent node -->
 <!-- Minimum supported values:
 	family  ' "SERIF" "SANS" "TYPEWRITER" '
 	justify ' "FIRST" "BEGIN" "MIDDLE" "END" ' -->
@@ -1318,7 +1316,6 @@
 	transparency     %SFFloat; "0"
 	normalScale       %SFFloat; "1"
 	occlusionStrength %SFFloat; "1"
-	transparency      %SFFloat; "0"
 	ambientTextureMapping           NMTOKEN #IMPLIED
 	diffuseTextureMapping           NMTOKEN #IMPLIED
 	emissiveTextureMapping          NMTOKEN #IMPLIED
@@ -1404,7 +1401,7 @@
 <!ELEMENT meta EMPTY>
 <!ATTLIST meta
 	http-equiv CDATA #IMPLIED
-	name CDATA #IMPLIED
+	name CDATA #REQUIRED
 	content CDATA #REQUIRED
 	scheme CDATA #IMPLIED
 	%i18n;
@@ -1674,11 +1671,8 @@
 <!ELEMENT ProtoInstance ( fieldValue* , (IS?), (%MetadataNodes;)? ) >
 <!-- ( %SceneNodes; )* --><!-- direct children disallowed, let fieldValue name="children" handle them -->
 <!ATTLIST ProtoInstance
-	name     NMTOKEN           #IMPLIED
+	name     NMTOKEN           #REQUIRED
 	containerField NMTOKEN "children"
-	class NMTOKENS   #IMPLIED
-        id    NMTOKEN    #IMPLIED
-	style %SFString; #IMPLIED
 	DEF      ID                #IMPLIED
 	USE      IDREF             #IMPLIED
 	class NMTOKENS   #IMPLIED
@@ -1780,6 +1774,7 @@
 <![%ImmersiveProfile;[
 <!ELEMENT Sound (IS?, (%MetadataNodes;)?, ( %AudioClipNodes;|%MovieTextureNodes;|%WildcardNodes; )?, (%AudioGraphNodes;|%WildcardNodes;)* ) >
 <!ATTLIST Sound
+	description %SFString; #IMPLIED
 	direction  %SFVec3f; "0 0 1"
 	enabled    %SFBool;  "true"
 	intensity  %SFFloat; "1"
@@ -1926,7 +1921,7 @@
 	on           %SFBool;   "true"
 	shadows         %SFBool;  "false"
 	shadowIntensity %SFFloat; "1"
-	upVector     %SFVec3f;  "0 0 1"
+	upVector     %SFVec3f;  "0 1 0"
 	containerField NMTOKEN "children"
 	class NMTOKENS   #IMPLIED
         id    NMTOKEN    #IMPLIED
@@ -1949,7 +1944,7 @@
 	on           %SFBool;   "true"
 	shadows         %SFBool;  "false"
 	shadowIntensity %SFFloat; "1"
-	upVector     %SFVec3f;  "0 0 1"
+	upVector     %SFVec3f;  "0 1 0"
 	containerField NMTOKEN "children"
 	class NMTOKENS   #IMPLIED
         id    NMTOKEN    #IMPLIED
@@ -2014,7 +2009,7 @@
 	DEF         ID        #IMPLIED
 	USE         IDREF     #IMPLIED>
 
-<!ELEMENT MultiTextureTransform ((IS?), (TextureTransform|ProtoInstance)* ) >
+<!ELEMENT MultiTextureTransform ((IS?), (TextureTransform|TextureTransform3D|TextureTransformMatrix3D|ProtoInstance)* ) >
 <!ATTLIST MultiTextureTransform
 	containerField NMTOKEN "textureTransform"
 	class NMTOKENS   #IMPLIED
@@ -2241,8 +2236,9 @@
 	DEF ID #IMPLIED
 	USE IDREF #IMPLIED
 >
-<!-- note namespace prefixes fixed -->
-<!ELEMENT X3D (head?, Scene, ds:Signature?)>
+<!-- note DOCTYPE entries not defined for ds:Signature family of elements, attributes -->
+<!-- note namespace prefixes for xmlns: and xsd: attributes are fixed -->
+<!ELEMENT X3D (head?, Scene)>
 <!ATTLIST X3D
 	xmlns:xsd CDATA "https://www.w3.org/2001/XMLSchema-instance"
 	xsd:noNamespaceSchemaLocation CDATA "https://www.web3d.org/specifications/x3d-4.0.xsd"
@@ -2796,8 +2792,7 @@ skullbase|l_eyelid_joint|r_eyelid_joint|l_eyeball_joint|r_eyeball_joint|l_eyebro
 l_sternoclavicular|l_acromioclavicular|l_shoulder|l_elbow|l_wrist|l_thumb1|l_thumb2|l_thumb3|
 l_index0|l_index1|l_index2|l_index3|l_middle0|l_middle1|l_middle2|l_middle3|l_ring0|l_ring1|l_ring2|l_ring3|l_pinky0|l_pinky1|l_pinky2|l_pinky3|
 r_sternoclavicular|r_acromioclavicular|r_shoulder|r_elbow|r_wrist|r_thumb1|r_thumb2|r_thumb3|
-r_index0|r_index1|r_index2|r_index3|r_middle0|r_middle1|r_middle2|r_middle3|r_ring0|r_ring1|r_ring2|r_ring3|r_pinky0|r_pinky1|r_pinky2|r_pinky3
-|
+r_index0|r_index1|r_index2|r_index3|r_middle0|r_middle1|r_middle2|r_middle3|r_ring0|r_ring1|r_ring2|r_ring3|r_pinky0|r_pinky1|r_pinky2|r_pinky3|
 l_radiocarpal_joint|l_midcarpal_joint_12|l_carpometacarpal_joint_1|l_metacarpophalangeal_joint_1|l_carpal_interphalangeal_joint_1|l_carpometacarpal_joint_2|l_metacarpophalangeal_joint_2|l_carpal_proximal_interphalangeal_joint_2|l_carpal_distal_interphalangeal_joint_2|l_midcarpal_joint_3|l_carpometacarpal_joint_3|l_metacarpophalangeal_joint_3|l_carpal_proximal_interphalangeal_joint_3|l_carpal_distal_interphalangeal_joint_3|l_midcarpal_joint_45|l_carpometacarpal_joint_4|l_metacarpophalangeal_joint_4|l_carpal_proximal_interphalangeal_joint_4|l_carpal_distal_interphalangeal_joint_4|l_carpometacarpal_joint_5|l_metacarpophalangeal_joint_5|l_carpal_proximal_interphalangeal_joint_5|l_carpal_distal_interphalangeal_joint_5|
 r_radiocarpal_joint|r_midcarpal_joint_12|r_carpometacarpal_joint_1|r_metacarpophalangeal_joint_1|r_carpal_interphalangeal_joint_1|r_carpometacarpal_joint_2|r_metacarpophalangeal_joint_2|r_carpal_proximal_interphalangeal_joint_2|r_carpal_distal_interphalangeal_joint_2|r_midcarpal_joint_3|r_carpometacarpal_joint_3|r_metacarpophalangeal_joint_3|r_carpal_proximal_interphalangeal_joint_3|r_carpal_distal_interphalangeal_joint_3|r_midcarpal_joint_45|r_carpometacarpal_joint_4|r_metacarpophalangeal_joint_4|r_carpal_proximal_interphalangeal_joint_4|r_carpal_distal_interphalangeal_joint_4|r_carpometacarpal_joint_5|r_metacarpophalangeal_joint_5|r_carpal_proximal_interphalangeal_joint_5|r_carpal_distal_interphalangeal_joint_5|
 l_talocrural_joint|l_tarsometatarsal_joint|l_metatarsophalangeal_joint|l_tarsal_interphalangeal_joint|
@@ -2868,7 +2863,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	USE		IDREF		#IMPLIED>
 
 <!ELEMENT HAnimHumanoid (IS?, (%MetadataNodes;)?,
-	(HAnimJoint*,	HAnimSegment*, HAnimSite*, HAnimMotion*, (%HAnimSkinNodes;)?, HAnimMotion*, (Coordinate | CoordinateDouble)*, (%NormalNodes;)*, ( %WildcardNodes; )* )* ) >
+	(HAnimJoint*,	HAnimSegment*, HAnimSite*, HAnimMotion*, (%HAnimSkinNodes;)?, (Coordinate | CoordinateDouble)*, (%NormalNodes;)*, ( %WildcardNodes; )* )* ) >
 <!-- skeleton/joints, segments, sites/viewpoints,  motion,        skin,                  skinCoord,                  skinNormal -->
 <!-- Note that version 2.0 is approved for X3D4 HAnim component, and version 1.0 is approved for X3D3 H-Anim component -->
 <!-- Note that joints, segments and sites should be USE nodes.  skin Shapes will USE preceding skinCoord, skinNormal definitions. -->
@@ -3733,9 +3728,9 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	containerField NMTOKEN "fontStyle"
 	class NMTOKENS   #IMPLIED
         id    NMTOKEN    #IMPLIED
-	style %SFString; #IMPLIED
 	DEF         ID          #IMPLIED
 	USE         IDREF       #IMPLIED>
+<!-- cannot override style field for CSS, but can apply CSS style information to parent node -->
 <!-- Minimum supported values:
 	family  ' "SERIF" "SANS" "TYPEWRITER" '
 	justify ' "FIRST" "BEGIN" "MIDDLE" "END" ' -->
@@ -4314,18 +4309,6 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	DEF ID #IMPLIED
 	USE IDREF #IMPLIED
 >
-<!ELEMENT VariationPhysicsModel (IS?, (%MetadataNodes;)? )>
-<!ATTLIST VariationPhysicsModel
-	enabled %SFBool; "true"
-	values %MFFloat; "0 0 0 0 0 0"
-	variations %MFFloat; "1 1 1 1 1 1"
-	containerField NMTOKEN "physics"
-	class NMTOKENS   #IMPLIED
-        id    NMTOKEN    #IMPLIED
-	style %SFString; #IMPLIED
-	DEF ID #IMPLIED
-	USE IDREF #IMPLIED
->
 <!ELEMENT WindPhysicsModel (IS?, (%MetadataNodes;)? )>
 <!ATTLIST WindPhysicsModel
 	direction %SFVec3f; "1 0 0"
@@ -4439,7 +4422,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
   )?,
   (Color | ColorRGBA | %WildcardNodes;)?,
   (ConeEmitter | ExplosionEmitter | PointEmitter | PolylineEmitter | SurfaceEmitter | VolumeEmitter | %WildcardNodes;)?,
-  (BoundedPhysicsModel | ForcePhysicsModel | VariationPhysicsModel | WindPhysicsModel | %WildcardNodes;)*,
+  (BoundedPhysicsModel | ForcePhysicsModel | WindPhysicsModel | %WildcardNodes;)*,
   (TextureCoordinate | TextureCoordinateGenerator | %WildcardNodes;)?
 ) >
 <!ATTLIST ParticleSystem
@@ -4707,7 +4690,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	pauseTime   %SFTime;  "0"
 	resumeTime  %SFTime;  "0"
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
     fftSize               %SFInt32; "2048"
     frequencyBinCount     %SFInt32; "1024"
     minDecibels           %SFFloat; "-100"
@@ -4736,7 +4719,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
     buffer                %MFFloat; #IMPLIED
 	bufferDuration        %SFTime; "0"
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
     detune                %SFFloat; "0"
     load                  %SFBool;  "true"
 	loop                  %SFBool;  "false"
@@ -4762,7 +4745,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
     maxChannelCount %SFInt32; "2"
     mediaDeviceID         %SFString; #IMPLIED
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
 	containerField NMTOKEN "children"
 	class NMTOKENS   #IMPLIED
         id    NMTOKEN    #IMPLIED
@@ -4781,7 +4764,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	pauseTime   %SFTime;  "0"
 	resumeTime  %SFTime;  "0"
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
     detune                %SFFloat; "0"
     frequency             %SFFloat; "350"
     qualityFactor         %SFFloat; "1"
@@ -4801,7 +4784,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	enabled     %SFBool;  "true"
     gain        %SFFloat; "1"
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
 	containerField NMTOKEN "children"
 	class NMTOKENS   #IMPLIED
         id    NMTOKEN    #IMPLIED
@@ -4817,7 +4800,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
     gain        %SFFloat; "1"
     channelSelection      %SFInt32; "0"
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
 	containerField NMTOKEN "children"
 	class NMTOKENS   #IMPLIED
         id    NMTOKEN    #IMPLIED
@@ -4832,7 +4815,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	enabled     %SFBool;  "true"
     gain        %SFFloat; "1"
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
 	containerField NMTOKEN "children"
 	class NMTOKENS   #IMPLIED
         id    NMTOKEN    #IMPLIED
@@ -4851,7 +4834,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	pauseTime   %SFTime;  "0"
 	resumeTime  %SFTime;  "0"
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
     buffer                %MFFloat; #IMPLIED
     normalize             %SFBool; "false"
     tailTime              %SFTime;  "0"
@@ -4873,7 +4856,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	pauseTime   %SFTime;  "0"
 	resumeTime  %SFTime;  "0"
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
     delayTime             %SFTime;  "0"
     maxDelayTime          %SFTime;  "1"
     tailTime              %SFTime;  "0"
@@ -4895,7 +4878,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	pauseTime   %SFTime;  "0"
 	resumeTime  %SFTime;  "0"
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
     attack                %SFTime; "0.003"
     knee                  %SFFloat; "30"
     ratio                 %SFFloat; "12"
@@ -4920,7 +4903,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	pauseTime   %SFTime;  "0"
 	resumeTime  %SFTime;  "0"
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
     tailTime              %SFTime;  "0"
 	containerField NMTOKEN "children"
 	class NMTOKENS   #IMPLIED
@@ -4993,13 +4976,12 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 <!ATTLIST PeriodicWave
 	description %SFString; #IMPLIED
 	enabled     %SFBool;  "true"
-    gain        %SFFloat; "1"
     optionsReal            %MFFloat; #IMPLIED
     optionsImag            %MFFloat; #IMPLIED
     type                  (SINE|SQUARE|SAWTOOTH|TRIANGLE|CUSTOM) "SQUARE"
 	containerField NMTOKEN "periodicWave"
 	class NMTOKENS   #IMPLIED
-        id    NMTOKEN    #IMPLIED
+    id    NMTOKEN    #IMPLIED
 	style %SFString; #IMPLIED
 	DEF ID #IMPLIED
 	USE IDREF #IMPLIED
@@ -5027,7 +5009,6 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	containerField NMTOKEN "children"
 	class NMTOKENS   #IMPLIED
         id    NMTOKEN    #IMPLIED
-        id    NMTOKEN    #IMPLIED
 	style %SFString; #IMPLIED
 	DEF        ID        #IMPLIED
 	USE        IDREF     #IMPLIED
@@ -5041,7 +5022,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	streamIdentifier %SFString; #IMPLIED
     mediaDeviceID         %SFString; #IMPLIED
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
 	containerField NMTOKEN "children"
 	class NMTOKENS   #IMPLIED
         id    NMTOKEN    #IMPLIED
@@ -5061,7 +5042,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
 	resumeTime  %SFTime;  "0"
 	streamIdentifier %SFString; #IMPLIED
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
 	containerField NMTOKEN "children"
 	class NMTOKENS   #IMPLIED
         id    NMTOKEN    #IMPLIED
@@ -5083,7 +5064,7 @@ rib10_midspine|sellion|skull_tip|substernale|supramenton|suprasternale|waist_pre
     oversample  (NONE|2X|4X) "NONE"
     tailTime    %SFTime;  "0"
     channelCountMode      (MAX|CLAMPED_MAX|EXPLICIT) "MAX"
-    channelInterpretation (SPEAKERS|EXPLICIT) "SPEAKERS"
+    channelInterpretation (SPEAKERS|DISCRETE) "SPEAKERS"
 	containerField NMTOKEN "children"
 	class NMTOKENS   #IMPLIED
         id    NMTOKEN    #IMPLIED

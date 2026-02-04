@@ -827,7 +827,7 @@ public class X3DJSONLD {
 	}
 
 	public String getX3DVersion(JsonObject jsobj) {
-		String version = "4.0";
+		String version = "4.1";
 		if (jsobj != null) {
 			version = ((JsonObject)jsobj.get("X3D")).get("@version").toString();
 		}
