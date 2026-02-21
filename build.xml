@@ -8,7 +8,7 @@
     -->
     <property name="examples"     value="examples"/>
     <property name="bad"     value="examples.bad"/>
-    <property name="classpath"     value=".;../pythonSAI/X3DJSAIL.4.0.full.jar"/>
+    <property name="classpath"     value=".;../X3DJSONLD/X3DJSAIL.4.0.full.jar"/>
     <target name="default" description="build and test" depends="compile,batch">
     </target>
     <target name="match" description="build and match" depends="compile">
